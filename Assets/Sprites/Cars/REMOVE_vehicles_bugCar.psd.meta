@@ -1,0 +1,525 @@
+fileFormatVersion: 2
+guid: 056b94aa36d45c544b2f71588c9563cd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 150513883256332861
+    second: vehicles_bugCar_body
+  - first:
+      213: 4087576206278274528
+    second: vehicles_bugCar_bodyParts
+  - first:
+      213: -2064059773144039729
+    second: vehicles_bugCar_glass
+  - first:
+      213: 5094600779055575732
+    second: vehicles_bugCar_bodyBackParts
+  - first:
+      213: -1976444966331704976
+    second: vehicles_bugCar_roof
+  - first:
+      213: 6920313872552969451
+    second: vehicles_bugCar_bodyBackDetails
+  - first:
+      213: -2260742032813051511
+    second: vehicles_bugCar_leftMirror
+  - first:
+      213: -9166477655251133526
+    second: vehicles_bugCar_frontLightCover
+  - first:
+      213: -2257599898705582025
+    second: vehicles_bugCar_frontLight
+  - first:
+      213: 7681383473278153009
+    second: vehicles_bugCar_backLightCover
+  - first:
+      213: 8344604475903779931
+    second: vehicles_bugCar_backLight
+  - first:
+      213: -2863565232156484302
+    second: vehicles_bugCar_frontLightCoverHighlight
+  - first:
+      213: 2782455579501637734
+    second: vehicles_bugCar_roof0Highlight
+  - first:
+      213: 7425187662151570026
+    second: vehicles_bugCar_bodyHighLight
+  - first:
+      213: -9055259578366743317
+    second: vehicles_bugCar_roof1Highlight
+  - first:
+      213: -7573146243048760307
+    second: vehicles_bugCar_bodyFrontDetails
+  - first:
+      213: 5976100658271459027
+    second: vehicles_bugCar_backLightCoverHighlight
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vehicles_bugCar_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 153
+        width: 142
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d322241549bb61200800000000000000
+      internalID: 150513883256332861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_bodyParts
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 156
+        width: 157
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed2e8717ecf9b830800000000000000
+      internalID: 4087576206278274528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_glass
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 284
+        width: 125
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce739a729cfa53e0800000000000000
+      internalID: -2064059773144039729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_roof
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 123
+        width: 105
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07990b756c14294e0800000000000000
+      internalID: -1976444966331704976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_bodyBackDetails
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 122
+        width: 89
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be44abb3dc4e90060800000000000000
+      internalID: 6920313872552969451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_leftMirror
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 93
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981326d591b30a0e0800000000000000
+      internalID: -2260742032813051511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_frontLightCover
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 91
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab533d73212ac080800000000000000
+      internalID: -9166477655251133526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_frontLight
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 95
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73822b87ad46ba0e0800000000000000
+      internalID: -2257599898705582025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_backLightCover
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 103
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131fc4c3291c99a60800000000000000
+      internalID: 7681383473278153009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_backLight
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 103
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5421692f8dfdc370800000000000000
+      internalID: 8344604475903779931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_frontLightCoverHighlight
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 65
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d572ad7929248d0800000000000000
+      internalID: -2863565232156484302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_roof0Highlight
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 40
+        width: 4
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660bf738b944d9620800000000000000
+      internalID: 2782455579501637734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_bodyHighLight
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 27
+        width: 28
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a625821a6d09b0760800000000000000
+      internalID: 7425187662151570026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_roof1Highlight
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 40
+        width: 10
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec2f7ae361455280800000000000000
+      internalID: -9055259578366743317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_bodyFrontDetails
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 26
+        width: 120
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c9efebd97c6e690800000000000000
+      internalID: -7573146243048760307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicles_bugCar_backLightCoverHighlight
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 52
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d69f3ec2ef5fe250800000000000000
+      internalID: 5976100658271459027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      vehicles_bugCar_glass: -2064059773144039729
+      vehicles_bugCar_roof: -1976444966331704976
+      vehicles_bugCar_frontLightCover: -9166477655251133526
+      vehicles_bugCar_frontLightCoverHighlight: -2863565232156484302
+      vehicles_bugCar_roof1Highlight: -9055259578366743317
+      vehicles_bugCar_backLight: 8344604475903779931
+      vehicles_bugCar_body: 150513883256332861
+      vehicles_bugCar_bodyFrontDetails: -7573146243048760307
+      vehicles_bugCar_bodyParts: 4087576206278274528
+      vehicles_bugCar_bodyHighLight: 7425187662151570026
+      vehicles_bugCar_leftMirror: -2260742032813051511
+      vehicles_bugCar_roof0Highlight: 2782455579501637734
+      vehicles_bugCar_backLightCoverHighlight: 5976100658271459027
+      vehicles_bugCar_bodyBackDetails: 6920313872552969451
+      vehicles_bugCar_backLightCover: 7681383473278153009
+      vehicles_bugCar_frontLight: -2257599898705582025
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

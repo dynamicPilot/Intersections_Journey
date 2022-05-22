@@ -1,0 +1,797 @@
+fileFormatVersion: 2
+guid: 9fa6768e5a9090f489b4d678092f8b6e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1904469388937515171
+    second: vehicle_miniCar_body
+  - first:
+      213: -3324974433421013487
+    second: vehicle_miniCar_roof
+  - first:
+      213: 1281977324613588318
+    second: vehicle_miniCar_bamper
+  - first:
+      213: 3449051113078874053
+    second: vehicle_miniCar_frontLightCover
+  - first:
+      213: 3911877974934950082
+    second: vehicle_miniCar_lightCover
+  - first:
+      213: 918928500364674033
+    second: vehicle_miniCar_leftMirror
+  - first:
+      213: 4721482367063971976
+    second: vehicle_miniCar_glass
+  - first:
+      213: -3322340681821930722
+    second: vehicle_miniCar_frontGlance
+  - first:
+      213: -3936695789530055313
+    second: vehicle_miniCar_backLight
+  - first:
+      213: 8845136341011878505
+    second: vehicle_miniCar_frontLightLarge
+  - first:
+      213: -8178177328668884953
+    second: vehicle_miniCar_frontLightSmall
+  - first:
+      213: 1054397550769728500
+    second: vehicle_miniCar_lightCoverGlance
+  - first:
+      213: -1159870902609382689
+    second: vehicle_miniCar_roofGlance
+  - first:
+      213: -3607096867086247263
+    second: vehicle_miniCar_frontLine
+  - first:
+      213: -6270375489530274498
+    second: vehicle_miniCar_silverCover
+  - first:
+      213: -7064049844139419095
+    second: vehicle_smallFiat_grid
+  - first:
+      213: 5134681108913395997
+    second: vehicle_smallFiat_mirror
+  - first:
+      213: 8110785700464536501
+    second: vehicle_smallFiat_frontLight
+  - first:
+      213: 8400905822474445304
+    second: vehicle_smallFiat_backLight
+  - first:
+      213: 9138747553392397830
+    second: vehicle_smallFiat_roofHighlight
+  - first:
+      213: 2236697414537007103
+    second: vehicle_smallFiat_tunkDetail
+  - first:
+      213: -548570820688129169
+    second: vehicle_smallFiat_bodyDetail
+  - first:
+      213: 476750809993394875
+    second: vehicle_smallFiat_hoodHighlight
+  - first:
+      213: 1910031622608461628
+    second: vehicle_smallFiat_hood
+  - first:
+      213: 8253213857934009168
+    second: vehicle_smallFiat_roof
+  - first:
+      213: -3031262570716909743
+    second: vehicle_smallFiat_glass
+  - first:
+      213: 7989784411211440672
+    second: vehicle_smallFiat_body
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vehicle_miniCar_body
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 236
+        width: 151
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0d935a1d80e6a10800000000000000
+      internalID: 1904469388937515171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_roof
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 349
+        width: 128
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e4fa88e515bd1d0800000000000000
+      internalID: -3324974433421013487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_bamper
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 299
+        width: 149
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55d2b3a59f7ac110800000000000000
+      internalID: 1281977324613588318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_frontLightCover
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 223
+        width: 23
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf5b37a6bd7ddf20800000000000000
+      internalID: 3449051113078874053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_lightCover
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 281
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c01cacca48c94630800000000000000
+      internalID: 3911877974934950082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_leftMirror
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 261
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f308363a90b0cc00800000000000000
+      internalID: 918928500364674033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_glass
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 50
+        width: 137
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8885e168233168140800000000000000
+      internalID: 4721482367063971976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_frontGlance
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 25
+        width: 90
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bbc2d90cca4e1d0800000000000000
+      internalID: -3322340681821930722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_backLight
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 207
+        width: 26
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6df844790c0e59c0800000000000000
+      internalID: -3936695789530055313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_frontLightLarge
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 183
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96259eb73ac30ca70800000000000000
+      internalID: 8845136341011878505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_frontLightSmall
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 171
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720c986ac07418e80800000000000000
+      internalID: -8178177328668884953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_lightCoverGlance
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 150
+        width: 4
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbeba96cf8f1ae00800000000000000
+      internalID: 1054397550769728500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_roofGlance
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 88
+        width: 4
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2f7a03f8f47efe0800000000000000
+      internalID: -1159870902609382689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_frontLine
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 283
+        width: 88
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa56e6b28401fdc0800000000000000
+      internalID: -3607096867086247263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_miniCar_silverCover
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 274
+        width: 22
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d5b32d6b62bf8a0800000000000000
+      internalID: -6270375489530274498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_grid
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 254
+        width: 82
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a9a6cf71477fd90800000000000000
+      internalID: -7064049844139419095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_mirror
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 228
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1911bb834d024740800000000000000
+      internalID: 5134681108913395997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_frontLight
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 235
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bba18d2f9c4f8070800000000000000
+      internalID: 8110785700464536501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_backLight
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 235
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1a91ce553069470800000000000000
+      internalID: 8400905822474445304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_roofHighlight
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 63
+        width: 89
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e8ceb0b7a53de70800000000000000
+      internalID: 9138747553392397830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_tunkDetail
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 49
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff438fa2785a0f10800000000000000
+      internalID: 2236697414537007103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_bodyDetail
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 11
+        width: 4
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f635dbabeb51368f0800000000000000
+      internalID: -548570820688129169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_hoodHighlight
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 19
+        width: 11
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba3904f552cd9600800000000000000
+      internalID: 476750809993394875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_hood
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 169
+        width: 116
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f175714abc18a10800000000000000
+      internalID: 1910031622608461628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_roof
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 10
+        width: 109
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053ec71c64e498270800000000000000
+      internalID: 8253213857934009168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_glass
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 10
+        width: 126
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f2b7390cacee5d0800000000000000
+      internalID: -3031262570716909743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_smallFiat_body
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 215
+        width: 146
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022263e179a61ee60800000000000000
+      internalID: 7989784411211440672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      vehicle_smallFiat_frontLight: 8110785700464536501
+      vehicle_miniCar_frontGlance: -3322340681821930722
+      vehicle_miniCar_backLight: -3936695789530055313
+      vehicle_smallFiat_backLight: 8400905822474445304
+      vehicle_smallFiat_hoodHighlight: 476750809993394875
+      vehicle_miniCar_leftMirror: 918928500364674033
+      vehicle_smallFiat_roof: 8253213857934009168
+      vehicle_smallFiat_grid: -7064049844139419095
+      vehicle_miniCar_frontLightSmall: -8178177328668884953
+      vehicle_miniCar_lightCover: 3911877974934950082
+      vehicle_miniCar_frontLine: -3607096867086247263
+      vehicle_miniCar_frontLightCover: 3449051113078874053
+      vehicle_smallFiat_roofHighlight: 9138747553392397830
+      vehicle_miniCar_silverCover: -6270375489530274498
+      vehicle_smallFiat_tunkDetail: 2236697414537007103
+      vehicle_miniCar_glass: 4721482367063971976
+      vehicle_smallFiat_mirror: 5134681108913395997
+      vehicle_smallFiat_hood: 1910031622608461628
+      vehicle_miniCar_lightCoverGlance: 1054397550769728500
+      vehicle_miniCar_roof: -3324974433421013487
+      vehicle_miniCar_body: 1904469388937515171
+      vehicle_miniCar_bamper: 1281977324613588318
+      vehicle_miniCar_frontLightLarge: 8845136341011878505
+      vehicle_smallFiat_glass: -3031262570716909743
+      vehicle_smallFiat_body: 7989784411211440672
+      vehicle_smallFiat_bodyDetail: -548570820688129169
+      vehicle_miniCar_roofGlance: -1159870902609382689
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Car
+  - TrafficLight
+  - BorderTriggers
+  - RoadTrigger
+  - RepairSite
+  - GameManager
+  - PlayerState
+  - DirectionTrigger
+  - Train
+  - ZoneTrigger
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - WayPoints
+  - AdditionalPoints
+  - Cars
+  - Background
+  - Testing
+  - TrafficLights
+  - BorderTriggers
+  - Managers
+  - RoadTriggers
+  - RoadMarks
+  - CarMarks
+  - RepairSites
+  - Town
+  - PlayerState
+  - Locations
+  - Trains&Others
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 1917976229
+    locked: 0
+  - name: Lakes
+    uniqueID: 664530723
+    locked: 0
+  - name: Trails
+    uniqueID: 1946654513
+    locked: 0
+  - name: Trees
+    uniqueID: 4052777747
+    locked: 0
+  - name: Decorations
+    uniqueID: 1844457577
+    locked: 0
+  - name: Town
+    uniqueID: 2094245153
+    locked: 0
+  - name: RoadsBorders
+    uniqueID: 1926618733
+    locked: 0
+  - name: Parking&Entrances
+    uniqueID: 2051905525
+    locked: 0
+  - name: Crossroads
+    uniqueID: 2926824685
+    locked: 0
+  - name: Railroads
+    uniqueID: 3549116485
+    locked: 0
+  - name: Trains
+    uniqueID: 2117199957
+    locked: 0
+  - name: CarsOfUnderdark
+    uniqueID: 3030200825
+    locked: 0
+  - name: TownAboveCrossroads
+    uniqueID: 2847519007
+    locked: 0
+  - name: DecorationsAboveCrossroads
+    uniqueID: 407930521
+    locked: 0
+  - name: WorldSpaceUI
+    uniqueID: 2329916497
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: RepairSites
+    uniqueID: 556218581
+    locked: 0
+  - name: Cars
+    uniqueID: 3931644217
+    locked: 0
+  - name: SpecialsBackground
+    uniqueID: 1211012647
+    locked: 0
+  - name: Specials
+    uniqueID: 3086031079
+    locked: 0
+  - name: TrafficLights
+    uniqueID: 1265453973
+    locked: 0
+  - name: Testing
+    uniqueID: 932980189
+    locked: 0
+  - name: WorldSpaceUIFront
+    uniqueID: 1760760425
+    locked: 0

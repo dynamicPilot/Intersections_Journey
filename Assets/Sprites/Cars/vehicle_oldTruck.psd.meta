@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: 1b804e701b030f84ab6781b6c06672d6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4305983514534161560
+    second: vehicle_oldTruck_bodyUp
+  - first:
+      213: 3444619844191746125
+    second: vehicle_oldTruck_truckBottom
+  - first:
+      213: 3275048004820348505
+    second: vehicle_oldTruck_wheelCover
+  - first:
+      213: -560537095734381714
+    second: vehicle_oldTruck_light
+  - first:
+      213: -5540406941198018794
+    second: vehicle_oldTruck_hoodDetail3
+  - first:
+      213: -80646148411375487
+    second: vehicle_oldTruck_roof
+  - first:
+      213: -1500888646151449238
+    second: vehicle_oldTruck_highlight
+  - first:
+      213: -3792284205020600326
+    second: vehicle_lambo_body
+  - first:
+      213: -8023121645032853359
+    second: vehicle_oldTruck_bodyDown
+  - first:
+      213: -4708465340038516785
+    second: vehicle_oldTruck_hood
+  - first:
+      213: -472424571022044905
+    second: vehicle_oldTruck_stripes
+  - first:
+      213: -2850540693525330773
+    second: vehicle_oldTruck_glass
+  - first:
+      213: -2706612038435819285
+    second: vehicle_oldTruck_hoodDetail0
+  - first:
+      213: -5420025677545688164
+    second: vehicle_oldTruck_hoodDetail1
+  - first:
+      213: 5445406548141016536
+    second: vehicle_oldTruck_hoodDetail2
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vehicle_oldTruck_bodyUp
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 307
+        width: 150
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c2f70413de1cb30800000000000000
+      internalID: 4305983514534161560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_truckBottom
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 349
+        width: 129
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d487f477f7fbdcf20800000000000000
+      internalID: 3444619844191746125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_wheelCover
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 399
+        width: 26
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e2ba5fece437d20800000000000000
+      internalID: 3275048004820348505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_light
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 485
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63b2553b729838f0800000000000000
+      internalID: -560537095734381714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_hoodDetail3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 456
+        width: 54
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61798c6cd358c13b0800000000000000
+      internalID: -5540406941198018794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_roof
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 237
+        width: 131
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180cf6b51cc71eef0800000000000000
+      internalID: -80646148411375487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_highlight
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 322
+        width: 4
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65d9b67ab5cb2be0800000000000000
+      internalID: -1500888646151449238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_lambo_body
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 9
+        width: 176
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af72c60ab991f5bc0800000000000000
+      internalID: -3792284205020600326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_bodyDown
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 123
+        width: 140
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190b1164f5528a090800000000000000
+      internalID: -8023121645032853359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_hood
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 126
+        width: 123
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcfe3c148bb28aeb0800000000000000
+      internalID: -4708465340038516785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_stripes
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 75
+        width: 32
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711901d0b5c9179f0800000000000000
+      internalID: -472424571022044905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_glass
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 31
+        width: 128
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba480a09758d078d0800000000000000
+      internalID: -2850540693525330773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_hoodDetail0
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 31
+        width: 51
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0bc38f0be207ad0800000000000000
+      internalID: -2706612038435819285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_hoodDetail1
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 49
+        width: 9
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93b460ec5338c4b0800000000000000
+      internalID: -5420025677545688164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_oldTruck_hoodDetail2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 49
+        width: 23
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5088f8768f19b40800000000000000
+      internalID: 5445406548141016536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      vehicle_oldTruck_truckBottom: 3444619844191746125
+      vehicle_oldTruck_hood: -4708465340038516785
+      vehicle_oldTruck_hoodDetail0: -2706612038435819285
+      vehicle_oldTruck_roof: -80646148411375487
+      vehicle_oldTruck_highlight: -1500888646151449238
+      vehicle_oldTruck_light: -560537095734381714
+      vehicle_oldTruck_hoodDetail3: -5540406941198018794
+      vehicle_oldTruck_hoodDetail1: -5420025677545688164
+      vehicle_lambo_body: -3792284205020600326
+      vehicle_oldTruck_stripes: -472424571022044905
+      vehicle_oldTruck_bodyUp: 4305983514534161560
+      vehicle_oldTruck_bodyDown: -8023121645032853359
+      vehicle_oldTruck_glass: -2850540693525330773
+      vehicle_oldTruck_hoodDetail2: 5445406548141016536
+      vehicle_oldTruck_wheelCover: 3275048004820348505
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

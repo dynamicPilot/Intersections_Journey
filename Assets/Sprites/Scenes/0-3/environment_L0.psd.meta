@@ -1,0 +1,531 @@
+fileFormatVersion: 2
+guid: 60941dd05f0a1f544a71ad4713ae957e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1646170228185932471
+    second: environment_lakeMediumBorder
+  - first:
+      213: -2241655147344741778
+    second: environment_trail2
+  - first:
+      213: 6265246881412484084
+    second: environment_trail3
+  - first:
+      213: 1617090522785128352
+    second: environment_trail1
+  - first:
+      213: -87786135942343914
+    second: environment_lakeMedium
+  - first:
+      213: -9014811493734768004
+    second: environment_trail0
+  - first:
+      213: -2215585624322918099
+    second: environment_roofPart0
+  - first:
+      213: -6569833147263455405
+    second: environment_lakeSmall0
+  - first:
+      213: -8527142153637568589
+    second: environment_lakeSmall1
+  - first:
+      213: 5468878023102976464
+    second: environment_roofPart1
+  - first:
+      213: -145591966199808199
+    second: environment_billboard
+  - first:
+      213: 8563133180545639704
+    second: environment_trail4
+  - first:
+      213: 7355450282791416536
+    second: environment_trail5
+  - first:
+      213: -3529756169329248713
+    second: environment_lakeSmall1Border
+  - first:
+      213: -4508489719526948082
+    second: environment_lakeSmall0Border
+  - first:
+      213: -1517986734712267907
+    second: environment_roofPart2
+  - first:
+      213: 6587505433099622194
+    second: environment_parkingExitBorders
+  - first:
+      213: 4630097844505508281
+    second: environment_parkingExit
+  - first:
+      213: -5494466929593405599
+    second: environment_trail6
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 72
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: environment_lakeMediumBorder
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 662
+        width: 453
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d572536e0a729e0800000000000000
+      internalID: -1646170228185932471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_trail2
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 678
+        width: 140
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a3791358a04e0e0800000000000000
+      internalID: -2241655147344741778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_trail3
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 832
+        width: 58
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb07bc08d0a2f650800000000000000
+      internalID: 6265246881412484084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_trail1
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 693
+        width: 206
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af1244434f017610800000000000000
+      internalID: 1617090522785128352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_lakeMedium
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 310
+        width: 437
+        height: 335
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613d3f679fe18cef0800000000000000
+      internalID: -87786135942343914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_trail0
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 466
+        width: 181
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72a4de75b4f4e280800000000000000
+      internalID: -9014811493734768004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_lakeSmall0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 189
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f66cf9f8343d4a0800000000000000
+      internalID: -6569833147263455405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_lakeSmall1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 65
+        width: 167
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf5c27d36189a980800000000000000
+      internalID: -8527142153637568589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_billboard
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 260
+        width: 24
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f728cc0e0cafdf0800000000000000
+      internalID: -145591966199808199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_trail4
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 362
+        width: 224
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815a8ce124c56d670800000000000000
+      internalID: 8563133180545639704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_trail5
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 66
+        width: 171
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d234d4bf0fc31660800000000000000
+      internalID: 7355450282791416536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_lakeSmall1Border
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 42
+        width: 184
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736f2672779c30fc0800000000000000
+      internalID: -3529756169329248713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_lakeSmall0Border
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 50
+        width: 205
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e038812bc70ae61c0800000000000000
+      internalID: -4508489719526948082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_parkingExitBorders
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 898
+        width: 143
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237dbdf0a458b6b50800000000000000
+      internalID: 6587505433099622194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_parkingExit
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 910
+        width: 123
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b97d015579614040800000000000000
+      internalID: 4630097844505508281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_trail6
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 916
+        width: 141
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f247f307bbfb3b0800000000000000
+      internalID: -5494466929593405599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      environment_trail3: 6265246881412484084
+      environment_lakeSmall1: -8527142153637568589
+      environment_lakeMedium: -87786135942343914
+      environment_trail0: -9014811493734768004
+      environment_lakeSmall1Border: -3529756169329248713
+      environment_trail4: 8563133180545639704
+      environment_lakeSmall0: -6569833147263455405
+      environment_trail2: -2241655147344741778
+      environment_trail6: -5494466929593405599
+      environment_parkingExitBorders: 6587505433099622194
+      environment_trail5: 7355450282791416536
+      environment_lakeSmall0Border: -4508489719526948082
+      environment_trail1: 1617090522785128352
+      environment_lakeMediumBorder: -1646170228185932471
+      environment_billboard: -145591966199808199
+      environment_parkingExit: 4630097844505508281
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

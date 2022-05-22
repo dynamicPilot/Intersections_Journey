@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c853769735ab140bf3ea6fd698c572, type: 3}
+  m_Name: PorscheCar
+  m_EditorClassIdentifier: 
+  type: 1
+  vehicleName: porscheF
+  packs:
+  - body: {fileID: 2862497274952701892, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+    leftLightCover: {fileID: -8883702000867323852, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+    rightLightCover: {fileID: 4645096706137482670, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+  - body: {fileID: -5149355680962261363, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+    leftLightCover: {fileID: -8557401926243263137, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+    rightLightCover: {fileID: 2583571246548237906, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+  - body: {fileID: 3183641190521051097, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+    leftLightCover: {fileID: -3571899882815985905, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+    rightLightCover: {fileID: 4172502691409274633, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+  maxVelocity: 3.5
+  maxTurningVelocity: 2
+  maxAcceleration: 2.5
+  normalAcceleration: 1
+  turningAcceleration: 1
+  mass: 12
+  gap: 1
+  prefab: {fileID: 2720729683730117685, guid: 8715ea34857da3640968e6ea3a820166, type: 3}

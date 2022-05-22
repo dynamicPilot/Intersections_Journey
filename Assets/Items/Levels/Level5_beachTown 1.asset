@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd141e6e58ad8b44bfa9136e30328b4, type: 3}
+  m_Name: Level5_beachTown 1
+  m_EditorClassIdentifier: 
+  number: 6
+  levelIndex: 5
+  sceneName: L5_beach
+  crossSceneName: X_crossDouble
+  crossType: 0
+  location: {fileID: 11400000, guid: e3663a9fbf42dc1468e73356c5a5b4c9, type: 2}
+  maxCrashesNumber: 3
+  maxTimeByRoad:
+  - 60
+  - 60
+  - 50
+  - 60
+  maxAdditionalTimeToWaitByRoad:
+  - 30
+  - 30
+  - 10
+  - 30
+  pointNumbersPairs:
+  - startPointNumber: 0
+    endPointNumbers: 01000000180000001b0000000f000000
+    needChanceControl: 1
+    endPointNumberChances:
+    - 0.1
+    - 0.4
+    - 0.7
+    - 1
+  - startPointNumber: 26
+    endPointNumbers: 180000001b000000010000000f000000
+    needChanceControl: 1
+    endPointNumberChances:
+    - 0.1
+    - 0.4
+    - 0.7
+    - 1
+  - startPointNumber: 25
+    endPointNumbers: 18000000010000000f000000
+    needChanceControl: 1
+    endPointNumberChances:
+    - 0.33
+    - 0.66
+    - 1
+  - startPointNumber: 13
+    endPointNumbers: 0f0000001b0000001800000001000000
+    needChanceControl: 1
+    endPointNumberChances:
+    - 0.1
+    - 0.4
+    - 0.7
+    - 1
+  endPointsWithParking: 
+  corrections: []
+  startPointPacksCorrections: []
+  activeRoadPacks: 000000000200000004000000
+  timeIntervalsByRoads: []
+  repairSiteTimePoints: []

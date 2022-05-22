@@ -1,0 +1,484 @@
+fileFormatVersion: 2
+guid: c10707184956e404c8856739a8b311c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7605722699375599106
+    second: environment_villageTrees-01_0
+  - first:
+      213: 1841206997759832592
+    second: environment_villageTrees-01_1
+  - first:
+      213: -1814808344451323543
+    second: environment_villageTrees-01_2
+  - first:
+      213: -4487445419394469740
+    second: environment_villageTrees-01_3
+  - first:
+      213: -3688113239671394
+    second: environment_villageTrees-01_4
+  - first:
+      213: 3527505112799244778
+    second: environment_villageTrees-01_5
+  - first:
+      213: -1137723001652997825
+    second: environment_villageTrees-01_6
+  - first:
+      213: 267028908735504038
+    second: environment_villageTrees-01_7
+  - first:
+      213: 1400563467638081387
+    second: environment_villageTrees-01_8
+  - first:
+      213: 2747559229934693425
+    second: environment_villageTrees-01_9
+  - first:
+      213: -6714701049354405152
+    second: environment_villageTrees-01_10
+  - first:
+      213: -4883247635365250353
+    second: environment_villageTrees-01_11
+  - first:
+      213: -4991423880414741490
+    second: environment_villageTrees-01_12
+  - first:
+      213: -6158073829529636621
+    second: environment_villageTrees-01_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 72
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 13
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: environment_villageTrees-01_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 199
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1a793708b037690800000000000000
+      internalID: -7605722699375599106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 199
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012307362084d8910800000000000000
+      internalID: 1841206997759832592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 210
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969609d0d6180d6e0800000000000000
+      internalID: -1814808344451323543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 209
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490f904aa2469b1c0800000000000000
+      internalID: -4487445419394469740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 140
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d35783ea5e2fff0800000000000000
+      internalID: -3688113239671394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_5
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 147
+        width: 56
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1f5c7e53734f030800000000000000
+      internalID: 3527505112799244778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 165
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f319ea935fef530f0800000000000000
+      internalID: -1137723001652997825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_7
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 164
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae90f1b06da4b300800000000000000
+      internalID: 267028908735504038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 86
+        width: 52
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6705f5ad0dcf6310800000000000000
+      internalID: 1400563467638081387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_9
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 93
+        width: 55
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c6a9bff8a412620800000000000000
+      internalID: 2747559229934693425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 113
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eab94cb8f690d2a0800000000000000
+      internalID: -6714701049354405152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_11
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 113
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcab9cfe5283b3cb0800000000000000
+      internalID: -4883247635365250353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 32
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c3a7c2d66eabab0800000000000000
+      internalID: -4991423880414741490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment_villageTrees-01_13
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 36
+        width: 51
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0b14a9a702a8aa0800000000000000
+      internalID: -6158073829529636621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      environment_villageTrees-01_6: -1137723001652997825
+      environment_villageTrees-01_8: 1400563467638081387
+      environment_villageTrees-01_1: 1841206997759832592
+      environment_villageTrees-01_9: 2747559229934693425
+      environment_villageTrees-01_3: -4487445419394469740
+      environment_villageTrees-01_7: 267028908735504038
+      environment_villageTrees-01_5: 3527505112799244778
+      environment_villageTrees-01_0: -7605722699375599106
+      environment_villageTrees-01_11: -4883247635365250353
+      environment_villageTrees-01_2: -1814808344451323543
+      environment_villageTrees-01_4: -3688113239671394
+      environment_villageTrees-01_12: -4991423880414741490
+      environment_villageTrees-01_10: -6714701049354405152
+      environment_villageTrees-01_13: -6158073829529636621
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

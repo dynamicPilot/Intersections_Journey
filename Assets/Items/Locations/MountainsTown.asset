@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023163ac44aa26b4994dd0be974502cf, type: 3}
+  m_Name: MountainsTown
+  m_EditorClassIdentifier: 
+  locationName: MountainsTown
+  locationIndex: 2
+  levels:
+  - {fileID: 11400000, guid: 1a700ad921075e14b8befca2552e7d0c, type: 2}
+  - {fileID: 11400000, guid: 0bfed232ca7b4604783ba80576b02451, type: 2}
+  - {fileID: 11400000, guid: ae8053e054cd899468da1701fbb80d75, type: 2}
+  - {fileID: 11400000, guid: c85743465569fa7439c0e42f5083b77f, type: 2}
+  pointsToMakeAvailable: 1
+  maxPoints: 12
+  locationsToMakeAvailable:
+  - {fileID: 11400000, guid: 326fb69ab71ae1f48bdae272dada5dbc, type: 2}
+  - {fileID: 11400000, guid: e3663a9fbf42dc1468e73356c5a5b4c9, type: 2}
+  crossroadsColors:
+  - {r: 0.023529414, g: 0.42352945, b: 0.4039216, a: 1}
+  - {r: 0.15686275, g: 0.19607845, b: 0.28627452, a: 1}
+  - {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+  uiColors:
+  - {r: 0.15686275, g: 0.19607845, b: 0.28627452, a: 1}
+  - {r: 0.9215687, g: 0.93725497, b: 0.95294124, a: 1}
+  - {r: 0.15686275, g: 0.19607845, b: 0.28627452, a: 1}

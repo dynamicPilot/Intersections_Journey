@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/START.unity
+    guid: 1da15a7b9dba8a14784b7b74fc898281
+  - enabled: 1
+    path: Assets/Scenes/MENU.unity
+    guid: bc86ff780a7a2d74d995612d99c9f615
+  - enabled: 1
+    path: Assets/Scenes/X_cross.unity
+    guid: 4b486b3e69d13b64089824a0c99325e3
+  - enabled: 1
+    path: Assets/Scenes/X_cross_V2.unity
+    guid: 202f9d417caa7a74f810fa138ffe41e9
+  - enabled: 1
+    path: Assets/Scenes/X_cross_v3.unity
+    guid: dddf2d5918796e54c93985083ce018d8
+  - enabled: 1
+    path: Assets/Scenes/X_cross_v4.unity
+    guid: 7eeb1cdb0b1c5d3488ca86d09e1d014d
+  - enabled: 1
+    path: Assets/Scenes/X_crossDouble.unity
+    guid: 48d321a6b10a71a49a58bbb2d70f5987
+  - enabled: 1
+    path: Assets/Scenes/X_crossDouble_curve.unity
+    guid: be80c66682ff6834884d56de58a2f317
+  - enabled: 1
+    path: Assets/Scenes/Y_crossDouble.unity
+    guid: 17bbc62d3f29f82458c399801ee9b9db
+  - enabled: 1
+    path: Assets/Scenes/X_crossTriple_curve.unity
+    guid: 8b0a38bb82969154fae959f56ce06095
+  - enabled: 1
+    path: Assets/Scenes/X_crossTriple_curve_v2.unity
+    guid: ea8d70775bc86a04b8c1c6055e5b76d3
+  - enabled: 1
+    path: Assets/Scenes/X_crossTriple_v3.unity
+    guid: 618545b129396284598658f47b07ea77
+  - enabled: 1
+    path: Assets/Scenes/X_crossTriple_v4.unity
+    guid: 9e5c4213b164980409950b289cf57d25
+  - enabled: 1
+    path: Assets/Scenes/L0_town.unity
+    guid: 4131ef907a87476439079cf0ddda94dd
+  - enabled: 1
+    path: Assets/Scenes/L1_town.unity
+    guid: 25b1ce52bc505344aa9fa571d184dfa6
+  - enabled: 1
+    path: Assets/Scenes/L2_town.unity
+    guid: 795cc51b250d1f64db606f955cdf212c
+  - enabled: 1
+    path: Assets/Scenes/L3_town.unity
+    guid: 90ca83a889c822d4282149d9ecdf61bf
+  - enabled: 1
+    path: Assets/Scenes/L4_beach.unity
+    guid: 423894cfc2f2da947b88058f59e65da9
+  - enabled: 1
+    path: Assets/Scenes/L5_beach.unity
+    guid: 3dba0c2e8a51c4745915f4788d75f93f
+  - enabled: 1
+    path: Assets/Scenes/L6_beach.unity
+    guid: 56cd8b00910013b4dad04d238424a1b6
+  - enabled: 1
+    path: Assets/Scenes/L7_beach.unity
+    guid: dfbca6f0890f5d44b8125e07fd983c55
+  - enabled: 1
+    path: Assets/Scenes/L8_mountains.unity
+    guid: 4d31e05c1ed15cf4dab25ae81b919461
+  - enabled: 1
+    path: Assets/Scenes/L9_mountains.unity
+    guid: 2b9a48aa99c38af43b600012302ab44b
+  - enabled: 1
+    path: Assets/Scenes/L10_mountains.unity
+    guid: 67afad591ce51184f9dfdf3c70000c92
+  - enabled: 1
+    path: Assets/Scenes/L11_mountains.unity
+    guid: 735daa49466945242be2a732db2e8bd0
+  - enabled: 1
+    path: Assets/Scenes/L12_city.unity
+    guid: 5c4e085af384d5647bdca3b1fcd43911
+  - enabled: 1
+    path: Assets/Scenes/L13_city.unity
+    guid: af04794195fc2e64db5b2cd7c3053571
+  - enabled: 1
+    path: Assets/Scenes/L14_city.unity
+    guid: bd32966cac6bb4f478065d69ba946cde
+  - enabled: 1
+    path: Assets/Scenes/L15_city.unity
+    guid: b3b448c81582736458a51f3021a34607
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: f29a78700f27bbc46bcc541a56a5c5ea, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 65e8ae8af56535649bf999f5b20e9117, type: 2}

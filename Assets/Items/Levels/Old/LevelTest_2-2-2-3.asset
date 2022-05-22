@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd141e6e58ad8b44bfa9136e30328b4, type: 3}
+  m_Name: LevelTest_2-2-2-3
+  m_EditorClassIdentifier: 
+  number: 2
+  sceneName: L_
+  maxCrashesNumber: 3
+  maxTimeByRoad:
+  - 80
+  - 80
+  - 80
+  - 80
+  - 80
+  maxAdditionalTimeToWaitByRoad:
+  - 20
+  - 10
+  - 20
+  - 10
+  - 10
+  pointNumbersPairs: []
+  timeIntervalsByRoads:
+  - roadStartPointNumber: 0
+    timeIntervals:
+    - startHour: 0
+      endHour: 2
+      vehicleNumbersList:
+      - type: 0
+        number: 1
+      - type: 1
+        number: 1
+    - startHour: 2
+      endHour: 4
+      vehicleNumbersList:
+      - type: 0
+        number: 2
+      - type: 1
+        number: 1
+    - startHour: 4
+      endHour: 6
+      vehicleNumbersList:
+      - type: 0
+        number: 2
+      - type: 1
+        number: 1
+    - startHour: 6
+      endHour: 8
+      vehicleNumbersList:
+      - type: 0
+        number: 1
+      - type: 1
+        number: 2
+    - startHour: 8
+      endHour: 10
+      vehicleNumbersList:
+      - type: 0
+        number: 1
+      - type: 1
+        number: 1
+    - startHour: 10
+      endHour: 12
+      vehicleNumbersList:
+      - type: 0
+        number: 1
+      - type: 1
+        number: 1
+  repairSiteTimePoints:
+  - roadStartPointNumber: 6
+    roadEndPointNumber: 2
+    hour: 2

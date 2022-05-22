@@ -1,0 +1,447 @@
+fileFormatVersion: 2
+guid: f780d8b6d296ba64abbdd0a302ac58cc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5818490597272118019
+    second: vehicle_silverFastCar_body
+  - first:
+      213: 2002699044542400179
+    second: vehicle_silverFastCar_details
+  - first:
+      213: 2715520466236537409
+    second: vehicle_silverFastCar_glass
+  - first:
+      213: -528337259857018916
+    second: vehicle_silverFastCar_airTube
+  - first:
+      213: -7971654018120241080
+    second: vehicle_silverFastCar_roof
+  - first:
+      213: 6821895926613195333
+    second: vehicle_silverFastCar_highlight1
+  - first:
+      213: -7807050944976109303
+    second: vehicle_silverFastCar_frontLight
+  - first:
+      213: 1397273418826681713
+    second: vehicle_silverFastCar_grid
+  - first:
+      213: 7309534429998032113
+    second: vehicle_silverFastCar_highlight0
+  - first:
+      213: -8111386635186035360
+    second: vehicle_silverFastCar_stripes
+  - first:
+      213: 3291058227941654266
+    second: vehicle_silverFastCar_shadow
+  - first:
+      213: -8505988833620631830
+    second: vehicle_silverFastCar_mirror
+  - first:
+      213: -2952095599575474947
+    second: vehicle_silverFastCar_backLight
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 171
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc15a421a1904fa0800000000000000
+      internalID: -5818490597272118019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_details
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 92
+        width: 135
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b6c6f59b240bcb10800000000000000
+      internalID: 2002699044542400179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_glass
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 332
+        width: 136
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14af4520a777fa520800000000000000
+      internalID: 2715520466236537409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_airTube
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 361
+        width: 22
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf7e98bf08faa8f0800000000000000
+      internalID: -528337259857018916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_roof
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 233
+        width: 104
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840b0a9f7eefe5190800000000000000
+      internalID: -7971654018120241080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_highlight1
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 263
+        width: 4
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ab678833e3cae50800000000000000
+      internalID: 6821895926613195333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_frontLight
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 198
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90142517788c7a390800000000000000
+      internalID: -7807050944976109303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_grid
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 189
+        width: 17
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d824775cc146310800000000000000
+      internalID: 1397273418826681713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_highlight0
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 133
+        width: 6
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4258526dea07560800000000000000
+      internalID: 7309534429998032113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_stripes
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 180
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065a2edc4d09e6f80800000000000000
+      internalID: -8111386635186035360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_shadow
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 121
+        width: 37
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afeb69385003cad20800000000000000
+      internalID: 3291058227941654266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_mirror
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 160
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee5a94f838a4f980800000000000000
+      internalID: -8505988833620631830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vehicle_silverFastCar_backLight
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 133
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc5f4c61bc0807d0800000000000000
+      internalID: -2952095599575474947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      vehicle_silverFastCar_frontLight: -7807050944976109303
+      vehicle_silverFastCar_stripes: -8111386635186035360
+      vehicle_silverFastCar_mirror: -8505988833620631830
+      vehicle_silverFastCar_grid: 1397273418826681713
+      vehicle_silverFastCar_shadow: 3291058227941654266
+      vehicle_silverFastCar_airTube: -528337259857018916
+      vehicle_silverFastCar_body: -5818490597272118019
+      vehicle_silverFastCar_roof: -7971654018120241080
+      vehicle_silverFastCar_backLight: -2952095599575474947
+      vehicle_silverFastCar_glass: 2715520466236537409
+      vehicle_silverFastCar_highlight0: 7309534429998032113
+      vehicle_silverFastCar_highlight1: 6821895926613195333
+      vehicle_silverFastCar_details: 2002699044542400179
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
