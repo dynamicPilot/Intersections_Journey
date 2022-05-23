@@ -24,6 +24,9 @@ MonoBehaviour:
   - body: {fileID: 3183641190521051097, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
     leftLightCover: {fileID: -3571899882815985905, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
     rightLightCover: {fileID: 4172502691409274633, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+  - body: {fileID: -1460467388, guid: 2c43f95482912814dad9fd2b711a8436, type: 3}
+    leftLightCover: {fileID: -1501796261, guid: 2c43f95482912814dad9fd2b711a8436, type: 3}
+    rightLightCover: {fileID: 918680009, guid: 2c43f95482912814dad9fd2b711a8436, type: 3}
   maxVelocity: 3.5
   maxTurningVelocity: 2
   maxAcceleration: 2.5

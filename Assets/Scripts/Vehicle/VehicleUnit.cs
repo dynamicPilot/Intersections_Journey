@@ -38,11 +38,11 @@ public class VehicleUnit : MonoBehaviour
 
     // FOR TEST START
 
-    [SerializeField] List<float> distanceToOtherVehicles = new List<float>();
-    [SerializeField] List<float> accelerationToOtherVehicles = new List<float>();
-    [SerializeField] List<float> sizeOfOtherVehicles = new List<float>();
-    [SerializeField] private float distanceToTrafficLight = 0f;
-    [SerializeField] private float accelerationToTrafficLight = 0f;
+    [SerializeField] List<float> distanceToOtherVehicles = new List<float>(); // for test
+    [SerializeField] List<float> accelerationToOtherVehicles = new List<float>();// for test
+    [SerializeField] List<float> sizeOfOtherVehicles = new List<float>();// for test
+    [SerializeField] private float distanceToTrafficLight = 0f;// for test
+    [SerializeField] private float accelerationToTrafficLight = 0f;// for test
 
     // FOR TEST END
 
@@ -112,7 +112,7 @@ public class VehicleUnit : MonoBehaviour
             // crash
             if (collision.gameObject.CompareTag("Car"))
             {
-                Vector2 contactPosition = collision.contacts[0].point;
+                Vector3 contactPosition = collision.contacts[0].point;
                 // if train --> store correct position
                 if (type == TYPE.train)
                 {
@@ -132,7 +132,7 @@ public class VehicleUnit : MonoBehaviour
 
                 collisionCounter = (type == TYPE.train) ? 0 : stepsAfterCollision;
 
-                unit.StopSimulatingIfMovingInCollision();
+                unit.StopSimulatingIfMovingInCollision(contactPosition - transformComponents.position);
                 vehicleManager.RegisterCrash(managerIndex, unit.ManagerIndex, contactPosition);
             }
             else if (collision.gameObject.CompareTag("Train"))
@@ -147,25 +147,19 @@ public class VehicleUnit : MonoBehaviour
         if (!inCrash && !isSimulating) isSimulating = true;
     }
 
-    public void StopSimulatingIfMovingInCollision()
+    public void StopSimulatingIfMovingInCollision(Vector3 pushVector)
     {
         if (isSimulating) isSimulating = false;
+
+        rigidbodyComponent.AddForce(pushVector.normalized * 2f, ForceMode2D.Impulse);
         collisionCounter = 0;
         inCrash = true;
-
-        // if train --> store correct position
-        //if (type == TYPE.train)
-        //{
-        //    positionToHold = transformComponents.position;
-        //    rotationToHold = transformComponents.rotation;
-        //}
 
         InCrashTimer();
     }
 
     public void SetVehicle(Vehicle newVehicle, List<Path> newPaths, VehicleManager newVehicleManager, int newManagerIndex, bool newStopIsParking = false)
     {
-        Logging.Log("VehicleUnit: start setting vehicle ... ");
         managerIndex = newManagerIndex;
         vehicleManager = newVehicleManager;
 
@@ -191,7 +185,8 @@ public class VehicleUnit : MonoBehaviour
         normalAcceleration = newVehicle.NormalAcceleration;
         turningAcceleration = newVehicle.TurningAcceleration;
 
-        rigidbodyComponent.mass = newVehicle.Mass; //Random.Range(1, newVehicle.Mass);
+        rigidbodyComponent.mass = newVehicle.Mass;
+        rigidbodyComponent.drag = 2f;
 
         // Sprites
         if (newVehicle.Packs != null)
@@ -281,17 +276,6 @@ public class VehicleUnit : MonoBehaviour
         isSimulating = true;
     }
 
-    public int GetCurrentPathPartPointNumbers(bool needStartPoint = true)
-    {
-        if (needStartPoint)
-        {
-            return paths[pathPartIndex].StartPointNumber;
-        }
-        else
-        {
-            return paths[pathPartIndex].EndPointNumber;
-        }
-    }
 
     void MoveAlongCurve()
     {
@@ -357,7 +341,7 @@ public class VehicleUnit : MonoBehaviour
             //acceleration = 0f;
 
             // update timer
-            if (type == TYPE.emergencyCar) effectsControl.CheckNewVelocityForTimer(velocity, Time.deltaTime);
+            if (type == TYPE.emergencyCar) effectsControl.CheckNewVelocityForTimer(velocity, Time.fixedDeltaTime);
 
             return;
         }
@@ -371,7 +355,7 @@ public class VehicleUnit : MonoBehaviour
         }
 
         // update timer
-        if (type == TYPE.emergencyCar) effectsControl.CheckNewVelocityForTimer(velocity, Time.deltaTime);
+        if (type == TYPE.emergencyCar) effectsControl.CheckNewVelocityForTimer(velocity, Time.fixedDeltaTime);
 
         //collisionCounter--;
 
@@ -383,12 +367,12 @@ public class VehicleUnit : MonoBehaviour
             return;
         }
 
-        t += (float)Time.deltaTime * velocity / paths[pathPartIndex].CurveLength;
+        t += (float)Time.fixedDeltaTime * velocity / paths[pathPartIndex].CurveLength;
 
         // move to endPoint
         if (Mathf.Abs(1f - t) < 0.001f || t > 1) t = 1f;
 
-        Vector2 newPoint = new Vector2();
+        Vector2 newPoint;
 
         // get new point
         if (isLine)
@@ -402,10 +386,17 @@ public class VehicleUnit : MonoBehaviour
 
         Quaternion newRotation = Quaternion.Euler(transformComponents.rotation.x, transformComponents.rotation.y, 360f - Mathf.Atan2(newPoint.x - transformComponents.position.x, newPoint.y - transformComponents.position.y) * Mathf.Rad2Deg);
 
+
         //Logging.Log("TEST: t is " + t + " point is: x " + newPoint.x + " y " + newPoint.y + " angle is " + (360f - Mathf.Atan2(newPoint.x - transformComponents.position.x, newPoint.y - transformComponents.position.y) * Mathf.Rad2Deg) + "velocity " + velocity);
 
-        transformComponents.position = newPoint;
-        transformComponents.rotation = newRotation;
+        //Vector3 delta = new Vector3(newPoint.x - transformComponents.position.x, newPoint.y - transformComponents.position.y, 0f);
+        //float angle = Mathf.Atan2(newPoint.x - transformComponents.position.x, newPoint.y - transformComponents.position.y) * Mathf.Rad2Deg;
+        transformComponents.Translate(new Vector3(newPoint.x - transformComponents.position.x, newPoint.y - transformComponents.position.y, 0f), Space.World);
+        //transformComponents.position = newPoint;
+        //transformComponents.Rotate(newRotation.eulerAngles - transformComponents.rotation.eulerAngles, 1 * Time.deltaTime);
+        //Debug.Log("Angle " + angle);
+        transformComponents.Rotate(newRotation.eulerAngles - transformComponents.rotation.eulerAngles, Space.World);
+        //transformComponents.rotation = newRotation;
 
         //if (vehicleTimer != null)
         //{
@@ -419,94 +410,6 @@ public class VehicleUnit : MonoBehaviour
         }
     }
 
-    
-
-    public void StartTurningLightEffectWhenDetectCrossroads()
-    {
-        if (pathPartIndex >= 0 && pathPartIndex + 1 < paths.Count)
-        {
-            if (paths[pathPartIndex + 1].Turn != Path.TURN.none)
-            {
-                effectsControl.StartTurningEffect(paths[pathPartIndex + 1].Turn);
-            }
-        }
-    }
-
-    float CalculateDistance(float currentVelocity, float targetVelocity, float currentAcceleration)
-    {
-        float timeUntilStop = Mathf.Abs((targetVelocity - currentVelocity) / currentAcceleration);
-        return currentVelocity * timeUntilStop + currentAcceleration * timeUntilStop * timeUntilStop / 2;
-    }
-
-    public void EnterOrExitTurn(bool isInTurnNow)
-    {
-        isInTurn = isInTurnNow;
-    }
-
-    public void ResetRoadStartPointNumber()
-    {
-        roadStartPointNumber = -1;
-    }
-
-    public void SetRoadStartPointNumber(int number)
-    {
-        roadStartPointNumber = number;
-    }
-
-    public bool CheckUnitForDirectionAndRoad(int index, int checkRoadStartPointNumber, VehicleScanner.DIRECTION direction)
-    {
-        Logging.Log("VehicleUnit: need be with direction " + (vehicleScanner.Direction == direction).ToString() + " start point " + (roadStartPointNumber == checkRoadStartPointNumber).ToString() + " index is " +
-            (managerIndex != index).ToString()) ;
-        return managerIndex != index && roadStartPointNumber == checkRoadStartPointNumber && vehicleScanner.Direction == direction;
-    }
-
-    public List<VehicleUnit> GetUnitsWhenChangeDirection()
-    {
-        return vehicleManager.GetUnitsToAddToVehicleToFollow(vehicleScanner.Direction, roadStartPointNumber, managerIndex);
-    }
-
-    public void EnterRepairSite(RepairSite repairSite)
-    {
-        isInRepairSide = true;
-        maxRepairSiteVelocity = repairSite.TargetVelocity;
-
-        if (type == TYPE.repairCar)
-        {
-            if (repairCar.RepairSiteIndex == repairSite.RepairSiteIndex)
-                maxRepairSiteVelocity = 0f;
-        }
-
-        repairSitePoint = repairSite.TargetPoint;
-    }
-
-    public void ExitRepairSite(RepairSite repairSite)
-    {
-        if (type == TYPE.repairCar && repairSite != null && repairCar != null)
-        {
-            if (repairCar.RepairSiteIndex == repairSite.RepairSiteIndex && !repairCar.RepairIsMade)
-            {
-                repairCar.GoToTargetRepairSite();
-            }
-            else
-            {
-                isInRepairSide = false;
-            }
-        }
-        else
-        {
-            if (type == TYPE.repairCar) Logging.Log("VehicleUnit: exit repair site!");
-            isInRepairSide = false;
-        }
-    }
-
-    public float CalculateAccelerationForRepairSite()
-    {
-        float distance = Vector2.Distance(transformComponents.position, repairSitePoint);
-        float newAcceleration = (Mathf.Pow(maxRepairSiteVelocity, 2) - Mathf.Pow(velocity, 2)) / (2 * (distance));
-        if (Mathf.Abs(newAcceleration) > maxAcceleration) newAcceleration = Mathf.Sign(newAcceleration) * maxAcceleration;
-
-        return newAcceleration;
-    }
 
     public float CalculateAccelerationForTrafficLight(Vector2 trafficLightPoint)
     {
@@ -620,6 +523,111 @@ public class VehicleUnit : MonoBehaviour
         if (needTimer) needTimer = false;
     }
 
+    #region("repair site")
+
+    public void EnterRepairSite(RepairSite repairSite)
+    {
+        isInRepairSide = true;
+        maxRepairSiteVelocity = repairSite.TargetVelocity;
+
+        if (type == TYPE.repairCar)
+        {
+            if (repairCar.RepairSiteIndex == repairSite.RepairSiteIndex)
+                maxRepairSiteVelocity = 0f;
+        }
+
+        repairSitePoint = repairSite.TargetPoint;
+    }
+
+    public void ExitRepairSite(RepairSite repairSite)
+    {
+        if (type == TYPE.repairCar && repairSite != null && repairCar != null)
+        {
+            if (repairCar.RepairSiteIndex == repairSite.RepairSiteIndex && !repairCar.RepairIsMade)
+            {
+                repairCar.GoToTargetRepairSite();
+            }
+            else
+            {
+                isInRepairSide = false;
+            }
+        }
+        else
+        {
+            if (type == TYPE.repairCar) Logging.Log("VehicleUnit: exit repair site!");
+            isInRepairSide = false;
+        }
+    }
+
+    public float CalculateAccelerationForRepairSite()
+    {
+        float distance = Vector2.Distance(transformComponents.position, repairSitePoint);
+        float newAcceleration = (Mathf.Pow(maxRepairSiteVelocity, 2) - Mathf.Pow(velocity, 2)) / (2 * (distance));
+        if (Mathf.Abs(newAcceleration) > maxAcceleration) newAcceleration = Mathf.Sign(newAcceleration) * maxAcceleration;
+
+        return newAcceleration;
+    }
+
+    #endregion
+
+    #region("effects&info")
+
+    public int GetCurrentPathPartPointNumbers(bool needStartPoint = true)
+    {
+        if (needStartPoint)
+        {
+            return paths[pathPartIndex].StartPointNumber;
+        }
+        else
+        {
+            return paths[pathPartIndex].EndPointNumber;
+        }
+    }
+
+    public void StartTurningLightEffectWhenDetectCrossroads()
+    {
+        if (pathPartIndex >= 0 && pathPartIndex + 1 < paths.Count)
+        {
+            if (paths[pathPartIndex + 1].Turn != Path.TURN.none)
+            {
+                effectsControl.StartTurningEffect(paths[pathPartIndex + 1].Turn);
+            }
+        }
+    }
+
+    float CalculateDistance(float currentVelocity, float targetVelocity, float currentAcceleration)
+    {
+        float timeUntilStop = Mathf.Abs((targetVelocity - currentVelocity) / currentAcceleration);
+        return currentVelocity * timeUntilStop + currentAcceleration * timeUntilStop * timeUntilStop / 2;
+    }
+
+    public void EnterOrExitTurn(bool isInTurnNow)
+    {
+        isInTurn = isInTurnNow;
+    }
+
+    public void ResetRoadStartPointNumber()
+    {
+        roadStartPointNumber = -1;
+    }
+
+    public void SetRoadStartPointNumber(int number)
+    {
+        roadStartPointNumber = number;
+    }
+
+    public bool CheckUnitForDirectionAndRoad(int index, int checkRoadStartPointNumber, VehicleScanner.DIRECTION direction)
+    {
+        Logging.Log("VehicleUnit: need be with direction " + (vehicleScanner.Direction == direction).ToString() + " start point " + (roadStartPointNumber == checkRoadStartPointNumber).ToString() + " index is " +
+            (managerIndex != index).ToString());
+        return managerIndex != index && roadStartPointNumber == checkRoadStartPointNumber && vehicleScanner.Direction == direction;
+    }
+
+    public List<VehicleUnit> GetUnitsWhenChangeDirection()
+    {
+        return vehicleManager.GetUnitsToAddToVehicleToFollow(vehicleScanner.Direction, roadStartPointNumber, managerIndex);
+    }
+
     public float GetTotalTimeOnRoad()
     {
         needTimer = false;
@@ -631,15 +639,15 @@ public class VehicleUnit : MonoBehaviour
         return transformComponents.position - boxColliderComponent.bounds.center;
     }
 
+    #endregion
+
+    #region("crash")
+
     void InCrashTimer()
     {
         if (!inCrash) return;
 
         effectsControl.MakeWheelSmoke();
-        //if (wheelSmoke != null)
-        //{
-        //    wheelSmoke.StartEffect();
-        //}
 
         if (type == TYPE.emergencyCar) effectsControl.HideMarkAndTimerForTimer();
 
@@ -667,9 +675,9 @@ public class VehicleUnit : MonoBehaviour
 
         inCrash = false;
         isSimulating = true;
-        
-        //acceleration = normalAcceleration;
     }
+
+    #endregion
 
     void StopVehicle()
     {

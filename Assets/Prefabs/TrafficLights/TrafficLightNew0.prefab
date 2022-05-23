@@ -29,8 +29,11 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0013, y: 0.0013, z: 0.0013}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8862245180072496624}
+  - {fileID: 3240116613483488820}
+  - {fileID: 3240116614953492821}
   m_Father: {fileID: 3240116614034095639}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -128,9 +131,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8862245180072496624}
-  m_RootOrder: 0
+  m_Father: {fileID: 1264520905389342015}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -203,6 +207,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -2.16, y: -0.5, z: 0}
   m_LocalScale: {x: 0.7, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1264520905389342015}
   m_Father: {fileID: 0}
@@ -223,6 +228,7 @@ MonoBehaviour:
   colliderComponent: {fileID: 3240116614034095638}
   image: {fileID: 3240116613483488823}
   effect: {fileID: 3240116614953492820}
+  pointsNumberToBeAffected: 
   greenColor: {r: 0.34901962, g: 0.6313726, b: 0.20784315, a: 1}
   redColor: {r: 0.8705883, g: 0.26666668, b: 0.28627452, a: 1}
   trafficLightObject: {fileID: 0}
@@ -276,9 +282,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8862245180072496624}
-  m_RootOrder: 1
+  m_Father: {fileID: 1264520905389342015}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -352,16 +359,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3240116613483488820}
-  - {fileID: 3240116614953492821}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 1264520905389342015}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 184.975, y: -275.925}
-  m_SizeDelta: {x: 369.95, y: 551.85}
+  m_AnchoredPosition: {x: -505.6, y: -593.7}
+  m_SizeDelta: {x: 1858.5, y: 2168.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3556982261733540390
 CanvasRenderer:
