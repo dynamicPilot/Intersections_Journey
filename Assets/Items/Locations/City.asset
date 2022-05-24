@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a4ee57922aa99fe4587a36e618ad389c, type: 2}
   - {fileID: 11400000, guid: e4647bbab5c4d9b4b842a4776c37df7e, type: 2}
   - {fileID: 11400000, guid: 721f13a72d166164f8ee4a3c9654684b, type: 2}
-  pointsToMakeAvailable: 1
+  pointsToMakeAvailable: 0
   maxPoints: 12
   locationsToMakeAvailable:
   - {fileID: 11400000, guid: 326fb69ab71ae1f48bdae272dada5dbc, type: 2}

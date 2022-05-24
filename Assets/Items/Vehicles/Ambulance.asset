@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c71c7d036e9bc5439d7cb59d5b2353f, type: 3}
+  m_Name: Ambulance
+  m_EditorClassIdentifier: 
+  type: 3
+  vehicleName: ambulanceV
+  packs:
+  - body: {fileID: -144865740, guid: 875fc016a31d0964da1312b0be00cbf1, type: 3}
+    leftLightCover: {fileID: 0}
+    rightLightCover: {fileID: 0}
+  maxVelocity: 2.5
+  maxTurningVelocity: 2
+  maxAcceleration: 2
+  normalAcceleration: 1
+  turningAcceleration: 1
+  mass: 15
+  gap: 0.7
+  prefab: {fileID: 2909463781412219138, guid: bf67c08b92a16444385ff1291de7794f, type: 3}
+  mainTimer: 10
+  allertTimer: 5

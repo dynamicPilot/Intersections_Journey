@@ -29,6 +29,18 @@ public class Cargo : MonoBehaviour
         }
     }
 
+    public void SetSortingLayerById(int newID)
+    {
+        if (activeCargoIndexes == null && activeCargoIndexes.Count == 0) return;
+
+        if (activeCargoIndexes.Count > 1 && cargos[0].sortingLayerID == newID) return;
+
+        foreach (int index in activeCargoIndexes)
+        {
+            cargos[index].sortingLayerID = newID;
+        }
+    }
+
     public void SetCargoState(bool mode)
     {
         HideCargo();

@@ -26,6 +26,11 @@ public class MenuMaster : MonoBehaviour
         mapLocationsUI.gameObject.SetActive(true);
     }
 
+    public void CloseStuffOnClick()
+    {
+        mapLocationsUI.ResetLocationInButtonState();
+    }
+
     public void OpenLevelsPanelForLocation(Location location)
     {
         if (!playerState.LocationsProgress[location.LocationIndex].IsAvailable)

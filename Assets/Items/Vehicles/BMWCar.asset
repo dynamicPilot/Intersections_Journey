@@ -14,10 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   vehicleName: bmwC
-  bodyColor:
-  - {r: 0.7725491, g: 0.7176471, b: 0.6313726, a: 1}
-  detailsColor:
-  - {r: 0.5882353, g: 0.5372549, b: 0.47058827, a: 1}
+  packs:
+  - body: {fileID: -1407494093, guid: 8e9e1292696acb4459b71c767b7643e0, type: 3}
+    leftLightCover: {fileID: 0}
+    rightLightCover: {fileID: 0}
+  - body: {fileID: -1118615261, guid: 8e9e1292696acb4459b71c767b7643e0, type: 3}
+    leftLightCover: {fileID: 0}
+    rightLightCover: {fileID: 0}
+  - body: {fileID: 1562906767, guid: 8e9e1292696acb4459b71c767b7643e0, type: 3}
+    leftLightCover: {fileID: 0}
+    rightLightCover: {fileID: 0}
   maxVelocity: 2.5
   maxTurningVelocity: 2
   maxAcceleration: 2
@@ -25,4 +31,4 @@ MonoBehaviour:
   turningAcceleration: 1
   mass: 8
   gap: 0.7
-  prefab: {fileID: 2645123447003118845, guid: 321d98c18d7835b489422c4eecd5ab15, type: 3}
+  prefab: {fileID: 7498754590293242052, guid: 746dcf5faba1e774baffa0c2aa4b9e7f, type: 3}

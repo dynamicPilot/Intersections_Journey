@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c853769735ab140bf3ea6fd698c572, type: 3}
+  m_Name: PickupTruck
+  m_EditorClassIdentifier: 
+  type: 6
+  vehicleName: pickupT
+  packs:
+  - body: {fileID: 2123306657, guid: 597390d7084e4034ebd62a2983e380a1, type: 3}
+    leftLightCover: {fileID: 0}
+    rightLightCover: {fileID: 0}
+  - body: {fileID: -1896751573, guid: 597390d7084e4034ebd62a2983e380a1, type: 3}
+    leftLightCover: {fileID: 0}
+    rightLightCover: {fileID: 0}
+  - body: {fileID: -1345510502, guid: 597390d7084e4034ebd62a2983e380a1, type: 3}
+    leftLightCover: {fileID: 0}
+    rightLightCover: {fileID: 0}
+  maxVelocity: 2.5
+  maxTurningVelocity: 2
+  maxAcceleration: 2
+  normalAcceleration: 1
+  turningAcceleration: 1
+  mass: 12
+  gap: 0.7
+  prefab: {fileID: 2805974974498848752, guid: 2cc9f3a444f7dac4ba67d267828cfcd9, type: 3}

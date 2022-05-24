@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   vehicleName: miniC
-  bodyColor:
-  - {r: 0.6509804, g: 0.14901961, b: 0, a: 1}
-  detailsColor:
-  - {r: 0.5372549, g: 0.10588236, b: 0.007843138, a: 1}
+  packs:
+  - body: {fileID: 1076194015, guid: 875fc016a31d0964da1312b0be00cbf1, type: 3}
+    leftLightCover: {fileID: 75024223, guid: 875fc016a31d0964da1312b0be00cbf1, type: 3}
+    rightLightCover: {fileID: 75024223, guid: 875fc016a31d0964da1312b0be00cbf1, type: 3}
   maxVelocity: 2
   maxTurningVelocity: 2
   maxAcceleration: 2
@@ -25,4 +25,4 @@ MonoBehaviour:
   turningAcceleration: 1
   mass: 5
   gap: 0.7
-  prefab: {fileID: 6258986497880872348, guid: 8e4a838d53a146945b407095a400e364, type: 3}
+  prefab: {fileID: 2615121486896612441, guid: a5f59895c6ca17342a1a19d21609d343, type: 3}

@@ -7659,17 +7659,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vehicleContainer: {fileID: 1611361321}
   vehicles:
-  - {fileID: 11400000, guid: 2006f8fefa4714647a11fdcadef1bdd3, type: 2}
+  - {fileID: 11400000, guid: 248bb9d39d339ec45a443988c5fa347c, type: 2}
   - {fileID: 11400000, guid: a05a49ed5765d1844b487e06c6ab7c94, type: 2}
+  - {fileID: 11400000, guid: dfaf3f7141a599b4dac0cf8bfe80a1fa, type: 2}
   - {fileID: 11400000, guid: 70b94539d48d3ba4c8ce72d98547265b, type: 2}
-  - {fileID: 11400000, guid: 709c17c313d07c44a94141b67cb9e714, type: 2}
-  - {fileID: 11400000, guid: 06679c2269f134e4b82328e9c590dc13, type: 2}
-  - {fileID: 11400000, guid: 17b309f5f8d6fa14f81acfde25d628fb, type: 2}
+  - {fileID: 11400000, guid: fc8a7d892934ff24b8ebd4ae0157acea, type: 2}
+  - {fileID: 11400000, guid: af142e1033a1e1a4b89f25f7700bfbe3, type: 2}
   - {fileID: 11400000, guid: f0a0d80582176d643a8a87ec8efb5cf7, type: 2}
-  - {fileID: 11400000, guid: 1d90a65c40f2d144c81bc6b29f33e5ea, type: 2}
+  - {fileID: 11400000, guid: d95d018392bb52b47b1bc6269dd1d177, type: 2}
+  - {fileID: 11400000, guid: 7914a3444170704408cdcce9ad6d405c, type: 2}
+  - {fileID: 11400000, guid: a4b8487c8a1e45e4fb2ff24cb8f2958d, type: 2}
+  - {fileID: 11400000, guid: 06679c2269f134e4b82328e9c590dc13, type: 2}
+  - {fileID: 11400000, guid: b4fce290f4ba4544cba11ff620319cbc, type: 2}
   - {fileID: 11400000, guid: 1f9d84e3b3e6e5648bc53cd0c0cd4c33, type: 2}
-  - {fileID: 11400000, guid: fec47bd1a3a63c342af607240dbed638, type: 2}
   - {fileID: 11400000, guid: d1a09b801f875384b91fcb542a934462, type: 2}
+  - {fileID: 11400000, guid: fec47bd1a3a63c342af607240dbed638, type: 2}
   - {fileID: 11400000, guid: bec0935d79dcd3a408813d94c02f6126, type: 2}
   - {fileID: 11400000, guid: dad7166a45693fe4083ee443d38024c6, type: 2}
   - {fileID: 11400000, guid: 29e8ec7001bbc9c47bbd392bf69d3775, type: 2}
@@ -9210,7 +9214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeThreshold: 0.2
   distanceMultiplier: 0.01
-  horizontal: 1
+  horizontal: 0
   vertical: 1
   leftBorder: -9.1
   upBorder: 22.5

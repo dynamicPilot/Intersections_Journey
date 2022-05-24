@@ -22,7 +22,9 @@ public class EffectsControl : MonoBehaviour
         if (viewControl != null)
         {
             viewControl.SetDefaultSortingLayer();
+            
             if (turningEffect != null) turningEffect.SetSortingLayerById(viewControl.GetDefaultSortingLayerID());
+            if (cargo != null) cargo.SetSortingLayerById(viewControl.GetDefaultSortingLayerID());
         }
     }
 
@@ -31,7 +33,9 @@ public class EffectsControl : MonoBehaviour
         if (viewControl != null)
         {
             viewControl.SetNewSortingLayerByID(newID);
+
             if (turningEffect != null) turningEffect.SetSortingLayerById(newID);
+            if (cargo != null) cargo.SetSortingLayerById(newID);
         }
     }
 

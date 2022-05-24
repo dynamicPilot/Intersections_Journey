@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c853769735ab140bf3ea6fd698c572, type: 3}
+  m_Name: VintageTruck
+  m_EditorClassIdentifier: 
+  type: 6
+  vehicleName: vintageT
+  packs:
+  - body: {fileID: 2083449847, guid: 597390d7084e4034ebd62a2983e380a1, type: 3}
+    leftLightCover: {fileID: 0}
+    rightLightCover: {fileID: 0}
+  - body: {fileID: 1477436018, guid: 597390d7084e4034ebd62a2983e380a1, type: 3}
+    leftLightCover: {fileID: 0}
+    rightLightCover: {fileID: 0}
+  - body: {fileID: -1244099727, guid: 875fc016a31d0964da1312b0be00cbf1, type: 3}
+    leftLightCover: {fileID: 0}
+    rightLightCover: {fileID: 0}
+  maxVelocity: 2.5
+  maxTurningVelocity: 2
+  maxAcceleration: 2
+  normalAcceleration: 1
+  turningAcceleration: 1
+  mass: 12
+  gap: 0.7
+  prefab: {fileID: 2330733194361225631, guid: 1191ce72b99b93640b957a9eb0e4c3c7, type: 3}
