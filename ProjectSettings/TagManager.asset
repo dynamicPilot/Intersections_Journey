@@ -14,6 +14,7 @@ TagManager:
   - DirectionTrigger
   - Train
   - ZoneTrigger
+  - AudioControl
   layers:
   - Default
   - TransparentFX
@@ -37,7 +38,7 @@ TagManager:
   - PlayerState
   - Locations
   - Trains&Others
-  - 
+  - Audio&Sounds
   - 
   - 
   - 

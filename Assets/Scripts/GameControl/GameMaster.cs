@@ -113,7 +113,22 @@ public class GameMaster : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        int getNextLevelIndexInLocation = level.Location.Levels.IndexOf(level) + 1;
+        Logging.Log("GameMaster: level index is " + getNextLevelIndexInLocation);
 
+        // get next scene name
+        if (getNextLevelIndexInLocation > 0 && 
+            getNextLevelIndexInLocation < level.Location.Levels.Count)
+        {
+            Level nextLevel = level.Location.Levels[getNextLevelIndexInLocation];
+            playerState.SetCurrentLevel(nextLevel);
+            loadNextSceneForLevel.LoadSceneByName(nextLevel.CrossSceneName);
+            
+        }
+        else
+        {
+            BackToMainMenu();
+        }
     }
 
     public void OpenGameOverMenu()

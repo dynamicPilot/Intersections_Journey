@@ -6538,7 +6538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7527028676296164210, guid: f422e2954f796464480e8f8f7d5ff963, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameMaster, Assembly-CSharp
+      value: GameMaster, Stuff
       objectReference: {fileID: 0}
     - target: {fileID: 7527028676296164210, guid: f422e2954f796464480e8f8f7d5ff963, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

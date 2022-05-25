@@ -7,6 +7,7 @@ public class ButtonEffect : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     [Header("Settings")]
     [SerializeField] private Vector3 pointerDownScale = new Vector3(0.95f, 0.95f, 0.95f);
     [SerializeField] private Vector3 pointerEnterScale = new Vector3(1.05f, 1.05f, 1.05f);
+    [SerializeField] private int clickSoundIndex = 0;
     //[SerializeField] private Color pointerDownColor;
     //[SerializeField] private Color pointerDownSignColor;
     //[SerializeField] private int clickSoundIndex = 0;
@@ -16,6 +17,9 @@ public class ButtonEffect : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     //[SerializeField] private bool needColorChange;
     //[SerializeField] private bool needSignColorChange;
     [SerializeField] private bool needClickSound = false;
+
+    [Header("Scripts")]
+    [SerializeField] private AudioControl audioControl;
 
     //[Header("UI Elements")]
     //[SerializeField] private Image image;
@@ -83,13 +87,7 @@ public class ButtonEffect : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (needClickSound)
-        {
-            //if (audioControl == null) audioControl = AudioControl.Instance;
-
-            ////Debug.Log("SimpleButton: click sound");
-            //audioControl.PlayClickSound(clickSoundIndex);
-        }
+        if (needClickSound && audioControl != null) audioControl.PlaySound(clickSoundIndex);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
