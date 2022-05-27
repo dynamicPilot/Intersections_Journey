@@ -351,7 +351,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &14288516
 GameObject:
@@ -4776,7 +4776,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &420126806
 MonoBehaviour:
@@ -10527,9 +10527,6 @@ MonoBehaviour:
   pointerDownScale: {x: 0.95, y: 0.95, z: 0.95}
   pointerEnterScale: {x: 1.05, y: 1.05, z: 1.05}
   clickSoundIndex: 0
-  needScaleChange: 1
-  needClickSound: 1
-  audioControl: {fileID: 1427843441}
 --- !u!1 &942350840
 GameObject:
   m_ObjectHideFlags: 0
@@ -13069,7 +13066,7 @@ Transform:
   - {fileID: 371577042}
   - {fileID: 1501013245}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1123716884
 GameObject:
@@ -15563,7 +15560,7 @@ Transform:
   - {fileID: 143556139}
   - {fileID: 1292595555}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1327010314
 GameObject:
@@ -15973,7 +15970,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1346824387
 GameObject:
@@ -16899,12 +16896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa0a354560e5d840bd3571e97196e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundsSource: {fileID: 442376609}
-  sounds:
-  - soundName: defaultClick
-    clip: {fileID: 8300000, guid: 95bf1b852f20e9f49a275be0401075ce, type: 3}
-    isLoop: 0
-    defaultVolume: 0.7
+  source: {fileID: 442376609}
+  collection: {fileID: 11400000, guid: 8fe43441b5e6f6e4a8657b2aa79fe621, type: 2}
 --- !u!114 &1427843441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16933,7 +16926,7 @@ Transform:
   m_Children:
   - {fileID: 442376608}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1449908983
 GameObject:
@@ -17335,7 +17328,7 @@ Transform:
   - {fileID: 326574896}
   - {fileID: 338388522}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495476640
 GameObject:
@@ -18557,6 +18550,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618755263}
   m_CullTransparentMesh: 1
+--- !u!1 &1626698843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1626698845}
+  - component: {fileID: 1626698844}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1626698844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626698843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7227db5f76cfd1b40b051d348084bfe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundsPlayer: {fileID: 1427843440}
+--- !u!4 &1626698845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626698843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1279.9939, y: 757.79865, z: -0.0038487655}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1651131747
 GameObject:
   m_ObjectHideFlags: 0
@@ -21603,7 +21641,7 @@ RectTransform:
   - {fileID: 247287183}
   - {fileID: 641002419381793240}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -24778,9 +24816,6 @@ MonoBehaviour:
   pointerDownScale: {x: 0.95, y: 0.95, z: 0.95}
   pointerEnterScale: {x: 1.05, y: 1.05, z: 1.05}
   clickSoundIndex: 0
-  needScaleChange: 1
-  needClickSound: 1
-  audioControl: {fileID: 1427843441}
 --- !u!95 &5471056171647239477
 Animator:
   serializedVersion: 4
@@ -25550,9 +25585,6 @@ MonoBehaviour:
   pointerDownScale: {x: 0.95, y: 0.95, z: 0.95}
   pointerEnterScale: {x: 1.05, y: 1.05, z: 1.05}
   clickSoundIndex: 0
-  needScaleChange: 1
-  needClickSound: 1
-  audioControl: {fileID: 1427843441}
 --- !u!114 &9063137330356278154
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,3 +7,4 @@ public class VehicleSpritePack
     public Sprite leftLightCover;
     public Sprite rightLightCover;
 }
+

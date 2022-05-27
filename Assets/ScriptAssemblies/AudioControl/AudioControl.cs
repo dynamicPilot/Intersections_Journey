@@ -6,7 +6,7 @@ public class AudioControl : MonoBehaviour
     [SerializeField] private float defaultVolumeRate = 0.7f;
 
     [Header("Scripts")]
-    [SerializeField] private SoundsPlayerAndStorage soundsPlayer;
+    [SerializeField] private SoundsPlayer soundsPlayer;
 
     bool isMute = false;
 
@@ -19,13 +19,6 @@ public class AudioControl : MonoBehaviour
     {
         isMute = false;
         soundsPlayer.SetVolumeRate(defaultVolumeRate);
-    }
-
-    public void PlaySound(int index = 0)
-    {
-        if (isMute) return;
-
-        soundsPlayer.PlaySound(index);
     }
 
     public void TurnOnOffSound(bool _isMute, bool musicOnly = false)

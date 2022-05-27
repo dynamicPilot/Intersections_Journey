@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class SoundsPlayerAndStorage: MonoBehaviour
+public class SoundsPlayer: MonoBehaviour
 {
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource soundsSource;
+    [SerializeField] private AudioSource source;
 
     [Header("Sounds")]
-    [SerializeField] private Sound[] sounds;
+    [SerializeField] private SoundCollection collection;
 
     float volumeRate = 0f;
 
@@ -18,15 +18,16 @@ public class SoundsPlayerAndStorage: MonoBehaviour
 
     public void TurnOnOff(bool _isMute)
     {
-        soundsSource.mute = _isMute;
+        source.mute = _isMute;
     }
 
     public void PlaySound(int index)
     {
-        if (index > -1 || index < sounds.Length)
+        Sound sound = collection.GetSoundOfIndex(index);
+        if (sound != null)
         {
-            sounds[index].SetSource(soundsSource, volumeRate);
-            soundsSource.Play();
+            sound.SetSource(source, volumeRate);
+            source.Play();
         }
     }
 }

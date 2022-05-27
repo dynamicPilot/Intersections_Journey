@@ -52,11 +52,6 @@ public class MenusUIControl : MonoBehaviour
         panelsUI.SetEndLevelOrGameOverPanel(0, levelNumber, true);
     }
 
-    public void OpenPauseMenu()
-    {
-        pauseUI.StartPause();
-    }
-
     public void SetEndHour(int newEndHour)
     {
         endHour = newEndHour;

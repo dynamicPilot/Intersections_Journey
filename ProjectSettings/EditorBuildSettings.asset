@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: bc86ff780a7a2d74d995612d99c9f615
   - enabled: 1
     path: Assets/Scenes/X_cross.unity
-    guid: 4b486b3e69d13b64089824a0c99325e3
+    guid: 13eefcc4f43515c479b2cfe06f28a57b
   - enabled: 1
     path: Assets/Scenes/X_cross_V2.unity
     guid: 202f9d417caa7a74f810fa138ffe41e9
