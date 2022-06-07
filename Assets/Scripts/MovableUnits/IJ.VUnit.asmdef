@@ -1,0 +1,19 @@
+{
+    "name": "IJ.VUnit",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d1c270bae9624de43a423f30ff7f3192",
+        "GUID:c6ab062adcdd76848a6ad1cbabc60d40",
+        "GUID:126e358da9cd67345a7a3504b2fe14db",
+        "GUID:c1cec5c79fe0514419b5e012b1063885"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

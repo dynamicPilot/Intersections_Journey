@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingPanel: {fileID: 0}
-  mainMenuSceneName: MENU
+  config: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
 --- !u!4 &594682454
 Transform:
   m_ObjectHideFlags: 0
@@ -2726,8 +2726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerDownScale: {x: 0.95, y: 0.95, z: 0.95}
   pointerEnterScale: {x: 1.05, y: 1.05, z: 1.05}
-  needScaleChange: 1
-  needClickSound: 0
+  clickSoundIndex: 0
 --- !u!95 &8470792716847670564
 Animator:
   serializedVersion: 4

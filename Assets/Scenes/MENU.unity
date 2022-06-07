@@ -11905,7 +11905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingPanel: {fileID: 641002419381793241}
-  mainMenuSceneName: MENU
+  config: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
 --- !u!4 &1053323073
 Transform:
   m_ObjectHideFlags: 0
@@ -11950,13 +11950,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afae0c8b0faf0149a154f749537748f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  needUpdateScriptable: 0
+  needUnloadScriptables: 0
+  needLoadLevels: 0
+  indexesToLoad: 
   locations:
   - {fileID: 11400000, guid: 326fb69ab71ae1f48bdae272dada5dbc, type: 2}
   - {fileID: 11400000, guid: e3663a9fbf42dc1468e73356c5a5b4c9, type: 2}
   - {fileID: 11400000, guid: 9bf1c896764670043945bf58ce2fa386, type: 2}
   - {fileID: 11400000, guid: aceac277239524d4d98a7100fba75560, type: 2}
   levels:
-  - {fileID: 11400000, guid: 8b73526925469eb4fab16903dbe7f9de, type: 2}
+  - {fileID: 11400000, guid: 11e6cca3805f74a49995e87ac3183d76, type: 2}
   - {fileID: 11400000, guid: 68e8c0b5bf338524ea69485a706a2a14, type: 2}
   - {fileID: 11400000, guid: e74f8e1d4d4555143a4cf01cd1006624, type: 2}
   - {fileID: 11400000, guid: 74a934578855bae4e9aa1e3f917079da, type: 2}
@@ -11972,7 +11976,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a4ee57922aa99fe4587a36e618ad389c, type: 2}
   - {fileID: 11400000, guid: e4647bbab5c4d9b4b842a4776c37df7e, type: 2}
   - {fileID: 11400000, guid: 721f13a72d166164f8ee4a3c9654684b, type: 2}
-  needUpdateScriptable: 0
 --- !u!114 &1053323077
 MonoBehaviour:
   m_ObjectHideFlags: 0
