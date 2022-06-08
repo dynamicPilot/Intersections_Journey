@@ -1,35 +1,45 @@
+using AudioControls.Radios;
+using AudioControls.SoundPlayers;
 using UnityEngine;
+using Utilites.Configs;
 
-public class AudioControl : MonoBehaviour
+namespace AudioControls
 {
-    [Header("Settings")]
-    [SerializeField] private float defaultVolumeRate = 0.7f;
-
-    [Header("Scripts")]
-    [SerializeField] private SoundsPlayer soundsPlayer;
-
-    bool isMute = false;
-
-    private void Awake()
+    [RequireComponent(typeof(SoundsPlayer))]
+    public class AudioControl : MonoBehaviour
     {
-        SetAudio();
-    }
+        [Header("Settings")]
+        [SerializeField] private GameConfig _config;
 
-    public void SetAudio()
-    {
-        isMute = false;
-        soundsPlayer.SetVolumeRate(defaultVolumeRate);
-    }
+        [Header("Scripts")]
+        [SerializeField] private SoundsPlayer soundsPlayer;
 
-    public void TurnOnOffSound(bool _isMute, bool musicOnly = false)
-    {
-        // if music only --> radio control
+        private Radio _radio;
+        bool isMute = false;
 
-        // UI sounds
-        if (isMute != _isMute)
+        private void Awake()
         {
-            isMute = _isMute;
-            soundsPlayer.TurnOnOff(isMute);
+            SetAudio();
+        }
+
+        public void SetAudio()
+        {
+            isMute = false;
+            _radio = GameObject.FindGameObjectWithTag("Radio").GetComponent<Radio>();
+            soundsPlayer.SetVolumeRate(_config.DefaultVolume);
+        }
+
+        public void TurnOnOffSound(bool _isMute, bool musicOnly = false)
+        {
+            // if music only --> radio control
+
+            // UI sounds
+            if (isMute != _isMute)
+            {
+                isMute = _isMute;
+                soundsPlayer.TurnOnOff(isMute);
+            }
         }
     }
 }
+

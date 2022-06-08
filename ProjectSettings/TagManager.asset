@@ -15,6 +15,7 @@ TagManager:
   - Train
   - ZoneTrigger
   - AudioControl
+  - Radio
   layers:
   - Default
   - TransparentFX

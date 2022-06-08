@@ -1,3 +1,16 @@
 {
-	"name": "AudioControl"
+    "name": "AudioControl",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c6ab062adcdd76848a6ad1cbabc60d40"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
