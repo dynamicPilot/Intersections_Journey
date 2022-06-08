@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BeeleBus_purple
   m_EditorClassIdentifier: 
   body: {fileID: -1862480382, guid: 2c43f95482912814dad9fd2b711a8436, type: 3}
-  lightCover: {fileID: -1862480382, guid: 2c43f95482912814dad9fd2b711a8436, type: 3}
+  lightCover: {fileID: -1885550055, guid: 2c43f95482912814dad9fd2b711a8436, type: 3}

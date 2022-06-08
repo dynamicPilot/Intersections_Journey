@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 38709873}
   - component: {fileID: 38709876}
   - component: {fileID: 38709875}
+  - component: {fileID: 38709877}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -219,12 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 11400000, guid: 68e8c0b5bf338524ea69485a706a2a14, type: 2}
-  menusUIControl: {fileID: 1620319626}
   playerState: {fileID: 0}
-  levelControl: {fileID: 194348409}
-  cameraControl: {fileID: 519420030}
-  loadNextSceneForLevel: {fileID: 38709876}
-  dataSaveAndLoad: {fileID: 38709875}
 --- !u!4 &38709874
 Transform:
   m_ObjectHideFlags: 0
@@ -266,8 +262,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingPanel: {fileID: 392909085}
-  mainMenuSceneName: MENU
-  gameMaster: {fileID: 38709873}
+  config: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
+--- !u!114 &38709877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38709872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9726b05a83d7ad04cb43922d9200fe43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menusUIControl: {fileID: 1620319626}
+  _loadNextSceneForLevel: {fileID: 38709876}
+  _levelControl: {fileID: 194348409}
+  _cameraControl: {fileID: 519420030}
+  _dataSaveAndLoad: {fileID: 38709875}
 --- !u!1 &43290678
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,8 +690,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundsPlayer: {fileID: 0}
-  gameMaster: {fileID: 38709873}
-  pauseMenuUI: {fileID: 0}
+  _levelFlow: {fileID: 38709877}
+  pauseMenuUI: {fileID: 131375715}
 --- !u!4 &131375717
 Transform:
   m_ObjectHideFlags: 0
@@ -811,17 +823,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 815dddc4c26916c4b9c16c3611fd2ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelControl: {fileID: 194348409}
-  gameMaster: {fileID: 38709873}
   roadMarks: {fileID: 1810322810}
   valueToShowIndicator: 0.6
   aCoeff: -0.25
   bCoeff: 0.25
-  roadStates: 
-  unitsOnRoads: 
-  taxiUnitsOnRoads: 
-  roadTimers: []
-  maxAdditionalTimeToWaitByRoad: []
+  roadsInfo:
+    unitsOnRoads: 
+  roadsTimers:
+    roadTimers: []
+    maxTimeByRoad: []
+    maxAdditionalTimeToWaitByRoad: []
+    roadsWithAllertOn: 
+  roadIndicators:
+    roadMarks: {fileID: 0}
+    marksState: 
+  timer:
+    indicatorStates: 
+    indicatorValues: []
 --- !u!1 &194348408
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,12 +874,13 @@ MonoBehaviour:
   timeControl: {fileID: 194348411}
   vehicleCreatorControl: {fileID: 1611361324}
   roadsManager: {fileID: 152586637}
-  gameMaster: {fileID: 38709873}
+  _levelFlow: {fileID: 38709877}
   repairSitesControl: {fileID: 2004227387}
   sceneViewControl: {fileID: 194348412}
   trafficLightsControl: {fileID: 1038193768}
   wayPoints: {fileID: 1038193767}
   startPointPacksControl: {fileID: 1038193769}
+  vehicleManager: {fileID: 1611361323}
 --- !u!4 &194348410
 Transform:
   m_ObjectHideFlags: 0
@@ -889,16 +908,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5469fcaf75804d48ad165390b7c22b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMinutesPerRealSecond: 7.5
-  secondBetweenTimeUpdate: 2
-  endHour: 12
+  config: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
   vehicleCreatorControl: {fileID: 1611361324}
   menusUIControl: {fileID: 1620319626}
-  gameMaster: {fileID: 38709873}
   repairSitesControl: {fileID: 2004227387}
-  hour: 0
-  minuteIntervalsIndex: 0
-  minuteIntervals: 
 --- !u!114 &194348412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2166,7 +2179,7 @@ MonoBehaviour:
   endSize: 5
   levelStartPoint: {x: 0, y: 2.7}
   inputControl: {fileID: 2001801664}
-  gameMaster: {fileID: 38709873}
+  _levelFlow: {fileID: 38709877}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -5573,32 +5586,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804c80ec4afac6b4bb07a873fbc37dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vehicleContainer: {fileID: 1611361321}
-  vehicles:
-  - {fileID: 11400000, guid: 248bb9d39d339ec45a443988c5fa347c, type: 2}
-  - {fileID: 11400000, guid: a05a49ed5765d1844b487e06c6ab7c94, type: 2}
-  - {fileID: 11400000, guid: 70b94539d48d3ba4c8ce72d98547265b, type: 2}
-  - {fileID: 11400000, guid: d95d018392bb52b47b1bc6269dd1d177, type: 2}
-  - {fileID: 11400000, guid: f0a0d80582176d643a8a87ec8efb5cf7, type: 2}
-  - {fileID: 11400000, guid: af142e1033a1e1a4b89f25f7700bfbe3, type: 2}
-  - {fileID: 11400000, guid: fc8a7d892934ff24b8ebd4ae0157acea, type: 2}
-  - {fileID: 11400000, guid: 7914a3444170704408cdcce9ad6d405c, type: 2}
-  - {fileID: 11400000, guid: 06679c2269f134e4b82328e9c590dc13, type: 2}
-  - {fileID: 11400000, guid: b4fce290f4ba4544cba11ff620319cbc, type: 2}
-  - {fileID: 11400000, guid: d1a09b801f875384b91fcb542a934462, type: 2}
-  - {fileID: 11400000, guid: fec47bd1a3a63c342af607240dbed638, type: 2}
-  - {fileID: 11400000, guid: a4b8487c8a1e45e4fb2ff24cb8f2958d, type: 2}
-  - {fileID: 11400000, guid: 1f9d84e3b3e6e5648bc53cd0c0cd4c33, type: 2}
-  - {fileID: 11400000, guid: bec0935d79dcd3a408813d94c02f6126, type: 2}
-  - {fileID: 11400000, guid: dad7166a45693fe4083ee443d38024c6, type: 2}
+  container: {fileID: 1611361321}
+  units: []
   wayCreator: {fileID: 152586636}
   vehicleManager: {fileID: 1611361323}
   roadsManager: {fileID: 152586637}
-  timeDeltsToSpawnCar: 2
-  totalNumber: 2
-  timePointsForRepairCars: []
-  indexesOfRepairSiteToRepairCars: 
-  needRepaireCar: 0
+  repairSitesControl: {fileID: 0}
+  _needRepaireCar: 0
 --- !u!114 &1611361323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5611,11 +5605,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13e4bbcb2b5bc94ea5a5ef26dd66768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelControl: {fileID: 194348409}
   roadsManager: {fileID: 152586637}
   menusUIControl: {fileID: 1620319626}
   crashEffects: {fileID: 739574426}
-  crashCounter: 0
 --- !u!114 &1611361324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5767,7 +5759,7 @@ PrefabInstance:
     - target: {fileID: 7856974198082352689, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
       propertyPath: pauseUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 131375715}
     - target: {fileID: 7856974198082352689, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
       propertyPath: panelsUI
       value: 
@@ -6779,7 +6771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca9514790e63104fb74280f3f31a7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraSpeed: 15
+  config: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
   cameraSizeMin: 3
   cameraSizeMax: 12.5
   inputControl: {fileID: 2001801664}
@@ -6825,8 +6817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0daadbea702d194f9f2738bfc0c5140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeThreshold: 0.2
-  distanceMultiplier: 0.01
+  config: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
   horizontal: 1
   vertical: 1
   leftBorder: -23.5
@@ -6866,10 +6857,6 @@ MonoBehaviour:
   repairSites:
   - {fileID: 811257919}
   needRepairCarButton: {fileID: 1620319628}
-  timeToRepair: 2
-  vehicleCreator: {fileID: 1611361322}
-  sitesToBeRepaired: 
-  sitesWaitingForCar: 
   needRepairSiteControl: 0
 --- !u!4 &2004227388
 Transform:

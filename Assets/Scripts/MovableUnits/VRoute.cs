@@ -24,7 +24,7 @@ public class VRoute : IGetPathPointAndMove, IStartAndEndPathPoints
 
     private bool isLine = true;
     private bool isInTurn = false;
-
+    private bool roadEnds = false;
     public RouterComponent routerComponent;
 
     public delegate void PathsEnded();
@@ -34,6 +34,7 @@ public class VRoute : IGetPathPointAndMove, IStartAndEndPathPoints
         paths = _paths;
         routerComponent = _routerComponent;
         pathPartIndex = -1;
+        roadEnds = false;
         NewPathsPart();
     }
 
@@ -65,7 +66,7 @@ public class VRoute : IGetPathPointAndMove, IStartAndEndPathPoints
 
     Vector3 GetPathPoint(float distance, Vector3 position)
     {
-        if (distance == 0) return position;
+        if (distance == 0 || roadEnds) return position;
         t += distance / paths[pathPartIndex].CurveLength;
 
         // move to endPoint
@@ -102,6 +103,7 @@ public class VRoute : IGetPathPointAndMove, IStartAndEndPathPoints
 
         if (pathPartIndex >= paths.Count)
         {
+            roadEnds = true;
             if (OnPathEnded != null) OnPathEnded.Invoke();
             return;
         }

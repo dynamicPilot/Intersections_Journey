@@ -18,13 +18,11 @@ public class ObjectsDetector
         TrafficLight trafficLight = collision.gameObject.GetComponent<TrafficLight>();
         if (trafficLight == null)
         {
-            Logging.Log("ObjcetDetector: no trafficLightObject ");
             return false;
         }
         else if (!trafficLight.CheckPointNumber(_routerInfo.StartPathPoints()) &&
             !trafficLight.CheckPointNumber(_routerInfo.EndPathPoints()))
         {
-            Logging.Log("ObjcetDetector: points are not suitable " + _routerInfo.StartPathPoints() + " " + _routerInfo.EndPathPoints());
             return false;
         }
 
