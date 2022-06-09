@@ -35,11 +35,11 @@ namespace Utilites.Configs
         [SerializeField] private float _cameraSpeed = 15f;
         public float CameraSpeed { get => _cameraSpeed; }
 
-        [Header("Audio Control")]
-        [SerializeField] private float _defaultVolume = 0.7f;
-        public float DefaultVolume { get => _defaultVolume; }
-        [SerializeField] private float _effectsPeriod = 2f;
-        public float EffectsPeriod { get => _effectsPeriod; }
+        //[Header("Audio Control")]
+        //[SerializeField] private float _defaultVolume = 0.7f;
+        //public float DefaultVolume { get => _defaultVolume; }
+        //[SerializeField] private float _effectsPeriod = 2f;
+        //public float EffectsPeriod { get => _effectsPeriod; }
     }
 }
 

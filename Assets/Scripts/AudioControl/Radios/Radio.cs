@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Utilites.Configs;
 
@@ -8,7 +6,7 @@ namespace AudioControls.Radios
     //[DefaultExecutionOrder(-2)]
     public class Radio : MonoBehaviour
     {
-        [SerializeField] private GameConfig _config;
+        [SerializeField] private AudioConfig _config;
 
         private AudioSource _source;
         float _volumeRate = 0.7f;

@@ -6,19 +6,22 @@ using Utilites.Configs;
 namespace AudioControls
 {
     [RequireComponent(typeof(SoundsPlayer))]
+    [RequireComponent(typeof(SnapshotTransition))]
     public class AudioControl : MonoBehaviour
     {
         [Header("Settings")]
-        [SerializeField] private GameConfig _config;
-
-        [Header("Scripts")]
-        [SerializeField] private SoundsPlayer soundsPlayer;
-
+        [SerializeField] private AudioConfig _config;
+        
+        private SoundsPlayer _soundsPlayer;
+        //private SnapshotTransition _snapshotTransition;
         private Radio _radio;
+
         bool isMute = false;
 
         private void Awake()
         {
+            _soundsPlayer = GetComponent<SoundsPlayer>();
+            //_snapshotTransition = GetComponent<SnapshotTransition>();
             SetAudio();
         }
 
@@ -26,7 +29,7 @@ namespace AudioControls
         {
             isMute = false;
             _radio = GameObject.FindGameObjectWithTag("Radio").GetComponent<Radio>();
-            soundsPlayer.SetVolumeRate(_config.DefaultVolume);
+            _soundsPlayer.SetVolumeRate(_config.DefaultVolume);
         }
 
         public void TurnOnOffSound(bool _isMute, bool musicOnly = false)
@@ -37,7 +40,7 @@ namespace AudioControls
             if (isMute != _isMute)
             {
                 isMute = _isMute;
-                soundsPlayer.TurnOnOff(isMute);
+                _soundsPlayer.TurnOnOff(isMute);
             }
         }
     }

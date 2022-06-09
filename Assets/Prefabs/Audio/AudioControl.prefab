@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3114535957060318175}
   - component: {fileID: 3114535957060318172}
   - component: {fileID: 3114535957060318173}
+  - component: {fileID: 2962548678710438222}
   m_Layer: 22
   m_Name: AudioControl
   m_TagString: AudioControl
@@ -46,8 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32e4a14523700ce4dba5bb020b267c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _config: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
-  soundsPlayer: {fileID: 3114535957060318173}
+  _config: {fileID: 11400000, guid: e25eacf65a0bcae409a2ed400ffc539d, type: 2}
 --- !u!114 &3114535957060318173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +62,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collection: {fileID: 11400000, guid: 8fe43441b5e6f6e4a8657b2aa79fe621, type: 2}
   _source: {fileID: 3114535958381853452}
+--- !u!114 &2962548678710438222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3114535957060318147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac5131cd30bef9448b1b6a28c0620ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _config: {fileID: 11400000, guid: e25eacf65a0bcae409a2ed400ffc539d, type: 2}
 --- !u!1 &3114535958381853490
 GameObject:
   m_ObjectHideFlags: 0
