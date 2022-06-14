@@ -1,41 +1,27 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class LocationOpeningUI : MonoBehaviour
 {
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject[] panelsForLocations;
+    [SerializeField] private PlayableDirector _director;
 
     [Header("Settings")]
-    [SerializeField] private float animationLength = 3f;
-
-    WaitForSeconds timer;
-    int activeIndex = -1;
-
-    private void Awake()
-    {
-        timer = new WaitForSeconds(animationLength);
-    }
+    [SerializeField] private PlayableAsset[] _assets;
 
     public void OpenLocationByIndex(int locationIndex)
     {
         if (locationIndex > panelsForLocations.Length - 1) return;
 
-        activeIndex = locationIndex;
-        panel.SetActive(true);
-        panelsForLocations[activeIndex].SetActive(true);
+        _director.playableAsset = _assets[locationIndex];
         StartCoroutine(MakeOpening());
     }
 
     IEnumerator MakeOpening()
     {
-        yield return timer;
-
-        // close all
-        panel.SetActive(false);
-
-        if (activeIndex > -1) panelsForLocations[activeIndex].SetActive(false);
-
+        _director.Play();
+        yield return _director.duration;
     }
 }

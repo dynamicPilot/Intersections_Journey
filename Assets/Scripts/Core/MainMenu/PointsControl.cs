@@ -1,13 +1,14 @@
 using UnityEngine;
 using TMPro;
+using IJ.Animations;
 
 public class PointsControl : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI pointsText;
-    [SerializeField] private Animator animator;
 
-    [Header("Scripts")]
+    [Header("Components")]
+    [SerializeField] private PopAndShakeAnimation _starAnimation;
     [SerializeField] private DataSaveAndLoad dataSaveAndLoad;
 
     private PlayerState playerState;
@@ -33,8 +34,7 @@ public class PointsControl : MonoBehaviour
     void UpdatePoints(int points)
     {
         pointsText.SetText(points.ToString());
-
-        animator.SetTrigger("OnChange");
+        _starAnimation.PopAndShake();
     }
 
     public bool HaveSomePoints(int amount)
