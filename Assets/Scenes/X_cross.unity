@@ -3282,6 +3282,7 @@ MonoBehaviour:
   additionalWayPointsContainer: {fileID: 1033022603}
   corrections: []
   points: []
+  _needSaveLocaly: 0
   paths:
   - startPointNumber: 0
     endPointNumber: 4

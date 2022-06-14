@@ -1,5 +1,6 @@
 using UnityEngine;
 using RepairSites;
+using IJ.Core.Ways;
 
 public class LevelControl : MonoBehaviour
 {

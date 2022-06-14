@@ -1,4 +1,4 @@
-using MovableUnits.MediatorAndComponents;
+using IJ.MovableUnits.MediatorAndComponents;
 using UnityEngine;
 
 [System.Serializable]

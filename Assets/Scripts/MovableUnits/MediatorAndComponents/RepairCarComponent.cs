@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MovableUnits.MediatorAndComponents
+namespace IJ.MovableUnits.MediatorAndComponents
 {
 
     public interface IHoldRepairCarComponent

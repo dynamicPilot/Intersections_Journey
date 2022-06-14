@@ -1,6 +1,7 @@
 using RepairSites;
 using System.Collections.Generic;
 using UnityEngine;
+using IJ.Utilities;
 
 public interface IInstantiatePrefab
 {

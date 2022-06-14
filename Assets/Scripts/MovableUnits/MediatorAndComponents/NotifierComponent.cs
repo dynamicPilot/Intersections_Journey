@@ -1,4 +1,4 @@
-namespace MovableUnits.MediatorAndComponents
+namespace IJ.MovableUnits.MediatorAndComponents
 {
     public class NotifierComponent
     {

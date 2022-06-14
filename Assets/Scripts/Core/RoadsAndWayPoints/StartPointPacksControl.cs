@@ -1,3 +1,4 @@
+using IJ.Core.Ways;
 using UnityEngine;
 
 public class StartPointPacksControl : MonoBehaviour

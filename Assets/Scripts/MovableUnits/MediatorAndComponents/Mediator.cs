@@ -1,4 +1,6 @@
-namespace MovableUnits.MediatorAndComponents
+using IJ.Utilities;
+
+namespace IJ.MovableUnits.MediatorAndComponents
 {
     public enum STATE { inStop, inRestart, startTurn, endTurn, inEnterRSite, inExitRSite }
 

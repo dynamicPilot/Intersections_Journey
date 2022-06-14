@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using MovableUnits.MediatorAndComponents;
+using IJ.MovableUnits.MediatorAndComponents;
 using UnityEngine;
-
+using IJ.Utilities;
 public interface IGetPathPointAndMove
 {
     public abstract void GetPathPointToMove(IMovable movable);

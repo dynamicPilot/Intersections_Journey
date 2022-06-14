@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using RepairSites;
 using UnityEngine;
+using IJ.Utilities;
 
 public interface IEmergencyUnit
 {
