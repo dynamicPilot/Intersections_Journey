@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 38709876}
   - component: {fileID: 38709875}
   m_Layer: 0
-  m_Name: GameMaster
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -219,8 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91dbc7232444184aa780a233a99f6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: {fileID: 11400000, guid: 8b73526925469eb4fab16903dbe7f9de, type: 2}
-  playerState: {fileID: 0}
+  _level: {fileID: 0}
 --- !u!4 &38709874
 Transform:
   m_ObjectHideFlags: 0
@@ -275,11 +274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9726b05a83d7ad04cb43922d9200fe43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _loadNextScene: {fileID: 38709876}
+  _dataSaveAndLoad: {fileID: 38709875}
   _menusUIControl: {fileID: 1620319626}
-  _loadNextSceneForLevel: {fileID: 38709876}
   _levelControl: {fileID: 194348409}
   _cameraControl: {fileID: 519420030}
-  _dataSaveAndLoad: {fileID: 38709875}
 --- !u!1 &43290678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,6 +1889,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -1922,6 +1922,7 @@ MonoBehaviour:
   effectTotalTime: 1
   endSize: 5
   levelStartPoint: {x: 0, y: 2.7}
+  _effects: {fileID: 519420033}
   inputControl: {fileID: 2001801664}
   _levelFlow: {fileID: 38709877}
 --- !u!20 &519420031
@@ -1982,6 +1983,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e31322074c7447d4b8232711e05f4aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &566183355 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2590814702224017361, guid: da4fac35885b070408b0f80eb1de909e, type: 3}

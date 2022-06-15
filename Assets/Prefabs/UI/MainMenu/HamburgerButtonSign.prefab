@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9194850561899681544}
-  - component: {fileID: 4142262203693490779}
+  - component: {fileID: 1401852760772507926}
   m_Layer: 5
   m_Name: HamburgerButtonSign
   m_TagString: Untagged
@@ -40,26 +40,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &4142262203693490779
-Animator:
-  serializedVersion: 4
+--- !u!114 &1401852760772507926
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4142262203693490788}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e6eee2dd25d9bc4a9d2a55453872cc8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c610cad2035bfbd44baf7014d08ed8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stripe0: {fileID: 5083386576696116598}
+  _stripe1: {fileID: 5083386577980048469}
+  _stripe2: {fileID: 5083386577389486297}
+  _duration: 1
 --- !u!1 &5083386576696116599
 GameObject:
   m_ObjectHideFlags: 0

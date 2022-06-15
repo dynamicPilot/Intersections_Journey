@@ -1,9 +1,8 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadNextSceneForLevel : LoadNextScene
 {
-    public void LoadAdditiveSceneAsync(string newSceneName, GameMaster gameMaster)
+    public void LoadAdditiveSceneAsync(string newSceneName, LevelGameManager gameMaster)
     {
         SceneManager.LoadSceneAsync(newSceneName, LoadSceneMode.Additive).completed += (asyncHandler) =>
         {

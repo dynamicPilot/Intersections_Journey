@@ -3,7 +3,11 @@ using UnityEngine;
 
 namespace IJ.Animations
 {
-    public class PopAndShakeAnimation : MonoBehaviour
+    public interface ISingleActionAnimation
+    {
+        public void MakeAction();
+    }
+    public class PopAndShakeAnimation : MonoBehaviour, ISingleActionAnimation
     {
         [SerializeField] private RectTransform _transform;
 
@@ -19,7 +23,13 @@ namespace IJ.Animations
             _turnInterval = _shakeInterval / 3f;
         }
 
-        public void PopAndShake()
+        private void OnDestroy()
+        {
+            DOTween.KillAll();
+        }
+
+
+        public void MakeAction()
         {
             Sequence scaleAndShakeSequence = DOTween.Sequence();
 

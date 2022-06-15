@@ -15,6 +15,12 @@ namespace IJ.Animations
             SwingAnimation();
         }
 
+        private void OnDestroy()
+        {
+            DOTween.KillAll();
+        }
+
+
         void SwingAnimation()
         {
             Sequence sequence = DOTween.Sequence();

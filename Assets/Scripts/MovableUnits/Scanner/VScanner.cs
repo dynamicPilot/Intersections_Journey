@@ -5,6 +5,7 @@ public enum DIRECTION { nord, west, south, east, none, south_east, nord_east, no
 public interface IDirectionShearer
 {
     public abstract DIRECTION GetDirection();
+    public abstract void SetDirection(DIRECTION direction, int roadStartPoint, bool needDirectionControl);
     public abstract int GetRoadStartPoint();
     public float GetTotalTimeOnRoad();
     public void SetRoadStartPointNumber(int number = -1);
@@ -38,13 +39,13 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
     public IPositionShearer PositionShearer { get => _positionShearer; }
 
     private ObjectsDetector detector;
-    private DIRECTION direction = DIRECTION.none;
+    private DIRECTION _direction = DIRECTION.none;
 
-    private bool isIntoCrossroads;
+    private bool _isIntoCrossroads;
     private bool haveTrafficLightToFollow = false;
-    private bool needUpdateTotalTime = true;
+    private bool _needUpdateTotalTime = true;
     
-    private int roadStartPointNumber = -1;
+    private int _roadStartPointNumber = -1;
     [SerializeField] private float totalTimeOnRoad = 0f;
 
     public event IDirectionShearer.DirectionControlChange OnDirectionControlChangeFromNone;
@@ -71,7 +72,7 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
         haveTrafficLightToFollow = false;
         boxCollider.enabled = true;
         polygonCollider.enabled = true;
-        needUpdateTotalTime = true;
+        _needUpdateTotalTime = true;
 
         totalTimeOnRoad = 0;
     }
@@ -80,15 +81,15 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
     {
         boxCollider.enabled = false;
         polygonCollider.enabled = false;
-        isIntoCrossroads = false;
-        needUpdateTotalTime = false;
-        direction = DIRECTION.none;
+        _isIntoCrossroads = false;
+        _needUpdateTotalTime = false;
+        _direction = DIRECTION.none;
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("TrafficLight") && !isIntoCrossroads && !haveTrafficLightToFollow)
+        if (collision.gameObject.CompareTag("TrafficLight") && !_isIntoCrossroads && !haveTrafficLightToFollow)
         {
             Logging.Log("VScanner: detectTrafficLight");
             haveTrafficLightToFollow = detector.DetectTrafficLight(collision);
@@ -96,12 +97,12 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
 
         if (collision is PolygonCollider2D && collision.gameObject.CompareTag("Car") && !isSelfTrain)
         {
-            detector.DetectCar(collision, direction);
+            detector.DetectCar(collision, _direction);
         }
 
         if (collision is PolygonCollider2D && collision.gameObject.CompareTag("Train"))
         {
-            detector.DetectTrain(collision, direction);
+            detector.DetectTrain(collision, _direction);
         }
     }
 
@@ -114,57 +115,58 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
 
         if (collision is PolygonCollider2D && collision.gameObject.CompareTag("Car") && !isSelfTrain)
         {
-            detector.UndetectCar(collision, direction);
+            detector.UndetectCar(collision, _direction);
         }
 
         if (collision is PolygonCollider2D && collision.gameObject.CompareTag("Train"))
         {
-            detector.UndetectTrain(collision, direction);
+            detector.UndetectTrain(collision, _direction);
         }
     }
-    public void ChangeDirection(DIRECTION _direction, int _roadStartPoint, bool _directionControl = false)
+
+    void ChangeDirection(DIRECTION direction, int roadStartPoint, bool directionControl = false)
     {
-        DIRECTION prevDirection = direction;
-        direction = _direction;
+        DIRECTION prevDirection = _direction;
+        _direction = direction;
 
         // nothing changes
-        if (direction == prevDirection && direction == DIRECTION.none) return;
+        if (_direction == prevDirection && _direction == DIRECTION.none) return;
 
         // new direction is not NONE -> check all vehicle and remove with another direction
-        if (direction != DIRECTION.none && prevDirection == DIRECTION.none)
+        if (_direction != DIRECTION.none && prevDirection == DIRECTION.none)
         {
             // new values
-            roadStartPointNumber = _roadStartPoint;
-            if (OnDirectionControlChangeFromNone != null) OnDirectionControlChangeFromNone.Invoke(_direction, _directionControl);
+            _roadStartPointNumber = roadStartPoint;
+            if (OnDirectionControlChangeFromNone != null) OnDirectionControlChangeFromNone.Invoke(direction, directionControl);
         }
         // new direction is NONE but prev is not
-        else if (prevDirection != DIRECTION.none && direction == DIRECTION.none)
+        else if (prevDirection != DIRECTION.none && _direction == DIRECTION.none)
         {
-            roadStartPointNumber = -1;
-            if (OnDirectionControlChangeToNone != null) OnDirectionControlChangeToNone.Invoke(_direction, false);
+            _roadStartPointNumber = -1;
+            if (OnDirectionControlChangeToNone != null) OnDirectionControlChangeToNone.Invoke(direction, false);
         }
     }
 
     public DIRECTION GetDirection()
     {
-        return direction;
+        return _direction;
     }
 
     public void CrossBorder()
     {
-        isIntoCrossroads = !isIntoCrossroads;
-        needUpdateTotalTime = false;
+        _isIntoCrossroads = !_isIntoCrossroads;
+        _needUpdateTotalTime = false;
     }
 
     public bool UpdateTotalTime(float deltaT)
     {
         totalTimeOnRoad += deltaT;
-        return needUpdateTotalTime;
+        return _needUpdateTotalTime;
     }
 
     public int GetRoadStartPoint()
     {
-        return roadStartPointNumber;
+        return _roadStartPointNumber;
     }
 
     public float GetTotalTimeOnRoad()
@@ -174,6 +176,11 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
 
     public void SetRoadStartPointNumber(int number = -1)
     {
-        roadStartPointNumber = number;
+        _roadStartPointNumber = number;
+    }
+
+    public void SetDirection(DIRECTION direction, int roadStartPoint, bool needDirectionControl)
+    {
+        ChangeDirection(direction, roadStartPoint, needDirectionControl);
     }
 }

@@ -5,6 +5,7 @@ public interface IPositionShearer
     public abstract Vector3 GetPosition();
     public abstract Vector2 GetSize();
     public abstract float GetGap();
+    public abstract IDirectionShearer GetDirectionShearer();
 
 }
 
@@ -24,6 +25,12 @@ public class VPositionShearer : IPositionShearer
         _collider = collider;
 
     }
+
+    public IDirectionShearer GetDirectionShearer()
+    {
+        return _transform.GetComponent<VScanner>() as IDirectionShearer;
+    }
+
     public float GetGap()
     {
         return _gap + _size.y;

@@ -139,6 +139,7 @@ public class VScannerUnitsInfo: IGetDistanceInfo, IHoldScannerUnitsInfo
             if (newDistance == -100f) continue;
             else if (newDistance > _maxDistanceToDetectUnit)
             {
+                Logging.Log("....remove due to distance " + newDistance + " index is " + i);
                 removeDueToDistance.Add(i);
                 continue;
             }

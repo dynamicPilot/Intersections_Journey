@@ -30,12 +30,13 @@ public static class ScannerUtilities
         return newDistance;
     }
 
-    public static void RemoveUnitsAtIndexes(List<int> indexed, ref List<IPositionShearer> positions, ref List<IVelocityShearer> velocities)
+    public static void RemoveUnitsAtIndexes(List<int> indexes, ref List<IPositionShearer> positions, ref List<IVelocityShearer> velocities)
     {
-        for (int i = 0; i < indexed.Count; i++)
+        for (int i = indexes.Count - 1; i >=0; i--)
         {
-            positions.RemoveAt(i);
-            velocities.RemoveAt(i);
+            Logging.Log("Try to remove at " + indexes[i] + " positions count " + positions.Count + " velocities count " + velocities.Count);
+            positions.RemoveAt(indexes[i]);
+            velocities.RemoveAt(indexes[i]);
         }
     }
 
@@ -61,7 +62,7 @@ public static class ScannerUtilities
         List<int> indexesToRemove = new List<int>();
         for (int i = 0; i < positions.Count; i++)
         {
-            IDirectionShearer unitDirection = positions[i] as IDirectionShearer;
+            IDirectionShearer unitDirection = positions[i].GetDirectionShearer();
             if (unitDirection.GetDirection() != direction) indexesToRemove.Add(i);
         }
         RemoveUnitsAtIndexes(indexesToRemove, ref positions, ref velocities);

@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 15
+  maxDistanceToDetect: 25
   isSelfTrain: 0
   _trafficLightInfo:
     _trafficLightToFollow: {fileID: 0}

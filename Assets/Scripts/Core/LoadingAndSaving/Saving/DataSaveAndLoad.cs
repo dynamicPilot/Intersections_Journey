@@ -35,14 +35,15 @@ public class DataSaveAndLoad : MonoBehaviour
         PlayerData data = SaveSystem.LoadData();
 
         playerState.CreateAllLists(levelsAndLocationsManager.Levels, levelsAndLocationsManager.Locations);
-        //HaveNoData(playerState);
+        playerState.ResetPoints();
+
         if (data == null) HaveNoData(playerState);
         else ParseData(data, playerState);
     }
 
     void ParseData(PlayerData data, PlayerState playerState)
     {
-        // parsing save file
+        Logging.Log("Start Parsing File");
         for (int i = 0; i < data.LevelPoints.Length; i++)
         {
             Level level = levelsAndLocationsManager.GetLevelByIndex(i);
