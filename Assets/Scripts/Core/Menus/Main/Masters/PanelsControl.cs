@@ -32,13 +32,13 @@ namespace IJ.Core.Menus.MainMenu
         {
             _map.gameObject.SetActive(false);
             _levels.gameObject.SetActive(true);
-            _levels.OpenLocationLevels(location);
+            _levels.OpenLocationPage(location);
         }
 
         public void BackToMenu()
         {
-            _levels.gameObject.SetActive(false);
             _map.gameObject.SetActive(true);
+            _levels.CloseLocationPage();           
         }
 
         public void TransitToLevelScene()

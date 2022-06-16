@@ -1,3 +1,4 @@
+using IJ.MovableUnits.MediatorAndComponents;
 using System.Collections;
 using UnityEngine;
 using Utilites.Configs;
@@ -8,16 +9,14 @@ public class VCrasher : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private GameConfig _gameConfig;
 
-    private float stayInCrashTimer = 2f;
-    private float forceMultiplier = 1f;
-    private Rigidbody2D body;
-    private VEffects effectsControl;
+    private float _stayInCrashTimer = 2f;
+    private float _forceMultiplier = 1f;
 
-    //private bool isSimulating = false;
-    //public bool IsSimulating { set => isSimulating = value; }
-    private bool inCrash = false;
+    private Rigidbody2D _body;
+    private CrasherComponent _component;
 
-    // event
+    private bool _inCrash = false;
+
     public delegate void StartCollision(Vector3 contactPosition, int otherIndex);
     public event StartCollision OnStartCollision;
 
@@ -29,30 +28,33 @@ public class VCrasher : MonoBehaviour
 
     private void Awake()
     {
-        body = GetComponent<Rigidbody2D>();
-        effectsControl = GetComponent<VEffects>();
+        OnAwake();
+    }
 
-        stayInCrashTimer = _gameConfig.StayInCrashTimer;
-        forceMultiplier = _gameConfig.CrashForce;
+    private protected void OnAwake()
+    {
+        _body = GetComponent<Rigidbody2D>();
+
+        _stayInCrashTimer = _gameConfig.StayInCrashTimer;
+        _forceMultiplier = _gameConfig.CrashForce;
+    }
+
+    public void SetCrasherComponent(CrasherComponent component)
+    {
+        _component = component;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (!isSimulating) return;
         if (collision.gameObject.CompareTag("Car"))
         {
             CollisionWithCar(collision, collision.contacts[0].point);
         }
     }
 
-    //private void OnCollisionExit2D(Collision2D collision)
-    //{
-    //    if (!inCrash && !isSimulating) isSimulating = true;
-    //}
-
     public virtual void CollisionWithCar(Collision2D collision, Vector3 contactPosition)
     {
-        inCrash = true;
+        _inCrash = true;
         Logging.Log("Crash!!");
         collision.gameObject.GetComponent<VCrasher>().MovingInCollision(contactPosition - transform.position);
 
@@ -63,10 +65,8 @@ public class VCrasher : MonoBehaviour
 
     public void MovingInCollision(Vector3 pushVector)
     {
-        //if (isSimulating) isSimulating = false;
-
-        body.AddForce(pushVector.normalized * forceMultiplier, ForceMode2D.Impulse);
-        inCrash = true;
+        _body.AddForce(pushVector.normalized * _forceMultiplier, ForceMode2D.Impulse);
+        _inCrash = true;
 
         if (OnStartCollisionNotify != null) OnStartCollisionNotify.Invoke();
         InCrashTimer();
@@ -74,24 +74,22 @@ public class VCrasher : MonoBehaviour
 
     void InCrashTimer()
     {
-        if (!inCrash) return;       
-        effectsControl.MakeWheelSmoke();
-
-        //if (type == TYPE.emergencyCar) effectsControl.HideMarkAndTimerForTimer();
-        //needTimer = false;
+        if (!_inCrash) return;
+        _component.DoInEnterCrash();
 
         StartCoroutine(StayInCrash());
     }
 
     IEnumerator StayInCrash()
     {
-        yield return new WaitForSeconds(stayInCrashTimer);
+        yield return new WaitForSeconds(_stayInCrashTimer);
         AfterCrash();
     }
 
     public virtual void AfterCrash()
     {
-        inCrash = false;
+        _inCrash = false;
+        _component.DoInExitCrash();
         if (OnEndCollision != null) OnEndCollision.Invoke();
     }
 }

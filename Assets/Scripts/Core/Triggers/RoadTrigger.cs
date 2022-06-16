@@ -7,6 +7,7 @@ public class RoadTrigger : Trigger
         if ((collision.gameObject.CompareTag("Car") || collision.gameObject.CompareTag("Train")) && collision is PolygonCollider2D)
         {
             // use defaults arguments values -- do not need any actual values, because it is just the road state trigger
+            Logging.Log("Unit Passed Border!");
             VehiclePassTheBorder();
         }
     }

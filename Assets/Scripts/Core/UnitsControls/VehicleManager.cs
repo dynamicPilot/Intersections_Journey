@@ -85,7 +85,11 @@ public class VehicleManager : MonoBehaviour, IIsEndPointParking
 
     void RemoveFromRoad(IDirectionShearer unitDirection, TYPE type)
     {
-        if (unitDirection == null) return;
+        if (unitDirection == null)
+        {
+            Logging.Log("No direction");
+            return;
+        }
 
         roadsManager.RemoveVehicleFromRoad(unitDirection.GetRoadStartPoint(), unitDirection.GetTotalTimeOnRoad(), type);
     }

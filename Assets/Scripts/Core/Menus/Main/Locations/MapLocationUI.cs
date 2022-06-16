@@ -23,7 +23,7 @@ public class MapLocationUI : MonoBehaviour
     [SerializeField] bool inView = true;
     [SerializeField] bool isAvailable = false;
 
-    public void SetLocationState(bool newIsAvailable, bool isPassed, bool isMax)
+    public void SetLocationState(bool newIsAvailable, bool isMax)
     {
         // set state
         isAvailable = newIsAvailable;

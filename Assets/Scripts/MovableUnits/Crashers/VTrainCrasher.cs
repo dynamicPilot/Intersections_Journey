@@ -1,31 +1,24 @@
 using UnityEngine;
 
-
+[RequireComponent(typeof(TrainEffects))]
 public class VTrainCrasher : VCrasher
 {
-    private Vector3 positionToHold = Vector3.zero;
-    private Quaternion rotationToHold;
+    private TrainEffects _trainEffects;
 
-    
+    private void Awake()
+    {
+        _trainEffects = GetComponent<TrainEffects>();
+        base.OnAwake();
+    }
     public override void CollisionWithCar(Collision2D collision, Vector3 contactPosition)
     {
-        // analyze and make working
-        //if (!effectsControl.CheckContactPositionToBeInCrashZone(contactPosition)) return;
-        
-        positionToHold = transform.position;
-        rotationToHold = transform.rotation;
-
+        if (!_trainEffects.IsContactPointInCrashZone(contactPosition)) return;
+       
         base.CollisionWithCar(collision, contactPosition);
     }
 
     public override void AfterCrash()
     {
-        //vehicleManager.RemoveCrashByVehicleIndex(managerIndex);
-
-        transform.position = positionToHold;
-        transform.rotation = rotationToHold;
-
-        //inCrash = false;
-        //isSimulating = true;
+        base.AfterCrash();
     }
 }

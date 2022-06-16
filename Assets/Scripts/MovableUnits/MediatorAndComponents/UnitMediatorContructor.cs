@@ -6,6 +6,7 @@ namespace IJ.MovableUnits.MediatorAndComponents
         protected MoverComponent _moverComponent;
         protected EffectsComponent _effectComponent;
         protected RepairSiteComponent _repairSiteComponent;
+        protected CrasherComponent _crasherComponent;
 
         protected void CreateBasics()
         {
@@ -13,6 +14,7 @@ namespace IJ.MovableUnits.MediatorAndComponents
             _moverComponent = new MoverComponent();
             _effectComponent = new EffectsComponent();
             _repairSiteComponent = new RepairSiteComponent();
+            _crasherComponent = new CrasherComponent();
         }
 
         public virtual void CreateMediator()
@@ -22,6 +24,7 @@ namespace IJ.MovableUnits.MediatorAndComponents
             Mediator mediator = new Mediator(_moverComponent, _effectComponent);           
             _routerComponent.SetMediator(mediator);
             _repairSiteComponent.SetMediator(mediator);
+            _crasherComponent.SetMediator(mediator);
         }
 
         public void SetHolderForMoverComponent(ref IHoldMoverComponent holder)
@@ -38,6 +41,11 @@ namespace IJ.MovableUnits.MediatorAndComponents
         public void SetComponentToRepairSiteTag(ref VRepairSiteTag tag)
         {
             tag.SetRepairSiteComponent(_repairSiteComponent);
+        }
+
+        public void SetComponentToVCrasher(ref VCrasher crasher)
+        {
+            crasher.SetCrasherComponent(_crasherComponent);
         }
 
         public RouterComponent GetRouterComponent()

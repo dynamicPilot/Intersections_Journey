@@ -14,7 +14,7 @@ public class MenuFlow : Flow
         }
         
         Time.timeScale = 1f;
-        _dataSaveAndLoad.SaveData(_playerState);
+        //_dataSaveAndLoad.SaveData(_playerState);
     }
 
     public void SetMenu()

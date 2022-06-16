@@ -61,6 +61,11 @@ namespace MovableUnits.Units
             IHoldEmergencyUnitComponent holder = this as IHoldEmergencyUnitComponent;
             makeMediator.SetHolderForEmergencyComponent(ref holder);
         }
+
+        public void DoInEnterCrash()
+        {
+            needUpdateTimer = false;
+        }
     }
 }
 

@@ -3,9 +3,10 @@ namespace IJ.MovableUnits.MediatorAndComponents
 
     public interface IHoldMoverComponent
     {
-        public abstract void SetMoverComponent(MoverComponent _moverComponent);
-        public abstract void ChangeIsInTurn(bool _isInTurn);
+        public abstract void SetMoverComponent(MoverComponent moverComponent);
+        public abstract void ChangeIsInTurn(bool isInTurn);
         public abstract void ChangeIsInRepairSite(bool isInRepairSite);
+        public abstract void ChangeIsInCrash(bool isInCrash);
     }
 
     public class MoverComponent : NotifierComponent
@@ -45,6 +46,16 @@ namespace IJ.MovableUnits.MediatorAndComponents
         public void DoInExitRepairSite()
         {
             _holder.ChangeIsInRepairSite(false);
+        }
+
+        public void DoInEnterCrash()
+        {
+            _holder.ChangeIsInCrash(true);
+        }
+
+        public void DoInExitCrash()
+        {
+            _holder.ChangeIsInCrash(false);
         }
     }
 }

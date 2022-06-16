@@ -20,6 +20,7 @@ public interface ICrossBorder
 }
 
 [RequireComponent(typeof(VRoadMemberTag))]
+[RequireComponent(typeof(VRoadMember))]
 public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
 {
     [Header("Settings")]
@@ -32,13 +33,13 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
     private VScannerUnitsInfo _unitsInfo;
     public VScannerUnitsInfo UnitsInfo { get => _unitsInfo; }
 
-    [SerializeField] private VScannerTrafficLightInfo _trafficLightInfo;
+    private VScannerTrafficLightInfo _trafficLightInfo;
     public VScannerTrafficLightInfo TrafficLightInfo { get => _trafficLightInfo; }
     
     private IPositionShearer _positionShearer;
     public IPositionShearer PositionShearer { get => _positionShearer; }
 
-    private ObjectsDetector detector;
+    private ObjectsDetector _detector;
     private DIRECTION _direction = DIRECTION.none;
 
     private bool _isIntoCrossroads;
@@ -65,10 +66,12 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
 
     public void StartScanner(IStartAndEndPathPoints _routerInfo)
     {
+        GetComponent<VRoadMember>().SetInfo(_routerInfo);
+
         _unitsInfo = new VScannerUnitsInfo(_positionShearer, maxDistanceToDetect, this, GetComponent<VRoadMemberTag>());
         _trafficLightInfo = new VScannerTrafficLightInfo(_positionShearer);
 
-        detector = new ObjectsDetector(_routerInfo, _unitsInfo, _trafficLightInfo);
+        _detector = new ObjectsDetector(_routerInfo, _unitsInfo, _trafficLightInfo);
         haveTrafficLightToFollow = false;
         boxCollider.enabled = true;
         polygonCollider.enabled = true;
@@ -91,18 +94,17 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
     {
         if (collision.gameObject.CompareTag("TrafficLight") && !_isIntoCrossroads && !haveTrafficLightToFollow)
         {
-            Logging.Log("VScanner: detectTrafficLight");
-            haveTrafficLightToFollow = detector.DetectTrafficLight(collision);
+            haveTrafficLightToFollow = _detector.DetectTrafficLight(collision);
         }
 
         if (collision is PolygonCollider2D && collision.gameObject.CompareTag("Car") && !isSelfTrain)
         {
-            detector.DetectCar(collision, _direction);
+            _detector.DetectCar(collision, _direction);
         }
 
         if (collision is PolygonCollider2D && collision.gameObject.CompareTag("Train"))
         {
-            detector.DetectTrain(collision, _direction);
+            _detector.DetectTrain(collision, _direction);
         }
     }
 
@@ -110,17 +112,17 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
     {
         if (collision.gameObject.CompareTag("TrafficLight") && haveTrafficLightToFollow)
         {
-            haveTrafficLightToFollow = detector.UndetectTrafficLight(collision);
+            haveTrafficLightToFollow = _detector.UndetectTrafficLight(collision);
         }
 
         if (collision is PolygonCollider2D && collision.gameObject.CompareTag("Car") && !isSelfTrain)
         {
-            detector.UndetectCar(collision, _direction);
+            _detector.UndetectCar(collision, _direction);
         }
 
         if (collision is PolygonCollider2D && collision.gameObject.CompareTag("Train"))
         {
-            detector.UndetectTrain(collision, _direction);
+            _detector.UndetectTrain(collision, _direction);
         }
     }
 

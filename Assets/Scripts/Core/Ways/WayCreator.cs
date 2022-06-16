@@ -1,40 +1,15 @@
 using IJ.Core.Ways;
 using IJ.Utilities;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WayCreator : MonoBehaviour
 {
-    //[SerializeField] private CrossroadsScheme scheme;
     [Header("Scripts")]
     [SerializeField] private WayPoints wayPoints;
     [SerializeField] private RoadsManager roadsManager;
-
-    [Header("---------- TEST ONLY -----------")]
-    [SerializeField] private bool testMode = false;
-    [SerializeField] private int startPointTest = 0;
-    [SerializeField] private int endPointTest = 5;
-
-    [Header("Route Searching Test")]
-    [SerializeField] private Transform testPoint;
-    [SerializeField] private float timeBetweenUpdates = 0.5f;
     
     Graph graph;
-
-    // test only
-    WaitForSeconds updateTimer;
-
-    private void Start()
-    {
-        //BuildGraph();
-
-        if (testMode)
-        {
-            List<int> route = SearchForRoute(startPointTest, endPointTest);
-            StartCoroutine(ShowRoute(route));
-        }
-    }
 
     private void BuildGraph()
     {        
@@ -160,40 +135,6 @@ public class WayCreator : MonoBehaviour
 
     List<Path> CreatePaths(int startPointNumber, int endPointNumber)
     {
-        //if (startPointNumber < 0 || endPointNumber < 0)
-        //{
-        //    Logging.Log("WayCreator: start or end points are null");
-        //    return null;
-        //}
-
-        //Logging.Log("WayCreator: start or end poin are good");
-        //List<int> route = GetRoute(startPointNumber, endPointNumber);
-
-        //if (route == null)
-        //{
-        //    Logging.Log("WayCreator: null route");
-        //    return null;
-        //}
-        //else if (route.Count < 2)
-        //{
-        //    Logging.Log("WayCreator: wrong route");
-        //    return null;
-        //}
-
-        // Get paths
-        //List<Path> paths = wayPoints.GetPathsForRoute(route);
-
-        //if (paths == null)
-        //{
-        //    Logging.Log("WayCreator: null paths");
-        //    return null;
-        //}
-        //else if (paths.Count < 1)
-        //{
-        //    Logging.Log("WayCreator: empty paths");
-        //    return null;
-        //}
-
         return GetPath(GetRoute(startPointNumber, endPointNumber));
     }
 
@@ -249,19 +190,5 @@ public class WayCreator : MonoBehaviour
         return route;
 
     }
-
-    IEnumerator ShowRoute(List<int> route)
-    {
-        updateTimer = new WaitForSeconds(timeBetweenUpdates);
-        yield return updateTimer;
-
-        foreach (int pointNumber in route)
-        {
-            testPoint.position = wayPoints.Points[pointNumber];
-            yield return updateTimer;
-        }
-
-    }
-
 
 }

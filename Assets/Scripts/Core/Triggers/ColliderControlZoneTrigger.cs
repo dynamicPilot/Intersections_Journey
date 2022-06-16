@@ -10,6 +10,7 @@ public class ColliderControlZoneTrigger : MonoBehaviour
     [Header("Directions")]
     [SerializeField] private bool needDirectionControl = false;
     [SerializeField] private List<VehicleScanner.DIRECTION> directionsToBeAffected = new List<VehicleScanner.DIRECTION>();
+    [SerializeField] private List<DIRECTION> _directionsToBeAffected = new List<DIRECTION>();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,20 +18,14 @@ public class ColliderControlZoneTrigger : MonoBehaviour
         {
             if (needPointsNumberControl)
             {
-                Logging.Log("ColliderControlZoneTrigger: checking points....");
-                VehicleUnit unit = collision.gameObject.GetComponent<VehicleUnit>();
-                if (!CheckPointNumber(unit.GetCurrentPathPartPointNumbers(true)) && !CheckPointNumber(unit.GetCurrentPathPartPointNumbers(false)))
-                {
-                    Logging.Log("ColliderControlZoneTrigger: no suitable points!");
-                    return;
-                }
+                VRoadMember unit = collision.gameObject.GetComponent<VRoadMember>();
+                if (!CheckPointNumber(unit.StartPathPoints()) && !CheckPointNumber(unit.EndPathPoints())) return;
             }
             else if (needDirectionControl)
             {
-                if (!CheckDirection(collision.gameObject.GetComponent<VehicleScanner>().Direction)) return;
+                if (!CheckDirection(collision.gameObject.GetComponent<VScanner>().GetDirection())) return;
             }
            
-            // turning effect if needed
             collision.gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
         }
     }
@@ -38,7 +33,6 @@ public class ColliderControlZoneTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Car") && collision is PolygonCollider2D)
         {
-            // turning effect if needed
             collision.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
         }
     }
@@ -48,9 +42,9 @@ public class ColliderControlZoneTrigger : MonoBehaviour
         return pointsNumberToBeAffected.Contains(pointNumberToCheck);
     }
 
-    bool CheckDirection(VehicleScanner.DIRECTION directionToCheck)
+    bool CheckDirection(DIRECTION directionToCheck)
     {
-        return directionsToBeAffected.Contains(directionToCheck);
+        return _directionsToBeAffected.Contains(directionToCheck);
     }
 
 }

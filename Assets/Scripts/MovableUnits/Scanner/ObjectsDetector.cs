@@ -44,6 +44,7 @@ public class ObjectsDetector
 
     public void DetectTrain(Collider2D collision, DIRECTION direction)
     {
+        Logging.Log("Detect train");
         DetectCar(collision, direction);
     }
 

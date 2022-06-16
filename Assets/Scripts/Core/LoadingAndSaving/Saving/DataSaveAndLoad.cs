@@ -1,11 +1,19 @@
+using IJ.Core.Objects.LevelAndLocation;
 using System.Collections.Generic;
 using UnityEngine;
+using Utilites.Configs;
 
 [DefaultExecutionOrder(-1)]
 public class DataSaveAndLoad : MonoBehaviour
 {
     [SerializeField] private LevelsAndLocationsManager levelsAndLocationsManager;
+    [SerializeField] private GameConfig _config;
 
+    private int _levelIsAvailableConst = 0;
+    private int _levelIsNotAvailableConst = -1;
+
+    private int _locationIsAvailableConst = 1;
+    private int _LocationIsNotAvailableConst = 0;
     public void SaveData(PlayerState playerState)
     {
         List<int> levelsPoints = new List<int>();
@@ -14,17 +22,16 @@ public class DataSaveAndLoad : MonoBehaviour
         foreach(LocationOrLevelProgress levelProgress in playerState.LevelsProgress)
         {
             if (levelProgress.PointsEarned > 0) levelsPoints.Add(levelProgress.PointsEarned);
-            else if (levelProgress.IsPassed) levelsPoints.Add(-1);
-            else levelsPoints.Add(0);
+            else if (!levelProgress.IsAvailable) levelsPoints.Add(_levelIsNotAvailableConst);
+            else levelsPoints.Add(_levelIsAvailableConst);
         }
 
         foreach(LocationProgress locationProgress in playerState.LocationsProgress)
         {
-            if (locationProgress.IsAvailable) locationAvailability.Add(1);
-            else locationAvailability.Add(0);
+            if (locationProgress.IsAvailable) locationAvailability.Add(_locationIsAvailableConst);
+            else locationAvailability.Add(_LocationIsNotAvailableConst);
         }
 
-        //Logging.Log("Data save and load: levels points count " + levelsPoints.Count);
         SaveSystem.SaveData(levelsPoints.ToArray(), locationAvailability.ToArray(), playerState.TotalPointsNumber);
     }
 
@@ -34,7 +41,7 @@ public class DataSaveAndLoad : MonoBehaviour
 
         PlayerData data = SaveSystem.LoadData();
 
-        playerState.CreateAllLists(levelsAndLocationsManager.Levels, levelsAndLocationsManager.Locations);
+        playerState.PrepairProgressLists(levelsAndLocationsManager.Levels, levelsAndLocationsManager.Locations);
         playerState.ResetPoints();
 
         if (data == null) HaveNoData(playerState);
@@ -43,34 +50,40 @@ public class DataSaveAndLoad : MonoBehaviour
 
     void ParseData(PlayerData data, PlayerState playerState)
     {
-        Logging.Log("Start Parsing File");
+        ParseLevels(data, playerState);
+        ParseLocations(data, playerState);
+
+        playerState.AddPointsToTotalNumber(data.TotalPoints);
+        playerState.DataIsLoaded();
+    }
+
+    void ParseLevels(PlayerData data, PlayerState playerState)
+    {
         for (int i = 0; i < data.LevelPoints.Length; i++)
         {
             Level level = levelsAndLocationsManager.GetLevelByIndex(i);
+
             if (level == null) return;
 
-            if (data.LevelPoints[i] > 0)
-            {
-                playerState.UpdateLevelDataInLevelsProgressWhenLoading(i, data.LevelPoints[i], true, level);
-            }
-            else
-            {
-                playerState.UpdateLevelDataInLevelsProgressWhenLoading(i, 0, (data.LevelPoints[i] == -1), level);
-            }
-        }
+            bool isAvailable = (data.LevelPoints[i] > _levelIsNotAvailableConst);
+            int points = (data.LevelPoints[i] > 0) ? data.LevelPoints[i] : 0;
 
+            playerState.UpdateLevelDataInLevelsProgressWhenLoading(i, points, isAvailable, level);
+        }
+    }
+
+    void ParseLocations(PlayerData data, PlayerState playerState)
+    {
         for (int i = 0; i < data.LocationAvailability.Length; i++)
         {
             Location location = levelsAndLocationsManager.GetLocationByIndex(i);
             if (location == null) return;
 
-            playerState.MakeLocationAvailableOrNot(i, data.LocationAvailability[i] == 1);
-            playerState.UpdateLocationMaxPointsAndIsMax(i, location);
-            playerState.UpdateLocationIsPassed(i);
-        }
+            bool isAvailable = data.LocationAvailability[i] == _locationIsAvailableConst;
 
-        playerState.AddPointsToTotalNumer(data.TotalPoints);
-        playerState.DataIsLoaded();
+            playerState.MakeLocationAvailableOrNot(i, isAvailable);
+            playerState.UpdateLocationMaxPointsAndIsMax(i, location);
+        }
     }
 
     void HaveNoData(PlayerState playerState)
@@ -78,7 +91,7 @@ public class DataSaveAndLoad : MonoBehaviour
         // new game or no data
 
         // new game
-        playerState.MakeLocationAvailableOrNot(0);
+        playerState.AddPointsToTotalNumber(_config.StartGamePoints);
         SaveData(playerState);
         playerState.DataIsLoaded();
     }

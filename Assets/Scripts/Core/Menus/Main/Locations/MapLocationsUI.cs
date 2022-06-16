@@ -8,14 +8,11 @@ public class MapLocationsUI : MonoBehaviour, ISetPlayerState
     [Header("Scripts")]
     [SerializeField] private MenuMaster menuMaster;
 
-    //private PlayerState _playerState;
-
     MapLocationUI locationInButtonsView = null;
     public MapLocationUI LocationInButtonsView { get => locationInButtonsView; set => locationInButtonsView = value; }
 
     public void SetPlayerState(PlayerState playerState)
     {
-        //_playerState = playerState;
         SetMap(playerState);
     }
 
@@ -26,8 +23,7 @@ public class MapLocationsUI : MonoBehaviour, ISetPlayerState
         foreach (MapLocationUI locationUI in mapLocations)
         {
             int index = locationUI.GetLocationIndex();
-            locationUI.SetLocationState(playerState.LocationsProgress[index].IsAvailable, playerState.LocationsProgress[index].IsPassed,
-                playerState.LocationsProgress[index].IsMax);
+            locationUI.SetLocationState(playerState.LocationsProgress[index].IsAvailable,playerState.LocationsProgress[index].IsMax);
         }
     }
 

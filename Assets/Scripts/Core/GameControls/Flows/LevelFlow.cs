@@ -81,17 +81,11 @@ public class LevelFlow : Flow, ISetLevel
             if (additionalPointsEarnedByLevel >= 0)
             {
                 bool needSave = false;
-                if (!_playerState.LevelsProgress[_level.LevelIndex].IsPassed)
-                {
-                    _playerState.LevelsProgress[_level.LevelIndex].IsPassed = true;
-                    needSave = true;
-                }
-
                 if (additionalPointsEarnedByLevel > 0)
                 {
                     _playerState.LevelsProgress[_level.LevelIndex].AddPoints(additionalPointsEarnedByLevel);
                     _playerState.LocationsProgress[_level.Location.LocationIndex].AddLevelPoints(_level.LevelIndex, additionalPointsEarnedByLevel);
-                    _playerState.AddPointsToTotalNumer(additionalPointsEarnedByLevel);
+                    _playerState.AddPointsToTotalNumber(additionalPointsEarnedByLevel);
                     needSave = true;
                 }
 

@@ -4,7 +4,8 @@ public class MakeUnitMediator
 {
     protected IMediatorConstructor _constructorInterface;
 
-    public RouterComponent CreateAndSet(ref IHoldMoverComponent moverHolder, ref IHoldEffectsComponent effectsHolder, ref VRepairSiteTag tag)
+    public RouterComponent CreateAndSet(ref IHoldMoverComponent moverHolder, ref IHoldEffectsComponent effectsHolder, 
+        ref VRepairSiteTag tag, ref VCrasher crasher)
     {
         GetContructorInterface();
         UnitMediatorContructor _constractor = _constructorInterface as UnitMediatorContructor;
@@ -12,6 +13,7 @@ public class MakeUnitMediator
         _constractor.SetHolderForMoverComponent(ref moverHolder);
         _constractor.SetHolderForEffectsComponent(ref effectsHolder);
         _constractor.SetComponentToRepairSiteTag(ref tag);
+        _constractor.SetComponentToVCrasher(ref crasher);
 
         return _constructorInterface.GetRouterComponent();
     }

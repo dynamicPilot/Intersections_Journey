@@ -28,10 +28,10 @@ namespace MovableUnits.Units
 
         private protected bool pauseUpdate = true;
         private bool stopInParking = false;
-        private bool needUpdateTotalTime = false;
+        private protected bool needUpdateTotalTime = false;
         private bool needUpdateCounter = false;
 
-        private int counter = 0;
+        private int counter = 0;        
         private void Awake()
         {
             mover = GetComponent<VMover>();
@@ -109,8 +109,9 @@ namespace MovableUnits.Units
 
             if (!stopInParking)
             {
-                transform.Translate(new Vector3(50f, 0f, 0f));
+                
                 gameObject.SetActive(false);
+                transform.Translate(new Vector3(-50f, 0f, 0f));
                 info.FreeUnitIndex(router.TargetRoutePoint());
             }
         }
@@ -146,7 +147,7 @@ namespace MovableUnits.Units
             if (needUpdateTotalTime) needUpdateTotalTime = scanner.UpdateTotalTime(Time.fixedDeltaTime);
         }
 
-        void EndCrash()
+        public virtual void EndCrash()
         {
             pauseUpdate = true;
             stopInParking = false;
@@ -164,7 +165,7 @@ namespace MovableUnits.Units
             VMover temp = mover as VMover;
             IHoldMoverComponent moverHolder = temp.State as IHoldMoverComponent;
             IHoldEffectsComponent effectsHolder = effects as IHoldEffectsComponent;
-            routerComponent = makeMediator.CreateAndSet(ref moverHolder, ref effectsHolder, ref repairSiteTag);
+            routerComponent = makeMediator.CreateAndSet(ref moverHolder, ref effectsHolder, ref repairSiteTag, ref crasher);
         }
 
         protected virtual void MakeMediatorAndSet()

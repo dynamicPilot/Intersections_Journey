@@ -9,10 +9,6 @@ namespace IJ.Animations
         [SerializeField] private float _initialPosX = -2000f;
         [SerializeField] private float _duration = 1f;
 
-        private void Start()
-        {
-            MoveIn();
-        }
         private void OnDestroy()
         {
             DOTween.KillAll();
@@ -20,12 +16,15 @@ namespace IJ.Animations
 
         public void MoveIn()
         {
-            _transform.DOLocalMoveX(0f, _duration).SetEase(Ease.InOutElastic);
+            _transform.DOLocalMoveX(0f, _duration).SetEase(Ease.OutBack);
         }
 
         public void MoveOut()
         {
-            _transform.DOLocalMoveX(_initialPosX, _duration).SetEase(Ease.InOutElastic);
+            _transform.DOLocalMoveX(_initialPosX, _duration).SetEase(Ease.InBack).OnComplete(() =>
+           {
+               gameObject.SetActive(false);
+           });
         }
     }
 }

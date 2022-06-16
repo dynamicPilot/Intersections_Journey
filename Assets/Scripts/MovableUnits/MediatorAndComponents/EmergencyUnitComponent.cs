@@ -4,6 +4,7 @@ namespace IJ.MovableUnits.MediatorAndComponents
     {
         public abstract void DoInStop();
         public abstract void DoInRestart();
+        public abstract void DoInEnterCrash();
     }
 
     public class EmergencyUnitComponent : NotifierComponent
@@ -23,6 +24,11 @@ namespace IJ.MovableUnits.MediatorAndComponents
         public void DoInRestart()
         {
             unit.DoInRestart();
+        }
+
+        public void DoInEnterCrash()
+        {
+            unit.DoInEnterCrash();
         }
     }
 }

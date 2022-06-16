@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd141e6e58ad8b44bfa9136e30328b4, type: 3}
   m_Name: Level12_city
   m_EditorClassIdentifier: 
-  number: 12
-  levelIndex: 11
+  number: 13
+  levelIndex: 12
   sceneName: L12_city
   crossSceneName: X_crossTriple_v3
   crossType: 2
@@ -117,6 +117,7 @@ MonoBehaviour:
       endHour: 2
       vehicleNumbersList:
       - type: 7
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -124,6 +125,7 @@ MonoBehaviour:
       endHour: 5
       vehicleNumbersList:
       - type: 7
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -131,6 +133,7 @@ MonoBehaviour:
       endHour: 8
       vehicleNumbersList:
       - type: 7
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -138,6 +141,7 @@ MonoBehaviour:
       endHour: 11
       vehicleNumbersList:
       - type: 7
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -147,14 +151,17 @@ MonoBehaviour:
       endHour: 2
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 1
         endPointNumber: 27
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 1
         endPointNumber: 15
       - type: 1
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -162,10 +169,12 @@ MonoBehaviour:
       endHour: 4
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -173,6 +182,7 @@ MonoBehaviour:
       endHour: 6
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 2
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -180,6 +190,7 @@ MonoBehaviour:
       endHour: 8
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 2
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -187,6 +198,7 @@ MonoBehaviour:
       endHour: 10
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -194,6 +206,7 @@ MonoBehaviour:
       endHour: 12
       vehicleNumbersList:
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -203,10 +216,12 @@ MonoBehaviour:
       endHour: 2
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -214,6 +229,7 @@ MonoBehaviour:
       endHour: 4
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -221,10 +237,12 @@ MonoBehaviour:
       endHour: 6
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 2
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -232,6 +250,7 @@ MonoBehaviour:
       endHour: 8
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -239,10 +258,12 @@ MonoBehaviour:
       endHour: 10
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 6
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -250,6 +271,7 @@ MonoBehaviour:
       endHour: 12
       vehicleNumbersList:
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -259,10 +281,12 @@ MonoBehaviour:
       endHour: 2
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 1
         endPointNumber: 12
@@ -270,6 +294,7 @@ MonoBehaviour:
       endHour: 4
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -277,10 +302,12 @@ MonoBehaviour:
       endHour: 6
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 2
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -288,6 +315,7 @@ MonoBehaviour:
       endHour: 8
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -295,10 +323,12 @@ MonoBehaviour:
       endHour: 10
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 6
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -306,6 +336,7 @@ MonoBehaviour:
       endHour: 12
       vehicleNumbersList:
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -315,10 +346,12 @@ MonoBehaviour:
       endHour: 2
       vehicleNumbersList:
       - type: 6
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 27
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -326,10 +359,12 @@ MonoBehaviour:
       endHour: 4
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 1
         endPointNumber: 27
@@ -337,10 +372,12 @@ MonoBehaviour:
       endHour: 6
       vehicleNumbersList:
       - type: 6
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -348,6 +385,7 @@ MonoBehaviour:
       endHour: 8
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -355,10 +393,12 @@ MonoBehaviour:
       endHour: 10
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 6
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -366,6 +406,7 @@ MonoBehaviour:
       endHour: 12
       vehicleNumbersList:
       - type: 6
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -375,10 +416,12 @@ MonoBehaviour:
       endHour: 2
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 1
         endPointNumber: 15
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 1
         endPointNumber: 12
@@ -386,6 +429,7 @@ MonoBehaviour:
       endHour: 4
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -393,10 +437,12 @@ MonoBehaviour:
       endHour: 6
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 2
+        _type: 0
         number: 1
         needSpecialEndPoint: 1
         endPointNumber: 27
@@ -404,6 +450,7 @@ MonoBehaviour:
       endHour: 8
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -411,10 +458,12 @@ MonoBehaviour:
       endHour: 10
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 6
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -422,6 +471,7 @@ MonoBehaviour:
       endHour: 12
       vehicleNumbersList:
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -431,10 +481,12 @@ MonoBehaviour:
       endHour: 2
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 1
         endPointNumber: 27
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -442,10 +494,12 @@ MonoBehaviour:
       endHour: 4
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 1
         endPointNumber: 24
@@ -453,10 +507,12 @@ MonoBehaviour:
       endHour: 6
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 2
+        _type: 0
         number: 1
         needSpecialEndPoint: 1
         endPointNumber: 27
@@ -464,6 +520,7 @@ MonoBehaviour:
       endHour: 8
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -471,10 +528,12 @@ MonoBehaviour:
       endHour: 10
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 6
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -482,6 +541,7 @@ MonoBehaviour:
       endHour: 12
       vehicleNumbersList:
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -491,10 +551,12 @@ MonoBehaviour:
       endHour: 2
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 1
         endPointNumber: 12
@@ -502,6 +564,7 @@ MonoBehaviour:
       endHour: 4
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -509,10 +572,12 @@ MonoBehaviour:
       endHour: 6
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 2
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -520,6 +585,7 @@ MonoBehaviour:
       endHour: 8
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -527,10 +593,12 @@ MonoBehaviour:
       endHour: 10
       vehicleNumbersList:
       - type: 0
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
       - type: 6
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0
@@ -538,6 +606,7 @@ MonoBehaviour:
       endHour: 12
       vehicleNumbersList:
       - type: 4
+        _type: 0
         number: 1
         needSpecialEndPoint: 0
         endPointNumber: 0

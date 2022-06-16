@@ -1,132 +1,67 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class LocationOrLevelProgress
+namespace IJ.Core.Objects.LevelAndLocation
 {
-    [SerializeField] private int itemIndex;
-    public int ItemIndex { get => itemIndex; }
-    [SerializeField] private bool isAvailable = false;
-    public bool IsAvailable { get => isAvailable; set { isAvailable = value; } }
-
-    [SerializeField] private bool isMax = false;
-    public bool IsMax { get => isMax; }
-
-    [SerializeField] private bool isPassed = false;
-    public bool IsPassed { get => isPassed; set { isPassed = value; } }
-
-    [SerializeField] private int pointsEarned = 0;
-    public int PointsEarned { get => pointsEarned; }
-    [SerializeField] private int maxPoints = 0;
-    public int MaxPoints { get => maxPoints; set { maxPoints = value; } }
-
-    public LocationOrLevelProgress()
+    [System.Serializable]
+    public class LocationOrLevelProgress
     {
-        itemIndex = -1;
-        isAvailable = false;
-        isPassed = false;
-        pointsEarned = 0;
-        maxPoints = -1;
-        isMax = false;
-    }
+        [SerializeField] private int _itemIndex;
+        public int ItemIndex { get => _itemIndex; }
+        [SerializeField] private bool _isAvailable = false;
+        public bool IsAvailable { get => _isAvailable; set { _isAvailable = value; } }
 
-    //public LocationOrLevelProgress(int newItemNumberOrIndex)
-    //{
-    //    itemIndex = newItemNumberOrIndex;
-    //    isAvailable = false;
-    //    pointsEarned = 0;
-    //    maxPoints = -1;
-    //    isMax = false;
-    //}
+        [SerializeField] private bool _isMax = false;
+        public bool IsMax { get => _isMax; }
 
-    public LocationOrLevelProgress(int newItemNumberOrIndex, int newMaxPoints = -1, bool newIsAvailable = false, int newPointsEarned = 0, bool newIsPassed = false)
-    {
-        itemIndex = newItemNumberOrIndex;
-        maxPoints = newMaxPoints;
-        isAvailable = newIsAvailable;
-        pointsEarned = newPointsEarned;
-        isPassed = newIsPassed;
-        if (maxPoints> 0) UpdateIsMax();
-    }
+        [SerializeField] private int _pointsEarned = 0;
+        public int PointsEarned { get => _pointsEarned; }
+        [SerializeField] private int _maxPoints = 0;
+        public int MaxPoints { get => _maxPoints; set { _maxPoints = value; } }
 
-    public void AddPoints(int amount = 1, bool firstlySetToZero = false, bool needUpdateMax = false)
-    {
-        //if (!isAvailable) return;
-
-        if (firstlySetToZero) pointsEarned = 0;
-
-        pointsEarned += amount;
-
-        if (pointsEarned > 0 && !isPassed) isPassed = true;
-
-        if (needUpdateMax) UpdateIsMax();
-    }
-
-    public void SetItemIndex(int newIndex)
-    {
-        if (newIndex >= 0) itemIndex = newIndex;
-        else itemIndex = -1;
-    }
-
-    public void UpdateIsMax()
-    {
-        //if (!isAvailable) return;
-
-        isMax = (pointsEarned >= maxPoints && maxPoints > 0);
-    }
-}
-
-[System.Serializable]
-public class LocationProgress : LocationOrLevelProgress
-{
-    private Dictionary<int, int> levelsPoints = new Dictionary<int, int>();
-    public Dictionary<int, int> LevelsPoints { get => levelsPoints; }
-
-    //public LocationProgress(int newLocationIndex)
-    //{
-    //    SetItemIndex(newLocationIndex);
-    //    IsAvailable = false;
-    //    MaxPoints = -1;
-    //    AddPoints(0, true, true);
-    //}
-
-    public LocationProgress(int newLocationIndex, List<Level> newLevels, int newMaxPoints = -1, bool newIsAvailable = false, int newPointsEarned = 0, bool newIsPassed = false)
-    {
-        SetItemIndex(newLocationIndex);
-        IsAvailable = newIsAvailable;
-        MaxPoints = newMaxPoints;
-        IsPassed = newIsPassed;
-        AddPoints(newPointsEarned, true, (MaxPoints > 0));
-
-        foreach(Level level in newLevels)
+        #region Constructors
+        public LocationOrLevelProgress()
         {
-            levelsPoints[level.LevelIndex] = 0;
-        }
-    }
-
-    public void AddLevelPoints(int levelIndex, int pointsAmount, bool needUpdateIsMax = true)
-    {
-        //if (!IsAvailable && pointsAmount > 0) return;
-        //Logging.Log("LocationProgress: add level points " + levelIndex);
-        if (levelsPoints.ContainsKey(levelIndex))
-        {
-            //Logging.Log("LocationProgress: add to level");
-            levelsPoints[levelIndex] += pointsAmount;
-        }
-        else
-        {
-            //Logging.Log("LocationProgress: new level");
-            levelsPoints[levelIndex] = pointsAmount;
+            _itemIndex = -1;
+            _isAvailable = false;
+            _pointsEarned = 0;
+            _maxPoints = -1;
+            _isMax = false;
         }
 
-        AddPoints(pointsAmount, false, needUpdateIsMax);
+        public LocationOrLevelProgress(int itemIndex, int maxPoints = -1)
+        {
+            _itemIndex = itemIndex;
+            _maxPoints = maxPoints;
+            _isAvailable = false;
+            _pointsEarned = 0;
+            if (_maxPoints > 0) UpdateIsMax();
+        }
+
+        #endregion
+
+        public void AddPoints(int amount = 1, bool firstlySetToZero = false, bool needUpdateMax = false)
+        {
+            if (firstlySetToZero) ResetPoints();
+
+            _pointsEarned += amount;
+
+            if (needUpdateMax) UpdateIsMax();
+        }
+
+        public void SetItemIndex(int itemIndex)
+        {
+            if (itemIndex >= 0) _itemIndex = itemIndex;
+            else _itemIndex = -1;
+        }
+
+        public void UpdateIsMax()
+        {
+            _isMax = (_pointsEarned >= _maxPoints && _maxPoints > 0);
+        }
+
+        void ResetPoints()
+        {
+            _pointsEarned = 0;
+        }
     }
-
-
-    //public void AddToMaxPoints(int pointsAmount, bool needUpdateIsMax = true)
-    //{
-    //    MaxPoints += pointsAmount;
-
-    //    if (needUpdateIsMax) UpdateIsMax();
-    //}
 }

@@ -13,7 +13,7 @@ public class RoadsInfo: IConvertToPointNumber
     IDictionary<int, int> startPointsNumbers = new Dictionary<int, int>();
     IDictionary<int, bool> endPointsWithParkingState = new Dictionary<int, bool>();
 
-    List<int> roadStates = new List<int>();
+    public List<int> roadStates = new List<int>();
     public List<int> unitsOnRoads = new List<int>();
     List<int> taxiUnitsOnRoads = new List<int>();    
 
@@ -48,10 +48,11 @@ public class RoadsInfo: IConvertToPointNumber
     }
     public void AddUnitOnRoad(int startPointNumber, TYPE type)
     {        
-        if (type == TYPE.train) return;
-
         int roadIndex = roads[startPointNumber];
         roadStates[roadIndex] += 1;
+
+        if (type == TYPE.train) return;
+
         unitsOnRoads[roadIndex] += 1;
 
         if (type == TYPE.taxi)
@@ -62,10 +63,14 @@ public class RoadsInfo: IConvertToPointNumber
 
     public void RemoveUnitFromRoad(int startPointNumber, float totalTimeOnRoad, TYPE type, RoadsTimers timers)
     {
-        if (!roads.ContainsKey(startPointNumber)) return;
+        if (!roads.ContainsKey(startPointNumber))
+        {
+            return;
+        }
         else if (type == TYPE.train) return;
 
         int roadIndex = roads[startPointNumber];
+        Logging.Log("road index is " + roadIndex);
         unitsOnRoads[roadIndex] -= 1;
 
         timers.RemoveUnitFromRoad(roadIndex, totalTimeOnRoad, type, taxiUnitsOnRoads[roadIndex]);

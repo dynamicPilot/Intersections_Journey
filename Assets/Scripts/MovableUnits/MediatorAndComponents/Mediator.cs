@@ -2,7 +2,7 @@ using IJ.Utilities;
 
 namespace IJ.MovableUnits.MediatorAndComponents
 {
-    public enum STATE { inStop, inRestart, startTurn, endTurn, inEnterRSite, inExitRSite }
+    public enum STATE { inStop, inRestart, startTurn, endTurn, inEnterRSite, inExitRSite, inEnterCrash, inExitCrash }
 
     public interface IMediator
     {
@@ -13,6 +13,7 @@ namespace IJ.MovableUnits.MediatorAndComponents
     {
         private MoverComponent moverComponent;
         private EffectsComponent effectsComponent;
+
         public Mediator(MoverComponent _moverComponent, EffectsComponent _effectsComponent)
         {
             moverComponent = _moverComponent;
@@ -43,6 +44,16 @@ namespace IJ.MovableUnits.MediatorAndComponents
             {
                 moverComponent.DoInExitRepairSite();
             }
+
+            if (eventCode == STATE.inEnterCrash)
+            {
+                effectsComponent.DoInEnterCrash();
+                moverComponent.DoInEnterCrash();
+            }
+            else if (eventCode == STATE.inExitCrash)
+            {
+                moverComponent.DoInExitCrash();
+            }
         }
     }
 
@@ -67,6 +78,11 @@ namespace IJ.MovableUnits.MediatorAndComponents
             else if (eventCode == STATE.inRestart)
             {
                 _emergencyComponent.DoInRestart();
+            }
+
+            if (eventCode == STATE.inEnterCrash)
+            {
+                _emergencyComponent.DoInEnterCrash();
             }
         }
     }

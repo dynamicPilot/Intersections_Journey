@@ -4,7 +4,8 @@ namespace IJ.MovableUnits.MediatorAndComponents
 {
     public interface IHoldEffectsComponent
     {
-        public abstract void ChangeIsInTurn(bool _isInTurn, Path.TURN turn);
+        public abstract void ChangeIsInTurn(bool isInTurn, Path.TURN turn);
+        public abstract void InEnterCrash();
     }
 
     public class EffectsComponent : NotifierComponent
@@ -24,6 +25,11 @@ namespace IJ.MovableUnits.MediatorAndComponents
         public void DoEndTurn()
         {
             _holder.ChangeIsInTurn(false, Path.TURN.none);
+        }
+
+        public void DoInEnterCrash()
+        {
+            _holder.InEnterCrash();
         }
     }
 }

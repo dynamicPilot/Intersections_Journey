@@ -35,7 +35,7 @@ namespace IJ.Core.Menus.MainMenu
 
         public void ChangePointsAmount(int amount, bool needSave = true)
         {
-            bool haveChanged = _playerState.AddPointsToTotalNumer(amount);
+            bool haveChanged = _playerState.AddPointsToTotalNumber(amount);
 
             if (needSave & haveChanged)
             {

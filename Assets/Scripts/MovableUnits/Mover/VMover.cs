@@ -36,6 +36,7 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
 
     public float GetVelocity()
     {
+        if (_state.IsInCrash) return 0f;
         return _velocity;
     }
 
@@ -108,7 +109,6 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
             _velocity = maxVelocity;
         }
     }
-
 
     float MaxPossibleAcceleration()
     {
