@@ -7,13 +7,10 @@ namespace RepairSites
     {
         [Header("Parameters")]
         [SerializeField] private float targetVelocity = 1f;
-        //public float TargetVelocity { get => targetVelocity; }
         [SerializeField] private Vector2 targetPoint;
-        //public Vector2 TargetPoint { get => targetPoint; }
-
         [SerializeField] private float minDistanceToAffectVehicle = 1f;
-
         [SerializeField] private bool isDouble = false;
+
         public bool IsDouble { get => isDouble; }
 
         [Header("For Repair Car and Control")]

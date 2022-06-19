@@ -1,7 +1,10 @@
 {
     "name": "IJ.RoadMark",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:71ca57373c045cb429f52df977ecdd06",
+        "GUID:c6ab062adcdd76848a6ad1cbabc60d40"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

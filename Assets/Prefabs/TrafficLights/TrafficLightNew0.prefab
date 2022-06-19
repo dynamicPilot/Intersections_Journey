@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 3556982261733540390}
   - component: {fileID: 5618451154112969505}
   - component: {fileID: 8324342983439846943}
+  - component: {fileID: 6668956641801853530}
   m_Layer: 11
   m_Name: SwitchTrafficLightButton
   m_TagString: Untagged
@@ -463,3 +464,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6668956641801853530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5807068271661367556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cae17c8147eb1b43924111637082551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSoundIndex: 1

@@ -20,9 +20,14 @@ namespace AudioControls.SoundEffects
 
             if (sound != null && source != null)
             {
-                sound.SetSource(source, _volumeRate);
+                sound.SetSource(source);
                 source.Play();
             }
+        }
+
+        public override void StopPlaying()
+        {
+            foreach (AudioSource source in _sources) source.Stop();
         }
 
         public override void TurnOnOff(bool isMute)

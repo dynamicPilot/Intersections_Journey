@@ -6,6 +6,8 @@ public class RoadMark : MonoBehaviour
 {
     [SerializeField] private int roadStartPointNumber = 0;
     public int RoadStartPointNumber { get => roadStartPointNumber; }
+    [SerializeField] private RoadMarkSound _sounds;
+
     [Header("UI Elements")]
     [SerializeField] private Image indicatorImage;
     [SerializeField] private Image indicatorAllertImage;
@@ -23,6 +25,7 @@ public class RoadMark : MonoBehaviour
     bool blockIndicatorUpdate = false;
     bool disapearingIsOn = false;
     bool needStartAfterEnd = false;
+
     private void Awake()
     {
         blockIndicatorUpdate = false;
@@ -41,6 +44,7 @@ public class RoadMark : MonoBehaviour
         StopAllCoroutines();
         blockIndicatorUpdate = false;
         needStartAfterEnd = false;
+        _sounds.PlayIndicatorSound();
     }
 
     public void UpdateIndicatorValue(float newValue, bool isAllert = false)
@@ -68,6 +72,7 @@ public class RoadMark : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(MovingToAllert());
+        _sounds.PlayAllertSound();
     }
 
     IEnumerator MovingToAllert()
@@ -86,6 +91,7 @@ public class RoadMark : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(MovingBackToTimer());
+        _sounds.PlayIndicatorSound();
     }
 
     IEnumerator MovingBackToTimer()
@@ -108,13 +114,13 @@ public class RoadMark : MonoBehaviour
         StopAllCoroutines();
 
         if (gameObject.activeSelf) StartCoroutine(Disappearing());
+        _sounds.StopPlaying();
         return true;
         
     }
 
     IEnumerator Disappearing()
     {
-        //Logging.Log("Make Disappearing.....");
         disapearingIsOn = true;
         blockIndicatorUpdate = true;
 
@@ -128,14 +134,11 @@ public class RoadMark : MonoBehaviour
             markBackgroundAnimator.SetTrigger("makeAppearance");
             disapearingIsOn = false;
             StartIndicator();
-
         }
         else
         {
             disapearingIsOn = false;
-            //Logging.Log("Stop Disappearing.....");
             gameObject.SetActive(false);            
-        }
-        
+        }        
     }
 }

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6832fb53010a8a499b6a2d64c4ec465, type: 3}
+  m_Name: UILongSounds
+  m_EditorClassIdentifier: 
+  collection:
+  - soundName: startLevel
+    clip: {fileID: 8300000, guid: 1de1895bb0d479043b7fbb0740bde00c, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
+  - soundName: endLevel
+    clip: {fileID: 8300000, guid: adf0b773d239ade49be1f7d9d37a9e3c, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
+  - soundName: loseLevel
+    clip: {fileID: 8300000, guid: c9023ef183384434bb8d9cc2ae65596e, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
+  - soundName: repairSideButton
+    clip: {fileID: 8300000, guid: 4f7b186527941174ea47a4dc149c3822, type: 3}
+    isLoop: 0
+    _defaultVolume: 1

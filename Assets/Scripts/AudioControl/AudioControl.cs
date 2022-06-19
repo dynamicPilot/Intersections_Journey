@@ -13,7 +13,6 @@ namespace AudioControls
         [SerializeField] private AudioConfig _config;
         
         private SoundsPlayer _soundsPlayer;
-        //private SnapshotTransition _snapshotTransition;
         private Radio _radio;
 
         bool isMute = false;
@@ -21,7 +20,6 @@ namespace AudioControls
         private void Awake()
         {
             _soundsPlayer = GetComponent<SoundsPlayer>();
-            //_snapshotTransition = GetComponent<SnapshotTransition>();
             SetAudio();
         }
 
@@ -29,7 +27,7 @@ namespace AudioControls
         {
             isMute = false;
             _radio = GameObject.FindGameObjectWithTag("Radio").GetComponent<Radio>();
-            _soundsPlayer.SetVolumeRate(_config.DefaultVolume);
+            //_soundsPlayer.SetVolumeRate(_config.DefaultVolume);
         }
 
         public void TurnOnOffSound(bool _isMute, bool musicOnly = false)

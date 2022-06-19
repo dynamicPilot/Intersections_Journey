@@ -9,7 +9,7 @@ namespace IJ.Animations
         public void FromSecondState();
     }
 
-    public class HamburgerSignAnimation : MonoBehaviour, ITwoStateAnimation
+    public class HamburgerSignAnimation : TweenAnimation, ITwoStateAnimation
     {
         [SerializeField] private RectTransform _stripe0;
         [SerializeField] private RectTransform _stripe1;
@@ -24,11 +24,6 @@ namespace IJ.Animations
         private void Awake()
         {
             _fadeDuration = 0.83f * _duration;
-        }
-
-        private void OnDestroy()
-        {
-            DOTween.KillAll();
         }
 
         public void ToSecondState()

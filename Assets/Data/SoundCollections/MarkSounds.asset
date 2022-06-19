@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6832fb53010a8a499b6a2d64c4ec465, type: 3}
+  m_Name: MarkSounds
+  m_EditorClassIdentifier: 
+  collection:
+  - soundName: indicator
+    clip: {fileID: 8300000, guid: d67831a9bfbc76448b56743f833d9d52, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
+  - soundName: allert_0
+    clip: {fileID: 8300000, guid: e4dbd61071f3d4844a6ee4de6647acdc, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
+  - soundName: allert_1
+    clip: {fileID: 8300000, guid: be84837fdd9c94c448d9263a039567d8, type: 3}
+    isLoop: 0
+    _defaultVolume: 1

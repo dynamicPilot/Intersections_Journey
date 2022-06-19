@@ -7,7 +7,7 @@ namespace IJ.Animations
     {
         public void MakeAction();
     }
-    public class PopAndShakeAnimation : MonoBehaviour, ISingleActionAnimation
+    public class PopAndShakeAnimation : TweenAnimation, ISingleActionAnimation
     {
         [SerializeField] private RectTransform _transform;
 
@@ -21,11 +21,6 @@ namespace IJ.Animations
         private void Awake()
         {
             _turnInterval = _shakeInterval / 3f;
-        }
-
-        private void OnDestroy()
-        {
-            DOTween.KillAll();
         }
 
 

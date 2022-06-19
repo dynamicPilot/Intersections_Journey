@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimatedButton : MonoBehaviour
@@ -41,14 +40,8 @@ public class AnimatedButton : MonoBehaviour
 
     }
 
-    //private void OnDisable()
-    //{
-    //    StopAllCoroutines();
-    //}
-
     IEnumerator Disappearing()
     {
-        //Logging.Log("Make Disappearing.....");
         disapearingIsOn = true;
 
         animator.SetTrigger("makeDisappearance");
@@ -66,7 +59,6 @@ public class AnimatedButton : MonoBehaviour
         else
         {
             disapearingIsOn = false;
-            //Logging.Log("Stop Disappearing.....");
             gameObject.SetActive(false);
         }
 

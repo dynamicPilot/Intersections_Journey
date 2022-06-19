@@ -16,4 +16,4 @@ MonoBehaviour:
   - soundName: traffic_low
     clip: {fileID: 8300000, guid: bb98836c2d1383947b9d9dff39f52ca1, type: 3}
     isLoop: 1
-    defaultVolume: 0.7
+    _defaultVolume: 1

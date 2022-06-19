@@ -6,11 +6,11 @@ namespace AudioControls.SoundPlayers
     public class SoundsPlayer : AudioPlayer
     {
         [Header("Audio Sources")]
-        [SerializeField] private AudioSource _source;
+        [SerializeField] private protected AudioSource _source;
 
-        public override void TurnOnOff(bool _isMute)
+        public override void TurnOnOff(bool isMute)
         {
-            _source.mute = _isMute;
+            _source.mute = isMute;
         }
 
         public override void PlaySound(int index)
@@ -18,9 +18,14 @@ namespace AudioControls.SoundPlayers
             Sound sound = collection.GetSoundOfIndex(index);
             if (sound != null)
             {
-                sound.SetSource(_source, _volumeRate);
+                sound.SetSource(_source);
                 _source.Play();
             }
+        }
+
+        public override void StopPlaying()
+        {
+            _source.Stop();
         }
     }
 }

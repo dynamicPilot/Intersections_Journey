@@ -1,6 +1,5 @@
 using AudioControls.SoundPlayers;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Utilites.Configs;
 
@@ -12,16 +11,14 @@ namespace AudioControls.SoundEffects
         [SerializeField] private AudioConfig _config;
         private EffectsPlayer _player;
         private SoundsPlayer _playerForAmbient;
-        private WaitForSeconds timer;
+        private WaitForSeconds _timer;
 
         private void Awake()
         {
             _player = GetComponent<EffectsPlayer>();
-            _player.SetVolumeRate(_config.DefaultVolume);
             _playerForAmbient = GetComponent<SoundsPlayer>();
-            _playerForAmbient.SetVolumeRate(_config.DefaultVolume);
 
-            timer = new WaitForSeconds(_config.EffectsPeriod);
+            _timer = new WaitForSeconds(_config.EffectsPeriod);
             StartEffects();
         }
 
@@ -38,7 +35,7 @@ namespace AudioControls.SoundEffects
 
         IEnumerator MakeEffect()
         {
-            yield return timer;
+            yield return _timer;
             Logging.Log("Play effect!");
             _player.PlaySound(-1);
             StartCoroutine(MakeEffect());

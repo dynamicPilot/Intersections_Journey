@@ -3,19 +3,16 @@ using UnityEngine;
 
 namespace IJ.Animations
 {
-    public class PanelMoveAnimation : MonoBehaviour
+    public class PanelMoveAnimation : TweenAnimation
     {
         [SerializeField] private RectTransform _transform;
+        [SerializeField] private GameObject _panel;
         [SerializeField] private float _initialPosX = -2000f;
         [SerializeField] private float _duration = 1f;
 
-        private void OnDestroy()
-        {
-            DOTween.KillAll();
-        }
-
         public void MoveIn()
         {
+            _panel.SetActive(true);
             _transform.DOLocalMoveX(0f, _duration).SetEase(Ease.OutBack);
         }
 
@@ -23,7 +20,7 @@ namespace IJ.Animations
         {
             _transform.DOLocalMoveX(_initialPosX, _duration).SetEase(Ease.InBack).OnComplete(() =>
            {
-               gameObject.SetActive(false);
+               _panel.SetActive(false);
            });
         }
     }

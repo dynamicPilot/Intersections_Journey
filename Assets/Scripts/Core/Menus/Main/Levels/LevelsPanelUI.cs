@@ -1,28 +1,21 @@
 using IJ.Animations;
-using IJ.Core.Objects.LevelAndLocation;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace IJ.Core.Menus.Main.Levels
 {
-    [RequireComponent(typeof(LevelPanelView))]
-    [RequireComponent(typeof(PanelMoveAnimation))]
+//    [RequireComponent(typeof(LevelPanelView))]
+//    [RequireComponent(typeof(PanelMoveAnimation))]
     public class LevelsPanelUI : MonoBehaviour, ISetPlayerState
     {
         public enum CROSS { tCross, cross, doubleCross, cross3222 }
        
         [Header("Components")]
         [SerializeField] private MenuFlow _flow;
+        [SerializeField] private LevelPanelView _view;
+        [SerializeField] private PanelMoveAnimation _animation;
+        [SerializeField] private Transform _levelCards;
 
-        private LevelPanelView _view;
-        private PanelMoveAnimation _animation;
         private PlayerState _playerState;
-
-        private void Awake()
-        {
-            _view = GetComponent<LevelPanelView>();
-            _animation = GetComponent<PanelMoveAnimation>();
-        }
 
         public void SetPlayerState(PlayerState playerState)
         {
@@ -41,11 +34,15 @@ namespace IJ.Core.Menus.Main.Levels
             _animation.MoveOut();
         }
 
+        public void HidePanel()
+        {
+            if (_levelCards.gameObject.activeSelf) _levelCards.gameObject.SetActive(false);
+        }
+
         public void LoadLevel(Level level)
         {
             _flow.LoadLevelScene(level);
-        }
-
-        
+            _levelCards.gameObject.SetActive(false);
+        }     
     }
 }

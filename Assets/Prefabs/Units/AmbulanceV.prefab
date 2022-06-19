@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4582104935054901952}
   - component: {fileID: 2932795026238200078}
   - component: {fileID: 2389928959425263710}
+  - component: {fileID: 6885803209580898262}
   m_Layer: 8
   m_Name: AmbulanceV
   m_TagString: Car
@@ -229,7 +230,7 @@ MonoBehaviour:
   timerMark: {fileID: 3111470489390828475}
   markTransform: {fileID: 3111470489115237226}
   timerValue: 10
-  allertValue: 2
+  allertValue: 10
 --- !u!114 &8335203526764868416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +255,7 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
 --- !u!114 &911534634629328413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,8 +284,6 @@ MonoBehaviour:
   gap: 0.7
   maxDistanceToDetect: 25
   isSelfTrain: 0
-  _trafficLightInfo:
-    _trafficLightToFollow: {fileID: 0}
   totalTimeOnRoad: 0
 --- !u!114 &4582104935054901952
 MonoBehaviour:
@@ -321,6 +321,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dc6dedfbb600dc46b1962e1b193e7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6885803209580898262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547212947914099375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6627807577839250488

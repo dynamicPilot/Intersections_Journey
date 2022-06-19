@@ -7,16 +7,12 @@ namespace AudioControls.Commons
         [Header("Sounds")]
         [SerializeField] private protected SoundCollection collection;
 
-        protected float _volumeRate = 0f;
-
-        public virtual void SetVolumeRate(float volumeRate)
-        {
-            _volumeRate = volumeRate;
-            if (_volumeRate == 0) TurnOnOff(true);
-        }
+        protected float _volumeRate = 1f;
 
         public abstract void TurnOnOff(bool _isMute);
         public abstract void PlaySound(int index);
+
+        public abstract void StopPlaying();
     }
 }
 

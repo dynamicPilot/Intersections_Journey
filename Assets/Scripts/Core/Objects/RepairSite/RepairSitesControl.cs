@@ -1,3 +1,4 @@
+using IJ.Core.UIElements.NeedRepairCar;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +7,8 @@ namespace RepairSites
     public class RepairSitesControl : MonoBehaviour
     {
         [SerializeField] private RepairSite[] repairSites;
-        [SerializeField] private AnimatedButton needRepairCarButton;
-        [SerializeField] bool needRepairSiteControl = false;
+        [SerializeField] private NeedRepairCarButtonEffects _needRepairCarButton;
+        bool _needRepairSiteControl = false;
 
         public delegate void NeedRepairCar(TimePoint timePoint, int repairSiteIndex);
         public event NeedRepairCar OnNeedRepairCar;
@@ -17,7 +18,7 @@ namespace RepairSites
 
         private void Awake()
         {
-            needRepairSiteControl = false;
+            _needRepairSiteControl = false;
 
             for (int i = 0; i < repairSites.Length; i++)
             {
@@ -50,20 +51,20 @@ namespace RepairSites
             if (timePoints == null || timePoints.Count == 0)
             {
                 Logging.Log("RepairSiteControl: no repair site!");
-                needRepairSiteControl = false;
+                _needRepairSiteControl = false;
                 return;
             }
 
             Logging.Log("RepairSiteControl: have repair site!");
             data = new RepairSiteData(timePoints, repairSites);
-            needRepairSiteControl = true;
+            _needRepairSiteControl = true;
         }
 
         public void CheckRepairSite(int hour)
         {
-            if (!needRepairSiteControl) return;
+            if (!_needRepairSiteControl) return;
 
-            ActivateRepairSite(data.CheckRepairSiteForMakeActive(hour, out needRepairSiteControl));
+            ActivateRepairSite(data.CheckRepairSiteForMakeActive(hour, out _needRepairSiteControl));
 
         }
 
@@ -76,14 +77,9 @@ namespace RepairSites
             repairSites[index].ActivateSite();
 
             // show UI
-            if (!needRepairCarButton.gameObject.activeSelf)
+            if (!_needRepairCarButton.gameObject.activeSelf)
             {
-                needRepairCarButton.StartButton();
-                needRepairCarButton.gameObject.SetActive(true);
-            }
-            else
-            {
-                needRepairCarButton.CheckForStartIndicator();
+                _needRepairCarButton.StartButton();
             }
         }
 
@@ -103,13 +99,13 @@ namespace RepairSites
             bool hasMoreActive = data.OnCallForRepairCar(out index);
 
             if (OnNeedRepairCar != null) OnNeedRepairCar.Invoke(repairSites[index].Location, index);
-            // if do not have another active sites
-            if (!hasMoreActive)
+
+            _needRepairCarButton.StopButton();
+
+            if (hasMoreActive)
             {
-                needRepairCarButton.StopButton();
+                _needRepairCarButton.StartButton();
             }
-            
-            needRepairCarButton.gameObject.SetActive(hasMoreActive);
         }
     }
 }

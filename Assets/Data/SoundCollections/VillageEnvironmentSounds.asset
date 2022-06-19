@@ -16,12 +16,12 @@ MonoBehaviour:
   - soundName: bird_1
     clip: {fileID: 8300000, guid: e6c48d50cc97b1b4389c37d5d3e6fce3, type: 3}
     isLoop: 0
-    defaultVolume: 0.7
+    _defaultVolume: 1
   - soundName: bird_3
     clip: {fileID: 8300000, guid: 63f517f618164684fb58943a16bb451e, type: 3}
     isLoop: 0
-    defaultVolume: 0.7
+    _defaultVolume: 1
   - soundName: bird_4
     clip: {fileID: 8300000, guid: 38ce5a6b9e9b0124a879e15edff0337e, type: 3}
     isLoop: 0
-    defaultVolume: 0.7
+    _defaultVolume: 1

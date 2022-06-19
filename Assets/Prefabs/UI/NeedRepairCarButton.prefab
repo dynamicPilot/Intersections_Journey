@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5213516940443066780}
   - component: {fileID: 5213516940443066781}
   - component: {fileID: 5213516940443066782}
-  - component: {fileID: 5246030258972852555}
-  - component: {fileID: 1818163152814669161}
+  - component: {fileID: 2064567731672491407}
+  - component: {fileID: 3792519778222240382}
+  - component: {fileID: 2491554493354549404}
   m_Layer: 5
   m_Name: NeedRepairCarButton
   m_TagString: Untagged
@@ -31,6 +32,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -134,26 +136,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!95 &5246030258972852555
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5213516940443066776}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a5790233e727b9947a886ec1182a47f8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1818163152814669161
+--- !u!114 &2064567731672491407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +145,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 5213516940443066776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc25dbfd5cd788b4b9a2d60c1295a047, type: 3}
+  m_Script: {fileID: 11500000, guid: e5843813afbfd584c99080a53149f49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 5246030258972852555}
-  disappearingDuration: 0.5
+  _transform: {fileID: 5213516940443066783}
+  _correctionToCenteredPosition: {x: 960, y: 540}
+  _appearanceDuration: 0.5
+  _pumpScale: {x: 1.05, y: 1.05, z: 1.05}
+  _crounchScale: {x: 0.95, y: 0.95, z: 0.95}
+  _jumpDeltaY: 25.2
+--- !u!114 &3792519778222240382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5213516940443066776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b341103fc1e49e3438e8d25a66a8081d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  _soundIndex: 3
+  _loopTime: 3.2
+--- !u!114 &2491554493354549404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5213516940443066776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a878ee987d8a7144fbdfdc20b481b270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

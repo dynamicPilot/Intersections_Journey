@@ -4,6 +4,7 @@ using UnityEngine;
 public class RoadMarksControl : MonoBehaviour
 {
     [SerializeField] private List<RoadMark> marks;
+
     IDictionary<int, int> roadMarksIndexByStartPointNumber = new Dictionary<int, int>();
 
     private void Awake()

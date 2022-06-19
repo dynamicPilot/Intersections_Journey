@@ -77,6 +77,7 @@ public class LevelControl : SceneControl
 
     public void LevelGameOver(Vector3 position, bool endByTimer = false)
     {
+        Logging.Log("Game over in level control");
         _levelFlow.EndLevel(endByTimer, position.x, position.y);
     }
 

@@ -6,8 +6,8 @@ namespace Utilites.Configs
     [CreateAssetMenu(fileName = "New AudioConfig", menuName = "Unit/AudioConfig")]
     public class AudioConfig : ScriptableObject
     {
-        [SerializeField] private float _defaultVolume = 0.7f;
-        public float DefaultVolume { get => _defaultVolume; }
+        //[SerializeField] private float _defaultVolume = 0.7f;
+        //public float DefaultVolume { get => _defaultVolume; }
         [SerializeField] private float _effectsPeriod = 2f;
         public float EffectsPeriod { get => _effectsPeriod; }
 

@@ -15,14 +15,14 @@ namespace AudioControls.Radios
         {
             DontDestroyOnLoad(gameObject);
             _source = GetComponent<AudioSource>();
-            SetVolumeRate(_config.DefaultVolume);
+            //SetVolumeRate(_config.DefaultVolume);
             StartRadio();
         }
 
         public void SetVolumeRate(float volumeRate)
         {
-            _volumeRate = volumeRate;
-            if (_volumeRate == 0) TurnOnOff(true);
+            //_volumeRate = volumeRate;
+            //if (_volumeRate == 0) TurnOnOff(true);
         }
 
         public void TurnOnOff(bool _isMute)

@@ -53,6 +53,7 @@ public class VInfo : MonoBehaviour, IGetUnitIndex
     public void GameOverState(Vector3 position)
     {
         if (OnGameOver != null) OnGameOver.Invoke(position);
+        Logging.Log("Game over by unit");
     }
 
     public int GetIndex()

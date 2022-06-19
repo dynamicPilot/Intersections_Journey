@@ -43,6 +43,7 @@ namespace MovableUnits.Units
 
         void TimerIsOver()
         {
+            Logging.Log("Timer is Over");
             info.GameOverState(transform.position);
             timer.OnTimerIsOver -= TimerIsOver;
         }

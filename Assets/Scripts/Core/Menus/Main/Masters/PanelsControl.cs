@@ -1,6 +1,4 @@
 using IJ.Core.Menus.Main.Levels;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace IJ.Core.Menus.MainMenu
@@ -14,7 +12,7 @@ namespace IJ.Core.Menus.MainMenu
 
         public void OpenMap()
         {
-            if (_levels.gameObject.activeSelf) _levels.gameObject.SetActive(false);
+            _levels.HidePanel();
             _map.gameObject.SetActive(true);
         }
 
@@ -31,7 +29,6 @@ namespace IJ.Core.Menus.MainMenu
         public void TransitToLevels(Location location)
         {
             _map.gameObject.SetActive(false);
-            _levels.gameObject.SetActive(true);
             _levels.OpenLocationPage(location);
         }
 
@@ -43,7 +40,7 @@ namespace IJ.Core.Menus.MainMenu
 
         public void TransitToLevelScene()
         {
-            _levels.gameObject.SetActive(false);
+            //_levels.gameObject.SetActive(false);
         }
     }
 }

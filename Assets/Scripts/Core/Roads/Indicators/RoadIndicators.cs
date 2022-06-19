@@ -7,7 +7,6 @@ public class RoadIndicators
     public enum STATE { stop, update, startAllert, stopAllert, allertUpdate }
 
     [SerializeField] private RoadMarksControl roadMarks;
-    //private float valueToShowIndicator = 0.7f;
 
     public List<STATE> marksState = new List<STATE>();
 
@@ -15,7 +14,6 @@ public class RoadIndicators
     public RoadIndicators(RoadMarksControl _roadMarks, float _valueToShowIndicator, int marksCounter, IConvertToPointNumber _converter)
     {
         roadMarks = _roadMarks;
-        //valueToShowIndicator = _valueToShowIndicator;
         converter = _converter;
 
         for (int i = 0; i < marksCounter; i++)

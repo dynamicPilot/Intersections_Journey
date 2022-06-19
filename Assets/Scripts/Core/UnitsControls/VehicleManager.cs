@@ -1,3 +1,4 @@
+using IJ.Core.Objects.CrashEffects;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -101,6 +102,7 @@ public class VehicleManager : MonoBehaviour, IIsEndPointParking
 
     public void GameOverState(Vector3 position)
     {
+        Logging.Log("Game over in manager");
         if (OnGameOver != null) OnGameOver.Invoke(position, false);
     }
 }

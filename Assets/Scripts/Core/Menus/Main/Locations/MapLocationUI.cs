@@ -1,3 +1,4 @@
+using IJ.Animations;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -7,11 +8,11 @@ public class MapLocationUI : MonoBehaviour
 {
     [SerializeField] private Location location;
     [SerializeField] private MapLocationsUI mapLocationsUI;
+    [SerializeField] private PanelsFlipAnimation _animation;
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI pointsText;
     [SerializeField] private Button openLocationButton;
-    [SerializeField] private Animator animator;
 
     [Header("Views")]
     [SerializeField] private GameObject closedView;
@@ -38,10 +39,8 @@ public class MapLocationUI : MonoBehaviour
     {
         if (inView) return;
 
-        //StopAllCoroutines();
-        if (animator != null)
+        if (_animation != null)
         {
-            Logging.Log("MapLocationUI: start animator");
             StartCoroutine(IsBlock());
         }
     }
@@ -64,7 +63,6 @@ public class MapLocationUI : MonoBehaviour
             if (closedView != null) closedView.SetActive(true);
 
             if (pointsText != null) pointsText.SetText(location.PointsToMakeAvailable.ToString());
-            if (animator != null) animator.enabled = true;
         }
     }
 
@@ -80,7 +78,7 @@ public class MapLocationUI : MonoBehaviour
         {
             // open button panel           
 
-            if (animator != null)
+            if (_animation != null)
             {
                 Logging.Log("MapLocationUI: start animator");                
                 StartCoroutine(IsBlock());
@@ -90,34 +88,17 @@ public class MapLocationUI : MonoBehaviour
 
     IEnumerator IsBlock()
     {
-        //Logging.Log("MapLocationUI: start isBlock go to view " + !inView);
         isBlock = true;
+        if (openLocationButton != null) openLocationButton.interactable = mapLocationsUI.CanBeLocationAvailable(location);
 
-        if (inView)
-        {
-            //Logging.Log("MapLocationUI: to buttons ");
-            animator.SetTrigger("ToButtons");
-            mapLocationsUI.LocationInButtonsView = this;
-        }
-        else
-        {
-            //Logging.Log("MapLocationUI: to view ");
-            animator.SetTrigger("ToView");
-            mapLocationsUI.LocationInButtonsView = null;
-        }
+        if (inView) mapLocationsUI.LocationInButtonsView = this;
+        else mapLocationsUI.LocationInButtonsView = null;
 
+        _animation.DoFlip();
         yield return timer;
 
         isBlock = false;
         inView = !inView;
-
-        if (!inView)
-        {
-            // set button state
-            if (openLocationButton != null) openLocationButton.interactable = mapLocationsUI.CanBeLocationAvailable(location);
-        }
-       
-        //Logging.Log("MapLocationUI: end isBlock");
     }
 
     public int GetLocationIndex()
@@ -131,7 +112,6 @@ public class MapLocationUI : MonoBehaviour
 
         if (isAvailable)
         {
-            // start opening effect is made by Menu Master so just update view
             mapLocationsUI.LocationInButtonsView = null;
             SetLocationView();
         }

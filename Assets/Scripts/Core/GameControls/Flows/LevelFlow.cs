@@ -98,6 +98,7 @@ public class LevelFlow : Flow, ISetLevel
         else
         {
             // losing
+            _menusUIControl.OpenGameOverMenu(_level.Number);
             _cameraControl.OnGameOverEndLevel(new Vector2(xPosition, yPosition));
         }
     }

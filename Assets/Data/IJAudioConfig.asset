@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IJAudioConfig
   m_EditorClassIdentifier: 
   _defaultVolume: 0.7
-  _effectsPeriod: 2
+  _effectsPeriod: 8
   _startSnaphot: {fileID: -426796722102886595, guid: 7a0fd72ff2e74cc46aca33280ef09bb0, type: 2}
   _activeSnaphot: {fileID: 24500006, guid: 7a0fd72ff2e74cc46aca33280ef09bb0, type: 2}
   _pausedSnaphot: {fileID: -405164258300344068, guid: 7a0fd72ff2e74cc46aca33280ef09bb0, type: 2}

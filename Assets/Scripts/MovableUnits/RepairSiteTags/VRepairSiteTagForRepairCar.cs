@@ -1,3 +1,4 @@
+using AudioControls.SoundPlayers;
 using IJ.MovableUnits.MediatorAndComponents;
 using System.Collections;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class VRepairSiteTagForRepairCar : VRepairSiteTag, IHoldRepairCarComponent
 {
     [SerializeField] private float _timeToRepair = 1f;
+    [SerializeField] private ObjectSoundsPlayer _player;
 
     private int _targetIndex;
 
@@ -41,11 +43,13 @@ public class VRepairSiteTagForRepairCar : VRepairSiteTag, IHoldRepairCarComponen
     IEnumerator RepairingTimer()
     {
         Logging.Log("RepairCar: start repairing");
+        _player.PlaySound(0);
         _isRepairing = true;
         yield return new WaitForSeconds(_timeToRepair);
 
         // hide repair side event
         _isRepairing = false;
+        _player.StopPlaying();
         if (OnRepairIsMade != null) OnRepairIsMade.Invoke(_targetIndex, this);
     }
 }

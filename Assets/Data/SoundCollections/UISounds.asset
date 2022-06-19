@@ -16,24 +16,24 @@ MonoBehaviour:
   - soundName: primaryClick
     clip: {fileID: 8300000, guid: d64dc55df6c379f43bbd0b2ebe84aa94, type: 3}
     isLoop: 0
-    defaultVolume: 0.7
+    _defaultVolume: 1
   - soundName: secondClick
-    clip: {fileID: 8300000, guid: 95bf1b852f20e9f49a275be0401075ce, type: 3}
+    clip: {fileID: 8300000, guid: 19a8686f95fdb2b4cbf7253efc00e53f, type: 3}
     isLoop: 0
-    defaultVolume: 0.7
+    _defaultVolume: 1
   - soundName: turnTo
     clip: {fileID: 8300000, guid: b4aedff186cd61948abc9071edfd4faa, type: 3}
     isLoop: 0
-    defaultVolume: 0.7
+    _defaultVolume: 1
   - soundName: turnFrom
     clip: {fileID: 8300000, guid: cf7d36633936acd44b4ef8e3122f798c, type: 3}
     isLoop: 0
-    defaultVolume: 0.7
+    _defaultVolume: 1
   - soundName: quit
     clip: {fileID: 8300000, guid: 2fb95d19038d93c4cbcf90c75a51d164, type: 3}
     isLoop: 0
-    defaultVolume: 0.7
+    _defaultVolume: 1
   - soundName: error
     clip: {fileID: 8300000, guid: d557bf05b58dde74d88e1f01a4810685, type: 3}
     isLoop: 0
-    defaultVolume: 0.7
+    _defaultVolume: 1

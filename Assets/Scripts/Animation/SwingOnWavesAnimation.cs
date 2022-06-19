@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace IJ.Animations
 {
-    public class SwingOnWavesAnimation : MonoBehaviour
+    public class SwingOnWavesAnimation : TweenAnimation
     {
         [SerializeField] private Transform _transform;
         [SerializeField] private float _amplitudeX;
@@ -15,17 +15,11 @@ namespace IJ.Animations
             SwingAnimation();
         }
 
-        private void OnDestroy()
-        {
-            DOTween.KillAll();
-        }
-
-
         void SwingAnimation()
         {
             Sequence sequence = DOTween.Sequence();
 
-            sequence.Append(transform.DOLocalMove(new Vector3(_amplitudeX, _amplitudeY, _transform.position.z),
+            sequence.Append(_transform.DOLocalMove(new Vector3(_amplitudeX, _amplitudeY, _transform.position.z),
                 _duration).SetEase(Ease.InOutSine));
             sequence.Append(_transform.DOLocalMove(Vector3.zero,
                 _duration).SetEase(Ease.InOutSine));

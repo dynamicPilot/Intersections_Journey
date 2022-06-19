@@ -11,7 +11,7 @@ namespace AudioControls.Commons
 
         [Header("Settings")]
         [SerializeField] private bool isLoop = false;
-        [SerializeField][Range(0f, 1f)] private float defaultVolume = 0.7f;
+        [SerializeField][Range(0f, 1f)] private float _defaultVolume = 1f;
 
         public Sound(string _soundName, bool _isLoop = false)
         {
@@ -19,11 +19,16 @@ namespace AudioControls.Commons
             isLoop = _isLoop;
         }
 
-        public void SetSource(AudioSource source, float volumeRate)
+        public void SetSource(AudioSource source)
         {
-            source.volume = volumeRate * defaultVolume;
+            source.volume = _defaultVolume;
             source.clip = clip;
             source.loop = isLoop;
+        }
+
+        public float GetLenght()
+        {
+            return clip.length;
         }
     }
 }
