@@ -4,27 +4,24 @@ using UnityEngine;
 using Utilites.Configs;
 
 namespace AudioControls.SoundEffects
-{
-    [RequireComponent(typeof(EffectsPlayer))]
+{ 
     public class SoundEffectsControl : MonoBehaviour
     {
-        [SerializeField] private AudioConfig _config;
-        private EffectsPlayer _player;
-        private SoundsPlayer _playerForAmbient;
+        [SerializeField] private EnvironmentEffects _effects;
+        [SerializeField] private AmbientSoundsPlayer[] _playersForAmbient;
+        [SerializeField] private float _effectTimer = 8f;
         private WaitForSeconds _timer;
 
         private void Awake()
         {
-            _player = GetComponent<EffectsPlayer>();
-            _playerForAmbient = GetComponent<SoundsPlayer>();
-
-            _timer = new WaitForSeconds(_config.EffectsPeriod);
+            _timer = new WaitForSeconds(_effectTimer);
             StartEffects();
         }
 
         public void StartEffects()
         {
-            _playerForAmbient.PlaySound(0);
+            foreach (AmbientSoundsPlayer player in _playersForAmbient) player.PlayAmbient();
+
             StartCoroutine(MakeEffect());
         }
 
@@ -36,10 +33,8 @@ namespace AudioControls.SoundEffects
         IEnumerator MakeEffect()
         {
             yield return _timer;
-            Logging.Log("Play effect!");
-            _player.PlaySound(-1);
+            _effects.PlayEffect();
             StartCoroutine(MakeEffect());
-
         }
     }
 }

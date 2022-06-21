@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
 using Utilites.Configs;
 
 public class SnapshotTransition : MonoBehaviour
@@ -23,5 +22,10 @@ public class SnapshotTransition : MonoBehaviour
     {
         isOnPause = false;
         _config.ActiveSnaphot.TransitionTo(_config.TransitionTime);
+    }
+
+    public void ToStartGame()
+    {
+        _config.StartSnaphot.TransitionTo(_config.TransitionTime);
     }
 }

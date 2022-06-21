@@ -146,7 +146,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Events
+  m_Name: EffectsAmb
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: de38fbbf3ef1083428ba5411fceef3f8
   m_Children: []
@@ -400,6 +400,7 @@ AudioMixerSnapshotController:
   m_FloatValues:
     690d9fb0cd1bb0b49a82125407c1b05b: -10
     6fcc7412895c09b448be7e9b70ca1598: -2.372476
+    b0c8571223b4c0c479ddcb7fdcfa6a3e: -5
     a12afcc2794679b44b95e07dc5780e70: -15
     04125b27880d60f43a5bed5f5d9d3f2a: -20
     0a345afa89d1c3943b426b0259740121: -11.944499

@@ -1,3 +1,17 @@
 {
-	"name": "EnvironmentElements"
+    "name": "EnvironmentElements",
+    "rootNamespace": "",
+    "references": [
+        "GUID:38614cce83e0b5641977d0707240a4d7",
+        "GUID:71ca57373c045cb429f52df977ecdd06"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

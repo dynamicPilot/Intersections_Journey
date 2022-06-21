@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7805998981155976993}
+  - component: {fileID: 6070057412737280132}
   - component: {fileID: 7736160178037894640}
   m_Layer: 22
   m_Name: Source3_traffic
@@ -32,6 +33,21 @@ Transform:
   m_Father: {fileID: 4467103585403241259}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6070057412737280132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759059860396673696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d662c80316ab4bb1a9270c3375f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collection: {fileID: 11400000, guid: 57a50756c003d6549a4701c4371ece7d, type: 2}
+  _source: {fileID: 7736160178037894640}
+  _index: 0
 --- !u!82 &7736160178037894640
 AudioSource:
   m_ObjectHideFlags: 0
@@ -138,8 +154,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4467103585403241259}
   - component: {fileID: 4467103585403241253}
+  - component: {fileID: 7975984331511506787}
   - component: {fileID: 4467103585403241258}
-  - component: {fileID: 2048248150268039960}
   m_Layer: 0
   m_Name: SoundEffecs
   m_TagString: Untagged
@@ -179,6 +195,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _config: {fileID: 11400000, guid: e25eacf65a0bcae409a2ed400ffc539d, type: 2}
+  _effects: {fileID: 7975984331511506787}
+  _playersForAmbient:
+  - {fileID: 6070057412737280132}
+--- !u!114 &7975984331511506787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467103585403241256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca3704df5eac18489f06815b1b6ab7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 4467103585403241258}
 --- !u!114 &4467103585403241258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,20 +228,6 @@ MonoBehaviour:
   - {fileID: 4467103586701842962}
   - {fileID: 4467103586241470985}
   - {fileID: 4467103586819933566}
---- !u!114 &2048248150268039960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4467103585403241256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfa0a354560e5d840bd3571e97196e8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collection: {fileID: 11400000, guid: 57a50756c003d6549a4701c4371ece7d, type: 2}
-  _source: {fileID: 7736160178037894640}
 --- !u!1 &4467103586241470990
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,17 +23,14 @@ namespace AudioControls
             SetAudio();
         }
 
-        public void SetAudio()
+        public virtual void SetAudio()
         {
             isMute = false;
             _radio = GameObject.FindGameObjectWithTag("Radio").GetComponent<Radio>();
-            //_soundsPlayer.SetVolumeRate(_config.DefaultVolume);
         }
 
         public void TurnOnOffSound(bool _isMute, bool musicOnly = false)
         {
-            // if music only --> radio control
-
             // UI sounds
             if (isMute != _isMute)
             {

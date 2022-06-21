@@ -355,6 +355,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: environment_village_banner
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 184
+        width: 17
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52fb264b0a109a458e0e7dbd31696cc
+      internalID: 1951129470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -366,6 +387,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      environment_village_banner: 1951129470
       environment_village-01_9: 8951927598576177007
       environment_village-01_5: 6269950660053517378
       environment_village-01_6: 8149293813162499179

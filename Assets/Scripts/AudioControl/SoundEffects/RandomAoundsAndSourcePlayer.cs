@@ -1,9 +1,9 @@
 using AudioControls.Commons;
 using UnityEngine;
 
-namespace AudioControls.SoundEffects
+namespace AudioControls.SoundPlayers
 {
-    public class EffectsPlayer : AudioPlayer
+    public class RandomAoundsAndSourcePlayer : AudioPlayer
     {
         [SerializeField] private AudioSource[] _sources;
         bool _isMute = false;

@@ -7,6 +7,10 @@ namespace AudioControls.Commons
     {
         [SerializeField] private Sound[] collection;
 
+        [Header("Random from index ( 0 for all lenght)")]
+        [SerializeField] private int _randomFrom = 0;
+        [Header("Random to index ( -1 for all lenght)")]
+        [SerializeField] private int _randomTo = -1;
         public Sound GetSoundOfIndex(int index)
         {
             if (index < collection.Length)
@@ -17,7 +21,14 @@ namespace AudioControls.Commons
 
         public Sound GetRandomSound()
         {
-            return collection[Random.Range(0, collection.Length)];
+            return collection[GetRandomSoundIndex()];
+        }
+
+        public int GetRandomSoundIndex()
+        {
+            int start = _randomFrom;
+            int end = (_randomTo + 1 == 0) ? collection.Length : _randomTo + 1;
+            return Random.Range(start, end);
         }
     }
 }

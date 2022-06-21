@@ -1,30 +1,36 @@
+using AudioControls.SoundPlayers;
+using IJ.Animations.Objects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlaneAnimatorControl : MonoBehaviour
 {
-    [SerializeField] private PlaneAnimator[] planeAnimators;
-    [SerializeField] private float updateInterval = 10f;
+    [SerializeField] private PlaneAnimation[] _planeAnimations;
+    [SerializeField] private float _updateInterval = 10f;
 
-    WaitForSeconds timer;
-    List<int> activePlaneAnimator = new List<int>();
-    int counter;
+    [SerializeField] private SoundsPlayer _player;
+    [SerializeField] private int _soundIndex = 1;
+
+    WaitForSeconds _timer;
+    List<int> _activePlaneAnimations = new List<int>();
+    int _counter;
+    bool _makeSound = true;
 
     private void Awake()
     {
-        counter = 0;
-        timer = new WaitForSeconds(updateInterval);
+        _counter = 0;
+        _makeSound = true;
+        _timer = new WaitForSeconds(_updateInterval);
         StartCoroutine(PlaneSpawner());
     }
 
     IEnumerator PlaneSpawner()
     {
-        yield return timer;
+        yield return _timer;
 
-        // first plane
         SpawnNextPlane();
-        if (counter < planeAnimators.Length)
+        if (_counter < _planeAnimations.Length)
         {
             StartCoroutine(PlaneSpawner());
         }
@@ -36,36 +42,43 @@ public class PlaneAnimatorControl : MonoBehaviour
 
     IEnumerator PlaneGetOut()
     {
-        yield return timer;
+        yield return _timer;
 
         GetOutNextPlane();
-        //yield return timer;
-        if (activePlaneAnimator.Count > 0) StartCoroutine(PlaneGetOut());
+        if (_activePlaneAnimations.Count > 0) StartCoroutine(PlaneGetOut());
         else
         {
-            counter = 0;
+            _counter = 0;
             StartCoroutine(PlaneSpawner());
         }
     }
 
     void SpawnNextPlane()
     {
-        if (counter < planeAnimators.Length)
+        if (_counter < _planeAnimations.Length)
         {
-            planeAnimators[counter].gameObject.SetActive(true);
-            planeAnimators[counter].StartAnimator();
-            activePlaneAnimator.Add(counter);
-            counter++;
+            _planeAnimations[_counter].gameObject.SetActive(true);
+            _planeAnimations[_counter].ToStand();
+            _activePlaneAnimations.Add(_counter);
+            _counter++;
+
+            MakeSound();
         }
     }
 
     void GetOutNextPlane()
     {
-        if (activePlaneAnimator.Count > 0)
+        if (_activePlaneAnimations.Count > 0)
         {
-            int index = activePlaneAnimator[0];           
-            planeAnimators[index].MakeGetOut();
-            activePlaneAnimator.RemoveAt(0);
+            int index = _activePlaneAnimations[0];           
+            _planeAnimations[index].FromStand();
+            _activePlaneAnimations.RemoveAt(0);            
         }
+    }
+
+    void MakeSound()
+    {
+        if (_makeSound) _player.PlaySound(_soundIndex);
+        _makeSound = !_makeSound;
     }
 }

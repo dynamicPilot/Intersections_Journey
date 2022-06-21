@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6832fb53010a8a499b6a2d64c4ec465, type: 3}
+  m_Name: BeachEnvironmentSounds
+  m_EditorClassIdentifier: 
+  collection:
+  - soundName: waves
+    clip: {fileID: 8300000, guid: cdce1395e538e8246850513eba0d08b0, type: 3}
+    isLoop: 1
+    _defaultVolume: 0.8
+  - soundName: gull_1
+    clip: {fileID: 8300000, guid: ac4594fa9a3406d43af7cde283cf0995, type: 3}
+    isLoop: 0
+    _defaultVolume: 0.5
+  - soundName: gull_2
+    clip: {fileID: 8300000, guid: 10f30b77fa5c3134886acff7179ccd68, type: 3}
+    isLoop: 0
+    _defaultVolume: 0.5
+  - soundName: gull_0
+    clip: {fileID: 8300000, guid: 2f09b905c4821d6448da4e37c960bed3, type: 3}
+    isLoop: 0
+    _defaultVolume: 0.5
+  _randomFrom: 1
+  _randomTo: 3
