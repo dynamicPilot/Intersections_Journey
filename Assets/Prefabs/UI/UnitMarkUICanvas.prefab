@@ -73,7 +73,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -290,7 +290,6 @@ MonoBehaviour:
   _allertSoundIndex: 2
   _indicatorLoopTime: 3
   _allertLoopTime: 1.5
-  _config: {fileID: 11400000, guid: e25eacf65a0bcae409a2ed400ffc539d, type: 2}
 --- !u!1 &1996886867719193066
 GameObject:
   m_ObjectHideFlags: 0

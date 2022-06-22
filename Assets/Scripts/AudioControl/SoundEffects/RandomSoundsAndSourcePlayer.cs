@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace AudioControls.SoundPlayers
 {
-    public class RandomAoundsAndSourcePlayer : AudioPlayer
+    public class RandomSoundsAndSourcePlayer : AudioPlayer
     {
         [SerializeField] private AudioSource[] _sources;
         bool _isMute = false;

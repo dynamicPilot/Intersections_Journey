@@ -68,7 +68,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 11
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -245,6 +245,7 @@ MonoBehaviour:
   _animation: {fileID: 6555413154480236999}
   _player: {fileID: 5201085483491563342}
   _signalDelay: 5
+  _startDelay: 0
   _soundIndex: 0
 --- !u!114 &6555413154480236999
 MonoBehaviour:

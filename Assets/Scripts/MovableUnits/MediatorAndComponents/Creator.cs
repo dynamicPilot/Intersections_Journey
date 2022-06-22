@@ -58,5 +58,14 @@ namespace IJ.MovableUnits.MediatorAndComponents
         }
     }
 
-
+    /// <summary>
+    /// Concrete creator for TrainMediator.
+    /// </summary>
+    class TrainMediatorCreator : Creator
+    {
+        public override IMediatorConstructor FactoryMethod()
+        {
+            return new TrainMediatorContructor();
+        }
+    }
 }

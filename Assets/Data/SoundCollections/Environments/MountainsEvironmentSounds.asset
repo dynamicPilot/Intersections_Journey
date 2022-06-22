@@ -10,24 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6832fb53010a8a499b6a2d64c4ec465, type: 3}
-  m_Name: UILongSounds
+  m_Name: MountainsEvironmentSounds
   m_EditorClassIdentifier: 
   collection:
-  - soundName: startLevel
-    clip: {fileID: 8300000, guid: 1de1895bb0d479043b7fbb0740bde00c, type: 3}
+  - soundName: chimes_0
+    clip: {fileID: 8300000, guid: 2bbcabd1dcac71942bfcb741b36e6364, type: 3}
     isLoop: 0
     _defaultVolume: 1
-  - soundName: endLevel
-    clip: {fileID: 8300000, guid: adf0b773d239ade49be1f7d9d37a9e3c, type: 3}
+  - soundName: chimes_1
+    clip: {fileID: 8300000, guid: 7cc235c1869cd214a8fe0b9242c75c67, type: 3}
     isLoop: 0
     _defaultVolume: 1
-  - soundName: loseLevel
-    clip: {fileID: 8300000, guid: c9023ef183384434bb8d9cc2ae65596e, type: 3}
+  - soundName: wind
+    clip: {fileID: 8300000, guid: f9c865aa90fbbea4f8227de84c4c0feb, type: 3}
     isLoop: 0
     _defaultVolume: 1
-  - soundName: repairSideButton
-    clip: {fileID: 8300000, guid: 4f7b186527941174ea47a4dc149c3822, type: 3}
-    isLoop: 0
-    _defaultVolume: 0.7
   _randomFrom: 0
   _randomTo: -1

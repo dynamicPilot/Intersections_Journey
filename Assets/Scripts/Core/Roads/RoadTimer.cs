@@ -26,6 +26,7 @@ public class RoadTimer
     public void UpdateUnits(List<int> _units, List<int> taxies)
     {
         units = _units;
+        deltas.Clear();
         for (int i = 0; i < units.Count; i++)
         {
             float delta = 0;

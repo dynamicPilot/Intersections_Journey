@@ -54,3 +54,18 @@ public class MakeRepairCarMediator : MakeUnitMediator
         _constractor.SetHolderForRepairCarComponent(ref holder);
     }
 }
+
+public class MakeTrainMediator : MakeUnitMediator
+{
+    protected override void GetContructorInterface()
+    {
+        Creator _creator = new TrainMediatorCreator();
+        _constructorInterface = _creator.CreateMediator();
+    }
+
+    public void SetHolderForTrainUnitComponent(ref IHoldTrainUnitComponent holder)
+    {
+        TrainMediatorContructor _constractor = _constructorInterface as TrainMediatorContructor;
+        _constractor.SetHolderForTrainUnitComponent(ref holder);
+    }
+}

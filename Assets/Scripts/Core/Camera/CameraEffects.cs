@@ -34,7 +34,7 @@ namespace IJ.Core.CameraControls
         {
             if (_pauseUpdate) return;
 
-            _totalEffectTimePassed += Time.deltaTime;
+            _totalEffectTimePassed += Time.unscaledDeltaTime;
             MakeEffectStep();
         }
 
@@ -45,9 +45,10 @@ namespace IJ.Core.CameraControls
             _needMove = needMove;
 
             if (needMove)
-            {
+            {               
                 _targetPoint = targetPoint;
-                _startPoint = _mainCamera.transform.position;
+                _startPoint = transform.position;
+                Logging.Log("change camera position from " + _startPoint + " to " + targetPoint);
             }
 
             _duration = duration;
@@ -76,6 +77,7 @@ namespace IJ.Core.CameraControls
 
         void ChangeCameraPosition(float t)
         {
+            Logging.Log("change camera position");
             Vector2 position = Vector2.Lerp(_startPoint, _targetPoint, t);
             _mainCamera.transform.position = new Vector3(position.x, position.y, _mainCamera.transform.position.z);
         }

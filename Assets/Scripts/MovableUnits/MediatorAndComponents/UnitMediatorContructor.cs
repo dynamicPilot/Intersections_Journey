@@ -21,10 +21,10 @@ namespace IJ.MovableUnits.MediatorAndComponents
         {
             CreateBasics();
 
-            Mediator mediator = new Mediator(_moverComponent, _effectComponent);           
-            _routerComponent.SetMediator(mediator);
-            _repairSiteComponent.SetMediator(mediator);
-            _crasherComponent.SetMediator(mediator);
+            Mediator _mediator = new Mediator(_moverComponent, _effectComponent);           
+            _routerComponent.SetMediator(_mediator);
+            _repairSiteComponent.SetMediator(_mediator);
+            _crasherComponent.SetMediator(_mediator);
         }
 
         public void SetHolderForMoverComponent(ref IHoldMoverComponent holder)
@@ -65,6 +65,7 @@ namespace IJ.MovableUnits.MediatorAndComponents
             Mediator _mediator = new EmergencyUnitMediator(_moverComponent, _effectComponent, _component);
             _routerComponent.SetMediator(_mediator);
             _repairSiteComponent.SetMediator(_mediator);
+            _crasherComponent.SetMediator(_mediator);
         }
 
         public void SetHolderForEmergencyComponent(ref IHoldEmergencyUnitComponent holder)
@@ -84,9 +85,30 @@ namespace IJ.MovableUnits.MediatorAndComponents
             Mediator _mediator = new RepairCarMediator(_moverComponent, _effectComponent, _component);
             _routerComponent.SetMediator(_mediator);
             _repairSiteComponent.SetMediator(_mediator);
+            _crasherComponent.SetMediator(_mediator);
         }
 
         public void SetHolderForRepairCarComponent(ref IHoldRepairCarComponent holder)
+        {
+            _component.SetHolder(holder);
+        }
+    }
+
+    public class TrainMediatorContructor : UnitMediatorContructor
+    {
+        TrainUnitComponent _component;
+
+        public override void CreateMediator()
+        {
+            CreateBasics();
+            _component = new TrainUnitComponent();
+            Mediator _mediator = new TrainMediator(_moverComponent, _effectComponent, _component);
+            _routerComponent.SetMediator(_mediator);
+            _repairSiteComponent.SetMediator(_mediator);
+            _crasherComponent.SetMediator(_mediator);
+        }
+
+        public void SetHolderForTrainUnitComponent(ref IHoldTrainUnitComponent holder)
         {
             _component.SetHolder(holder);
         }

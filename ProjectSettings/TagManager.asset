@@ -16,6 +16,7 @@ TagManager:
   - ZoneTrigger
   - AudioControl
   - Radio
+  - Inputs
   layers:
   - Default
   - TransparentFX
@@ -40,7 +41,7 @@ TagManager:
   - Locations
   - Trains&Others
   - Audio&Sounds
-  - 
+  - Inputs
   - 
   - 
   - 

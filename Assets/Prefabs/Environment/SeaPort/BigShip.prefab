@@ -68,7 +68,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 11.5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -249,6 +249,7 @@ MonoBehaviour:
   _animation: {fileID: 5579332401550738823}
   _player: {fileID: 2134373388627589449}
   _signalDelay: 10
+  _startDelay: 0
   _soundIndex: 0
 --- !u!114 &5579332401550738823
 MonoBehaviour:
@@ -266,8 +267,8 @@ MonoBehaviour:
   _initialPosition: {x: 41.5, y: -20.74, z: 0}
   _portPosition: {x: 12.58, y: -17.62, z: 0}
   _swingDelta: {x: 0.36, y: 0.32, z: 0}
-  _sailingInTimer: 20
   _swingTimer: 2
+  _sailingInTimer: 20
 --- !u!1001 &6893443803054422187
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -56,6 +56,7 @@ namespace IJ.Core.CameraControls
             inputControl.EndInputControl();
 
             mode = MODE.end;
+            Logging.Log("CameraControl: ending effect to point " + movingToPoint);
             _effects.StartCameraEffect(endSize, movingToPoint, effectTotalTime, true);
         }
 
