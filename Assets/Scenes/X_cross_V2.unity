@@ -5714,10 +5714,6 @@ PrefabInstance:
       propertyPath: _animation
       value: 
       objectReference: {fileID: 1620319630}
-    - target: {fileID: 6460458482509080467, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
-      propertyPath: _player
-      value: 
-      objectReference: {fileID: 1652498132}
     - target: {fileID: 7856974198082352682, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
       propertyPath: m_Name
       value: CanvasForGameUI

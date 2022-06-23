@@ -20,6 +20,6 @@ MonoBehaviour:
   - soundName: move
     clip: {fileID: 8300000, guid: ff2aa4a335aa38b4db588b48d8d3f0b2, type: 3}
     isLoop: 1
-    _defaultVolume: 1
+    _defaultVolume: 0.5
   _randomFrom: 0
   _randomTo: -1

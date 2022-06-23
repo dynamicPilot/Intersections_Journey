@@ -60,13 +60,15 @@ public class RoadTimer
         if (state == RoadIndicators.STATE.update)
         {
             if (value > indicatorBorder)
+            {
                 indicatorValues[roadIndex] = value;
+            }               
             else
             {
                 indicatorStates[roadIndex] = RoadIndicators.STATE.stop;
             }
         }
-        else if (state == RoadIndicators.STATE.allertUpdate)
+        else if (state == RoadIndicators.STATE.allertUpdate || state == RoadIndicators.STATE.startAllert || state == RoadIndicators.STATE.stopAllert)
         {
             indicatorValues[roadIndex] = value;
         }

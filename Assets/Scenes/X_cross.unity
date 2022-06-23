@@ -4847,10 +4847,6 @@ PrefabInstance:
       propertyPath: _animation
       value: 
       objectReference: {fileID: 1620319630}
-    - target: {fileID: 6460458482509080467, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
-      propertyPath: _player
-      value: 
-      objectReference: {fileID: 1971180245}
     - target: {fileID: 7856974198082352682, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
       propertyPath: m_Name
       value: CanvasForGameUI
@@ -4959,6 +4955,18 @@ PrefabInstance:
       propertyPath: _canvas
       value: 
       objectReference: {fileID: 1514235923}
+    - target: {fileID: 9047691333142885049, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047691333142885049, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
+      propertyPath: MaxDistance
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047691333142885049, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
 --- !u!114 &1620319626 stripped
@@ -5836,7 +5844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3114535958381853452, guid: c1bc9ed9ef5dcbb4d9d0098d8310c7d8, type: 3}
       propertyPath: MinDistance
-      value: 7.8090363
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3114535958381853452, guid: c1bc9ed9ef5dcbb4d9d0098d8310c7d8, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -5848,7 +5856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5407806436418046376, guid: c1bc9ed9ef5dcbb4d9d0098d8310c7d8, type: 3}
       propertyPath: MinDistance
-      value: 7.9709496
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5921885585394623556, guid: c1bc9ed9ef5dcbb4d9d0098d8310c7d8, type: 3}

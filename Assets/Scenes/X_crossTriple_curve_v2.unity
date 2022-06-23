@@ -10513,10 +10513,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2004227387}
-    - target: {fileID: 6460458482509080467, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
-      propertyPath: _player
-      value: 
-      objectReference: {fileID: 793213144}
     - target: {fileID: 7856974197227764919, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
