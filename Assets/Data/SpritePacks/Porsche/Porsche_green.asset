@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a531dbf46174584588440180356874c, type: 3}
+  m_Name: Porsche_green
+  m_EditorClassIdentifier: 
+  body: {fileID: -5149355680962261363, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+  lightCover: {fileID: -8557401926243263137, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}
+  rightlightCover: {fileID: 2583571246548237906, guid: 11e0efcfc3e4aa941aca6ce4c1cac648, type: 3}

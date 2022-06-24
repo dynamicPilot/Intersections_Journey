@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6832fb53010a8a499b6a2d64c4ec465, type: 3}
+  m_Name: CityEnvironmentSounds
+  m_EditorClassIdentifier: 
+  collection:
+  - soundName: crowd
+    clip: {fileID: 8300000, guid: f2af4bed1b6f519469f5a49956bc599f, type: 3}
+    isLoop: 1
+    _defaultVolume: 0.5
+  - soundName: bird
+    clip: {fileID: 8300000, guid: 38ce5a6b9e9b0124a879e15edff0337e, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
+  - soundName: skate
+    clip: {fileID: 8300000, guid: 92f326da84898a149b513e7a50ea93d1, type: 3}
+    isLoop: 0
+    _defaultVolume: 0.5
+  - soundName: wind
+    clip: {fileID: 8300000, guid: 2bbcabd1dcac71942bfcb741b36e6364, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
+  - soundName: bike
+    clip: {fileID: 8300000, guid: 748471be8b2d5244b8986bb6a3bc9e2e, type: 3}
+    isLoop: 0
+    _defaultVolume: 0.7
+  _randomFrom: 1
+  _randomTo: -1

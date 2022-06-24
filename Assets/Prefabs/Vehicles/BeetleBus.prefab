@@ -185,9 +185,7 @@ GameObject:
   - component: {fileID: 8276009507358271547}
   - component: {fileID: 8276009507358271546}
   - component: {fileID: 8276009507358271545}
-  - component: {fileID: 1497338853909869479}
   - component: {fileID: 8276009507358271539}
-  - component: {fileID: 7783432035221445606}
   m_Layer: 8
   m_Name: BeetleBus
   m_TagString: Car
@@ -290,7 +288,7 @@ MonoBehaviour:
   vehicleManager: {fileID: 0}
   vehicleScanner: {fileID: 8276009507358271542}
   repairCar: {fileID: 0}
-  effectsControl: {fileID: 1497338853909869479}
+  effectsControl: {fileID: 0}
   size: {x: 0, y: 0}
   maxVelocity: 0
   maxTurningVelocity: 0
@@ -428,24 +426,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.98, y: 4.3239613}
   m_EdgeRadius: 0
---- !u!114 &1497338853909869479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8276009507358271544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee97b06884cae6d47aee1ebbd237e658, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wheelSmoke: {fileID: 5694269490302005451}
-  turningEffect: {fileID: 8276009507358271539}
-  viewControl: {fileID: 7783432035221445606}
-  cargo: {fileID: 0}
-  vehicleTimer: {fileID: 0}
-  trainEffects: {fileID: 0}
 --- !u!114 &8276009507358271539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,23 +442,6 @@ MonoBehaviour:
   rightFrontLightEffect: {fileID: 2792590056329620651}
   turningColor: {r: 0.8705883, g: 0.26666668, b: 0.28627452, a: 1}
   turningPeriod: 0.5
---- !u!114 &7783432035221445606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8276009507358271544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9829ace4b0e045941bc7f744b0cc5c96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body: {fileID: 8276009507358271540}
-  leftLightCover: {fileID: 8276009505948645288}
-  rightLightCover: {fileID: 4896241637343947832}
-  packs: []
-  defaultSortingLayer: Cars
 --- !u!1001 &1551803856006791136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -540,17 +503,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c2f16b0fce338649a1b7e9e4a0529ec, type: 3}
---- !u!114 &5694269490302005451 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6525441583693041451, guid: 9c2f16b0fce338649a1b7e9e4a0529ec, type: 3}
-  m_PrefabInstance: {fileID: 1551803856006791136}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b7ea0f63b6609f4eacc7190e353f567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &6025178506913365970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5049844217358975026, guid: 9c2f16b0fce338649a1b7e9e4a0529ec, type: 3}
@@ -633,6 +585,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4682024157956089822, guid: 7bfe285b81b0c5640ad5fc551e7c3b05, type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682024157956089822, guid: 7bfe285b81b0c5640ad5fc551e7c3b05, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5085317344966532194, guid: 7bfe285b81b0c5640ad5fc551e7c3b05, type: 3}
@@ -770,6 +726,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4682024157956089822, guid: 7bfe285b81b0c5640ad5fc551e7c3b05, type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682024157956089822, guid: 7bfe285b81b0c5640ad5fc551e7c3b05, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5085317344966532194, guid: 7bfe285b81b0c5640ad5fc551e7c3b05, type: 3}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02d20d36e0757942886bc4b289bd96c, type: 3}
+  m_Name: IJConfig
+  m_EditorClassIdentifier: 
+  _menuSceneName: MENU
+  _minutesPerRealSecond: 7.5
+  _secondsBetweenTimeUpdate: 2
+  _endHour: 12
+  _indicatorUpdateTimer: 0.92
+  _stayInCrashTimer: 2
+  _crashForce: 1
+  _timeThreshold: 0.2
+  _distanceMultiplier: 0.01
+  _cameraSpeed: 15
+  _defaultVolume: 0.7
+  _effectsPeriod: 8

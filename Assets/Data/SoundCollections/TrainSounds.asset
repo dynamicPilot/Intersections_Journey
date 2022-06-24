@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6832fb53010a8a499b6a2d64c4ec465, type: 3}
+  m_Name: TrainSounds
+  m_EditorClassIdentifier: 
+  collection:
+  - soundName: signal
+    clip: {fileID: 8300000, guid: baaef78a3710f274baa7024dca20e987, type: 3}
+    isLoop: 0
+    _defaultVolume: 0.7
+  - soundName: move
+    clip: {fileID: 8300000, guid: ff2aa4a335aa38b4db588b48d8d3f0b2, type: 3}
+    isLoop: 1
+    _defaultVolume: 0.5
+  _randomFrom: 0
+  _randomTo: -1

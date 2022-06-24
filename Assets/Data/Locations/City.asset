@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023163ac44aa26b4994dd0be974502cf, type: 3}
+  m_Name: City
+  m_EditorClassIdentifier: 
+  locationName: NightCity
+  locationIndex: 3
+  levels:
+  - {fileID: 11400000, guid: 03fd4a2f5c37a064abf74bc078d8311d, type: 2}
+  - {fileID: 11400000, guid: a4ee57922aa99fe4587a36e618ad389c, type: 2}
+  - {fileID: 11400000, guid: e4647bbab5c4d9b4b842a4776c37df7e, type: 2}
+  - {fileID: 11400000, guid: 721f13a72d166164f8ee4a3c9654684b, type: 2}
+  pointsToMakeAvailable: 0
+  maxPoints: 12
+  locationsToMakeAvailable:
+  - {fileID: 11400000, guid: 326fb69ab71ae1f48bdae272dada5dbc, type: 2}
+  - {fileID: 11400000, guid: e3663a9fbf42dc1468e73356c5a5b4c9, type: 2}
+  - {fileID: 11400000, guid: 9bf1c896764670043945bf58ce2fa386, type: 2}
+  crossroadsColors:
+  - {r: 0, g: 0.6627451, b: 0.6156863, a: 1}
+  - {r: 0.15686275, g: 0.19607845, b: 0.28627452, a: 1}
+  - {r: 1, g: 0.9803922, b: 0.8235295, a: 1}
+  uiColors:
+  - {r: 0, g: 0.6627451, b: 0.6156863, a: 1}
+  - {r: 1, g: 0.9843138, b: 0.8235295, a: 1}
+  - {r: 0, g: 0.6627451, b: 0.6156863, a: 1}

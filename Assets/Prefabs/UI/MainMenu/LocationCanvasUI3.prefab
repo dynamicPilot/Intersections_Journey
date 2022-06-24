@@ -192,7 +192,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -3.91, y: 2.51}
+  m_AnchoredPosition: {x: -3.909912, y: 2.5100098}
   m_SizeDelta: {x: 402.0696, y: 467.802}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4189524062471402447
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4189524062471402445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,9 +270,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   location: {fileID: 11400000, guid: aceac277239524d4d98a7100fba75560, type: 2}
   mapLocationsUI: {fileID: 0}
+  _animation: {fileID: 6764070333976902308}
   pointsText: {fileID: 620921747387478680}
   openLocationButton: {fileID: 3499353254478680931}
-  animator: {fileID: 4189524064173639857}
   closedView: {fileID: 4189524064173639863}
   openedView: {fileID: 4189524063488792448}
   decorations: {fileID: 0}
@@ -1242,8 +1242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerDownScale: {x: 0.95, y: 0.95, z: 0.95}
   pointerEnterScale: {x: 1.05, y: 1.05, z: 1.05}
-  needScaleChange: 1
-  needClickSound: 0
+  clickSoundIndex: 2
 --- !u!1 &4189524063159188354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,8 +1729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerDownScale: {x: 0.95, y: 0.95, z: 0.95}
   pointerEnterScale: {x: 1.05, y: 1.05, z: 1.05}
-  needScaleChange: 1
-  needClickSound: 0
+  clickSoundIndex: 0
 --- !u!1 &4189524063499689892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,7 +3178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4189524064173639862}
-  - component: {fileID: 4189524064173639857}
+  - component: {fileID: 6764070333976902308}
   m_Layer: 20
   m_Name: ClosedView
   m_TagString: Untagged
@@ -3210,26 +3208,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &4189524064173639857
-Animator:
-  serializedVersion: 4
+--- !u!114 &6764070333976902308
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4189524064173639863}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a0e4566a640362f40a7b7c011f994b07, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d10cb82f3725994bb7619dd4648067a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SingleFlipDuration: 0.5
+  _firstTransform: {fileID: 4189524063155435303}
+  _secondTransform: {fileID: 620921748008182052}
 --- !u!1 &4189524064230815556
 GameObject:
   m_ObjectHideFlags: 0

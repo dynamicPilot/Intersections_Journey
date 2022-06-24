@@ -666,7 +666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelsUI: {fileID: 0}
   pauseUI: {fileID: 0}
-  indicatorUpdateLockdownTimer: 0.92
+  config: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
   crashSign: {fileID: 7856974198606974555}
   timeIndicatorImage: {fileID: 7856974199200581733}
   indicatorAnimator: {fileID: 4463127846676820717}
