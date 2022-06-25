@@ -16704,6 +16704,103 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1816757758
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3535585417122254491, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535585417122254491, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884729, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_Name
+      value: CitySoundEffecs
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884730, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884730, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884730, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884730, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884730, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884730, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884730, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884730, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884730, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884730, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035904411884730, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035905386659224, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: MaxDistance
+      value: 12.030294
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035905386659225, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035905386659225, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035905964628712, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035905964628712, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901035905964628719, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: MaxDistance
+      value: 22.638
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784943855623036508, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: MaxDistance
+      value: 12.317684
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460616031322155184, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0cfd8bf7176b35941964926b3f927d00, type: 3}
 --- !u!1 &1818716533
 GameObject:
   m_ObjectHideFlags: 0

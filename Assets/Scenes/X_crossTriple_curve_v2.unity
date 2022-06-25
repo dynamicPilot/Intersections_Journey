@@ -893,10 +893,10 @@ MonoBehaviour:
     roadStates: 
     unitsOnRoads: 
   roadsTimers:
-    roadTimers: []
+    _roadTimers: []
     maxTimeByRoad: []
     maxAdditionalTimeToWaitByRoad: []
-    roadsWithAllertOn: 
+    _roadsWithAllert: 
   roadIndicators:
     roadMarks: {fileID: 0}
     marksState: 
@@ -4735,7 +4735,7 @@ MonoBehaviour:
   - {x: 48, y: 20.27, z: 29}
   - {x: 47.47, y: 18.67, z: 31}
   points: []
-  _needSaveLocaly: 1
+  _needSaveLocaly: 0
   paths:
   - startPointNumber: 0
     endPointNumber: 4

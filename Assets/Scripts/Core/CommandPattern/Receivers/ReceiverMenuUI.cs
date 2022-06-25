@@ -1,5 +1,4 @@
-using IJ.Core.Menus;
-using IJ.Core.Menus.MainMenu;
+using IJ.Core.Menus.Others;
 using UnityEngine;
 
 namespace IJ.Core.CommandPattern.Receivers

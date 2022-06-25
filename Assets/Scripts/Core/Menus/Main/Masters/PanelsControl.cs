@@ -1,4 +1,5 @@
 using IJ.Core.Menus.Main.Levels;
+using IJ.Core.Menus.Others;
 using UnityEngine;
 
 namespace IJ.Core.Menus.MainMenu
@@ -9,6 +10,7 @@ namespace IJ.Core.Menus.MainMenu
         [SerializeField] private MapLocationsUI _map;
         [SerializeField] private LevelsPanelUI _levels;
         [SerializeField] private LocationOpeningUI _opening;
+        [SerializeField] private SettingsPanelUI _settings;
 
         public void OpenMap()
         {
@@ -35,7 +37,8 @@ namespace IJ.Core.Menus.MainMenu
         public void BackToMenu()
         {
             _map.gameObject.SetActive(true);
-            _levels.CloseLocationPage();           
+            _levels.ClosePage();
+            _settings.ClosePage();
         }
 
         public void TransitToLevelScene()

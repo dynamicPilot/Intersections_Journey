@@ -152,9 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf855038841801342ab0776a7051aa9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locationsProgress: []
-  levelsProgress: []
-  totalPointsNumber: 0
+  _locationsProgress: []
+  _levelsProgress: []
+  _totalPointsNumber: 0
   currentLevel: {fileID: 0}
 --- !u!4 &111581971
 Transform:
@@ -896,7 +896,7 @@ AudioSource:
   m_GameObject: {fileID: 1763244756}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -58404766480280471, guid: 7a0fd72ff2e74cc46aca33280ef09bb0, type: 2}
+  OutputAudioMixerGroup: {fileID: 1547358547212938065, guid: 7a0fd72ff2e74cc46aca33280ef09bb0, type: 2}
   m_audioClip: {fileID: 8300000, guid: f71638315e64af140978f6e80e57cef6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
