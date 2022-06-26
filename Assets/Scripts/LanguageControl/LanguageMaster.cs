@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -14,12 +12,19 @@ namespace IJ.LanguageControl
         public delegate void ChangeLanguage(LANG lang);
         public event ChangeLanguage OnChangeLanguage;
 
-        public void SetLanguage(LANG lang)
+        public void SetLanguageByIndex(int langIndex)
         {
+            LANG lang = (LANG)langIndex;
+
             if (_lang == lang) return;
 
             _lang = lang;
             if (OnChangeLanguage != null) OnChangeLanguage.Invoke(_lang);
+        }
+
+        public int GetLanguageIndex()
+        {
+            return (int)_lang;
         }
     }
 }

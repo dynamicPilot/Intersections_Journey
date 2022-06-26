@@ -21,7 +21,7 @@ AudioMixerController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: UnitMixer
-  m_OutputGroup: {fileID: 6924995660048712413, guid: 7a0fd72ff2e74cc46aca33280ef09bb0, type: 2}
+  m_OutputGroup: {fileID: -3410528705582384443, guid: 787aca33ad2d75945bc14c0f96c7574f, type: 2}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}

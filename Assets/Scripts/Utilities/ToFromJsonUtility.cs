@@ -18,4 +18,11 @@ public static class ToFromJsonUtility<T> where T : class
         File.WriteAllText(filename, json);
     }
 
+    public static void LoadJsonFromFileRef(string filename, ref T classObject)
+    {
+        //Debug.Log(string.Format("[{0}] Read file {1}", typeof(T).Name, filename));
+        string json = File.ReadAllText(filename);
+        JsonUtility.FromJsonOverwrite(json, classObject);
+    }
+
 }

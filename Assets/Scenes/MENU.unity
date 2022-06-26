@@ -3659,6 +3659,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animation: {fileID: 322893377}
+  _parameters:
+  - {fileID: 1780320553706783798}
+  _gameCongif: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
+  _audioConfig: {fileID: 11400000, guid: e25eacf65a0bcae409a2ed400ffc539d, type: 2}
 --- !u!1 &326574895
 GameObject:
   m_ObjectHideFlags: 0
@@ -6548,7 +6552,7 @@ AudioSource:
   m_GameObject: {fileID: 522357685}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -8631906390499555379, guid: 7a0fd72ff2e74cc46aca33280ef09bb0, type: 2}
+  OutputAudioMixerGroup: {fileID: 147133292255710163, guid: 7a0fd72ff2e74cc46aca33280ef09bb0, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -11309,8 +11313,9 @@ GameObject:
   m_Component:
   - component: {fileID: 952936257}
   - component: {fileID: 952936256}
-  m_Layer: 0
-  m_Name: LanguageMaster
+  - component: {fileID: 952936258}
+  m_Layer: 13
+  m_Name: SettingsManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11344,6 +11349,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &952936258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952936255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2819e41bf4bc04faa232ec17de4eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _languageMaster: {fileID: 952936256}
+  _volumeControl: {fileID: 154278663352710117}
+  _gameCongif: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
+  _audioConfig: {fileID: 11400000, guid: e25eacf65a0bcae409a2ed400ffc539d, type: 2}
 --- !u!1 &958690634
 GameObject:
   m_ObjectHideFlags: 0
@@ -17628,6 +17649,7 @@ GameObject:
   - component: {fileID: 154278663352710116}
   - component: {fileID: 1427843440}
   - component: {fileID: 154278663352710115}
+  - component: {fileID: 154278663352710117}
   m_Layer: 22
   m_Name: AudioControl
   m_TagString: AudioControl
@@ -19259,6 +19281,7 @@ MonoBehaviour:
   soundsPlayer: {fileID: 1427843440}
   _sideMenuUI: {fileID: 420126808}
   _flow: {fileID: 1053323078}
+  _settings: {fileID: 952936258}
 --- !u!1 &1647700535
 GameObject:
   m_ObjectHideFlags: 0
@@ -24522,6 +24545,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _config: {fileID: 11400000, guid: e25eacf65a0bcae409a2ed400ffc539d, type: 2}
   _transition: {fileID: 154278663352710115}
+--- !u!114 &154278663352710117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427843438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d206beb2ebc0b4086d3a03d03fea29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _musicVolume: {fileID: 11400000, guid: 3f42318d370f01c40806ab0e8d7718b6, type: 2}
+  _effectsVolume: {fileID: 11400000, guid: e67e0c2df6e5710469bce1f22ab0566d, type: 2}
+  _totalVolume: {fileID: 11400000, guid: 1e860ed1fec11e34dada6ee9a0495ffa, type: 2}
 --- !u!4 &474191428782018066
 Transform:
   m_ObjectHideFlags: 0
@@ -25110,6 +25148,10 @@ PrefabInstance:
       value: "\u0413\u0443\u0447\u043D\u0456\u0441\u0442\u044C \u043C\u0443\u0437\u0438\u043A\u0438"
       objectReference: {fileID: 0}
     - target: {fileID: 7413905759021152936, guid: 4584c254f4eae0241a393c52b3426d09, type: 3}
+      propertyPath: _group
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f42318d370f01c40806ab0e8d7718b6, type: 2}
+    - target: {fileID: 7413905759021152936, guid: 4584c254f4eae0241a393c52b3426d09, type: 3}
       propertyPath: _parameter
       value: music
       objectReference: {fileID: 0}
@@ -25122,6 +25164,11 @@ PrefabInstance:
 --- !u!224 &1780320553706783797 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4472388048969548442, guid: 4584c254f4eae0241a393c52b3426d09, type: 3}
+  m_PrefabInstance: {fileID: 1780320553706783796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1780320553706783798 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2947525504088190607, guid: 4584c254f4eae0241a393c52b3426d09, type: 3}
   m_PrefabInstance: {fileID: 1780320553706783796}
   m_PrefabAsset: {fileID: 0}
 --- !u!225 &2494856678408458459

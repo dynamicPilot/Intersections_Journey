@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Utilites.Configs
+namespace IJ.Utilities.Configs
 {
     [CreateAssetMenu(fileName = "New Config", menuName = "Unit/GameConfig")]
     public class GameConfig : ScriptableObject
@@ -35,9 +35,13 @@ namespace Utilites.Configs
         [SerializeField] private float _cameraSpeed = 15f;
         public float CameraSpeed { get => _cameraSpeed; }
 
-        [Header("New GameSettings")]
+        [Header("New Game Settings")]
         [SerializeField] private int _startGamePoints = 1;
         public int StartGamePoints { get => _startGamePoints; }
+
+        [Header("Default Settings")]
+        [SerializeField] private int _defaultLangUndex = 0;
+        public int DefaultLangIndex { get => _defaultLangUndex; }
     }
 }
 

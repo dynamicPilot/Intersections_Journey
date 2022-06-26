@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RepairSites;
-using Utilites.Configs;
+using IJ.Utilities.Configs;
 
 namespace IJ.Core.GameTime
 {

@@ -2,7 +2,7 @@ using IJ.Core.UIElements.GameFlowPanels;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using Utilites.Configs;
+using IJ.Utilities.Configs;
 
 public class MenusUIControl : MonoBehaviour
 {

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Utilites.Configs;
+using IJ.Utilities.Configs;
 
 public class MoveDetection : MonoBehaviour
 {

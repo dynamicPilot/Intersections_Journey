@@ -1,7 +1,7 @@
 using AudioControls.SoundPlayers;
 using System.Collections;
 using UnityEngine;
-using Utilites.Configs;
+using IJ.Utilities.Configs;
 
 namespace AudioControls.SoundEffects
 { 

@@ -1,7 +1,7 @@
 using IJ.Core.Objects.LevelAndLocation;
 using System.Collections.Generic;
 using UnityEngine;
-using Utilites.Configs;
+using IJ.Utilities.Configs;
 
 [DefaultExecutionOrder(-1)]
 public class DataSaveAndLoad : MonoBehaviour

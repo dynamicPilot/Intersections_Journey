@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Utilites.Configs
+namespace IJ.Utilities.Configs
 {
     [CreateAssetMenu(fileName = "New AudioConfig", menuName = "Unit/AudioConfig")]
     public class AudioConfig : ScriptableObject
@@ -10,6 +10,14 @@ namespace Utilites.Configs
         //public float DefaultVolume { get => _defaultVolume; }
         [SerializeField] private float _effectsPeriod = 2f;
         public float EffectsPeriod { get => _effectsPeriod; }
+
+        [Header("Defaults")]
+        [SerializeField] private float _defaultMusicVolume = 0.9f;
+        public float DefaultMusicVolume { get => _defaultMusicVolume; }
+        [SerializeField] private float _defaultEffectsVolume = 0.9f;
+        public float DefaultEffectsVolume { get => _defaultEffectsVolume; }
+        [SerializeField] private float _defaultTotalVolume = 0.9f;
+        public float DefaultTotalVolume { get => _defaultTotalVolume; }
 
 
         [Header("Snapshots")]

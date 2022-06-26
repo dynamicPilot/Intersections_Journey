@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using AudioControls.SoundPlayers;
-using Utilites.Configs;
+using IJ.Utilities.Configs;
 
 public class RoadMarkSound : MonoBehaviour
 {

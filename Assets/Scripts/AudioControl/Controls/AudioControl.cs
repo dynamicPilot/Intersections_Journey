@@ -1,7 +1,7 @@
 using AudioControls.Radios;
 using AudioControls.SoundPlayers;
 using UnityEngine;
-using Utilites.Configs;
+using IJ.Utilities.Configs;
 
 namespace IJ.AudioControls.Controls
 {

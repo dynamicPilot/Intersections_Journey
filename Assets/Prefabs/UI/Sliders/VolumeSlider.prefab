@@ -242,8 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slider: {fileID: 1024367029566809306}
-  _mixer: {fileID: 24100000, guid: 7a0fd72ff2e74cc46aca33280ef09bb0, type: 2}
-  _parameter: 
+  _group: {fileID: 0}
 --- !u!114 &1024367029566809306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,7 +296,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7973809407292850672}
         m_TargetAssemblyTypeName: IJ.AudioControls.VolumeControls.VolumeSlider, AudioControl
-        m_MethodName: SetVolume
+        m_MethodName: SetValue
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

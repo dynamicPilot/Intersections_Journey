@@ -1,5 +1,5 @@
 using UnityEngine;
-using Utilites.Configs;
+using IJ.Utilities.Configs;
 
 public class SnapshotTransition : MonoBehaviour
 {

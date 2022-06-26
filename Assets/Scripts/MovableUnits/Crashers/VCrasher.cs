@@ -1,7 +1,7 @@
 using IJ.MovableUnits.MediatorAndComponents;
 using System.Collections;
 using UnityEngine;
-using Utilites.Configs;
+using IJ.Utilities.Configs;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class VCrasher : MonoBehaviour
