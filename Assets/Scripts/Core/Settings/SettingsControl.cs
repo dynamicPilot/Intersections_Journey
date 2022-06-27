@@ -1,5 +1,4 @@
 using UnityEngine;
-using IJ.LanguageControl;
 using IJ.Utilities.Configs;
 using IJ.AudioControls.VolumeControls;
 
@@ -7,31 +6,46 @@ namespace IJ.Core.Settings
 {
     public class SettingsControl : MonoBehaviour
     {
-        [Header("Components")]
-        [SerializeField] private LanguageMaster _languageMaster;
-        [SerializeField] private VolumeControl _volumeControl;
+        [SerializeField] private bool _updateVolumesWhenRead = false;
 
         [Header("Configs")]
         [SerializeField] private GameConfig _gameCongif;
         [SerializeField] private AudioConfig _audioConfig;
 
+        [Header("Components")]
+        [SerializeField] private VolumeControl _volumeControl;
+
+        protected int _langIndex;
+
         private void Start()
         {
-            SetSettings();
+            ReadSettings();
         }
 
-        void SetSettings()
+        protected virtual void ReadSettings()
         {
             PlayerConfig playerConfig = SettingsControlUtility.ReadData(_audioConfig, _gameCongif);
-            _languageMaster.SetLanguageByIndex(playerConfig.LangIndex);
+            _langIndex = playerConfig.LangIndex;
+
+            if (_updateVolumesWhenRead) SetVolumes(playerConfig);
+        }
+
+        protected void SetVolumes(PlayerConfig playerConfig)
+        {
             _volumeControl.SetVolumes(playerConfig);
         }
 
         public void SavePreferences()
         {
+            UpdateLangugeIndex();
             _volumeControl.GetVolumes(out PlayerConfig playerConfig);
-            playerConfig.LangIndex = _languageMaster.GetLanguageIndex();
+            playerConfig.LangIndex = _langIndex;
             SettingsControlUtility.SaveData(playerConfig);
+        }
+
+        protected virtual void UpdateLangugeIndex()
+        {
+
         }
     }
 }

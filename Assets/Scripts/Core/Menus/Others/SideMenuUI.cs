@@ -6,8 +6,7 @@ namespace IJ.Core.Menus.Others
     {
         [SerializeField] private SettingsPanelUI _settingsPanel;
         public void OpenSettings()
-        {
-            
+        {           
             _settingsPanel.OpenPage();
             _settingsPanel.SetSettingsUI();
         }

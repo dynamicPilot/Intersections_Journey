@@ -11552,13 +11552,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 952936255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f2819e41bf4bc04faa232ec17de4eb5, type: 3}
+  m_Script: {fileID: 11500000, guid: 4801f3b191e3a314793049ca8d233539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _languageMaster: {fileID: 952936256}
-  _volumeControl: {fileID: 154278663352710117}
+  _updateVolumesWhenRead: 0
   _gameCongif: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
   _audioConfig: {fileID: 11400000, guid: e25eacf65a0bcae409a2ed400ffc539d, type: 2}
+  _volumeControl: {fileID: 154278663352710117}
+  _languageMaster: {fileID: 952936256}
 --- !u!1 &958690634
 GameObject:
   m_ObjectHideFlags: 0
@@ -19664,9 +19665,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundsPlayer: {fileID: 1427843440}
+  _settings: {fileID: 952936258}
   _sideMenuUI: {fileID: 420126808}
   _flow: {fileID: 1053323078}
   _settings: {fileID: 952936258}
+  _sidePanelDropdownMenu: {fileID: 9063137330356278154}
 --- !u!224 &1626963420 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6566641091911733755, guid: c3e0465541acea04893d082e1ea2d786, type: 3}

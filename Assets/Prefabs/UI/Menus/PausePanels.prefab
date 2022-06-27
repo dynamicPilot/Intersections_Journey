@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8482286078036536774}
   - component: {fileID: 8482286078036536768}
   - component: {fileID: 8482286078036536769}
+  - component: {fileID: 747125181210625706}
   m_Layer: 5
   m_Name: PausePanels
   m_TagString: Untagged
@@ -77,6 +78,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &747125181210625706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8482286078036536775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27d3a576bd6fcc45a77047e4a6c1665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _totalVolumeButton: {fileID: 4224139166556756800}
 --- !u!1 &8482286078938544297
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2420815098348416323, guid: 7e8631cbfe8cd2d4b91b74bcf57fcfd0, type: 3}
+  m_Sprite: {fileID: 2039897362, guid: 3f0b574804d3de749b86091018efd5f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -394,6 +408,7 @@ GameObject:
   - component: {fileID: 8631869821162996664}
   - component: {fileID: 8631869821162996667}
   - component: {fileID: 7383769467518992526}
+  - component: {fileID: 4224139166556756800}
   m_Layer: 5
   m_Name: VolumeOnOffButton
   m_TagString: Untagged
@@ -503,7 +518,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8631869821162996664}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4224139166556756800}
+        m_TargetAssemblyTypeName: IJ.AudioControls.VolumeControls.VolumeButton, AudioControl
+        m_MethodName: SetValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7383769467518992526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +545,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerDownScale: {x: 0.95, y: 0.95, z: 0.95}
   pointerEnterScale: {x: 1.05, y: 1.05, z: 1.05}
-  clickSoundIndex: 0
+  clickSoundIndex: 6
+--- !u!114 &4224139166556756800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8631869821162996661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70508a47e76fc93419a60435da6f2c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioConfig: {fileID: 11400000, guid: e25eacf65a0bcae409a2ed400ffc539d, type: 2}
+  _group: {fileID: 11400000, guid: 1e860ed1fec11e34dada6ee9a0495ffa, type: 2}
+  _collection: {fileID: 11400000, guid: dea58db93225dcb4794657854b6bab5a, type: 2}
+  _image: {fileID: 8631869819484096181}
 --- !u!1001 &8482286077641931382
 PrefabInstance:
   m_ObjectHideFlags: 0

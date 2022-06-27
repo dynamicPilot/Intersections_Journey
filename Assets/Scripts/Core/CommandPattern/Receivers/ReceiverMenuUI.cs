@@ -1,18 +1,18 @@
+using IJ.Core.Menus;
 using IJ.Core.Menus.Others;
-using IJ.Core.Settings;
 using UnityEngine;
 
 namespace IJ.Core.CommandPattern.Receivers
 {
     public class ReceiverMenuUI : ReceiverUI
-    {
-        
+    {       
         [SerializeField] private SideMenuUI _sideMenuUI;
         [SerializeField] private MenuFlow _flow;
-        [SerializeField] private SettingsControl _settings;
+        [SerializeField] private AnimatedDropdownMenuUI _sidePanelDropdownMenu;
 
         public void MakeMenuCommand(MenuCommandType type)
         {
+            _sidePanelDropdownMenu.OpenClosePanel();
             if (type == MenuCommandType.toSettings) _sideMenuUI.OpenSettings();
             else if (type == MenuCommandType.toAccount) _sideMenuUI.OpenAccount();
             else if (type == MenuCommandType.quit) _sideMenuUI.QuitGame();
@@ -25,7 +25,7 @@ namespace IJ.Core.CommandPattern.Receivers
 
         public override void SaveSettings(SaveSettingsCommandType type)
         {
-            if (type == SaveSettingsCommandType.preferences) _settings.SavePreferences();
+            base.SaveSettings(type);
             _flow.BackToMenu();
         }
     }

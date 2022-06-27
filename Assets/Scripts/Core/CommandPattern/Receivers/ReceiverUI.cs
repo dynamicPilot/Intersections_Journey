@@ -1,4 +1,5 @@
 using AudioControls.SoundPlayers;
+using IJ.Core.Settings;
 using UnityEngine;
 
 namespace IJ.Core.CommandPattern.Receivers
@@ -10,7 +11,7 @@ namespace IJ.Core.CommandPattern.Receivers
         public enum SaveSettingsCommandType { preferences, account }
 
         [SerializeField] private SoundsPlayer soundsPlayer;
-
+        [SerializeField] private SettingsControl _settings;
         public void MakeClick(int clickSoundIndex)
         {
             if (soundsPlayer == null) return;
@@ -24,8 +25,8 @@ namespace IJ.Core.CommandPattern.Receivers
         }
 
         public virtual void SaveSettings(SaveSettingsCommandType type)
-        { 
-
+        {
+            if (type == SaveSettingsCommandType.preferences) _settings.SavePreferences();
         }
     }
 }

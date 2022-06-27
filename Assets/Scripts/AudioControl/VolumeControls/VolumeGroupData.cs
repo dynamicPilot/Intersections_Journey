@@ -12,6 +12,7 @@ namespace IJ.AudioControls.VolumeControls
         [SerializeField] private float _minVolume = -80f;
         [SerializeField] private float _maxVolume = 0f;
 
+        private float _muteDelta = 10f;
         public void SetValue(float value)
         {
             _mixer.SetFloat(_parameter, Mathf.Lerp(_minVolume, _maxVolume, value));
@@ -25,6 +26,21 @@ namespace IJ.AudioControls.VolumeControls
             }
 
             return 0f;
+        }
+
+        public bool IsMute()
+        {
+            if (_mixer.GetFloat(_parameter, out float volume))
+            {
+                return volume < (_minVolume + _muteDelta);
+            }
+
+            return true;
+        }
+
+        public void MakeMute()
+        {
+            SetValue(_minVolume);
         }
     }
 }
