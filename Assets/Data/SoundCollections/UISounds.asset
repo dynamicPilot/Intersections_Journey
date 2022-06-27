@@ -37,3 +37,9 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d557bf05b58dde74d88e1f01a4810685, type: 3}
     isLoop: 0
     _defaultVolume: 1
+  - soundName: switch
+    clip: {fileID: 8300000, guid: 42dc8012c2242ea4ea182ba2c6fc7eaf, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
+  _randomFrom: 0
+  _randomTo: -1

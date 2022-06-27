@@ -6,7 +6,7 @@ namespace IJ.Core.CommandPattern.Receivers
 {
     public class ReceiverMenuUI : ReceiverUI
     {
-        public enum SaveSettingsCommandType { preferences, account }
+        
         [SerializeField] private SideMenuUI _sideMenuUI;
         [SerializeField] private MenuFlow _flow;
         [SerializeField] private SettingsControl _settings;
@@ -23,9 +23,10 @@ namespace IJ.Core.CommandPattern.Receivers
             if (type == GameflowCommandType.toMenu) _flow.BackToMenu();
         }
 
-        public void SaveSettings(SaveSettingsCommandType type)
+        public override void SaveSettings(SaveSettingsCommandType type)
         {
             if (type == SaveSettingsCommandType.preferences) _settings.SavePreferences();
+            _flow.BackToMenu();
         }
     }
 }

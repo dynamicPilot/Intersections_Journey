@@ -116,7 +116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4009734710475120389, guid: 726a0735fd743c14fa71631e9fa74687, type: 3}
+  m_Sprite: {fileID: 1100512689, guid: 3f0b574804d3de749b86091018efd5f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -834,11 +834,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4039102369934602108, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 567
       objectReference: {fileID: 0}
     - target: {fileID: 4039102369934602108, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 235
       objectReference: {fileID: 0}
     - target: {fileID: 4039102369934602108, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -971,7 +971,7 @@ PrefabInstance:
     - target: {fileID: 4039102371613502067, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -3550670756987454617, guid: 726a0735fd743c14fa71631e9fa74687, type: 3}
+      objectReference: {fileID: 62698023, guid: 168955920ffe0c04598e122062baecb1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
 --- !u!224 &1183408030128841387 stripped
@@ -1024,11 +1024,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4039102369934602108, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 567
       objectReference: {fileID: 0}
     - target: {fileID: 4039102369934602108, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 235
       objectReference: {fileID: 0}
     - target: {fileID: 4039102369934602108, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1148,16 +1148,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4039102371613502066, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 185.76
+      value: 192.9259
       objectReference: {fileID: 0}
     - target: {fileID: 4039102371613502066, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.000041485
       objectReference: {fileID: 0}
     - target: {fileID: 4039102371613502067, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3083058434095199490, guid: 726a0735fd743c14fa71631e9fa74687, type: 3}
+      objectReference: {fileID: 325457202, guid: 168955920ffe0c04598e122062baecb1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
 --- !u!224 &1183408030360703957 stripped

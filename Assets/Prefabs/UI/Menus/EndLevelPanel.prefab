@@ -211,14 +211,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.011764706, g: 0.5254902, b: 0.4627451, a: 1}
+  m_Color: {r: 0.011764707, g: 0.5254902, b: 0.46274513, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3550670756987454617, guid: 726a0735fd743c14fa71631e9fa74687, type: 3}
+  m_Sprite: {fileID: 20630334, guid: 168955920ffe0c04598e122062baecb1, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6387659899537537529, guid: 726a0735fd743c14fa71631e9fa74687, type: 3}
+  m_Sprite: {fileID: 2039897362, guid: 3f0b574804d3de749b86091018efd5f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1125,7 +1125,7 @@ PrefabInstance:
     - target: {fileID: 4039102371613502067, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6132415467512388176, guid: 726a0735fd743c14fa71631e9fa74687, type: 3}
+      objectReference: {fileID: 432791251, guid: 168955920ffe0c04598e122062baecb1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
 --- !u!224 &5062373367511078614 stripped
@@ -1302,16 +1302,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4039102371613502066, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 185.76
+      value: 202.1149
       objectReference: {fileID: 0}
     - target: {fileID: 4039102371613502066, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -5.206
       objectReference: {fileID: 0}
     - target: {fileID: 4039102371613502067, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3083058434095199490, guid: 726a0735fd743c14fa71631e9fa74687, type: 3}
+      objectReference: {fileID: 325457202, guid: 168955920ffe0c04598e122062baecb1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
 --- !u!224 &5062373367842499100 stripped

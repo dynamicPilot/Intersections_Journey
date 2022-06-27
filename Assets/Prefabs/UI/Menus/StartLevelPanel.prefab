@@ -554,7 +554,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3083058434095199490, guid: 726a0735fd743c14fa71631e9fa74687, type: 3}
+  m_Sprite: {fileID: -1652098644, guid: 168955920ffe0c04598e122062baecb1, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1636,6 +1636,14 @@ PrefabInstance:
     - target: {fileID: 4039102369934602109, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4039102370307404096, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7.399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4039102371613502065, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b996f97a491d3a41b4f07de508d44bc, type: 3}

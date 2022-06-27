@@ -2,7 +2,6 @@ using UnityEngine;
 using IJ.LanguageControl;
 using IJ.Utilities.Configs;
 using IJ.AudioControls.VolumeControls;
-using IJ.Core.Menus.Others;
 
 namespace IJ.Core.Settings
 {

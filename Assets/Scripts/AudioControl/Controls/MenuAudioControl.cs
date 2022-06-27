@@ -9,7 +9,7 @@ namespace IJ.AudioControls.Controls
         public override void SetAudio()
         {
             base.SetAudio();
-            _transition.ToStartGame();
+            _transition.ToMainMenu();
         }
     }
 }

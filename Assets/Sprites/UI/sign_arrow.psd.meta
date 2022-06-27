@@ -134,211 +134,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sign_volumeMute
+      name: sign_arrow_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 360
-        width: 179
-        height: 140
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db25a0c7e79876ed0800000000000000
-      internalID: -2420815098348416323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sign_volume
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 360
-        width: 179
-        height: 140
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d815cf42716a51730800000000000000
-      internalID: 3969261264931934605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sign_needRepair
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 172
-        width: 169
-        height: 169
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a36dda96d2a77a570800000000000000
-      internalID: 8477879159013365306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: roadSign_doubleTurns
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 16
-        width: 143
+        x: 11
+        y: 105
+        width: 142
         height: 135
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7f61557002ba3f40800000000000000
-      internalID: 5709071192683540351
+      spriteID: e5d8f1a2491a6f542b28558e39efc8cb
+      internalID: -1679529685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roadSign_forward
+      name: sign_arrow_1
       rect:
         serializedVersion: 2
         x: 168
-        y: 16
+        y: 105
         width: 51
         height: 135
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac3ec769edab84f90800000000000000
-      internalID: -6969114958185569334
+      spriteID: 081f4c1b92a7eb9449546174208bc21d
+      internalID: -1989876209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roadSign_singleTurn
+      name: sign_arrow_2
       rect:
         serializedVersion: 2
-        x: 234
-        y: 16
-        width: 80
+        x: 235
+        y: 105
+        width: 79
         height: 135
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76272611d542e9f50800000000000000
-      internalID: 6889984462065660519
+      spriteID: ff038cba2e9e28f4f999cf5f8b3506e0
+      internalID: 1031950050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roadSign_forward&turn
+      name: sign_arrow_3
       rect:
         serializedVersion: 2
         x: 330
-        y: 16
+        y: 105
         width: 96
         height: 135
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c27c9633d1e4cc90800000000000000
-      internalID: -7150342011086933311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sign_settings
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 240
-        width: 100
-        height: 108
-      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4cc5d3fbfca8fe30800000000000000
-      internalID: 4537566822703418444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sign_basket
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 243
-        width: 118
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e11cc45e3b4e6ee0800000000000000
-      internalID: -1265991714161815065
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sign_person
-      rect:
-        serializedVersion: 2
-        x: 419
-        y: 410
-        width: 78
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5fd068793d0e82a0800000000000000
-      internalID: -6733429852388401314
+      spriteID: 4674578c3d9a0b54693cc603d4e9c812
+      internalID: -1171761564
       vertices: []
       indices: 
       edges: []
@@ -354,16 +228,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sign_basket: -1265991714161815065
-      sign_volume: 3969261264931934605
-      sign_person: -6733429852388401314
-      sign_volumeMute: -2420815098348416323
-      sign_settings: 4537566822703418444
-      sign_needRepair: 8477879159013365306
-      roadSign_forward: -6969114958185569334
-      roadSign_doubleTurns: 5709071192683540351
-      roadSign_forward&turn: -7150342011086933311
-      roadSign_singleTurn: 6889984462065660519
+      sign_arrow_0: -1679529685
+      sign_arrow_2: 1031950050
+      sign_arrow_3: -1171761564
+      sign_arrow_1: -1989876209
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1

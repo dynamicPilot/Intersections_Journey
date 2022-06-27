@@ -1,8 +1,6 @@
 using IJ.AudioControls.VolumeControls;
-using IJ.LanguageControl;
+using IJ.LanguageControl.UI;
 using IJ.Utilities.Configs;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace IJ.Core.Menus.Others
@@ -10,7 +8,10 @@ namespace IJ.Core.Menus.Others
     public class SettingsPanelUI : MovablePanelUI
     {
         [Header("UI Components")]
-        [SerializeField] private Transform[] _parameters;
+        [SerializeField] private VolumeSlider _musicVolume;
+        [SerializeField] private VolumeSlider _effectsVolume;
+        [SerializeField] private VolumeSlider _totalVolume;
+        [SerializeField] private LanguageSwitcher _languageSwitcher;
 
         [Header("Configs")]
         [SerializeField] private GameConfig _gameCongif;
@@ -18,18 +19,18 @@ namespace IJ.Core.Menus.Others
 
         public void SetSettingsUI()
         {
-            foreach (Transform parameter in _parameters)
-            {
-                parameter.GetComponent<ISettingsParameter>().UpdateParameter();
-            }
+            _musicVolume.UpdateParameter();
+            _effectsVolume.UpdateParameter();
+            _totalVolume.UpdateParameter();
+            _languageSwitcher.UpdateParameter();
         }
 
         public void ResetToDefaults()
         {
-            foreach (Transform parameter in _parameters)
-            {
-                
-            }
+            _musicVolume.UpdateParameterToDefault(_audioConfig.DefaultMusicVolume);
+            _effectsVolume.UpdateParameterToDefault(_audioConfig.DefaultEffectsVolume);
+            _totalVolume.UpdateParameterToDefault(_audioConfig.DefaultTotalVolume);
+            _languageSwitcher.UpdateParameterToDefault(_gameCongif.DefaultLangIndex);
         }
     }
 }

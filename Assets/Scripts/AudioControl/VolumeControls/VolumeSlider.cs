@@ -1,16 +1,10 @@
-using IJ.Utilities.Configs;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace IJ.AudioControls.VolumeControls
 {
-    public interface ISettingsParameter
-    {
-        public abstract void UpdateParameter();
-    }
-
-    public class VolumeSlider : MonoBehaviour, ISettingsParameter
-    {
+    public class VolumeSlider : MonoBehaviour
+    { 
         [SerializeField] private Slider _slider;
         [SerializeField] private VolumeGroupData _group;
 

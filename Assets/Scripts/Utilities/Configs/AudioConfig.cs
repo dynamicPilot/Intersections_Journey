@@ -28,6 +28,9 @@ namespace IJ.Utilities.Configs
         [SerializeField] private AudioMixerSnapshot _pausedSnaphot;
         public AudioMixerSnapshot PausedSnaphot { get => _pausedSnaphot; }
 
+        [SerializeField] private AudioMixerSnapshot _mainMenuSnaphot;
+        public AudioMixerSnapshot MainMenuSnaphot { get => _mainMenuSnaphot; }
+
         [Header("Transitions")]
         [SerializeField] private float _shortTransitionTime = 0.1f;
         public float ShortTransitionTime { get => _shortTransitionTime; }

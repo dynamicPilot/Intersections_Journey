@@ -7,6 +7,7 @@ namespace IJ.Core.CommandPattern.Receivers
     {
         public enum GameflowCommandType { startNext, restart, toMenu, start }
         public enum MenuCommandType { toSettings, toAccount, quit }
+        public enum SaveSettingsCommandType { preferences, account }
 
         [SerializeField] private SoundsPlayer soundsPlayer;
 
@@ -19,6 +20,11 @@ namespace IJ.Core.CommandPattern.Receivers
 
         public virtual void ChangeGameflow(GameflowCommandType type)
         {
+
+        }
+
+        public virtual void SaveSettings(SaveSettingsCommandType type)
+        { 
 
         }
     }

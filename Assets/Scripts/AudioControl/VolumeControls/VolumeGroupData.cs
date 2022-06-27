@@ -21,7 +21,7 @@ namespace IJ.AudioControls.VolumeControls
         {
             if (_mixer.GetFloat(_parameter, out float volume))
             {
-                return Mathf.InverseLerp(-80.0f, 0.0f, volume);
+                return Mathf.InverseLerp(_minVolume, _maxVolume, volume);
             }
 
             return 0f;

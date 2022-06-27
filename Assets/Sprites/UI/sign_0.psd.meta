@@ -254,53 +254,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sign_play
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 127
-        width: 85
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a097e3d20591f530800000000000000
-      internalID: 3887051792775090340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sign_backArrow
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 125
-        width: 122
-        height: 102
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2053402af4939ca20800000000000000
-      internalID: 3083058434095199490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: sign_crashSignEffect
       rect:
         serializedVersion: 2
-        x: 430
-        y: 126
+        x: 180
+        y: 253
         width: 44
         height: 110
       alignment: 0
@@ -312,90 +270,6 @@ TextureImporter:
       bones: []
       spriteID: 5de54972a44505220800000000000000
       internalID: 2472568872894750421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sign_quit
-      rect:
-        serializedVersion: 2
-        x: 151
-        y: 7
-        width: 100
-        height: 109
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf0a39a768f8a58c0800000000000000
-      internalID: -4009734710475120389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sign_next
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 7
-        width: 128
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05adf247067ba1550800000000000000
-      internalID: 6132415467512388176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sign_accept
-      rect:
-        serializedVersion: 2
-        x: 393
-        y: 10
-        width: 110
-        height: 109
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 706ce062a297a57a0800000000000000
-      internalID: -6387659899537537529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sign_reload
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 242
-        width: 119
-        height: 109
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76b356f32cb79bec0800000000000000
-      internalID: -3550670756987454617
       vertices: []
       indices: 
       edges: []
@@ -451,7 +325,7 @@ TextureImporter:
         width: 56
         height: 142
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -459,6 +333,27 @@ TextureImporter:
       bones: []
       spriteID: ef7d5b1d7b45d51f0800000000000000
       internalID: -1054593589260724226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_needReapirCar
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 70
+        width: 171
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09c909586f4f38458590633932f8305
+      internalID: 843487377
       vertices: []
       indices: 
       edges: []
@@ -486,6 +381,7 @@ TextureImporter:
       sign_circleSmall: 8183189148293364751
       sign_next: 6132415467512388176
       sign_carCrash: 7168540986364394743
+      sign_needReapirCar: 843487377
       sign_quit: -4009734710475120389
       sign_play: 3887051792775090340
       sign_crashSignCarOnly: -5920526608949867901

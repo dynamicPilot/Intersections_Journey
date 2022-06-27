@@ -19,6 +19,11 @@ namespace IJ.LanguageControl
             if (_lang == lang) return;
 
             _lang = lang;
+            UpdateLanguageViews();
+        }
+
+        public void UpdateLanguageViews()
+        {
             if (OnChangeLanguage != null) OnChangeLanguage.Invoke(_lang);
         }
 
