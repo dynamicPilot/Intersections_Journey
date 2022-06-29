@@ -30,4 +30,9 @@ public class SnapshotTransition : MonoBehaviour
     {
         _config.MainMenuSnaphot.TransitionTo(_config.TransitionTime);
     }
+
+    public void ToAds()
+    {
+        _config.InAdsSnaphot.TransitionTo(_config.TransitionTime);
+    }
 }

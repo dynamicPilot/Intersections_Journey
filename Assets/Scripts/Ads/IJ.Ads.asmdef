@@ -1,8 +1,12 @@
 {
-    "name": "IJ.Animations",
+    "name": "IJ.Ads",
     "rootNamespace": "",
     "references": [
-        "GUID:e5ec36b77bd55104ca1395a3bab49219"
+        "GUID:ff6de30450f3748908ff580f6ec64d9a",
+        "GUID:c6ab062adcdd76848a6ad1cbabc60d40",
+        "GUID:c4b90ca4a576c5f4483610cb38d39ed0",
+        "GUID:71ca57373c045cb429f52df977ecdd06",
+        "GUID:29890991a1112a84a8b81717d90f7fea"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

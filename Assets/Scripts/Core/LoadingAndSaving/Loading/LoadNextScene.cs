@@ -36,7 +36,6 @@ public class LoadNextScene : MonoBehaviour
 
             while (operation.isDone == false)
             {
-                //float progress = Mathf.Clamp01(operation.progress / 0.9f);
                 loadingPanel.UpdateProgress(Mathf.Clamp01(operation.progress / 0.9f));
                 yield return null;
             }
