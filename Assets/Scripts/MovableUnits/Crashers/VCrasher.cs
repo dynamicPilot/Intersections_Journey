@@ -56,7 +56,7 @@ public class VCrasher : MonoBehaviour
     {
         _inCrash = true;
         Logging.Log("Crash!!");
-        collision.gameObject.GetComponent<VCrasher>().MovingInCollision(contactPosition - transform.position);
+        collision.gameObject.GetComponent<VCrasher>().MovingInCollision(contactPosition - new Vector3(_body.position.x, _body.position.y, 0f));
 
         if (OnStartCollision != null) OnStartCollision.Invoke(contactPosition, collision.gameObject.GetComponent<IGetUnitIndex>().GetIndex());
         InCrashTimer();

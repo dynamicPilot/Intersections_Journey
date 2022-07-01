@@ -22,7 +22,7 @@ namespace MovableUnits.Units
         protected private VInfo info;
         private VEffects effects;
         private VRepairSiteTag repairSiteTag;
-
+        private Rigidbody2D _rigidbody;
         private RouterComponent routerComponent;
         [SerializeField] private VRoute router;
 
@@ -31,7 +31,9 @@ namespace MovableUnits.Units
         private protected bool needUpdateTotalTime = false;
         private bool needUpdateCounter = false;
 
-        private int counter = 0;        
+        private int counter = 0;
+
+        private MoveViaPath _movable;
         private void Awake()
         {
             mover = GetComponent<VMover>();
@@ -40,7 +42,7 @@ namespace MovableUnits.Units
             info = GetComponent<VInfo>();
             effects = GetComponent<VEffects>();
             repairSiteTag = GetComponent<VRepairSiteTag>();
-
+            _rigidbody = GetComponent<Rigidbody2D>();
             MakeMediatorAndSet();
         }
 
@@ -73,11 +75,11 @@ namespace MovableUnits.Units
 
             FixedUpdateStuff(Time.fixedDeltaTime);
 
-            MoveViaPath movable = new MoveViaPath(transform);
-            if (mover.CalculateVelocity(Time.fixedDeltaTime, movable, new IGetDistanceInfo[3] { scanner.TrafficLightInfo, scanner.UnitsInfo, repairSiteTag }))
+            _movable = new MoveViaPath(_rigidbody);
+            if (mover.CalculateVelocity(Time.fixedDeltaTime, _movable, new IGetDistanceInfo[3] { scanner.TrafficLightInfo, scanner.UnitsInfo, repairSiteTag }))
             {
-                router.GetPathPointToMove(movable);
-                movable.MoveAndRotate();
+                router.GetPathPointToMove(_movable);
+                _movable.MoveAndRotate();
             }
         }
 
@@ -111,7 +113,8 @@ namespace MovableUnits.Units
             {
                 
                 gameObject.SetActive(false);
-                transform.Translate(new Vector3(-50f, 0f, 0f));
+                _rigidbody.position = new Vector2(-50f, 0f);
+                    //Translate(new Vector3(-50f, 0f, 0f));
                 info.FreeUnitIndex(router.TargetRoutePoint());
             }
         }

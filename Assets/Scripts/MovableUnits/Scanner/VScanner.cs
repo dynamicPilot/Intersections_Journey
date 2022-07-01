@@ -56,7 +56,7 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
     {
         boxCollider = GetComponent<BoxCollider2D>();
         polygonCollider = GetComponent<PolygonCollider2D>();
-        _positionShearer = new VPositionShearer(gap, polygonCollider.bounds.extents, transform, boxCollider);
+        _positionShearer = new VPositionShearer(gap, polygonCollider.bounds.extents, GetComponent<Rigidbody2D>(), boxCollider);
     }
 
     private void OnDestroy()

@@ -53,7 +53,7 @@ public class Level : ScriptableObject
     [Header("Vehicle Creator settings")]
     // if need curve by hour
     [SerializeField] private TimeIntervalsByRoad[] timeIntervalsByRoads;
-    public TimeIntervalsByRoad[] TimeIntervalsByRoads { get => timeIntervalsByRoads; }
+    public TimeIntervalsByRoad[] TimeIntervalsByRoads { get => timeIntervalsByRoads; set => timeIntervalsByRoads = value; }
 
     [Header("Repair Site settings")]
     [SerializeField] private List<TimePoint> repairSiteTimePoints;

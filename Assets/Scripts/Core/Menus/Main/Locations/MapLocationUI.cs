@@ -71,7 +71,6 @@ public class MapLocationUI : MonoBehaviour
         mapLocationsUI.ResetLocationInButtonState(this);
         if (isAvailable && !isBlock)
         {
-            Logging.Log("MapLocationUI: opening level panel");
             mapLocationsUI.OpenLevelsPanelForLocation(location);
         }
         else
@@ -79,8 +78,7 @@ public class MapLocationUI : MonoBehaviour
             // open button panel           
 
             if (_animation != null)
-            {
-                Logging.Log("MapLocationUI: start animator");                
+            {            
                 StartCoroutine(IsBlock());
             }
         }

@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.28627452, g: 0.3254902, b: 0.5176471, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.85882354, g: 0.85882354, b: 0.8509804, a: 0.4}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.46666667, g: 0.39215687, b: 0.5137255, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -504,7 +504,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4870263338675398945}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7832374202744145440}
+        m_TargetAssemblyTypeName: IJ.Core.Menus.Others.ErrorPageControl, IJ.Core
+        m_MethodName: ClosePage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4870263338675398947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,6 +619,7 @@ GameObject:
   - component: {fileID: 4870263339034537640}
   - component: {fileID: 4870263339034537641}
   - component: {fileID: 5795589029390834301}
+  - component: {fileID: 7832374202744145440}
   m_Layer: 5
   m_Name: ErrorPage
   m_TagString: Untagged
@@ -661,7 +674,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _group: {fileID: 4870263339034537641}
-  _duration: 0.5
+  _duration: 1
+--- !u!114 &7832374202744145440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4870263339034537643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69075d977a22f2a4d97ffd139827e173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animation: {fileID: 5795589029390834301}
+  _player: {fileID: 0}
+  _soundDelay: 1
+  _soundIndex: 4
 --- !u!1 &5491503587640186904
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,10 +20,10 @@ public class MapLocationsUI : MonoBehaviour, ISetPlayerState
     {
         locationInButtonsView = null;
 
-        foreach (MapLocationUI locationUI in mapLocations)
+        for (int i = 0; i < mapLocations.Length; i++)
         {
-            int index = locationUI.GetLocationIndex();
-            locationUI.SetLocationState(playerState.LocationsProgress[index].IsAvailable,playerState.LocationsProgress[index].IsMax);
+            int index = mapLocations[i].GetLocationIndex();
+            mapLocations[i].SetLocationState(playerState.LocationsProgress[index].IsAvailable,playerState.LocationsProgress[index].IsMax);
         }
     }
 

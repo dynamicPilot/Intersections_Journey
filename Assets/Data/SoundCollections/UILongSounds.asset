@@ -29,5 +29,9 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 4f7b186527941174ea47a4dc149c3822, type: 3}
     isLoop: 0
     _defaultVolume: 0.7
+  - soundName: error
+    clip: {fileID: 8300000, guid: 6d96f13448306ec45bb7527d659b42de, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
   _randomFrom: 0
   _randomTo: -1

@@ -28,12 +28,11 @@ public struct TimeInterval
 [System.Serializable]
 public struct VehicleNumberByType
 {
-    [SerializeField] public VehicleUnit.TYPE type;
-    [SerializeField] public TYPE _type;
-    [SerializeField] public int number;
-    [SerializeField] public bool needSpecialEndPoint;
-    //public int startPointNumber;
-    [SerializeField] public int endPointNumber;
+    public VehicleUnit.TYPE type;
+    public TYPE _type;
+    public int number;
+    public bool needSpecialEndPoint;
+    public int endPointNumber;
 
 
     public VehicleNumberByType(TYPE newType, int newNumber, bool newNeedSpecialEndPoint = false, int newEndPoint = -1)

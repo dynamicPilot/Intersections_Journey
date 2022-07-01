@@ -9,12 +9,10 @@ public class MenuFlow : Flow
     {
         if (_playerState.NeedLoadData)
         {
-            Logging.Log("Load Data");
             _dataSaveAndLoad.LoadData(_playerState);
         }
         
         Time.timeScale = 1f;
-        //_dataSaveAndLoad.SaveData(_playerState);
     }
 
     public void SetMenu()

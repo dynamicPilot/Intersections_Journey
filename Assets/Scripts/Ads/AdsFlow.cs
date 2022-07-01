@@ -1,4 +1,5 @@
 using IJ.Core.Menus.MainMenu;
+using IJ.Core.Menus.Others;
 using UnityEngine;
 
 namespace IJ.Ads
@@ -7,6 +8,7 @@ namespace IJ.Ads
     {
         [SerializeField] private SnapshotTransition _snapshotTransition;
         [SerializeField] private PointsControl _pointsControl;
+        [SerializeField] private ErrorPageControl _error;
         public void StartShow()
         {
             _snapshotTransition.ToAds();
@@ -21,6 +23,13 @@ namespace IJ.Ads
                 Logging.Log("Get 1 point!");
                 _pointsControl.ChangePointsAmount(1, true);
             }
+            Failed();
+        }
+
+        public void Failed()
+        {
+            _error.gameObject.SetActive(true);
+            _error.OpenPage();
         }
     }
 }

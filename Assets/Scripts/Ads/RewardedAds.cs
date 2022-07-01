@@ -1,6 +1,5 @@
 using UnityEngine.Advertisements;
 using UnityEngine;
-using UnityEngine.UI;
 using IJ.UIElements;
 
 namespace IJ.Ads
@@ -52,6 +51,7 @@ namespace IJ.Ads
         {
             Logging.Log($"Error loading Ad Unit {adUnitId}: {error.ToString()} - {message}");
             _showAdButton.gameObject.SetActive(false);
+            _flow.Failed();
         }
 
         public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)
@@ -71,6 +71,7 @@ namespace IJ.Ads
             Logging.Log($"Error showing Ad Unit {adUnitId}: {error.ToString()} - {message}");
             _showAdButton.gameObject.SetActive(false);
             _flow.EndShow(false);
+            _flow.Failed();
         }
 
         public void OnUnityAdsShowStart(string adUnitId)

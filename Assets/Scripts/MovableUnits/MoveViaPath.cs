@@ -14,12 +14,14 @@ public interface ISetDistanceToMove
 
 public class MoveViaPath: IMovable, ISetDistanceToMove
 {
-    readonly Transform transform;
+    //readonly Transform _transform;
+    readonly Rigidbody2D _rigidbody;
     float distance = 0f;
     Vector3 position;
-    public MoveViaPath(Transform _transform)
+    public MoveViaPath(Rigidbody2D rd)
     {
-        transform = _transform;
+        //this._transform = _transform;
+        _rigidbody = rd;
     }
 
     public void SetMovingParams(float velocity, float acceleration, float deltaT)
@@ -39,13 +41,18 @@ public class MoveViaPath: IMovable, ISetDistanceToMove
 
     public void MoveAndRotate()
     {
-        Quaternion rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 360f - Mathf.Atan2(position.x - transform.position.x, position.y - transform.position.y) * Mathf.Rad2Deg);
-        transform.Translate(new Vector3(position.x - transform.position.x, position.y - transform.position.y, 0f), Space.World);
-        transform.Rotate(rotation.eulerAngles - transform.rotation.eulerAngles, Space.World);
+        //Quaternion rotation = Quaternion.Euler(_transform.rotation.x, _transform.rotation.y, 360f - Mathf.Atan2(position.x - _transform.position.x, position.y - _transform.position.y) * Mathf.Rad2Deg);
+        //transform.Translate(new Vector3(position.x - transform.position.x, position.y - transform.position.y, 0f), Space.World);
+        //
+
+        float angle = 360f - Mathf.Atan2(position.x - _rigidbody.position.x, position.y - _rigidbody.position.y) * Mathf.Rad2Deg;
+        _rigidbody.MovePosition(position);
+        _rigidbody.SetRotation(angle);
+        //_transform.Rotate(rotation.eulerAngles - _transform.rotation.eulerAngles, Space.World);
     }
 
     public Vector3 GetPosition()
     {
-        return transform.position;
+        return _rigidbody.position;
     }
 }

@@ -6,6 +6,6 @@ public class GameStartManager : MonoBehaviour
 
     private void Start()
     {
-        loadNextScene.LoadMainManu();
+        //loadNextScene.LoadMainManu();
     }
 }

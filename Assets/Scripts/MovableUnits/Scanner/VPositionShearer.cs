@@ -14,21 +14,21 @@ public class VPositionShearer : IPositionShearer
 {
     private float _gap;
     private Vector2 _size;
-    private Transform _transform;
+    private Rigidbody2D _rigidBody;
     private BoxCollider2D _collider;
 
-    public VPositionShearer(float gap, Vector2 size, Transform transform, BoxCollider2D collider)
+    public VPositionShearer(float gap, Vector2 size, Rigidbody2D rigidbody, BoxCollider2D collider)
     {
         _gap = gap;
         _size = size;
-        _transform = transform;
+        _rigidBody = rigidbody;
         _collider = collider;
 
     }
 
     public IDirectionShearer GetDirectionShearer()
     {
-        return _transform.GetComponent<VScanner>() as IDirectionShearer;
+        return _rigidBody.GetComponent<VScanner>() as IDirectionShearer;
     }
 
     public float GetGap()
@@ -38,12 +38,12 @@ public class VPositionShearer : IPositionShearer
 
     public Vector3 GetPosition()
     {
-        return _transform.position;
+        return _rigidBody.position;
     }
 
     public Vector3 GetSetToOriginVelocityVector()
     {
-        return _transform.position - _collider.bounds.center;
+        return new Vector3(_rigidBody.position.x, _rigidBody.position.y, 0f) - _collider.bounds.center;
     }
 
     public Vector2 GetSize()
