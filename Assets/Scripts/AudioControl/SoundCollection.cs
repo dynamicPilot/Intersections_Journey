@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace AudioControls.Commons
 {
-    [CreateAssetMenu(fileName = "New SoundCollection", menuName = "Unit/SoundCollection")]
+    [CreateAssetMenu(fileName = "New SoundCollection", menuName = "Unit/Collections/SoundCollection")]
     public class SoundCollection : ScriptableObject
     {
         [SerializeField] private Sound[] collection;

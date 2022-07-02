@@ -1,3 +1,4 @@
+using IJ.Core.Objects.LevelAndLocation;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,30 +12,29 @@ public class LevelsAndLocationsManager : MonoBehaviour
     [SerializeField] private bool needLoadLevels = false;
     [SerializeField] private int[] indexesToLoad;
 
-    [SerializeField] private Location[] locations;
-    public Location[] Locations { get => locations; }
-    [SerializeField] private Level[] levels;
-    public Level[] Levels { get => levels; }
+    [SerializeField] private LevelsAndLocationsCollection _collection;
+
+    public Location[] Locations { get => _collection.Locations; }
+    public Level[] Levels { get => _collection.Levels; }
 
 
     private void Awake()
     {
+        if (needUpdateScriptable) LocationAndLevelUtilities.FillLocationsAndLevelsIndexes(_collection.Locations);
+        if (needUnloadScriptables) LocationAndLevelUtilities.DumpCopyToJson(_collection.Levels);
 
-        if (needUpdateScriptable) LocationAndLevelUtilities.FillLocationsAndLevelsIndexes(locations);
-        if (needUnloadScriptables) LocationAndLevelUtilities.DumpCopyToJson(levels);
-
-        if (needLoadLevels) LocationAndLevelUtilities.LoadLevelsCopyFromJson(levels, indexesToLoad);
+        if (needLoadLevels) LocationAndLevelUtilities.LoadLevelsCopyFromJson(_collection.Levels, indexesToLoad);
     }
 
     public Level GetLevelByIndex(int index)
     {
-        if (index < levels.Length) return levels[index];
+        if (index < _collection.Levels.Length) return _collection.Levels[index];
         else return null;
     }
 
     public Location GetLocationByIndex(int index)
     {
-        if (index < locations.Length) return locations[index];
+        if (index < _collection.Locations.Length) return _collection.Locations[index];
         else return null;
     }
 }

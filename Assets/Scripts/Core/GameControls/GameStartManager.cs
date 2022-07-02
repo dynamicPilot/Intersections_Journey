@@ -1,11 +1,19 @@
 using UnityEngine;
 
-public class GameStartManager : MonoBehaviour
+namespace IJ.Core.Managers.GameManagers
 {
-    [SerializeField] private LoadNextScene loadNextScene;
-
-    private void Start()
+    [RequireComponent(typeof(GameStartFlow))]
+    public class GameStartManager : GameManager
     {
-        //loadNextScene.LoadMainManu();
+        private void Awake()
+        {
+            FindPlayerState();
+        }
+
+        private void Start()
+        {
+            GameStartFlow menuFlow = _flow as GameStartFlow;
+            menuFlow.SetGameStart();
+        }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine.Audio;
 
 namespace IJ.Utilities.Configs
 {
-    [CreateAssetMenu(fileName = "New AudioConfig", menuName = "Unit/AudioConfig")]
+    [CreateAssetMenu(fileName = "New AudioConfig", menuName = "Unit/Configs/AudioConfig")]
     public class AudioConfig : ScriptableObject
     {
         //[SerializeField] private float _defaultVolume = 0.7f;

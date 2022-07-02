@@ -23,7 +23,6 @@ namespace IJ.Ads
                 Logging.Log("Get 1 point!");
                 _pointsControl.ChangePointsAmount(1, true);
             }
-            Failed();
         }
 
         public void Failed()

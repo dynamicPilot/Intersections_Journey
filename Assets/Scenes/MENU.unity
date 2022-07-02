@@ -12547,30 +12547,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needUpdateScriptable: 0
   needUnloadScriptables: 0
-  needLoadLevels: 1
-  indexesToLoad: 02000000
-  locations:
-  - {fileID: 11400000, guid: 326fb69ab71ae1f48bdae272dada5dbc, type: 2}
-  - {fileID: 11400000, guid: e3663a9fbf42dc1468e73356c5a5b4c9, type: 2}
-  - {fileID: 11400000, guid: 9bf1c896764670043945bf58ce2fa386, type: 2}
-  - {fileID: 11400000, guid: aceac277239524d4d98a7100fba75560, type: 2}
-  levels:
-  - {fileID: 11400000, guid: 11e6cca3805f74a49995e87ac3183d76, type: 2}
-  - {fileID: 11400000, guid: 68e8c0b5bf338524ea69485a706a2a14, type: 2}
-  - {fileID: 11400000, guid: e74f8e1d4d4555143a4cf01cd1006624, type: 2}
-  - {fileID: 11400000, guid: 74a934578855bae4e9aa1e3f917079da, type: 2}
-  - {fileID: 11400000, guid: ac09dcd0b7b430843bf3fb2890d0eb1f, type: 2}
-  - {fileID: 11400000, guid: a4d04345d46a2a647852547c41eb592c, type: 2}
-  - {fileID: 11400000, guid: 20fb27e740ac1ad428a6ed128368ccd7, type: 2}
-  - {fileID: 11400000, guid: 221ed2a23e7370d488512cb12c803f7e, type: 2}
-  - {fileID: 11400000, guid: 1a700ad921075e14b8befca2552e7d0c, type: 2}
-  - {fileID: 11400000, guid: 0bfed232ca7b4604783ba80576b02451, type: 2}
-  - {fileID: 11400000, guid: ae8053e054cd899468da1701fbb80d75, type: 2}
-  - {fileID: 11400000, guid: c85743465569fa7439c0e42f5083b77f, type: 2}
-  - {fileID: 11400000, guid: 03fd4a2f5c37a064abf74bc078d8311d, type: 2}
-  - {fileID: 11400000, guid: a4ee57922aa99fe4587a36e618ad389c, type: 2}
-  - {fileID: 11400000, guid: e4647bbab5c4d9b4b842a4776c37df7e, type: 2}
-  - {fileID: 11400000, guid: 721f13a72d166164f8ee4a3c9654684b, type: 2}
+  needLoadLevels: 0
+  indexesToLoad: 
+  _collection: {fileID: 11400000, guid: 9c0d96dcb78f31244abf9d5566ede45d, type: 2}
 --- !u!114 &1053323077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27472,7 +27451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!225 &7847285878183217917
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -27856,7 +27835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &9063137330356278153
 MonoBehaviour:
   m_ObjectHideFlags: 0

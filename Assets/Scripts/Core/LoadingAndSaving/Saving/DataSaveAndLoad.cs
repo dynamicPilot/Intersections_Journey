@@ -6,6 +6,8 @@ using IJ.Utilities.Configs;
 [DefaultExecutionOrder(-1)]
 public class DataSaveAndLoad : MonoBehaviour
 {
+    public enum DataState { fine, noData, error};
+
     [SerializeField] private LevelsAndLocationsManager levelsAndLocationsManager;
     [SerializeField] private GameConfig _config;
 
@@ -35,17 +37,24 @@ public class DataSaveAndLoad : MonoBehaviour
         SaveSystem.SaveData(levelsPoints.ToArray(), locationAvailability.ToArray(), playerState.TotalPointsNumber);
     }
 
-    public void LoadData(PlayerState playerState)
+    public DataState LoadData(PlayerState playerState)
     {
-        if (levelsAndLocationsManager == null) return;
+        if (levelsAndLocationsManager == null) return DataState.error;
 
         PlayerData data = SaveSystem.LoadData();
 
         playerState.PrepairProgressLists(levelsAndLocationsManager.Levels, levelsAndLocationsManager.Locations);
         playerState.ResetPoints();
 
-        if (data == null) HaveNoData(playerState);
-        else ParseData(data, playerState);
+        if (data == null)
+        {
+            return HaveNoData(playerState);
+        }
+        else
+        {
+            ParseData(data, playerState);
+            return DataState.fine;
+        }
     }
 
     void ParseData(PlayerData data, PlayerState playerState)
@@ -86,7 +95,7 @@ public class DataSaveAndLoad : MonoBehaviour
         }
     }
 
-    void HaveNoData(PlayerState playerState)
+    DataState HaveNoData(PlayerState playerState)
     {
         // new game or no data
 
@@ -94,5 +103,6 @@ public class DataSaveAndLoad : MonoBehaviour
         playerState.AddPointsToTotalNumber(_config.StartGamePoints);
         SaveData(playerState);
         playerState.DataIsLoaded();
+        return DataState.noData;
     }
 }

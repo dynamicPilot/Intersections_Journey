@@ -10,7 +10,7 @@ public class PlayerState : MonoBehaviour
     [SerializeField] private int _totalPointsNumber;   
     [SerializeField] private Level currentLevel;
 
-    private bool _needLoadData =true;
+    [SerializeField] private bool _needLoadData =true;
     private bool _listsIsCreated = true;   
 
     #region PublicVariables

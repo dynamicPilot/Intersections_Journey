@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1413074c73157434e8a44bf32213b0e2, type: 3}
+  m_Name: GreenCircleAPath0
+  m_EditorClassIdentifier: 
+  Points: []
+  Paths:
+  - Points:
+    - {x: 1699, y: 594, z: 0}
+    - {x: 1106, y: 203, z: 0}
+    - {x: 308, y: -137, z: 0}
+    - {x: -623, y: -362, z: 0}
+    Duration: 3
+    EasyIndex: 4
+  - Points:
+    - {x: -623, y: -362, z: 0}
+    - {x: -79, y: -166, z: 0}
+    - {x: 455, y: 119, z: 0}
+    Duration: 2
+    EasyIndex: 4

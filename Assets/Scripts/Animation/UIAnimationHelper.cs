@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,13 +7,15 @@ namespace IJ.Animations.Helper
 {
     public interface ITestAnimation
     {
-        public abstract void TestMethodForHelper(Vector3[] points);
+        public abstract void TestMethodForHelper(AnimationSinglePath singlePath);
     }
 
     public class UIAnimationHelper : MonoBehaviour
     {
         [SerializeField] private RectTransform[] _points;
         [SerializeField] private AnimationPath _pathToWrite;
+        [SerializeField] private float _duration = 3f;
+        [SerializeField] private Ease _easeType;
         [SerializeField] private bool _needWrite = false;
 
         [Header("Test Animation Script")]
@@ -26,13 +29,8 @@ namespace IJ.Animations.Helper
         public void DoTestScript()
         {
             ITestAnimation testScript = _testScriptObject.GetComponent<ITestAnimation>();
-            testScript.TestMethodForHelper(GetPoints());
+            testScript.TestMethodForHelper(new AnimationSinglePath { Points = GetPoints(), Duration = _duration, EasyIndex = (int)_easeType });
             if (_needWrite) AddToPaths();
-        }
-
-        void WritePoints()
-        {
-            _pathToWrite.Points = GetPoints();
         }
 
         Vector3[] GetPoints()
@@ -50,7 +48,7 @@ namespace IJ.Animations.Helper
         {
             List<AnimationSinglePath> temp = new List<AnimationSinglePath>();
             if (_pathToWrite.Paths != null) temp.AddRange(_pathToWrite.Paths);
-            temp.Add( new AnimationSinglePath { Points = GetPoints() });
+            temp.Add( new AnimationSinglePath { Points = GetPoints(), Duration = _duration, EasyIndex = (int)_easeType });
             _pathToWrite.Paths = temp.ToArray();
 
         }

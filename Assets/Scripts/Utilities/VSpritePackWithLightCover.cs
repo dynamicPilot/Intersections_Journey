@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Utilites.SpritePacks
 {
-    [CreateAssetMenu(fileName = "New VSpritePackWithLightCover", menuName = "Unit / VSpritePackWithLightCover")]
+    [CreateAssetMenu(fileName = "New VSpritePackWithLightCover", menuName = "Unit/SpritePack/VSpritePackWithLightCover")]
     [System.Serializable]
     public class VSpritePackWithLightCover : VSpritePack
     {

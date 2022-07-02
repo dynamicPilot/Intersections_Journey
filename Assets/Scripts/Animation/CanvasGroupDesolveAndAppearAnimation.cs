@@ -1,9 +1,10 @@
 using UnityEngine;
 using DG.Tweening;
+using IJ.Animations.Waves;
 
 namespace IJ.Animations
 {
-    public class CanvasGroupDesolveAndAppearAnimation : TweenAnimation
+    public class CanvasGroupDesolveAndAppearAnimation : TweenAnimation, IAnimationWaveMember
     {
         [SerializeField] private CanvasGroup _group;
 
@@ -22,6 +23,11 @@ namespace IJ.Animations
             {
                 if (disable) gameObject.SetActive(false);
             });
+        }
+
+        public void OnWaveStart(AnimationPath path)
+        {
+            Appear();
         }
     }
 }

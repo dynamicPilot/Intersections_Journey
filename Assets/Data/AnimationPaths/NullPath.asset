@@ -10,9 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1413074c73157434e8a44bf32213b0e2, type: 3}
-  m_Name: RedCircleAPath_1
+  m_Name: NullPath
   m_EditorClassIdentifier: 
-  Points:
-  - {x: -243, y: -383, z: 0}
-  - {x: 239, y: -645, z: 0}
-  - {x: 869, y: -645, z: 0}
+  Points: []
+  Paths: []

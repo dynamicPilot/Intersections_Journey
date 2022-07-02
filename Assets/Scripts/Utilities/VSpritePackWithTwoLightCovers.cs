@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Utilites.SpritePacks
 {
-    [CreateAssetMenu(fileName = "New VSpritePackWithTwoLightCovers", menuName = "Unit / VSpritePackWithTwoLightCovers")]
+    [CreateAssetMenu(fileName = "New VSpritePackWithTwoLightCovers", menuName = "Unit/SpritePack/VSpritePackWithTwoLightCovers")]
     [System.Serializable]
     public class VSpritePackWithTwoLightCovers : VSpritePackWithLightCover
     {

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace IJ.Utilities.Configs
 {
-    [CreateAssetMenu(fileName = "New Config", menuName = "Unit/GameConfig")]
+    [CreateAssetMenu(fileName = "New Config", menuName = "Unit/Configs/GameConfig")]
     public class GameConfig : ScriptableObject
     {
         [SerializeField] private string _menuSceneName = "MENU";

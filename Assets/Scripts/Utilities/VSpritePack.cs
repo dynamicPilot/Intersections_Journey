@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Utilites.SpritePacks
 {
 
-    [CreateAssetMenu(fileName = "New VSpritePack", menuName = "Unit / VSpritePack")]
+    [CreateAssetMenu(fileName = "New VSpritePack", menuName = "Unit/SpritePack/VSpritePack")]
     [System.Serializable]
     public class VSpritePack : ScriptableObject
     {

@@ -1,26 +1,55 @@
 using DG.Tweening;
+using System.Collections;
 using IJ.Animations.Helper;
 using UnityEngine;
+using IJ.Animations.Waves;
 
 namespace IJ.Animations.Objects
 {
     
-    public class PathMoveRectObjectAnimation : TweenAnimation, ITestAnimation
+    public class PathMoveRectObjectAnimation : TweenAnimation, ITestAnimation, IAnimationWaveMember
     {
         [SerializeField] private RectTransform _transform;
         [SerializeField] private AnimationPath _path;
-        [SerializeField] private float _duration;
-        [SerializeField] private bool _effectOnIn = false;
-        [SerializeField] private bool _effectOnOut = true;
+        [SerializeField] private bool _onStart = false;
 
-        public void MoveViaPath(Vector3[] points)
+        WaitForSeconds _timer;
+        int _pathIndex;
+
+        private void Start()
         {
-            if (_effectOnOut) _transform.DOLocalPath(points, _duration, PathType.CatmullRom).SetEase(Ease.OutSine);
+            if (_onStart) StartMove();
         }
 
-        public void TestMethodForHelper(Vector3[] points)
+        public void StartMove()
         {
-            MoveViaPath(points);
+            _pathIndex = 0;
+            StartCoroutine(PathCoroutine(_path.Paths[_pathIndex]));
+        }
+
+        IEnumerator PathCoroutine(AnimationSinglePath singlePath, bool singleMove = false)
+        {
+            _timer = new WaitForSeconds(singlePath.Duration);
+
+            if (singlePath.Points != null && singlePath.Points.Length > 0) 
+                _transform.DOLocalPath(singlePath.Points, singlePath.Duration, PathType.CatmullRom).SetEase((Ease)singlePath.EasyIndex);
+
+            yield return _timer;
+
+            _pathIndex++;
+            if (_path != null && _pathIndex < _path.Paths.Length && !singleMove) StartCoroutine(PathCoroutine(_path.Paths[_pathIndex]));
+        }
+
+        public void TestMethodForHelper(AnimationSinglePath singlePath)
+        {
+            StartCoroutine(PathCoroutine(singlePath, true));
+        }
+
+        public void OnWaveStart(AnimationPath path)
+        {
+            StopAllCoroutines();
+            _path = path;
+            StartMove();
         }
     }
 }

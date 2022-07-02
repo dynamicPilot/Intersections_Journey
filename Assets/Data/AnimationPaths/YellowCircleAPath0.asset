@@ -10,20 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1413074c73157434e8a44bf32213b0e2, type: 3}
-  m_Name: RedCircleAPath_0
+  m_Name: YellowCircleAPath0
   m_EditorClassIdentifier: 
-  Points:
-  - {x: -1569, y: 990, z: 0}
-  - {x: -1095, y: -41, z: 0}
-  - {x: -313, y: -374, z: 0}
-  - {x: 553, y: -63, z: 0}
-  - {x: 73, y: -111, z: 0}
-  - {x: -410, y: 72, z: 0}
+  Points: []
   Paths:
+  - Points: []
+    Duration: 3
+    EasyIndex: 4
   - Points:
-    - {x: -1569, y: 990, z: 0}
-    - {x: -1095, y: -41, z: 0}
-    - {x: -313, y: -374, z: 0}
-    - {x: 553, y: -63, z: 0}
-    - {x: 73, y: -111, z: 0}
-    - {x: -410, y: 72, z: 0}
+    - {x: 124, y: -1081, z: 0}
+    - {x: 124, y: -645, z: 0}
+    Duration: 2
+    EasyIndex: 4
