@@ -6,16 +6,16 @@ namespace IJ.Core.Settings
     public class MenuSettingsControl : SettingsControl
     {
         [SerializeField] private LanguageMaster _languageMaster;
-
+        
         protected override void ReadSettings()
         {
             base.ReadSettings();
             SetLanguageIndex();
         }
 
-        void SetLanguageIndex()
+        protected virtual void SetLanguageIndex()
         {
-            _languageMaster.SetLanguageByIndex(_langIndex);
+            _languageMaster.SetLanguageByIndex(_langIndex);           
         }
 
         protected override void UpdateLangugeIndex()

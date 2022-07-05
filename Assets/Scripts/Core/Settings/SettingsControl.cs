@@ -37,6 +37,7 @@ namespace IJ.Core.Settings
 
         public void SavePreferences()
         {
+            Logging.Log("Save Pref");
             UpdateLangugeIndex();
             _volumeControl.GetVolumes(out PlayerConfig playerConfig);
             playerConfig.LangIndex = _langIndex;
