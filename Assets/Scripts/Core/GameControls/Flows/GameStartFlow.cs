@@ -20,8 +20,7 @@ public class GameStartFlow : Flow, IOnEndWaves
         {
             _state = _dataSaveAndLoad.LoadData(_playerState);
 
-            Logging.Log("state is " + _state);
-            PlayerPrefs.SetInt("State", (int)_state);      
+            PlayerPrefs.SetInt("state", (int)_state);      
         }
     }
 

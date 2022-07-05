@@ -8471,7 +8471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 2105648778}
-  _settings: {fileID: 0}
+  _settings: {fileID: 8482286078380362574}
 --- !u!1001 &1949662590
 PrefabInstance:
   m_ObjectHideFlags: 0

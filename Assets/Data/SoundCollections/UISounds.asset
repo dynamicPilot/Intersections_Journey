@@ -41,5 +41,9 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 42dc8012c2242ea4ea182ba2c6fc7eaf, type: 3}
     isLoop: 0
     _defaultVolume: 1
+  - soundName: completed
+    clip: {fileID: 8300000, guid: 1de1895bb0d479043b7fbb0740bde00c, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
   _randomFrom: 0
   _randomTo: -1

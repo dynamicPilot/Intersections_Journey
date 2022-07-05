@@ -2,7 +2,8 @@
     "name": "IJ.UIElements",
     "rootNamespace": "",
     "references": [
-        "GUID:c6ab062adcdd76848a6ad1cbabc60d40"
+        "GUID:c6ab062adcdd76848a6ad1cbabc60d40",
+        "GUID:38614cce83e0b5641977d0707240a4d7"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

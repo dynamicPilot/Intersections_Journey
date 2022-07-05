@@ -3438,7 +3438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &305322387
 Transform:
   m_ObjectHideFlags: 0
@@ -3707,7 +3707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &326574896
 Transform:
   m_ObjectHideFlags: 0
@@ -3922,7 +3922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &338388522
 Transform:
   m_ObjectHideFlags: 0
@@ -5139,6 +5139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09ab592ec5c5e549bf1132f2c19eacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tutorialHand: {fileID: 5779022682809269454}
   _menuMaster: {fileID: 420126806}
   _pointsControl: {fileID: 420126807}
   _mapLocationsUI: {fileID: 1120385098}
@@ -20368,7 +20369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1707386557
 Transform:
   m_ObjectHideFlags: 0
@@ -26728,6 +26729,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1120385099}
     m_Modifications:
+    - target: {fileID: 2003635731422946683, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 116.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003635731422946683, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -206.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5779022681010421971, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -26750,7 +26759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5779022681244408275, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5779022681244408275, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -26759,14 +26768,22 @@ PrefabInstance:
     - target: {fileID: 5779022681244408275, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 5779022682809269453}
+      objectReference: {fileID: 5779022682809269454}
     - target: {fileID: 5779022681244408275, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5779022681244408275, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: MoveToNextPosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779022681244408275, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: MapLocationUI, Assembly-CSharp
+      value: IJ.UIElements.TutorialElement, IJ.UIElements
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779022681244408275, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5779022682244116938, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -26778,7 +26795,7 @@ PrefabInstance:
       objectReference: {fileID: 1342394906}
     - target: {fileID: 5779022682244116939, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 3
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 5779022682244116941, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
       propertyPath: m_Name
@@ -26884,17 +26901,25 @@ PrefabInstance:
       propertyPath: needClickSound
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7964277946771720486, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614881765858812898, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
---- !u!114 &5779022682809269453 stripped
+--- !u!114 &5779022682809269454 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5779022681244408274, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8089653342132638973, guid: 313405dfae92ac241a1e27fc2b84e7c0, type: 3}
   m_PrefabInstance: {fileID: 5779022682809269452}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 133abf6ef2a50734287db08be96ea9d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 20cb4356907ed9046a78fcd0e27769b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &6314531698185805292
