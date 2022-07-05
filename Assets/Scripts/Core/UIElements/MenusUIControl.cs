@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using IJ.Utilities.Configs;
+using IJ.Animations.Objects;
 
 public class MenusUIControl : MonoBehaviour
 {
@@ -15,32 +16,33 @@ public class MenusUIControl : MonoBehaviour
 
     [Header("----- UI -----")]
     [SerializeField] private CrashSign crashSign;
+    [SerializeField] private TimeIndicatorAnimation _indicatorAnimation;
     [SerializeField] private Image timeIndicatorImage;
-    [SerializeField] private Animator indicatorAnimator;
 
     private int _endHour = 0;
-    private float _indicatorUpdateLockdownTimer = 0.92f;
+    private float _indicatorUpdateLockdownTimer = 1f;
     bool _isIndicatorInLockdown = false;
-
+    int _counterForIndicator = 3;
     private void Awake()
     {
         _endHour = config.EndHour;
         _indicatorUpdateLockdownTimer = config.IndicatorUpdateTimer;
+        _counterForIndicator = 3;
 
         SetUI();
     }
 
     void SetUI()
     {
-        UpdateCrashCounter(0);
+        UpdateCrashCounter(0);        
         StartCoroutine(IndicatorUpdateLockdown());
     }
 
     IEnumerator IndicatorUpdateLockdown()
     {
         _isIndicatorInLockdown = true;
+        _indicatorAnimation.StartIndicator();
         yield return new WaitForSeconds(_indicatorUpdateLockdownTimer);
-        indicatorAnimator.enabled = false;
         _isIndicatorInLockdown = false;
     }
 
@@ -72,5 +74,11 @@ public class MenusUIControl : MonoBehaviour
 
         if (temp >= 0 && temp <= 1)
             timeIndicatorImage.fillAmount = temp;
+
+        if (_counterForIndicator > -1)
+        {
+            if (_counterForIndicator == 0) _indicatorAnimation.ShowMenuSign();
+            _counterForIndicator--;
+        }
     }
 }

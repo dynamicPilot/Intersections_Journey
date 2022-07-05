@@ -1,18 +1,42 @@
+using DG.Tweening;
+using IJ.Animations.Objects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TimeIndicatorAnimation : MonoBehaviour
+namespace IJ.Animations.Objects
 {
-    // Start is called before the first frame update
-    void Start()
+    public class TimeIndicatorAnimation : RectTransformScaleAnimation
     {
-        
-    }
+        [SerializeField] private Image _image;
+        [SerializeField] private CanvasGroup _group;
+        [SerializeField] private float _changeSignDuration = 3f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private float _fadeDuration = 1f;
+
+        public void StartIndicator()
+        {
+            _image.DOFillAmount(0, _durationToPump);
+            PumpAndBack(0);
+        }
+
+        public void ShowMenuSign()
+        {
+            _group.DOFade(0, _fadeDuration);
+            StartCoroutine(ChangeSign());
+        }
+
+        IEnumerator ChangeSign()
+        {
+            yield return new WaitForSeconds(_fadeDuration + _changeSignDuration);
+            _group.DOFade(1, _fadeDuration);
+        }
+
+        private void OnDestroy()
+        {
+            StopAllCoroutines();
+            DOTween.KillAll();
+        }
     }
 }

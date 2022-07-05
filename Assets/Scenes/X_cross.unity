@@ -857,6 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac6dfbee7798e043a987ae8ee7c4418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tutorialHand: {fileID: 0}
   timeControl: {fileID: 194348411}
   vehicleCreatorControl: {fileID: 1611361324}
   roadsManager: {fileID: 152586637}
@@ -4927,6 +4928,14 @@ PrefabInstance:
       propertyPath: _animation
       value: 
       objectReference: {fileID: 1620319630}
+    - target: {fileID: 7856974197345347486, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 7.4548
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856974197345347486, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.7274
+      objectReference: {fileID: 0}
     - target: {fileID: 7856974198082352682, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
       propertyPath: m_Name
       value: CanvasForGameUI
@@ -5026,11 +5035,15 @@ PrefabInstance:
     - target: {fileID: 7856974198082352689, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
       propertyPath: pauseUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1948950823}
     - target: {fileID: 7856974198082352689, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
       propertyPath: panelsUI
       value: 
       objectReference: {fileID: 1312238421}
+    - target: {fileID: 7856974199200581733, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8191842174004506722, guid: 79f29fe8f462d814ab61f350d2ab8b3c, type: 3}
       propertyPath: _canvas
       value: 
