@@ -4,11 +4,9 @@ namespace IJ.AudioControls.Controls
 {
     public class MenuAudioControl : AudioControl
     {
-        [SerializeField] private SnapshotTransition _transition;
 
-        public override void SetAudio()
+        protected override void SetStartTransition()
         {
-            base.SetAudio();
             _transition.ToMainMenu();
         }
     }

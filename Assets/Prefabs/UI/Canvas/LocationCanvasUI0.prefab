@@ -2065,7 +2065,7 @@ MonoBehaviour:
   mapLocationsUI: {fileID: 0}
   _animation: {fileID: 2907940612875462403}
   pointsText: {fileID: 5779022681630479184}
-  openLocationButton: {fileID: 7511705893530366635}
+  _openLocationButton: {fileID: 7440565724088809032}
   closedView: {fileID: 5779022682810429754}
   openedView: {fileID: 5779022682298139861}
   decorations: {fileID: 0}
@@ -3605,15 +3605,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7511705893530366635 stripped
+--- !u!114 &7440565724088809032 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6219243889538778012, guid: 64d28c3fe3f06354b866bfcfb7a3048c, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6427748211266226047, guid: 64d28c3fe3f06354b866bfcfb7a3048c, type: 3}
   m_PrefabInstance: {fileID: 4499590721915826487}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f755ba99ea826c4080807fd74f5e9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7511514571688805861

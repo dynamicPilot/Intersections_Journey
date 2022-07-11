@@ -21,7 +21,12 @@ public class MenuFlow : Flow
         _control.SetMenu(_playerState);
 
         DataSaveAndLoad.DataState state = (DataSaveAndLoad.DataState) PlayerPrefs.GetInt("state");
-        if (state == DataSaveAndLoad.DataState.noData) _control.StartTutorial();
+        if (state == DataSaveAndLoad.DataState.noData)
+        {
+            _control.StartTutorial();
+            PlayerPrefs.SetInt("state", (int)DataSaveAndLoad.DataState.fine);
+        }
+        
     }
 
     public override void BackToMenu()

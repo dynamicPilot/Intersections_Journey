@@ -238,7 +238,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4189524062471402445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
   mapLocationsUI: {fileID: 0}
   _animation: {fileID: 6764070333976902308}
   pointsText: {fileID: 620921747387478680}
-  openLocationButton: {fileID: 3499353254478680931}
+  _openLocationButton: {fileID: 4606321028977153920}
   closedView: {fileID: 4189524064173639863}
   openedView: {fileID: 4189524063488792448}
   decorations: {fileID: 0}
@@ -3480,14 +3480,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7945184724939633115, guid: 64d28c3fe3f06354b866bfcfb7a3048c, type: 3}
   m_PrefabInstance: {fileID: 7412646137170317567}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3499353254478680931 stripped
+--- !u!114 &4606321028977153920 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6219243889538778012, guid: 64d28c3fe3f06354b866bfcfb7a3048c, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6427748211266226047, guid: 64d28c3fe3f06354b866bfcfb7a3048c, type: 3}
   m_PrefabInstance: {fileID: 7412646137170317567}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f755ba99ea826c4080807fd74f5e9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

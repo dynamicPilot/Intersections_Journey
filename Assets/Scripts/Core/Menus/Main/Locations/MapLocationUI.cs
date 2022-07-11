@@ -1,8 +1,8 @@
 using IJ.Animations;
+using IJ.UIElements;
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MapLocationUI : MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class MapLocationUI : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI pointsText;
-    [SerializeField] private Button openLocationButton;
+    [SerializeField] private DisableButtonWithIcon _openLocationButton;
 
     [Header("Views")]
     [SerializeField] private GameObject closedView;
@@ -87,7 +87,7 @@ public class MapLocationUI : MonoBehaviour
     IEnumerator IsBlock()
     {
         isBlock = true;
-        if (openLocationButton != null) openLocationButton.interactable = mapLocationsUI.CanBeLocationAvailable(location);
+        if (_openLocationButton != null) _openLocationButton.Interactive(mapLocationsUI.CanBeLocationAvailable(location));
 
         if (inView) mapLocationsUI.LocationInButtonsView = this;
         else mapLocationsUI.LocationInButtonsView = null;

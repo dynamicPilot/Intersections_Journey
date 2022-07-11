@@ -119,7 +119,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: 483e2662ceac5f444ad6c7fac48fc86d
   m_FloatValues:
     9b835e000bbc4624e80f51d00ed7cf08: -80
-    690d9fb0cd1bb0b49a82125407c1b05b: -10
+    690d9fb0cd1bb0b49a82125407c1b05b: -5.45275
     6fcc7412895c09b448be7e9b70ca1598: 5
     b0c8571223b4c0c479ddcb7fdcfa6a3e: 0
     a12afcc2794679b44b95e07dc5780e70: -5
@@ -155,7 +155,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: 57a8f1eceed313a45b7e9d791158eb1a
   m_FloatValues:
     9b835e000bbc4624e80f51d00ed7cf08: -80
-    690d9fb0cd1bb0b49a82125407c1b05b: -10
+    690d9fb0cd1bb0b49a82125407c1b05b: -4.682082
     6fcc7412895c09b448be7e9b70ca1598: 5
     b0c8571223b4c0c479ddcb7fdcfa6a3e: 0
     a12afcc2794679b44b95e07dc5780e70: -5
@@ -176,7 +176,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: f5219b461455ef44a991534515daf989
   m_FloatValues:
     9b835e000bbc4624e80f51d00ed7cf08: -80
-    690d9fb0cd1bb0b49a82125407c1b05b: -20
+    690d9fb0cd1bb0b49a82125407c1b05b: -15.485682
     6fcc7412895c09b448be7e9b70ca1598: 5
     b0c8571223b4c0c479ddcb7fdcfa6a3e: 0
     a12afcc2794679b44b95e07dc5780e70: -5
@@ -268,7 +268,7 @@ AudioMixerController:
     - df80ff289b49c4943bde4b6ce7973336
     name: Full
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: -1518166237343890356}
+  m_TargetSnapshot: {fileID: 1013019441770247017}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 2b44ba5b4737e1a489ca915b4d62e46c
   m_FloatValues:
-    690d9fb0cd1bb0b49a82125407c1b05b: -10
+    690d9fb0cd1bb0b49a82125407c1b05b: -5.45275
     6fcc7412895c09b448be7e9b70ca1598: -2.372476
     b0c8571223b4c0c479ddcb7fdcfa6a3e: -5
     a12afcc2794679b44b95e07dc5780e70: -15
@@ -334,7 +334,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: 5f48a48940256b84c99de4d532f9f64a
   m_FloatValues:
     9b835e000bbc4624e80f51d00ed7cf08: -80
-    690d9fb0cd1bb0b49a82125407c1b05b: -10
+    690d9fb0cd1bb0b49a82125407c1b05b: -5
     6fcc7412895c09b448be7e9b70ca1598: 5
     b0c8571223b4c0c479ddcb7fdcfa6a3e: 0
     a12afcc2794679b44b95e07dc5780e70: -5
