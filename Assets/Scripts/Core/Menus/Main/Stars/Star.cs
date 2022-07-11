@@ -13,11 +13,11 @@ public class Star : MonoBehaviour
     [SerializeField] private Image image;
 
     [SerializeField] STATE state = STATE.empty;
-    private void Awake()
-    {
-        state = STATE.empty;
-        SetStarState();
-    }
+    //private void Awake()
+    //{
+    //    state = STATE.empty;
+    //    SetStarState();
+    //}
     public void SetStarNewState(STATE newState)
     {
         if (state == newState)

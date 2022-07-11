@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collection:
   - soundName: startLevel
-    clip: {fileID: 8300000, guid: 1de1895bb0d479043b7fbb0740bde00c, type: 3}
+    clip: {fileID: 8300000, guid: 5743b5917946da84ea419c86813a30f5, type: 3}
     isLoop: 0
     _defaultVolume: 1
   - soundName: endLevel

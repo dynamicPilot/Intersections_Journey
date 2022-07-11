@@ -4212,7 +4212,7 @@ MonoBehaviour:
   _startIndex: 0
   _winIndex: 1
   _loseIndex: 2
-  _delay: 0.5
+  _delay: 0.2
 --- !u!1001 &1347210703
 PrefabInstance:
   m_ObjectHideFlags: 0

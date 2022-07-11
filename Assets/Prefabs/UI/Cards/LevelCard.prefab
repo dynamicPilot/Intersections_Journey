@@ -167,9 +167,6 @@ MonoBehaviour:
   pointerDownScale: {x: 0.95, y: 0.95, z: 0.95}
   pointerEnterScale: {x: 1.05, y: 1.05, z: 1.05}
   clickSoundIndex: 0
-  needScaleChange: 1
-  needClickSound: 1
-  audioControl: {fileID: 0}
 --- !u!1 &883906923840685780
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +484,7 @@ PrefabInstance:
     - target: {fileID: 169869117747245155, guid: e67436c1a1407fc44a22bc87cc084c5d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -766550022001070873, guid: 67fedae9aea2b81409f4aa7441868ca3, type: 3}
+      objectReference: {fileID: 4715450178108460108, guid: 67fedae9aea2b81409f4aa7441868ca3, type: 3}
     - target: {fileID: 169869117747245181, guid: e67436c1a1407fc44a22bc87cc084c5d, type: 3}
       propertyPath: m_Name
       value: Star1
@@ -604,7 +601,7 @@ PrefabInstance:
     - target: {fileID: 169869117747245155, guid: e67436c1a1407fc44a22bc87cc084c5d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -766550022001070873, guid: 67fedae9aea2b81409f4aa7441868ca3, type: 3}
+      objectReference: {fileID: 4715450178108460108, guid: 67fedae9aea2b81409f4aa7441868ca3, type: 3}
     - target: {fileID: 169869117747245181, guid: e67436c1a1407fc44a22bc87cc084c5d, type: 3}
       propertyPath: m_Name
       value: Star2
@@ -721,7 +718,7 @@ PrefabInstance:
     - target: {fileID: 169869117747245155, guid: e67436c1a1407fc44a22bc87cc084c5d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -766550022001070873, guid: 67fedae9aea2b81409f4aa7441868ca3, type: 3}
+      objectReference: {fileID: 4715450178108460108, guid: 67fedae9aea2b81409f4aa7441868ca3, type: 3}
     - target: {fileID: 169869117747245181, guid: e67436c1a1407fc44a22bc87cc084c5d, type: 3}
       propertyPath: m_Name
       value: Star0

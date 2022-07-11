@@ -842,6 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac6dfbee7798e043a987ae8ee7c4418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tutorialHand: {fileID: 0}
   timeControl: {fileID: 194348411}
   vehicleCreatorControl: {fileID: 1611361324}
   roadsManager: {fileID: 152586637}
@@ -4723,7 +4724,7 @@ MonoBehaviour:
   _startIndex: 0
   _winIndex: 1
   _loseIndex: 2
-  _delay: 0.5
+  _delay: 0.2
 --- !u!1001 &1325488958
 PrefabInstance:
   m_ObjectHideFlags: 0

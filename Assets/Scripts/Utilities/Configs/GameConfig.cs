@@ -8,6 +8,9 @@ namespace IJ.Utilities.Configs
         [SerializeField] private string _menuSceneName = "MENU";
         public string MenuSceneName { get => _menuSceneName; }
 
+        [SerializeField] private int _menuSceneIndex = 1;
+        public int MenuSceneIndex { get => _menuSceneIndex; }
+
         [Header("Time Settings")]
         [SerializeField] private float _minutesPerRealSecond = 7.5f;
         public float MinutesForRealSecond { get => _minutesPerRealSecond; }

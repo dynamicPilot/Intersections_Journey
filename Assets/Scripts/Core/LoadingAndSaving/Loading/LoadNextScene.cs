@@ -16,6 +16,11 @@ public class LoadNextScene : MonoBehaviour
         StartCoroutine(LoadAsynchronously(newSceneName, mode));
     }
 
+    public void LoadSceneByIndex(int index, MODE mode = MODE.single)
+    {
+        StartCoroutine(LoadAsynchronouslyByIndex(index, mode));
+    }
+
     IEnumerator LoadAsynchronously(string sceneName, MODE mode = MODE.single)
     {
         AsyncOperation operation;
@@ -42,9 +47,36 @@ public class LoadNextScene : MonoBehaviour
         }
     }
 
+    IEnumerator LoadAsynchronouslyByIndex(int index, MODE mode = MODE.single)
+    {
+        AsyncOperation operation;
+
+        if (mode == MODE.single)
+        {
+            operation = SceneManager.LoadSceneAsync(index, LoadSceneMode.Single);
+        }
+        else
+        {
+            operation = SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
+        }
+
+        if (loadingPanel != null)
+        {
+            loadingPanel.StartLoading();
+            loadingPanel.gameObject.SetActive(true);
+
+            while (operation.isDone == false)
+            {
+                loadingPanel.UpdateProgress(Mathf.Clamp01(operation.progress / 0.9f));
+                yield return null;
+            }
+        }
+    }
+
     public void LoadMainManu()
     {
-        LoadSceneByName(config.MenuSceneName);
+        //LoadSceneByName(config.MenuSceneName);
+        LoadSceneByIndex(config.MenuSceneIndex);
     }
 
     //public void ReloadCurrentLevel()
