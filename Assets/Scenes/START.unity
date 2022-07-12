@@ -1184,6 +1184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadNextScene: {fileID: 594682453}
   _dataSaveAndLoad: {fileID: 594682457}
+  _scenesConfig: {fileID: 11400000, guid: 6e161e1d2ed77514bb76ec68b4ec83f0, type: 2}
   _mainRoutine: {fileID: 1194238236}
   _newGameRoutine: {fileID: 1883309419}
 --- !u!114 &594682457
@@ -1214,8 +1215,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needUpdateScriptable: 0
   needUnloadScriptables: 0
-  needLoadLevels: 0
-  indexesToLoad: 
+  indexToWrite: 0
+  needLoadLevels: 1
+  indexesToLoad: 000000000f000000
   _collection: {fileID: 11400000, guid: 9c0d96dcb78f31244abf9d5566ede45d, type: 2}
 --- !u!114 &624475362 stripped
 MonoBehaviour:

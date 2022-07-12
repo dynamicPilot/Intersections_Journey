@@ -13,10 +13,10 @@ public class Level : ScriptableObject
     [SerializeField] private int levelIndex;
     public int LevelIndex { get => levelIndex; set { levelIndex = value; } }
 
-    [SerializeField] private string sceneName;
-    public string SceneName { get => sceneName; }
-    [SerializeField] private string crossSceneName;
-    public string CrossSceneName { get => crossSceneName; }
+    //[SerializeField] private string sceneName;
+    ////public string SceneName { get => sceneName; }
+    //[SerializeField] private string crossSceneName;
+    ////public string CrossSceneName { get => crossSceneName; }
 
     [SerializeField] private LevelsPanelUI.CROSS crossType;
     public LevelsPanelUI.CROSS CrossType { get => crossType; }

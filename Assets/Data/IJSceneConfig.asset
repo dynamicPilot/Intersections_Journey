@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295ff4f5a9b8ad6408d69bd6d09652c0, type: 3}
+  m_Name: IJSceneConfig
+  m_EditorClassIdentifier: 
+  _scenesByLevels:
+  - _levelIndex: 0
+    _environmentSceneIndex: 13
+    _crossSceneIndex: 2
+    _environmentSceneName: L0_town
+    _crossSceneName: X_cross
+  - _levelIndex: 1
+    _environmentSceneIndex: 14
+    _crossSceneIndex: 2
+    _environmentSceneName: L1_town
+    _crossSceneName: X_cross
+  - _levelIndex: 2
+    _environmentSceneIndex: 15
+    _crossSceneIndex: 2
+    _environmentSceneName: L2_town
+    _crossSceneName: X_cross
+  - _levelIndex: 3
+    _environmentSceneIndex: 16
+    _crossSceneIndex: 3
+    _environmentSceneName: L3_town
+    _crossSceneName: X_cross_v2
+  - _levelIndex: 4
+    _environmentSceneIndex: 17
+    _crossSceneIndex: 6
+    _environmentSceneName: L4_beach
+    _crossSceneName: X_crossDouble
+  - _levelIndex: 5
+    _environmentSceneIndex: 18
+    _crossSceneIndex: 6
+    _environmentSceneName: L5_beach
+    _crossSceneName: X_crossDouble
+  - _levelIndex: 6
+    _environmentSceneIndex: 19
+    _crossSceneIndex: 6
+    _environmentSceneName: L6_beach
+    _crossSceneName: X_crossDouble
+  - _levelIndex: 7
+    _environmentSceneIndex: 20
+    _crossSceneIndex: 6
+    _environmentSceneName: L7_beach
+    _crossSceneName: X_crossDouble
+  - _levelIndex: 8
+    _environmentSceneIndex: 21
+    _crossSceneIndex: 7
+    _environmentSceneName: L8_mountains
+    _crossSceneName: X_crossDouble_curve
+  - _levelIndex: 9
+    _environmentSceneIndex: 22
+    _crossSceneIndex: 8
+    _environmentSceneName: L9_mountains
+    _crossSceneName: Y_crossDouble
+  - _levelIndex: 10
+    _environmentSceneIndex: 23
+    _crossSceneIndex: 9
+    _environmentSceneName: L10_mountains
+    _crossSceneName: X_crossTriple_curve
+  - _levelIndex: 11
+    _environmentSceneIndex: 24
+    _crossSceneIndex: 10
+    _environmentSceneName: L11_mountains
+    _crossSceneName: X_crossTriple_curve_v2
+  - _levelIndex: 12
+    _environmentSceneIndex: 25
+    _crossSceneIndex: 11
+    _environmentSceneName: L12_city
+    _crossSceneName: X_crossTriple_v3
+  - _levelIndex: 13
+    _environmentSceneIndex: 26
+    _crossSceneIndex: 12
+    _environmentSceneName: L13_city
+    _crossSceneName: X_crossTriple_v4
+  - _levelIndex: 14
+    _environmentSceneIndex: 27
+    _crossSceneIndex: 4
+    _environmentSceneName: L14_city
+    _crossSceneName: X_cross_v3
+  - _levelIndex: 15
+    _environmentSceneIndex: 28
+    _crossSceneIndex: 5
+    _environmentSceneName: L15_city
+    _crossSceneName: X_cross_v4

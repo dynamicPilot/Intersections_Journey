@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public static class LocationAndLevelUtilities
@@ -33,9 +31,14 @@ public static class LocationAndLevelUtilities
         {
             path = Application.persistentDataPath + "/" + subFolder + "/" + string.Format(levelSaveFileName, i);
             ToFromJsonUtility<Level>.DumpJsonToFile(path, items[i]);
-
-
         }
+    }
+
+    public static void DumpCopyToJsonByIndex(Level[] items, int index)
+    {
+        string path = "";
+        path = Application.persistentDataPath + "/" + subFolder + "/" + string.Format(levelSaveFileName, index);
+        ToFromJsonUtility<Level>.DumpJsonToFile(path, items[index]);
     }
 
     public static void LoadLevelsCopyFromJson(Level[] items, int[] indexes)
@@ -49,7 +52,7 @@ public static class LocationAndLevelUtilities
     public static void LoadLevelCopyFromJson(Level item, int index)
     {
         string path = Application.persistentDataPath + "/" + subFolder + "/" + string.Format(levelSaveFileName, index);
-        Debug.Log("Path to load " + path);
+        //Debug.Log("Path to load " + path);
         ToFromJsonUtility<Level>.LoadJsonFromFile(path, item);
     }
 }

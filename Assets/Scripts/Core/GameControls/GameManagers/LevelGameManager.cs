@@ -1,12 +1,14 @@
 using IJ.Core.Managers.GameManagers;
+using IJ.Utilities.Configs;
 using UnityEngine;
 
 [DefaultExecutionOrder(-1)]
 [RequireComponent(typeof(LevelFlow))]
 public class LevelGameManager : GameManager
 {
-    [SerializeField] private Level _level;
-   
+    [SerializeField] private ScenesConfig _scenesConfig;
+    
+    private Level _level;   
     private LoadNextSceneForLevel _loadNextSceneForLevel;
 
     private void Awake()
@@ -29,7 +31,12 @@ public class LevelGameManager : GameManager
 
     private void Start()
     {
-        _loadNextSceneForLevel.LoadAdditiveSceneAsync(_level.SceneName, this);
+        int index = _scenesConfig.GetEnvironmentSceneIndexByLevelIndex(_level.LevelIndex);
+
+        if (index == -1) _flow.BackToMenu();
+        else _loadNextSceneForLevel.LoadAdditiveSceneAsyncByIndex(index, this);
+
+        //_loadNextSceneForLevel.LoadAdditiveSceneAsync(_level.SceneName, this);
     }
 
     public void LevelIsReady()

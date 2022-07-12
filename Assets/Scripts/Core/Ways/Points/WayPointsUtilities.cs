@@ -29,17 +29,12 @@ namespace IJ.Core.Ways
 
         public static void LoadCopyFromJson(ref IJ.Utilities.Path[] items)
         {
-            for (int i = 0; i < items.Length; i++)
-            {
-                LoadPathCopyFromJson(ref items[i]);
-            }
+
         }
 
         public static void LoadPathCopyFromJson(ref IJ.Utilities.Path item)
         {
-            string folderPath = Application.persistentDataPath + "/" + _storageFolder + "/" + _storageSubFolder + "/" + string.Format(_scneneSaveFileName, SceneManager.GetActiveScene().name);
-            Debug.Log("Path to load " + folderPath);
-            ToFromJsonUtility<IJ.Utilities.Path>.LoadJsonFromFile(folderPath, item);
+
         }
 
         static void CheckMainFolderToSave(string pathToFolder)

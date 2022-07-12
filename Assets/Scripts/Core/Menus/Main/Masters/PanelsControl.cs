@@ -11,6 +11,7 @@ namespace IJ.Core.Menus.MainMenu
         [SerializeField] private LevelsPanelUI _levels;
         [SerializeField] private LocationOpeningUI _opening;
         [SerializeField] private SettingsPanelUI _settings;
+        [SerializeField] private MovablePanelUI _credits;
 
         public void OpenMap()
         {
@@ -39,6 +40,7 @@ namespace IJ.Core.Menus.MainMenu
             _map.gameObject.SetActive(true);
             _levels.ClosePage();
             _settings.ClosePage();
+            _credits.ClosePage();
         }
 
         public void TransitToLevelScene()

@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91dbc7232444184aa780a233a99f6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _level: {fileID: 0}
+  _scenesConfig: {fileID: 11400000, guid: 6e161e1d2ed77514bb76ec68b4ec83f0, type: 2}
 --- !u!4 &38709874
 Transform:
   m_ObjectHideFlags: 0
@@ -277,6 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadNextScene: {fileID: 38709876}
   _dataSaveAndLoad: {fileID: 38709875}
+  _scenesConfig: {fileID: 11400000, guid: 6e161e1d2ed77514bb76ec68b4ec83f0, type: 2}
   _menusUIControl: {fileID: 1620319626}
   _levelControl: {fileID: 194348409}
   _cameraControl: {fileID: 519420030}
@@ -3848,7 +3849,7 @@ MonoBehaviour:
     turn: 2
     positionDelta: {x: 0, y: 0}
   - startPointNumber: 8
-    endPointNumber: 2
+    endPointNumber: 12
     weight: 0
     additionalPoints: []
     curvePoints: []

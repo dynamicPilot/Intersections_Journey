@@ -6,7 +6,10 @@ using UnityEngine;
 public class LevelsAndLocationsManager : MonoBehaviour
 {
     [SerializeField] private bool needUpdateScriptable = false;
+
+    [Header("Uploading levels -----")]
     [SerializeField] private bool needUnloadScriptables = false;
+    [SerializeField] private int indexToWrite;
 
     [Header("Loading levels -----")]
     [SerializeField] private bool needLoadLevels = false;
@@ -20,10 +23,15 @@ public class LevelsAndLocationsManager : MonoBehaviour
 
     private void Awake()
     {
+#if UNITY_EDITOR
         if (needUpdateScriptable) LocationAndLevelUtilities.FillLocationsAndLevelsIndexes(_collection.Locations);
-        if (needUnloadScriptables) LocationAndLevelUtilities.DumpCopyToJson(_collection.Levels);
+        if (needUnloadScriptables)
+        {
+            LocationAndLevelUtilities.DumpCopyToJsonByIndex(_collection.Levels, indexToWrite);
+        }
 
         if (needLoadLevels) LocationAndLevelUtilities.LoadLevelsCopyFromJson(_collection.Levels, indexesToLoad);
+#endif
     }
 
     public Level GetLevelByIndex(int index)

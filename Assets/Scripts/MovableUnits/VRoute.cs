@@ -38,6 +38,11 @@ public class VRoute : IGetPathPointAndMove, IStartAndEndPathPoints
         NewPathsPart();
     }
 
+    public Vector3 StartPointPosition()
+    {
+        return paths[pathPartIndex].CurvePoints[0];
+    }
+
     public int StartPathPoints()
     {
         return paths[pathPartIndex].StartPointNumber;

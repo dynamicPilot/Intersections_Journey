@@ -11,6 +11,15 @@ public class LoadNextSceneForLevel : LoadNextScene
         };
     }
 
+    public void LoadAdditiveSceneAsyncByIndex(int index, LevelGameManager gameMaster)
+    {
+        SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive).completed += (asyncHandler) =>
+        {
+            loadingPanel.gameObject.SetActive(false);
+            gameMaster.LevelIsReady();
+        };
+    }
+
     public void ContinueLoading()
     {
         loadingPanel.ContinueLoading();

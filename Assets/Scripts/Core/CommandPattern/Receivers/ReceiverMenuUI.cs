@@ -14,7 +14,7 @@ namespace IJ.Core.CommandPattern.Receivers
         {
             _sidePanelDropdownMenu.OpenClosePanel();
             if (type == MenuCommandType.toSettings) _sideMenuUI.OpenSettings();
-            else if (type == MenuCommandType.toAccount) _sideMenuUI.OpenAccount();
+            else if (type == MenuCommandType.toCredits) _sideMenuUI.OpenCredits();
             else if (type == MenuCommandType.quit) _sideMenuUI.QuitGame();
         }
 

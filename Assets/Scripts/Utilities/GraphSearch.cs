@@ -56,7 +56,7 @@ public class GraphSearch
 
         if (count <= 0)
         {
-            Logging.Log("AStarSearch: CAN NOT FIND ROUTE FROM: " + startPointNumber + " TO " + endPointNumber);
+            //Logging.Log("AStarSearch: CAN NOT FIND ROUTE FROM: " + startPointNumber + " TO " + endPointNumber);
             return null;
         }
 

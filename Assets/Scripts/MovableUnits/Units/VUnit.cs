@@ -75,7 +75,7 @@ namespace MovableUnits.Units
 
             FixedUpdateStuff(Time.fixedDeltaTime);
 
-            _movable = new MoveViaPath(_rigidbody);
+            _movable.Reset();
             if (mover.CalculateVelocity(Time.fixedDeltaTime, _movable, new IGetDistanceInfo[3] { scanner.TrafficLightInfo, scanner.UnitsInfo, repairSiteTag }))
             {
                 router.GetPathPointToMove(_movable);
@@ -87,6 +87,7 @@ namespace MovableUnits.Units
         {
             stopInParking = _stopIsParking;
             SetRouter(_paths);
+            SetUnitInStartPosition();
 
             info.SetInfo(_managerIndex);
             mover.InitialVelocity();
@@ -124,6 +125,13 @@ namespace MovableUnits.Units
             if (_paths == null && _paths.Count < 2) StopVehicel();
             router = new VRoute(_paths, routerComponent);
             router.OnPathEnded += StopVehicel;
+        }
+
+        void SetUnitInStartPosition()
+        {
+            _movable = new MoveViaPath(_rigidbody);
+            _movable.SetNewPosition(router.StartPointPosition());
+            _movable.MoveAndRotate();
         }
 
         void StartCrash()

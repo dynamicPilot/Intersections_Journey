@@ -37,7 +37,12 @@ public class LevelFlow : Flow, ISetLevel
 
     public void ReloadLevel()
     {
-        _loadNextScene.LoadSceneByName(_level.CrossSceneName);
+        LoadLevelScene(_level);
+        //_loadNextScene.LoadSceneByName(_level.CrossSceneName);
+        //int index = _scenesConfig.GetCrossSceneIndexByLevelIndex(_level.LevelIndex);
+
+        //if (index == -1) return;
+        //else _loadNextScene.LoadSceneByIndex(index);
     }
 
     public override void BackToMenu()

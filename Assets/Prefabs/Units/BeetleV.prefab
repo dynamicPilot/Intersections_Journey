@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 1050765316036940359}
   - component: {fileID: 8432508969664280958}
   - component: {fileID: 2349355318763082889}
+  - component: {fileID: 2501863718651327821}
   m_Layer: 8
   m_Name: BeetleV
   m_TagString: Car
@@ -123,8 +124,8 @@ Transform:
   m_GameObject: {fileID: 5164874981121681058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -50, y: 0, z: 0}
-  m_LocalScale: {x: 0.47, y: 0.4, z: 0.4}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3188538850037159458}
   - {fileID: 5164874981724928307}
@@ -337,8 +338,6 @@ MonoBehaviour:
   gap: 0.7
   maxDistanceToDetect: 25
   isSelfTrain: 0
-  _trafficLightInfo:
-    _trafficLightToFollow: {fileID: 0}
   totalTimeOnRoad: 0
 --- !u!114 &1440146595773491732
 MonoBehaviour:
@@ -364,6 +363,7 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
 --- !u!114 &1800223268900649922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +436,18 @@ MonoBehaviour:
   body: {fileID: 5164874981121681070}
   leftLightCover: {fileID: 5164874981724928306}
   rightLightCover: {fileID: 2529225167027026714}
+--- !u!114 &2501863718651327821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164874981121681058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5164874981724928304
 GameObject:
   m_ObjectHideFlags: 0

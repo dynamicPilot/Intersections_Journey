@@ -24,6 +24,12 @@ public class MoveViaPath: IMovable, ISetDistanceToMove
         _rigidbody = rd;
     }
 
+    public void Reset()
+    {
+        distance = 0f;
+        position = Vector3.zero;
+    }
+
     public void SetMovingParams(float velocity, float acceleration, float deltaT)
     {
         distance = (velocity * deltaT + acceleration * deltaT * deltaT / 2);
@@ -41,14 +47,15 @@ public class MoveViaPath: IMovable, ISetDistanceToMove
 
     public void MoveAndRotate()
     {
-        //Quaternion rotation = Quaternion.Euler(_transform.rotation.x, _transform.rotation.y, 360f - Mathf.Atan2(position.x - _transform.position.x, position.y - _transform.position.y) * Mathf.Rad2Deg);
+        //Transform transform = _rigidbody.GetComponent<Transform>();
+        //Quaternion rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 360f - Mathf.Atan2(position.x - transform.position.x, position.y - transform.position.y) * Mathf.Rad2Deg);
         //transform.Translate(new Vector3(position.x - transform.position.x, position.y - transform.position.y, 0f), Space.World);
         //
 
         float angle = 360f - Mathf.Atan2(position.x - _rigidbody.position.x, position.y - _rigidbody.position.y) * Mathf.Rad2Deg;
-        _rigidbody.MovePosition(position);
+        _rigidbody.position = position;
         _rigidbody.SetRotation(angle);
-        //_transform.Rotate(rotation.eulerAngles - _transform.rotation.eulerAngles, Space.World);
+        //transform.Rotate(rotation.eulerAngles - transform.rotation.eulerAngles, Space.World);
     }
 
     public Vector3 GetPosition()
