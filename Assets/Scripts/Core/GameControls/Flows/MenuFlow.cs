@@ -23,7 +23,8 @@ public class MenuFlow : Flow
         DataSaveAndLoad.DataState state = (DataSaveAndLoad.DataState) PlayerPrefs.GetInt("state");
         if (state == DataSaveAndLoad.DataState.noData)
         {
-            _control.StartTutorial();
+            // new game
+            _control.StartNewGame();
             PlayerPrefs.SetInt("state", (int)DataSaveAndLoad.DataState.fine);
         }
         

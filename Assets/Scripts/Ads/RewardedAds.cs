@@ -51,7 +51,7 @@ namespace IJ.Ads
         {
             Logging.Log($"Error loading Ad Unit {adUnitId}: {error.ToString()} - {message}");
             _showAdButton.gameObject.SetActive(false);
-            _flow.Failed();
+            //_flow.Failed();
         }
 
         public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)

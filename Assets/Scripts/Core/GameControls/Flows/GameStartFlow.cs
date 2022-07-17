@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class GameStartFlow : Flow, IOnEndWaves
 {
-    [SerializeField] private AnimationWavesRoutine _mainRoutine;
-    [SerializeField] private AnimationWavesRoutine _newGameRoutine;
+    [SerializeField] private AnimationWavesWithPathRoutine _mainRoutine;
+    [SerializeField] private AnimationWavesWithPathRoutine _newGameRoutine;
+    [SerializeField] private bool _isNewGame = false;
 
     DataSaveAndLoad.DataState _state;
     public void SetGameStart()
@@ -20,7 +21,8 @@ public class GameStartFlow : Flow, IOnEndWaves
         {
             _state = _dataSaveAndLoad.LoadData(_playerState);
 
-            PlayerPrefs.SetInt("state", (int)_state);      
+            PlayerPrefs.SetInt("state", (int)_state);
+            if (_isNewGame) PlayerPrefs.SetInt("state", (int)DataSaveAndLoad.DataState.noData);
         }
     }
 

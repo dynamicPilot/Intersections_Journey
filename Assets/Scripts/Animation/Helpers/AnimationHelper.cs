@@ -1,18 +1,11 @@
-using DG.Tweening;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 namespace IJ.Animations.Helper
 {
-    public interface ITestAnimation
+    public class AnimationHelper : MonoBehaviour
     {
-        public abstract void TestMethodForHelper(AnimationSinglePath singlePath);
-    }
-
-    public class UIAnimationHelper : MonoBehaviour
-    {
-        [SerializeField] private RectTransform[] _points;
         [SerializeField] private AnimationPath _pathToWrite;
         [SerializeField] private float _duration = 3f;
         [SerializeField] private Ease _easeType;
@@ -21,11 +14,6 @@ namespace IJ.Animations.Helper
         [Header("Test Animation Script")]
         [SerializeField] private GameObject _testScriptObject;
 
-        private void Start()
-        {
-            DoTestScript();
-        }
-
         public void DoTestScript()
         {
             ITestAnimation testScript = _testScriptObject.GetComponent<ITestAnimation>();
@@ -33,22 +21,16 @@ namespace IJ.Animations.Helper
             if (_needWrite) AddToPaths();
         }
 
-        Vector3[] GetPoints()
+        protected virtual Vector3[] GetPoints()
         {
-            Vector3[] result = new Vector3[_points.Length];
-            for (int i = 0; i < _points.Length; i++)
-            {
-                result[i] = _points[i].anchoredPosition;
-            }
-
-            return result;
+            return null;
         }
 
         void AddToPaths()
         {
             List<AnimationSinglePath> temp = new List<AnimationSinglePath>();
             if (_pathToWrite.Paths != null) temp.AddRange(_pathToWrite.Paths);
-            temp.Add( new AnimationSinglePath { Points = GetPoints(), Duration = _duration, EasyIndex = (int)_easeType });
+            temp.Add(new AnimationSinglePath { Points = GetPoints(), Duration = _duration, EasyIndex = (int)_easeType });
             _pathToWrite.Paths = temp.ToArray();
 
         }

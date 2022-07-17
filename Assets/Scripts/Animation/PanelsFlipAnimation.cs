@@ -6,7 +6,7 @@ namespace IJ.Animations
     public class PanelsFlipAnimation : TweenAnimation
     {
         private enum VIEW { first, second }
-        [SerializeField] private float _SingleFlipDuration = 0.5f;
+        [SerializeField] private float _singleFlipDuration = 0.5f;
         [SerializeField] private RectTransform _firstTransform;
         [SerializeField] private RectTransform _secondTransform;
         VIEW _activeView = VIEW.first;
@@ -32,11 +32,11 @@ namespace IJ.Animations
         {
             toTransform.rotation = Quaternion.Euler(fromTransform.rotation.eulerAngles.x, 90f, fromTransform.rotation.eulerAngles.z);
 
-            var tween = fromTransform.DORotate(new Vector3(fromTransform.rotation.eulerAngles.x, 90f, fromTransform.rotation.eulerAngles.z), _SingleFlipDuration).SetEase(Ease.InSine).OnComplete(() =>
+            var tween = fromTransform.DORotate(new Vector3(fromTransform.rotation.eulerAngles.x, 90f, fromTransform.rotation.eulerAngles.z), _singleFlipDuration).SetEase(Ease.InSine).OnComplete(() =>
             {
                 fromTransform.gameObject.SetActive(false);
                 toTransform.gameObject.SetActive(true);
-                toTransform.DORotate(new Vector3(fromTransform.rotation.eulerAngles.x, 0f, fromTransform.rotation.eulerAngles.z), _SingleFlipDuration).SetEase(Ease.OutSine);
+                toTransform.DORotate(new Vector3(fromTransform.rotation.eulerAngles.x, 0f, fromTransform.rotation.eulerAngles.z), _singleFlipDuration).SetEase(Ease.OutSine);
             }
             );
         }

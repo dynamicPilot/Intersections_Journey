@@ -25,6 +25,10 @@ namespace IJ.Animations
             });
         }
 
+        public void OnInitialState()
+        {
+        }
+
         public void OnWaveStart(AnimationPath path)
         {
             Appear();

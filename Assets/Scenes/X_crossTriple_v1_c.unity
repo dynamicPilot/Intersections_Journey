@@ -1129,13 +1129,13 @@ MonoBehaviour:
   timeControl: {fileID: 194348411}
   vehicleCreatorControl: {fileID: 1611361324}
   roadsManager: {fileID: 152586637}
-  _levelFlow: {fileID: 0}
+  _levelFlow: {fileID: 38709877}
   repairSitesControl: {fileID: 2004227387}
   sceneViewControl: {fileID: 194348412}
   trafficLightsControl: {fileID: 1038193768}
   wayPoints: {fileID: 1038193767}
   startPointPacksControl: {fileID: 1038193769}
-  vehicleManager: {fileID: 0}
+  vehicleManager: {fileID: 1611361323}
 --- !u!4 &194348410
 Transform:
   m_ObjectHideFlags: 0
@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5469fcaf75804d48ad165390b7c22b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 0}
+  config: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
   vehicleCreatorControl: {fileID: 1611361324}
   menusUIControl: {fileID: 2030520048}
   repairSitesControl: {fileID: 2004227387}

@@ -32,13 +32,13 @@ public class InputControl : MonoBehaviour
     public void StartInputControl()
     {
         controllers.Enable();
-        zoomDetection.enabled = true;
+        if (zoomDetection != null) zoomDetection.enabled = true;
         moveDetection.enabled = true;
     }
 
     public void EndInputControl()
     {
-        zoomDetection.enabled = false;
+        if (zoomDetection != null) zoomDetection.enabled = false;
         moveDetection.enabled = false;
         controllers.Disable();
     }

@@ -51,5 +51,9 @@ namespace IJ.Animations.Objects
             _path = path;
             StartMove();
         }
+
+        public void OnInitialState()
+        {
+        }
     }
 }

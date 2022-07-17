@@ -1,7 +1,5 @@
 using DG.Tweening;
-using IJ.Animations.Objects;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
