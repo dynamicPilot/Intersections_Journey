@@ -2420,7 +2420,7 @@ Camera:
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 0
+  m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &519420032
@@ -7765,7 +7765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
   cameraSizeMin: 3
-  cameraSizeMax: 12.5
+  cameraSizeMax: 11
   inputControl: {fileID: 2001801664}
   moveDetection: {fileID: 2001801666}
 --- !u!114 &2001801664

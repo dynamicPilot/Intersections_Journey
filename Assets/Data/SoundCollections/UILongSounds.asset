@@ -16,7 +16,7 @@ MonoBehaviour:
   - soundName: startLevel
     clip: {fileID: 8300000, guid: 5743b5917946da84ea419c86813a30f5, type: 3}
     isLoop: 0
-    _defaultVolume: 1
+    _defaultVolume: 0.7
   - soundName: endLevel
     clip: {fileID: 8300000, guid: adf0b773d239ade49be1f7d9d37a9e3c, type: 3}
     isLoop: 0

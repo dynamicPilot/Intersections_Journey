@@ -7,6 +7,11 @@ namespace IJ.Animations
     {
         public Vector3[] Points;
         public AnimationSinglePath[] Paths;
+
+        public Vector3 GetInitialPosition()
+        {
+            return Paths[0].Points[0];
+        }
     }
 
     [System.Serializable]

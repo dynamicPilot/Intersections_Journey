@@ -9,8 +9,8 @@ namespace IJ.Animations.Objects
     
     public class PathMoveRectObjectAnimation : TweenAnimation, ITestAnimation, IAnimationWaveMember
     {
-        [SerializeField] private RectTransform _transform;
-        [SerializeField] private AnimationPath _path;
+        [SerializeField] private protected RectTransform _transform;
+        [SerializeField] private protected AnimationPath _path;
         [SerializeField] private bool _onStart = false;
 
         WaitForSeconds _timer;
@@ -21,7 +21,7 @@ namespace IJ.Animations.Objects
             if (_onStart) StartMove();
         }
 
-        public void StartMove()
+        public virtual void StartMove()
         {
             _pathIndex = 0;
             StartCoroutine(PathCoroutine(_path.Paths[_pathIndex]));
@@ -38,6 +38,12 @@ namespace IJ.Animations.Objects
 
             _pathIndex++;
             if (_path != null && _pathIndex < _path.Paths.Length && !singleMove) StartCoroutine(PathCoroutine(_path.Paths[_pathIndex]));
+            else OnEndMove();
+        }
+
+        public virtual void OnEndMove()
+        {
+
         }
 
         public void TestMethodForHelper(AnimationSinglePath singlePath)
@@ -48,12 +54,13 @@ namespace IJ.Animations.Objects
         public void OnWaveStart(AnimationPath path)
         {
             StopAllCoroutines();
-            _path = path;
+            if (path != null) _path = path;
             StartMove();
         }
 
-        public void OnInitialState()
+        public virtual void OnInitialState()
         {
+
         }
     }
 }

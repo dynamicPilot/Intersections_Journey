@@ -2898,7 +2898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01cc5e0619223c74b954994f85f8da7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSize: 13
+  startSize: 12
   onStartEffectSizeDelta: 1
   effectTotalTime: 1
   endSize: 5

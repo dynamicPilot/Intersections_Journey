@@ -9,6 +9,7 @@ namespace IJ.Animations
         [SerializeField] private CanvasGroup _group;
 
         [Header("Settings")]
+        [SerializeField] private bool _appearOnWaveStart = true;
         [SerializeField] private float _duration = 0.5f;
 
         public void Appear()
@@ -31,7 +32,8 @@ namespace IJ.Animations
 
         public void OnWaveStart(AnimationPath path)
         {
-            Appear();
+            if (_appearOnWaveStart) Appear();
+            else Desolve(true);
         }
     }
 }

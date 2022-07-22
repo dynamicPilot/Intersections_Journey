@@ -16,5 +16,10 @@ namespace IJ.Animations.Waves
         {
             _basicWaves = _waves;
         }
+
+        public void SetWaves(AnimationWaveWithPath[] waves)
+        {
+            _waves = waves;
+        }
     }
 }

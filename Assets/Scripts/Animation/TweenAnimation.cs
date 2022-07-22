@@ -7,7 +7,7 @@ namespace IJ.Animations
     {
         private void OnDestroy()
         {
-            DOTween.KillAll();
+            DOTween.Kill(this);
         }
     }
 }

@@ -2830,7 +2830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01cc5e0619223c74b954994f85f8da7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSize: 13
+  startSize: 12
   onStartEffectSizeDelta: 1
   effectTotalTime: 1
   endSize: 5
@@ -2846,8 +2846,8 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 3
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.7960785, g: 0.8980393, b: 0.95294124, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -7561,7 +7561,7 @@ GameObject:
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1339525379
 Transform:
   m_ObjectHideFlags: 0
@@ -10037,7 +10037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 38d0bd3e8f38b2248bf674292641a882, type: 2}
   cameraSizeMin: 3
-  cameraSizeMax: 13
+  cameraSizeMax: 12
   inputControl: {fileID: 2001801664}
   moveDetection: {fileID: 2001801666}
 --- !u!114 &2001801664

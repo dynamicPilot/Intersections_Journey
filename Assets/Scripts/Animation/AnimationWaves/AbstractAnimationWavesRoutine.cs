@@ -8,7 +8,7 @@ namespace IJ.Animations.Waves
         public void OnEndWaves();
     }
 
-    public abstract class AbstractAnimationWavesRoutine : MonoBehaviour
+    public abstract class AbstractAnimationWavesRoutine : MonoBehaviour, IAnimationWaveMember
     {
         [SerializeField] private bool _onStart = false;
 
@@ -16,6 +16,7 @@ namespace IJ.Animations.Waves
         protected WaitForSeconds _timer;
         protected int _waveIndex;
         protected IOnEndWaves _onEndWave;
+        private bool _isSet = false;
 
         private void Start()
         {
@@ -28,8 +29,8 @@ namespace IJ.Animations.Waves
         {
             _waveIndex = 0;
             _onEndWave = onEndWaves;
-            SetBasicWaves();
-            WavesToInitial();
+
+            SetWavesAndInititalState();
             StartCoroutine(Wave());
         }
 
@@ -56,6 +57,26 @@ namespace IJ.Animations.Waves
         void EndWaves()
         {
             if (_onEndWave != null) _onEndWave.OnEndWaves();
+        }
+
+        private void SetWavesAndInititalState()
+        {
+            if (!_isSet)
+            {
+                SetBasicWaves();
+                WavesToInitial();
+                _isSet = true;
+            }
+        }
+
+        public void OnWaveStart(AnimationPath path = null)
+        {
+            StartWaves();
+        }
+
+        public virtual void OnInitialState()
+        {
+            SetWavesAndInititalState();
         }
     }
 }

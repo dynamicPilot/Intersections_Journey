@@ -10,7 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1413074c73157434e8a44bf32213b0e2, type: 3}
-  m_Name: Location0Path
+  m_Name: Star3APath
   m_EditorClassIdentifier: 
   Points: []
-  Paths: []
+  Paths:
+  - Points:
+    - {x: -60.99999, y: 647, z: 0}
+    - {x: 115, y: 290, z: 0}
+    - {x: -2, y: -2, z: 0}
+    Duration: 1.2
+    EasyIndex: 4

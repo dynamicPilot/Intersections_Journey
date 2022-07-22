@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: IJConfig
   m_EditorClassIdentifier: 
   _menuSceneName: MENU
+  _menuSceneIndex: 1
   _minutesPerRealSecond: 7.5
   _secondsBetweenTimeUpdate: 2
   _endHour: 12
   _indicatorUpdateTimer: 0.92
   _stayInCrashTimer: 2
   _crashForce: 1
-  _timeThreshold: 0.2
+  _timeThreshold: 0.1
   _distanceMultiplier: 0.01
   _cameraSpeed: 15
-  _defaultVolume: 0.7
-  _effectsPeriod: 8
+  _startGamePoints: 1
+  _defaultLangUndex: 0

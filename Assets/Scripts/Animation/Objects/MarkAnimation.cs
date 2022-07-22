@@ -29,7 +29,8 @@ namespace IJ.Animations.Objects
 
         public float Disappearance()
         {
-            DOTween.KillAll();
+            //DOTween.KillAll();
+            DOTween.Kill(this);
             _transform.DOScale(_initialScale, _appearanceDuration).SetEase(Ease.InOutSine);
             return _appearanceDuration;
         }

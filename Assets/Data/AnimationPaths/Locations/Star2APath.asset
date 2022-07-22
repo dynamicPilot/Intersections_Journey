@@ -9,9 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7059f92287841246a26ed90b62e1524, type: 3}
-  m_Name: VolumeSignsCollection
+  m_Script: {fileID: 11500000, guid: 1413074c73157434e8a44bf32213b0e2, type: 3}
+  m_Name: Star2APath
   m_EditorClassIdentifier: 
-  Collection:
-  - {fileID: -527239609, guid: 3f0b574804d3de749b86091018efd5f9, type: 3}
-  - {fileID: 1350397526, guid: 3f0b574804d3de749b86091018efd5f9, type: 3}
+  Points: []
+  Paths:
+  - Points:
+    - {x: 509.00006, y: 457, z: 0}
+    - {x: 177, y: 290, z: 0}
+    - {x: -2, y: -2, z: 0}
+    Duration: 1.2
+    EasyIndex: 4
