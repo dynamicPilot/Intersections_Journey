@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 6586317883644456847}
   - component: {fileID: 1330681272870308109}
   - component: {fileID: 2584084246974415693}
+  - component: {fileID: 7856939491492591216}
   m_Layer: 8
   m_Name: PoliceV
   m_TagString: Car
@@ -228,8 +229,8 @@ MonoBehaviour:
     pathPartIndex: 0
   timerMark: {fileID: 3380553685115121571}
   markTransform: {fileID: 3380553683765821298}
-  timerValue: 10
-  allertValue: 2
+  timerValue: 15
+  allertValue: 10
 --- !u!114 &8980481488357216333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,8 +246,7 @@ MonoBehaviour:
   gap: 0.7
   maxDistanceToDetect: 25
   isSelfTrain: 0
-  _trafficLightInfo:
-    _trafficLightToFollow: {fileID: 0}
+  _direction: 4
   totalTimeOnRoad: 0
 --- !u!114 &1676985757511996360
 MonoBehaviour:
@@ -272,6 +272,7 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
 --- !u!114 &2707760814866454618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +324,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheelSmoke: {fileID: 4692847586143259546}
   turningEffect: {fileID: 5611547650494472596}
+--- !u!114 &7856939491492591216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967672803849997283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6121104933578283123
 GameObject:
   m_ObjectHideFlags: 0

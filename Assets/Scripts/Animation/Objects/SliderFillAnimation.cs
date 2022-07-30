@@ -1,7 +1,5 @@
 using DG.Tweening;
 using IJ.Animations.Waves;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +11,9 @@ namespace IJ.Animations.Objects
         [SerializeField] private float _stepDuration = 1f;
         [SerializeField] private float _fillStep = 0.33f;
 
+        [Header("Update Mode")]
+        [SerializeField] private bool _unscaledTime = false;
+
         private float _inittialValue = 0f;
 
         public void OnInitialState()
@@ -22,7 +23,7 @@ namespace IJ.Animations.Objects
 
         public void OnWaveStart(AnimationPath path = null)
         {
-            _slider.DOValue(_slider.value + _fillStep, _stepDuration);
+            _slider.DOValue(_slider.value + _fillStep, _stepDuration).SetUpdate(_unscaledTime);
         }
     }
 }

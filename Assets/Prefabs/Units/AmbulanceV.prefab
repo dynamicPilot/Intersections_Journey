@@ -229,7 +229,7 @@ MonoBehaviour:
     pathPartIndex: 0
   timerMark: {fileID: 3111470489390828475}
   markTransform: {fileID: 3111470489115237226}
-  timerValue: 10
+  timerValue: 15
   allertValue: 10
 --- !u!114 &8335203526764868416
 MonoBehaviour:
@@ -284,6 +284,7 @@ MonoBehaviour:
   gap: 0.7
   maxDistanceToDetect: 25
   isSelfTrain: 0
+  _direction: 4
   totalTimeOnRoad: 0
 --- !u!114 &4582104935054901952
 MonoBehaviour:
@@ -734,6 +735,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1996886867259760576, guid: 4734e25a24f59bc45b35589efa94aa53, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1996886867719193068, guid: 4734e25a24f59bc45b35589efa94aa53, type: 3}
       propertyPath: m_FillAmount
       value: 0
@@ -741,10 +746,6 @@ PrefabInstance:
     - target: {fileID: 1996886868814454946, guid: 4734e25a24f59bc45b35589efa94aa53, type: 3}
       propertyPath: m_FillAmount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4953817139283829808, guid: 4734e25a24f59bc45b35589efa94aa53, type: 3}
-      propertyPath: MaxDistance
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4734e25a24f59bc45b35589efa94aa53, type: 3}

@@ -6,7 +6,7 @@ namespace IJ.Core.UIElements.GameFlowPanels
     public class PanelsUI : MonoBehaviour
     {
         [SerializeField] private StartMenuPanelUI startPanel;
-        [SerializeField] private MenuPanelUI endLevelPanel;
+        [SerializeField] private EndMenuPanelUI endLevelPanel;
         [SerializeField] private MenuPanelUI gameOverPanel;
 
         private PanelsUISound _sound;
@@ -24,7 +24,7 @@ namespace IJ.Core.UIElements.GameFlowPanels
             _sound.PlayStartSound();
         }
 
-        public void SetEndLevelOrGameOverPanel(int mode, int levelNumber, bool needStopGameTime = true)
+        public void SetEndLevelOrGameOverPanel(int mode, int levelNumber, bool needStopGameTime = true, int starsNumber = 0)
         {
             if (needStopGameTime) Time.timeScale = 0f;
 
@@ -38,6 +38,8 @@ namespace IJ.Core.UIElements.GameFlowPanels
             {
                 endLevelPanel.gameObject.SetActive(true);
                 endLevelPanel.SetPanelHeader(levelNumber.ToString());
+                endLevelPanel.SetStarsNumber(starsNumber);
+                endLevelPanel.StartAnimationWaves();
                 _sound.PlayWinSound();
             }
         }

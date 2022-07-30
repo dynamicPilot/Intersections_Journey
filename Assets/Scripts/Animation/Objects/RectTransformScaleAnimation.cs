@@ -11,6 +11,9 @@ namespace IJ.Animations.Objects
         [SerializeField] private protected float _durationToPump = 0.7f;
         [SerializeField] private float _durationToBack = 0.25f;
 
+        [Header("Update Mode")]
+        [SerializeField] private bool _unscaledTime = false;
+
         private protected Vector3 _initialScale = Vector3.one;
 
         public void PumpAndBack(int loops = -1) 
@@ -18,7 +21,7 @@ namespace IJ.Animations.Objects
             Sequence sequence = DOTween.Sequence();
 
             sequence.Append(_transform.DOScale(_pumpScale, _durationToPump))
-                .Append(_transform.DOScale(_initialScale, _durationToBack))
+                .Append(_transform.DOScale(_initialScale, _durationToBack)).SetUpdate(_unscaledTime)
                 .SetLoops(loops);
         }
 

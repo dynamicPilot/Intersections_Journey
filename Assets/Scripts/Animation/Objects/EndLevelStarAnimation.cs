@@ -10,7 +10,7 @@ namespace IJ.Animations.Objects
         [SerializeField] private Vector3 _endRotation = new Vector3(0f, 0f, -45f);
         [SerializeField] private float _rotationDuration;
         [SerializeField] private Vector3 _targetScale = Vector3.one;
-        
+
         private Vector3 _initialScale = Vector3.zero;
         private float _endEffectDuration = 0.5f;
 
@@ -24,15 +24,15 @@ namespace IJ.Animations.Objects
         public override void StartMove()
         {
             OnInitialState();
-            _transform.DOLocalRotate(_targetRotation, _rotationDuration, RotateMode.FastBeyond360);
-            _transform.DOScale(_targetScale, _rotationDuration / 2);
+            _transform.DOLocalRotate(_targetRotation, _rotationDuration, RotateMode.FastBeyond360).SetUpdate(_unscaledTime);
+            _transform.DOScale(_targetScale, _rotationDuration / 2).SetUpdate(_unscaledTime);
             base.StartMove();
         }
 
         public override void OnEndMove()
         {
-            _transform.DOLocalRotate(_endRotation, _endEffectDuration);
-            _transform.DOScale(_initialScale, _endEffectDuration);
+            _transform.DOLocalRotate(_endRotation, _endEffectDuration).SetUpdate(_unscaledTime);
+            _transform.DOScale(_initialScale, _endEffectDuration).SetUpdate(_unscaledTime);
         }
     }
 }

@@ -13,7 +13,11 @@ namespace IJ.Animations.Objects
         [SerializeField] private protected AnimationPath _path;
         [SerializeField] private bool _onStart = false;
 
+        [Header("Update Mode")]
+        [SerializeField] private protected bool _unscaledTime = false;
+
         WaitForSeconds _timer;
+        WaitForSecondsRealtime _unscaledTimer;
         int _pathIndex;
 
         private void Start()
@@ -29,12 +33,14 @@ namespace IJ.Animations.Objects
 
         IEnumerator PathCoroutine(AnimationSinglePath singlePath, bool singleMove = false)
         {
-            _timer = new WaitForSeconds(singlePath.Duration);
+            if (!_unscaledTime) _timer = new WaitForSeconds(singlePath.Duration);
+            else _unscaledTimer = new WaitForSecondsRealtime(singlePath.Duration);
 
             if (singlePath.Points != null && singlePath.Points.Length > 0) 
-                _transform.DOLocalPath(singlePath.Points, singlePath.Duration, PathType.CatmullRom).SetEase((Ease)singlePath.EasyIndex);
+                _transform.DOLocalPath(singlePath.Points, singlePath.Duration, PathType.CatmullRom).SetEase((Ease)singlePath.EasyIndex).SetUpdate(_unscaledTime);
 
-            yield return _timer;
+            if (!_unscaledTime) yield return _timer;
+            else yield return _unscaledTimer;
 
             _pathIndex++;
             if (_path != null && _pathIndex < _path.Paths.Length && !singleMove) StartCoroutine(PathCoroutine(_path.Paths[_pathIndex]));

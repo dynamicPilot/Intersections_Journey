@@ -40,7 +40,7 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
     public IPositionShearer PositionShearer { get => _positionShearer; }
 
     private ObjectsDetector _detector;
-    private DIRECTION _direction = DIRECTION.none;
+    [SerializeField] private DIRECTION _direction = DIRECTION.none;
 
     private bool _isIntoCrossroads;
     private bool haveTrafficLightToFollow = false;

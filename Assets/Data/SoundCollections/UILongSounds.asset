@@ -33,5 +33,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 6d96f13448306ec45bb7527d659b42de, type: 3}
     isLoop: 0
     _defaultVolume: 1
+  - soundName: star1
+    clip: {fileID: 8300000, guid: 1d44fd5f25c37b242ad0789e2b1d5c07, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
+  - soundName: star2
+    clip: {fileID: 8300000, guid: 32817504314e66148b6d1a6ad6791f93, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
+  - soundName: star3
+    clip: {fileID: 8300000, guid: bf627798708031e4881bd822cb92bb52, type: 3}
+    isLoop: 0
+    _defaultVolume: 1
   _randomFrom: 0
   _randomTo: -1

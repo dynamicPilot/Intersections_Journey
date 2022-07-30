@@ -83,7 +83,11 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
         {
             return possibleAcceleration;
         }
-        else if (unitDistance <= 0) return -1 * _maxAcceleration;
+        else if (unitDistance <= 0)
+        {
+            if (_velocity > _velocitySensitivity) return -1 * _maxAcceleration;
+            else return possibleAcceleration;
+        }
 
         return (Mathf.Pow(unitVelocity, 2) - Mathf.Pow(_velocity, 2)) / (2 * unitDistance);
     }

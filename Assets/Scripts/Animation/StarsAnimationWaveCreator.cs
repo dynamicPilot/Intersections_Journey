@@ -9,13 +9,14 @@ namespace IJ.Animations
         [SerializeField] private AnimationWaveWithPath[] _starWaves;
         [SerializeField] private AnimationWaveWithPath _sliderWave;
         [SerializeField] private AnimationWaveWithPath _endStarWave;
+        [SerializeField] private AnimationWaveWithPath _soundsWave;
         [SerializeField] private AnimationWavesWithPathRoutine _animationWaveRoutine;
 
         private List<AnimationWaveWithPath> _waves = new List<AnimationWaveWithPath>();
 
         private void Awake()
         {
-            SetStars(1);
+            SetStars(3);
         }
         public void SetStars(int starNumber)
         {
@@ -23,6 +24,7 @@ namespace IJ.Animations
             for (int i = 0; i < starNumber; i++)
             {
                 _waves.Add(_starWaves[i]);
+                _waves.Add(_soundsWave);
                 _waves.Add(_sliderWave);
             }
 

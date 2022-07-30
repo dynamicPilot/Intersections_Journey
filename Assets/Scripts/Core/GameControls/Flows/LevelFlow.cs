@@ -98,7 +98,7 @@ public class LevelFlow : Flow, ISetLevel
                 if (needSave) _dataSaveAndLoad.SaveData(_playerState);
             }
 
-            _menusUIControl.OpenEndLevelMenu(_level.Number);
+            _menusUIControl.OpenEndLevelMenu(_level.Number, _levelControl.GetFinalPointsNumber());
         }
         else
         {

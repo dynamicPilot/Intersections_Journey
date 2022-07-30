@@ -51,9 +51,9 @@ public class MenusUIControl : MonoBehaviour
         panelsUI.SetStartPanel(levelNumber, maxCrashesNumber);
     }
 
-    public void OpenEndLevelMenu(int levelNumber)
+    public void OpenEndLevelMenu(int levelNumber, int starsNumber)
     {
-        panelsUI.SetEndLevelOrGameOverPanel(1, levelNumber, true);
+        panelsUI.SetEndLevelOrGameOverPanel(1, levelNumber, true, starsNumber);
     }
 
     public void OpenGameOverMenu(int levelNumber)
