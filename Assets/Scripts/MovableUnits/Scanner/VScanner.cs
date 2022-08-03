@@ -30,10 +30,10 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
 
     private BoxCollider2D boxCollider;
     private PolygonCollider2D polygonCollider;
-    private VScannerUnitsInfo _unitsInfo;
+    [SerializeField] private VScannerUnitsInfo _unitsInfo;
     public VScannerUnitsInfo UnitsInfo { get => _unitsInfo; }
 
-    private VScannerTrafficLightInfo _trafficLightInfo;
+    [SerializeField] private VScannerTrafficLightInfo _trafficLightInfo;
     public VScannerTrafficLightInfo TrafficLightInfo { get => _trafficLightInfo; }
     
     private IPositionShearer _positionShearer;
@@ -45,8 +45,8 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
     private bool _isIntoCrossroads;
     private bool haveTrafficLightToFollow = false;
     private bool _needUpdateTotalTime = true;
-    
-    private int _roadStartPointNumber = -1;
+
+    [SerializeField] private int _roadStartPointNumber = -1;
     [SerializeField] private float totalTimeOnRoad = 0f;
 
     public event IDirectionShearer.DirectionControlChange OnDirectionControlChangeFromNone;

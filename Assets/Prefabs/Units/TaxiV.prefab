@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 7526554445660357670}
   - component: {fileID: 983158706546042153}
   - component: {fileID: 4224791234686591}
+  - component: {fileID: 7120278327472224924}
   m_Layer: 8
   m_Name: TaxiV
   m_TagString: Car
@@ -246,10 +247,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 0
   _trafficLightInfo:
     _trafficLightToFollow: {fileID: 0}
+  _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &8123895169313787736
 MonoBehaviour:
@@ -275,6 +278,8 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
+  _needLog: 0
 --- !u!114 &3009180161389399634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,6 +345,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderers:
   - {fileID: 1397345226811407567}
+--- !u!114 &7120278327472224924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397345226811407555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8559211716242957672
 GameObject:
   m_ObjectHideFlags: 0

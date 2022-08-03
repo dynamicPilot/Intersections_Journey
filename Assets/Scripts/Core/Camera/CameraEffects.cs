@@ -77,7 +77,6 @@ namespace IJ.Core.CameraControls
 
         void ChangeCameraPosition(float t)
         {
-            Logging.Log("change camera position");
             Vector2 position = Vector2.Lerp(_startPoint, _targetPoint, t);
             _mainCamera.transform.position = new Vector3(position.x, position.y, _mainCamera.transform.position.z);
         }

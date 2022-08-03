@@ -55,7 +55,7 @@ public class VCrasher : MonoBehaviour
     public virtual void CollisionWithCar(Collision2D collision, Vector3 contactPosition)
     {
         _inCrash = true;
-        Logging.Log("Crash!!");
+        Logging.Log("Crash!! Position " + contactPosition + " with cars " + gameObject.name + " and " + collision.gameObject.name);
         collision.gameObject.GetComponent<VCrasher>().MovingInCollision(contactPosition - new Vector3(_body.position.x, _body.position.y, 0f));
 
         if (OnStartCollision != null) OnStartCollision.Invoke(contactPosition, collision.gameObject.GetComponent<IGetUnitIndex>().GetIndex());

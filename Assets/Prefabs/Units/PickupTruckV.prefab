@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 2741969753558589233}
   - component: {fileID: 8345415099397539725}
   - component: {fileID: 4644091080850251934}
+  - component: {fileID: 5477209975991938218}
   m_Layer: 8
   m_Name: PickupTruckV
   m_TagString: Car
@@ -291,6 +292,8 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
+  _needLog: 0
 --- !u!114 &3329834225353517918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,10 +344,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 0
   _trafficLightInfo:
     _trafficLightToFollow: {fileID: 0}
+  _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &8345415099397539725
 MonoBehaviour:
@@ -378,6 +383,18 @@ MonoBehaviour:
   wheelSmoke: {fileID: 5270324293803290714}
   turningEffect: {fileID: 1472665348588696280}
   cargo: {fileID: 5166375329307128980}
+--- !u!114 &5477209975991938218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803532182644173325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1417774655520358257
 PrefabInstance:
   m_ObjectHideFlags: 0

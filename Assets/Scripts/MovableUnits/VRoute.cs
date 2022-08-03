@@ -18,23 +18,26 @@ public class VRoute : IGetPathPointAndMove, IStartAndEndPathPoints
 {
     [SerializeField] private List<Path> paths = new List<Path>(); // all paths from start to end point
     [SerializeField] private List<Vector2> points = new List<Vector2>(); // current path part points
-
     [SerializeField] private int pathPartIndex = -1;
     private float t = 0;
 
     private bool isLine = true;
     private bool isInTurn = false;
     private bool roadEnds = false;
+    private bool _makeEndShift = false;
     public RouterComponent routerComponent;
+
+    private Vector3 _shiftPoint = new Vector3(-50f, 0f, 0f);
 
     public delegate void PathsEnded();
     public event PathsEnded OnPathEnded;
-    public VRoute(List<Path> _paths, RouterComponent _routerComponent)
+    public VRoute(List<Path> _paths, RouterComponent _routerComponent, bool makeEndShift = false)
     {
         paths = _paths;
         routerComponent = _routerComponent;
         pathPartIndex = -1;
         roadEnds = false;
+        _makeEndShift = makeEndShift;
         NewPathsPart();
     }
 
@@ -72,6 +75,7 @@ public class VRoute : IGetPathPointAndMove, IStartAndEndPathPoints
     Vector3 GetPathPoint(float distance, Vector3 position)
     {
         if (distance == 0 || roadEnds) return position;
+
         t += distance / paths[pathPartIndex].CurveLength;
 
         // move to endPoint
@@ -98,6 +102,11 @@ public class VRoute : IGetPathPointAndMove, IStartAndEndPathPoints
 
 
         if (t >= 1) NewPathsPart();
+
+        if (roadEnds && _makeEndShift)
+        {           
+            newPoint = _shiftPoint;
+        }
 
         return newPoint;
     }

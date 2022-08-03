@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 5537617089892528246}
   - component: {fileID: 6230026747995693693}
   - component: {fileID: 4139053325221259864}
+  - component: {fileID: 4400740450755055949}
   m_Layer: 8
   m_Name: SmallFiatV
   m_TagString: Car
@@ -305,6 +306,8 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
+  _needLog: 0
 --- !u!114 &2900804950804873555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,10 +321,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 0
   _trafficLightInfo:
     _trafficLightToFollow: {fileID: 0}
+  _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &8635410622334921347
 MonoBehaviour:
@@ -377,6 +382,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dc6dedfbb600dc46b1962e1b193e7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4400740450755055949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655590313170318700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1618450807189991363

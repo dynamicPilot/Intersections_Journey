@@ -30,7 +30,7 @@ public static class ScannerUtilities
         return newDistance;
     }
 
-    public static void RemoveUnitsAtIndexes(List<int> indexes, ref List<IPositionShearer> positions, ref List<IVelocityShearer> velocities)
+    public static void RemoveUnitsAtIndexes(List<int> indexes, List<IPositionShearer> positions, List<IVelocityShearer> velocities)
     {
         for (int i = indexes.Count - 1; i >=0; i--)
         {
@@ -40,24 +40,24 @@ public static class ScannerUtilities
         }
     }
 
-    public static void RemoveUnitAtIndex(int index, ref List<IPositionShearer> positions, ref List<IVelocityShearer> velocities)
+    public static void RemoveUnitAtIndex(int index, List<IPositionShearer> positions, List<IVelocityShearer> velocities)
     {
         positions.RemoveAt(index);
         velocities.RemoveAt(index);
     }
 
-    public static void RemoveUnits(List<IPositionShearer> toRemove, ref List<IPositionShearer> positions, ref List<IVelocityShearer> velocities)
+    public static void RemoveUnits(List<IPositionShearer> toRemove, List<IPositionShearer> positions, List<IVelocityShearer> velocities)
     {
         foreach (IPositionShearer position in toRemove)
         {
             if (positions.Contains(position))
             {
-                RemoveUnitAtIndex(positions.IndexOf(position), ref positions, ref velocities);
+                RemoveUnitAtIndex(positions.IndexOf(position), positions, velocities);
             }
         }
     }
 
-    public static void RemoveUnitsWithAnotherDirection(DIRECTION direction, ref List<IPositionShearer> positions, ref List<IVelocityShearer> velocities)
+    public static void RemoveUnitsWithAnotherDirection(DIRECTION direction, List<IPositionShearer> positions, List<IVelocityShearer> velocities)
     {
         List<int> indexesToRemove = new List<int>();
         for (int i = 0; i < positions.Count; i++)
@@ -65,10 +65,11 @@ public static class ScannerUtilities
             IDirectionShearer unitDirection = positions[i].GetDirectionShearer();
             if (unitDirection.GetDirection() != direction) indexesToRemove.Add(i);
         }
-        RemoveUnitsAtIndexes(indexesToRemove, ref positions, ref velocities);
+        Logging.Log("Remove due to another direction " + indexesToRemove.Count);
+        RemoveUnitsAtIndexes(indexesToRemove, positions, velocities);
     }
 
-    public static void AddUnits(List<IPositionShearer> newPositions, List<IVelocityShearer> newVelocities, ref List<IPositionShearer> positions, ref List<IVelocityShearer> velocities)
+    public static void AddUnits(List<IPositionShearer> newPositions, List<IVelocityShearer> newVelocities, List<IPositionShearer> positions, List<IVelocityShearer> velocities)
     {
         for(int i = 0; i < newPositions.Count; i++)
         {

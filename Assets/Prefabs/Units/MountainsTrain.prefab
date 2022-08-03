@@ -579,8 +579,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 1
+  _trafficLightInfo:
+    _trafficLightToFollow: {fileID: 0}
+  _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &5754086879843924160
 MonoBehaviour:
@@ -607,6 +611,7 @@ MonoBehaviour:
     _inTurn: 0
     _isCrossroadsLimitOn: 0
     _isInCrash: 0
+  _needLog: 0
 --- !u!114 &8751775389695309935
 MonoBehaviour:
   m_ObjectHideFlags: 0

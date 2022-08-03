@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 4446466098642326990}
   - component: {fileID: 3274637422883428658}
   - component: {fileID: 8223721705524536894}
+  - component: {fileID: 4842320182464385466}
   m_Layer: 8
   m_Name: BMWCarV
   m_TagString: Car
@@ -289,10 +290,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 0
   _trafficLightInfo:
     _trafficLightToFollow: {fileID: 0}
+  _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &1627942775977758420
 MonoBehaviour:
@@ -386,6 +389,20 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
+  _needLog: 0
+--- !u!114 &4842320182464385466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9035239464329455491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1069934141045243395
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -34,7 +34,6 @@ public class EmergencyTimer
     {
         timer += deltaTime;
         
-
         if (timer >= timerValue)
         {
             if (!isAllertOn)

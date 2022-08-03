@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 5166970194684282605}
   - component: {fileID: 8769561489079926933}
   - component: {fileID: 8177255325915092424}
+  - component: {fileID: 3508307122551606015}
   m_Layer: 8
   m_Name: CityCarV
   m_TagString: Car
@@ -286,10 +287,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 0
   _trafficLightInfo:
     _trafficLightToFollow: {fileID: 0}
+  _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &5150178521511686003
 MonoBehaviour:
@@ -328,6 +331,8 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
+  _needLog: 0
 --- !u!114 &949132876067340019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,6 +388,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e399ebb9dbabc304385c9398be4e5406, type: 2}
   - {fileID: 11400000, guid: 9e3d4531652db804599688dc840dd140, type: 2}
   body: {fileID: 5944281032087074530}
+--- !u!114 &3508307122551606015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944281032087074535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1335229537495180004
 PrefabInstance:
   m_ObjectHideFlags: 0

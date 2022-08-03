@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 1525188466166025280}
   - component: {fileID: 1525188466166025281}
   - component: {fileID: 1525188466166025286}
+  - component: {fileID: 5459265443986083392}
   m_Layer: 8
   m_Name: SilverStarV
   m_TagString: Car
@@ -251,10 +252,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 0
   _trafficLightInfo:
     _trafficLightToFollow: {fileID: 0}
+  _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &1525188466166025309
 MonoBehaviour:
@@ -280,6 +283,8 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
+  _needLog: 0
 --- !u!114 &1525188466166025282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +353,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aaeca0a487fb113459efbb776903fece, type: 2}
   - {fileID: 11400000, guid: ca4bdc522da872040b61b6e85a569666, type: 2}
   body: {fileID: 1525188466166025291}
+--- !u!114 &5459265443986083392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525188466166025287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5561085912606425032
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,36 +21,35 @@ public class RoadMark : MonoBehaviour
     [SerializeField] private float moveBackDuration = 1.5f;
     [SerializeField] private float disappearingDuration = 0.5f;
 
-    WaitForSeconds movingTimer;
-    bool blockIndicatorUpdate = false;
-    bool disapearingIsOn = false;
-    bool needStartAfterEnd = false;
+    WaitForSeconds _movingTimer;
+    [SerializeField] bool _blockIndicatorUpdate = false;
+    [SerializeField] bool _disapearingIsOn = false;
+    [SerializeField] bool _needStartAfterEnd = false;
 
     private void Awake()
     {
-        blockIndicatorUpdate = false;
-        disapearingIsOn = false;
-        needStartAfterEnd = false;
+        _blockIndicatorUpdate = false;
+        _disapearingIsOn = false;
+        _needStartAfterEnd = false;
     }
 
     public bool CheckForStartIndicator()
     {
-        needStartAfterEnd = disapearingIsOn;
-        return !needStartAfterEnd;
+        _needStartAfterEnd = _disapearingIsOn;
+        return !_needStartAfterEnd;
     }
 
     public void StartIndicator()
     {
         StopAllCoroutines();
-        blockIndicatorUpdate = false;
-        needStartAfterEnd = false;
+        _blockIndicatorUpdate = false;
+        _needStartAfterEnd = false;
         _sounds.PlayIndicatorSound();
     }
 
     public void UpdateIndicatorValue(float newValue, bool isAllert = false)
     {
-        if (blockIndicatorUpdate) return;
-
+        if (_blockIndicatorUpdate) return;
 
         if (newValue > 1) newValue = 1;
         else if (newValue < 0) newValue = 0;
@@ -78,13 +77,13 @@ public class RoadMark : MonoBehaviour
     IEnumerator MovingToAllert()
     {
         UpdateIndicatorValue(0f, true);
-        blockIndicatorUpdate = true;
+        _blockIndicatorUpdate = true;
         markIndicatorAnimator.SetTrigger("moveToAllert");
-        movingTimer = new WaitForSeconds(moveToAllertDuration);
-        yield return movingTimer;
+        _movingTimer = new WaitForSeconds(moveToAllertDuration);
+        yield return _movingTimer;
 
         markBackgroundAnimator.SetBool("isAllert", true);
-        blockIndicatorUpdate = false;
+        _blockIndicatorUpdate = false;
     }
 
     public void MoveBackToTimer()
@@ -96,48 +95,59 @@ public class RoadMark : MonoBehaviour
 
     IEnumerator MovingBackToTimer()
     {
-        blockIndicatorUpdate = true;
-        disapearingIsOn = true;
+        _blockIndicatorUpdate = true;
+        _disapearingIsOn = true;
         markBackgroundAnimator.SetBool("isAllert", false);
         markIndicatorAnimator.SetTrigger("backToTimer");
-        movingTimer = new WaitForSeconds(moveBackDuration);
-        yield return movingTimer;
+        _movingTimer = new WaitForSeconds(moveBackDuration);
+        yield return _movingTimer;
 
-        blockIndicatorUpdate = false;
-        disapearingIsOn = false;
+        _blockIndicatorUpdate = false;
+        _disapearingIsOn = false;
     }
 
     public bool StopIndicator()
     {
-        if (disapearingIsOn) return false;
+        if (_disapearingIsOn) return false;
 
         StopAllCoroutines();
 
         if (gameObject.activeSelf) StartCoroutine(Disappearing());
-        _sounds.StopPlaying();
+        
         return true;
         
     }
 
+    public void ForcedStopIndicator()
+    {
+        if (!_disapearingIsOn || gameObject.activeSelf)
+        {
+            StopAllCoroutines();
+            _disapearingIsOn = false;
+            gameObject.SetActive(false);
+        }
+    }
+
     IEnumerator Disappearing()
     {
-        disapearingIsOn = true;
-        blockIndicatorUpdate = true;
+        _sounds.StopPlaying();
+        _disapearingIsOn = true;
+        _blockIndicatorUpdate = true;
 
         markBackgroundAnimator.SetTrigger("makeDisappearance");
         
-        movingTimer = new WaitForSeconds(disappearingDuration);
-        yield return movingTimer;
+        _movingTimer = new WaitForSeconds(disappearingDuration);
+        yield return _movingTimer;
 
-        if (needStartAfterEnd)
+        if (_needStartAfterEnd)
         {
             markBackgroundAnimator.SetTrigger("makeAppearance");
-            disapearingIsOn = false;
+            _disapearingIsOn = false;
             StartIndicator();
         }
         else
         {
-            disapearingIsOn = false;
+            _disapearingIsOn = false;
             gameObject.SetActive(false);            
         }        
     }

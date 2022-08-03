@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 6183495527399705363}
   - component: {fileID: 6930199204428854803}
   - component: {fileID: 4479393075998522432}
+  - component: {fileID: 4235113727826899793}
   m_Layer: 8
   m_Name: PorscheCarV
   m_TagString: Car
@@ -254,10 +255,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 0
   _trafficLightInfo:
     _trafficLightToFollow: {fileID: 0}
+  _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &1565566257263220460
 MonoBehaviour:
@@ -283,6 +286,8 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
+  _needLog: 0
 --- !u!114 &1305345657670363258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +359,18 @@ MonoBehaviour:
   body: {fileID: 418476000891570358}
   leftLightCover: {fileID: 418476002300155690}
   rightLightCover: {fileID: 418476001755121716}
+--- !u!114 &4235113727826899793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418476000891570362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &418476001755121722
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 7980380731247281750}
   - component: {fileID: 7980380731247281751}
   - component: {fileID: 7980380731247281748}
+  - component: {fileID: 3597019748769717844}
   m_Layer: 8
   m_Name: VanV
   m_TagString: Car
@@ -238,10 +239,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 0
   _trafficLightInfo:
     _trafficLightToFollow: {fileID: 0}
+  _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &7980380731247281755
 MonoBehaviour:
@@ -267,6 +270,8 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
+  _needLog: 0
 --- !u!114 &7980380731247281752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +340,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3bf8c5365360ac445aa429f0e481fd59, type: 2}
   - {fileID: 11400000, guid: 35d106158aaa836419de4d45cae59f63, type: 2}
   body: {fileID: 6648426514620355752}
+--- !u!114 &3597019748769717844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648426514620355757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6800638932660633317
 GameObject:
   m_ObjectHideFlags: 0

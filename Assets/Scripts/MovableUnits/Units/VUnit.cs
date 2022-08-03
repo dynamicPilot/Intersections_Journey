@@ -112,10 +112,7 @@ namespace MovableUnits.Units
 
             if (!stopInParking)
             {
-                
                 gameObject.SetActive(false);
-                _rigidbody.position = new Vector2(-50f, 0f);
-                    //Translate(new Vector3(-50f, 0f, 0f));
                 info.FreeUnitIndex(router.TargetRoutePoint());
             }
         }
@@ -123,7 +120,7 @@ namespace MovableUnits.Units
         void SetRouter(List<Path> _paths)
         {
             if (_paths == null && _paths.Count < 2) StopVehicel();
-            router = new VRoute(_paths, routerComponent);
+            router = new VRoute(_paths, routerComponent, !stopInParking);
             router.OnPathEnded += StopVehicel;
         }
 

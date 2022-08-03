@@ -103,7 +103,7 @@ namespace IJ.Core.Ways
                 path.FillCurvePoints(points[path.StartPointNumber], points[path.EndPointNumber]);
             }
 
-            Logging.Log("WayPoints: end to calculate paths");
+            //Logging.Log("WayPoints: end to calculate paths");
         }
 
 
@@ -113,7 +113,7 @@ namespace IJ.Core.Ways
             IDictionary<int, Path> pathesByRoutePoints = new Dictionary<int, Path>();
 
 
-            Logging.Log("WayPoints: start form paires....");
+            //Logging.Log("WayPoints: start form paires....");
 
             // form point pairs
             for (int i = 0; i < route.Count - 1; i++)

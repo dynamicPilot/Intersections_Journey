@@ -8,6 +8,7 @@ public interface ICrossroadsSpeedLimit
 public interface IVelocityShearer
 {
     public abstract float GetVelocity();
+    public abstract bool GetInCrashAndNonActive();
 }
 public interface IVMover
 {
@@ -32,6 +33,7 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
     [SerializeField] private float _acceleration;
 
     [SerializeField] private VMoverState _state = new VMoverState();
+    [SerializeField] private bool _needLog = false;
     public VMoverState State { get => _state; }
 
     public float GetVelocity()
@@ -70,6 +72,10 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
         for (int i = 0; i < scannerInfo.Count; i += 2)
         {
             newAcceleration = Mathf.Min(CalculateAcceleration(scannerInfo[i], scannerInfo[i + 1]), newAcceleration);
+            if (_needLog)
+            {
+                Logging.Log("   new acceleration " + newAcceleration);
+            }
         }
 
         return newAcceleration;
@@ -77,6 +83,11 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
 
     float CalculateAcceleration(float unitVelocity, float unitDistance)
     {
+        if (_needLog)
+        {
+            Logging.Log("   unit velocity " + unitVelocity + "    unit distance " + unitDistance);
+        }
+        
         float possibleAcceleration = MaxPossibleAcceleration();
 
         if (unitDistance < -10f || unitVelocity < 0)
@@ -88,6 +99,10 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
             if (_velocity > _velocitySensitivity) return -1 * _maxAcceleration;
             else return possibleAcceleration;
         }
+        //else if (_velocity == 0 && unitVelocity > 1f && unitDistance > 0)
+        //{
+        //    return possibleAcceleration;
+        //}
 
         return (Mathf.Pow(unitVelocity, 2) - Mathf.Pow(_velocity, 2)) / (2 * unitDistance);
     }
@@ -130,5 +145,10 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
     {
         _velocity = maxVelocity / 2;
         _acceleration = 0f;
+    }
+
+    public bool GetInCrashAndNonActive()
+    {
+        return _state.IsInCrash && !gameObject.activeSelf;
     }
 }

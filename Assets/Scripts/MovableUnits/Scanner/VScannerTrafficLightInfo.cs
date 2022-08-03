@@ -12,7 +12,7 @@ public class VScannerTrafficLightInfo : IGetDistanceInfo, IHoldScannerTrafficLig
 {
     [SerializeField] private TrafficLight _trafficLightToFollow;
 
-    private IPositionShearer _positionShearer;
+    [SerializeField] private IPositionShearer _positionShearer;
 
     public VScannerTrafficLightInfo(IPositionShearer positionShearer)
     {

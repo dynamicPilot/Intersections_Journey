@@ -256,6 +256,7 @@ MonoBehaviour:
     _inTurn: 0
     _isCrossroadsLimitOn: 0
     _isInCrash: 0
+  _needLog: 0
 --- !u!114 &911534634629328413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,9 +283,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 0
+  _unitsInfo:
+    _directionControl: 0
+    _directionInfo:
+      _direction: 0
+      _unitsStateWhenDirectionNone: 
+    _needLog: 0
+    _units: []
+  _trafficLightInfo:
+    _trafficLightToFollow: {fileID: 0}
   _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &4582104935054901952
 MonoBehaviour:
@@ -721,7 +732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1996886867259760575, guid: 4734e25a24f59bc45b35589efa94aa53, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.14
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 1996886867259760575, guid: 4734e25a24f59bc45b35589efa94aa53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

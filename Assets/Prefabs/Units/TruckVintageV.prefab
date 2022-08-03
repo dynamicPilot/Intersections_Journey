@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 209454364836796991}
   - component: {fileID: 15487152947536960}
   - component: {fileID: 694655585536347130}
+  - component: {fileID: 6715959372853135438}
   m_Layer: 8
   m_Name: TruckVintageV
   m_TagString: Car
@@ -295,10 +296,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 0
   _trafficLightInfo:
     _trafficLightToFollow: {fileID: 0}
+  _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &7704483785589715188
 MonoBehaviour:
@@ -324,6 +327,8 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
+  _needLog: 0
 --- !u!114 &1907747979915177413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +398,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fd466085aec3a674a8f8225173c8b852, type: 2}
   - {fileID: 11400000, guid: e7499f7e64da3da4ea730fbe2e68a1b2, type: 2}
   body: {fileID: 497781509105096902}
+--- !u!114 &6715959372853135438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555190069515713558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4265534511601503455
 PrefabInstance:
   m_ObjectHideFlags: 0

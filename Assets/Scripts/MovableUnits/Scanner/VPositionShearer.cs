@@ -6,7 +6,7 @@ public interface IPositionShearer
     public abstract Vector2 GetSize();
     public abstract float GetGap();
     public abstract IDirectionShearer GetDirectionShearer();
-
+    public abstract GameObject GetName();
 }
 
 
@@ -49,5 +49,10 @@ public class VPositionShearer : IPositionShearer
     public Vector2 GetSize()
     {
         return _size;
+    }
+
+    public GameObject GetName()
+    {
+        return _rigidBody.gameObject;
     }
 }

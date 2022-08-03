@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 6652877013874686792}
   - component: {fileID: 1235366431569074885}
   - component: {fileID: 3111788809864754105}
+  - component: {fileID: 3011558734602409932}
   m_Layer: 8
   m_Name: LamboV
   m_TagString: Car
@@ -299,10 +300,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gap: 0.7
-  maxDistanceToDetect: 25
+  maxDistanceToDetect: 19
   isSelfTrain: 0
   _trafficLightInfo:
     _trafficLightToFollow: {fileID: 0}
+  _direction: 4
+  _roadStartPointNumber: -1
   totalTimeOnRoad: 0
 --- !u!114 &3719380023868612214
 MonoBehaviour:
@@ -328,6 +331,8 @@ MonoBehaviour:
     _inRepairSite: 0
     _inTurn: 0
     _isCrossroadsLimitOn: 0
+    _isInCrash: 0
+  _needLog: 0
 --- !u!114 &1486848086787698010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,6 +400,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cbb7915d159990d49936d5a97e5ef982, type: 2}
   - {fileID: 11400000, guid: c555ac63d3716fb49b8d0a160f72309c, type: 2}
   body: {fileID: 6839055131551537428}
+--- !u!114 &3011558734602409932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6839055131551537432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea8f223c3fad614fb3c0739e46188ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1603941722470816550
 PrefabInstance:
   m_ObjectHideFlags: 0
