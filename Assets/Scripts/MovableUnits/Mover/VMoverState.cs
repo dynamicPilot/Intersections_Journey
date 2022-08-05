@@ -13,6 +13,8 @@ public class VMoverState : IHoldMoverComponent
 
     MoverComponent _moverComponent;
 
+    private float _inStopVelocitySensitivity = 0.02f;
+
     public void SetMoverComponent(MoverComponent moverComponent)
     {
         _moverComponent = moverComponent;
@@ -49,7 +51,7 @@ public class VMoverState : IHoldMoverComponent
         {
             _moverComponent.DoInStop();
         }
-        else if (prevVelocity == 0 && velocity != 0)
+        else if (prevVelocity <= _inStopVelocitySensitivity && velocity > _inStopVelocitySensitivity)
         {
             _moverComponent.DoInRestart();
         }

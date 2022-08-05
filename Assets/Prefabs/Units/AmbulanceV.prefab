@@ -250,6 +250,7 @@ MonoBehaviour:
   turningAcceleration: 1
   _velocity: 0
   _prevVelocity: 0
+  _velocitySensitivity: 0.01
   _acceleration: 0
   _state:
     _inRepairSite: 0

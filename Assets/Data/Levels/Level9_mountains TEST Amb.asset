@@ -70,21 +70,6 @@ MonoBehaviour:
     - startHour: 0
       endHour: 2
       vehicleNumbersList:
-      - type: 0
-        _type: 0
-        number: 1
-        needSpecialEndPoint: 1
-        endPointNumber: 7
-      - type: 1
-        _type: 0
-        number: 1
-        needSpecialEndPoint: 1
-        endPointNumber: 10
-      - type: 2
-        _type: 0
-        number: 1
-        needSpecialEndPoint: 1
-        endPointNumber: 18
       - type: 3
         _type: 0
         number: 1

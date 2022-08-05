@@ -17,12 +17,14 @@ namespace MovableUnits.Units
 
         public void DoInRestart()
         {
+            Logging.Log("VEmergencyUnit: Do In Restart!");
             needUpdateTimer = false;
             timer.OnStart();
         }
 
         public void DoInStop()
         {
+            Logging.Log("VEmergencyUnit: Do In Stop!");
             needUpdateTimer = true;
             timer.OnStop(transform);
         }

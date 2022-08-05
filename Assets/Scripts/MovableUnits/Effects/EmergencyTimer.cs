@@ -60,8 +60,10 @@ public class EmergencyTimer
 
     public void OnStop(Transform transform)
     {
+        Logging.Log("Timer: OnStop");
         if (mark.CheckForStartIndicator())
         {
+            Logging.Log("..... start indicator");
             mark.gameObject.SetActive(true);
             CorrectMarkRotationToStayVertical(transform);
             mark.StartIndicator();
@@ -70,8 +72,10 @@ public class EmergencyTimer
 
     public void OnStart()
     {
+        Logging.Log("Timer: OnStart");
         if (mark.gameObject.activeSelf)
         {
+            Logging.Log("..... stop indicator");
             mark.StopIndicator();
         }
     }

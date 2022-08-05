@@ -28,7 +28,7 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
 
     [SerializeField] private float _velocity;
     [SerializeField] private float _prevVelocity = 0f;
-    [SerializeField] private readonly float _velocitySensitivity = 0.01f;
+    [SerializeField] private float _velocitySensitivity = 0.01f;
 
     [SerializeField] private float _acceleration;
 
