@@ -29,7 +29,7 @@ public class VScannerUnitsInfo: IGetDistanceInfo, IHoldScannerUnitsInfo
     [SerializeField] private DirectionInfo _directionInfo;
     [SerializeField] private bool _needLog = false;
 
-    [SerializeField] private List<GameObject> _units = new List<GameObject>();
+    //[SerializeField] private List<GameObject> _units = new List<GameObject>();
 
     public VScannerUnitsInfo(IPositionShearer positionShearer, float _maxDistance, IDirectionShearer _directionShearer,IRoadInfoShearer roadInfo)
     {
@@ -47,6 +47,16 @@ public class VScannerUnitsInfo: IGetDistanceInfo, IHoldScannerUnitsInfo
 
         _roadInfo = roadInfo;
     }
+
+    public void ClearInfo()
+    {
+        _unitsPosition.Clear();
+        _unitsVelocity.Clear();
+        //_units.Clear();
+        _directionControl = false;
+        _directionInfo = null;
+    }
+
 
     public void Destroy()
     {
@@ -71,12 +81,11 @@ public class VScannerUnitsInfo: IGetDistanceInfo, IHoldScannerUnitsInfo
             UnitsShearers _unitsShearers = _roadInfo.GetUnitsToAddToVehicleToFollow(directionShearer);
             ScannerUtilities.AddUnits(_unitsShearers.Positions, _unitsShearers.Velocities, _unitsPosition, _unitsVelocity);
 
-            // add to directionInfo
-          
+            // add to directionInfo          
             _directionInfo = new DirectionInfo(direction, _unitsShearers.Positions);
         }
 
-        UpdateUnits();
+        //UpdateUnits();
     }
 
     void ChangeDirectionControlToNone(DIRECTION direction, bool directionControl)
@@ -89,7 +98,7 @@ public class VScannerUnitsInfo: IGetDistanceInfo, IHoldScannerUnitsInfo
         }
         _directionControl = directionControl;
 
-        UpdateUnits();
+        //UpdateUnits();
     }
 
     public List<float> GetInfo()
@@ -115,7 +124,7 @@ public class VScannerUnitsInfo: IGetDistanceInfo, IHoldScannerUnitsInfo
             _directionInfo.AddUnit(unitPosition, unitVelocity, true);
         }
 
-        UpdateUnits();
+        //UpdateUnits();
     }
 
     public void RemoveUnit(IPositionShearer unitPosition, IVelocityShearer unitVelocity)
@@ -123,21 +132,20 @@ public class VScannerUnitsInfo: IGetDistanceInfo, IHoldScannerUnitsInfo
         if (_unitsPosition.Contains(unitPosition))
         {
             if (_directionControl)
-            {
-                Logging.Log("Mark as removed due to directionControl");
-                _directionInfo.AddUnit(unitPosition, unitVelocity, false);
-                if (unitVelocity.GetInCrashAndNonActive())
-                {
-                    Logging.Log("Remove due to crash");
-                    ScannerUtilities.RemoveUnitAtIndex(_unitsPosition.IndexOf(unitPosition), _unitsPosition, _unitsVelocity);
-                }
+            {                
+                bool objectIsActive = unitVelocity.GetInCrashOrNonActive();
+                Logging.Log("Remove unit in direction control. Is forced remove " + !objectIsActive);
+                _directionInfo.AddUnit(unitPosition, unitVelocity, false, !objectIsActive);
+                
+                if (objectIsActive) ScannerUtilities.RemoveUnitAtIndex(_unitsPosition.IndexOf(unitPosition), _unitsPosition, _unitsVelocity);
             }
             else
             {
                 ScannerUtilities.RemoveUnitAtIndex(_unitsPosition.IndexOf(unitPosition), _unitsPosition, _unitsVelocity);
-            }
-            UpdateUnits();
+            }            
         }
+
+        //UpdateUnits();
     }
 
     float[] GetDistanceToVehicles(Vector3 position, float gap)
@@ -159,11 +167,9 @@ public class VScannerUnitsInfo: IGetDistanceInfo, IHoldScannerUnitsInfo
                 if ((_unitsPosition[i].GetDirectionShearer().GetDirection() != _positionShearer.GetDirectionShearer().GetDirection()) && newDistance > _minDistanceToKeep)
                 {
                     newDistance = _maxDistanceToDetectUnit + 1;
-                    if (_directionControl) _directionInfo.AddUnit(_unitsPosition[i], _unitsVelocity[i], false);
+                    if (_directionControl) _directionInfo.AddUnit(_unitsPosition[i], _unitsVelocity[i], false, true);
                 }
             }
-
-            //newDistance = ScannerUtilities.DistanceToSingleUnitObject(position, _positionShearer.GetSetToOriginVelocityVector(), _unitsPosition[i], gap);
 
             if (_needLog) Logging.Log("Distance to unit " + _unitsPosition[i].GetName() + " is " + newDistance);
 
@@ -196,13 +202,13 @@ public class VScannerUnitsInfo: IGetDistanceInfo, IHoldScannerUnitsInfo
         if (distanceToVehicleWithZeroVelocity == 1000f) distanceToVehicleWithZeroVelocity = -100f;
         if (toUnitMinDistance == 1000f) toUnitMinDistance = -100f;
 
-        UpdateUnits();
+        //UpdateUnits();
         return new float[4] { toUnitMinVelocity, toUnitMinDistance, 0f, distanceToVehicleWithZeroVelocity };
     }
 
     private void UpdateUnits()
     {
-        _units.Clear();
-        for (int i = 0; i < _unitsPosition.Count; i++) _units.Add(_unitsPosition[i].GetName());
+        //_units.Clear();
+        //for (int i = 0; i < _unitsPosition.Count; i++) _units.Add(_unitsPosition[i].GetName());
     }
 }

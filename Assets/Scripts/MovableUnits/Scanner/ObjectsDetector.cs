@@ -33,6 +33,7 @@ public class ObjectsDetector
     {
         IDirectionShearer unitDirection = collision.gameObject.GetComponent<VScanner>();
         IPositionShearer unitPosition = collision.gameObject.GetComponent<VScanner>().PositionShearer;
+
         if (direction != DIRECTION.none)
         {
             // compaire directions
@@ -55,13 +56,13 @@ public class ObjectsDetector
 
     public void UndetectCar(Collider2D collision, DIRECTION direction)
     {
-        IDirectionShearer unitDirection = collision.gameObject.GetComponent<VScanner>();
+        //IDirectionShearer unitDirection = collision.gameObject.GetComponent<VScanner>();
         IPositionShearer unitPosition = collision.gameObject.GetComponent<VScanner>().PositionShearer;
-        if (direction != DIRECTION.none)
-        {
-            // compaire directions
-            if (unitDirection.GetDirection() != direction) return;
-        }
+        //if (direction != DIRECTION.none)
+        //{
+        //    // compaire directions
+        //    if (unitDirection.GetDirection() != direction) return;
+        //}
 
         _unitsInfo.RemoveUnit(unitPosition, collision.gameObject.GetComponent<VMover>());
     }

@@ -87,18 +87,18 @@ namespace MovableUnits.Units
         {
             stopInParking = _stopIsParking;
             SetRouter(_paths);
+            gameObject.SetActive(true);
             SetUnitInStartPosition();
 
             info.SetInfo(_managerIndex);
             mover.InitialVelocity();
             scanner.StartScanner(router);
             effects.StartEffects();
-
-            gameObject.SetActive(true);
             pauseUpdate = false;
 
             needUpdateTotalTime = true;
             needUpdateCounter = false;
+            _rigidbody.simulated = true;
         }
 
         protected virtual void StopVehicel()
@@ -107,8 +107,10 @@ namespace MovableUnits.Units
             if (router != null) router.OnPathEnded -= StopVehicel;
 
             //stop effects
+            mover.EndVelocity();
             scanner.StopScanner();
             effects.StopEffect();
+            _rigidbody.simulated = false;
 
             if (!stopInParking)
             {

@@ -46,7 +46,7 @@ public class VCrasher : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Car"))
+        if (collision.gameObject.CompareTag("Car") && collision.gameObject.GetComponent<IVelocityShearer>().GetInCrashOrNonActive())
         {
             CollisionWithCar(collision, collision.contacts[0].point);
         }

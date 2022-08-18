@@ -8,12 +8,13 @@ public interface ICrossroadsSpeedLimit
 public interface IVelocityShearer
 {
     public abstract float GetVelocity();
-    public abstract bool GetInCrashAndNonActive();
+    public abstract bool GetInCrashOrNonActive();
 }
 public interface IVMover
 {
     public abstract bool CalculateVelocity(float deltaT, ISetDistanceToMove movable, IGetDistanceInfo[] infos);
     public void InitialVelocity();
+    public void EndVelocity();
 }
 
 
@@ -44,6 +45,8 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
 
     public bool CalculateVelocity(float deltaT, ISetDistanceToMove movable, IGetDistanceInfo[] infos)
     {
+        if (!_state.IsOnRoad && gameObject.activeSelf) _state.ChangeIsOnRoad(true);
+
         _prevVelocity = _velocity;
         float newAcceleration = _maxAcceleration;
 
@@ -99,10 +102,10 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
             if (_velocity > _velocitySensitivity) return -1 * _maxAcceleration;
             else return possibleAcceleration;
         }
-        //else if (_velocity == 0 && unitVelocity > 1f && unitDistance > 0)
-        //{
-        //    return possibleAcceleration;
-        //}
+        else if (_velocity == 0 && unitVelocity > _velocitySensitivity && unitDistance > 0)
+        {
+            return possibleAcceleration;
+        }
 
         return (Mathf.Pow(unitVelocity, 2) - Mathf.Pow(_velocity, 2)) / (2 * unitDistance);
     }
@@ -147,8 +150,13 @@ public class VMover : MonoBehaviour, IVelocityShearer, IVMover, ICrossroadsSpeed
         _acceleration = 0f;
     }
 
-    public bool GetInCrashAndNonActive()
+    public void EndVelocity()
     {
-        return _state.IsInCrash && !gameObject.activeSelf;
+        _state.ChangeIsOnRoad(false);
+    }
+
+    public bool GetInCrashOrNonActive()
+    {
+        return _state.IsOnRoad;
     }
 }

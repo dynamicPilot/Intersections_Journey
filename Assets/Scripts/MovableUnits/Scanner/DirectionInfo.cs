@@ -11,7 +11,7 @@ public class DirectionInfo
     [SerializeField] private List<bool> _unitsStateWhenDirectionNone = new List<bool>();
 
     [SerializeField] private List<IPositionShearer> _unitsPositionToAddBeforeDirectionChange = new List<IPositionShearer>();
-
+    [SerializeField] private List<IPositionShearer> _forcedRemovedUnits = new List<IPositionShearer>();
     public DirectionInfo(DIRECTION direction, List<IPositionShearer> unitsPositionToAdd)
     {
         _direction = direction;
@@ -23,8 +23,14 @@ public class DirectionInfo
         _direction = DIRECTION.none;
     }
 
-    public void AddUnit(IPositionShearer unitPosition, IVelocityShearer unitVelocity, bool state)
+    public void AddUnit(IPositionShearer unitPosition, IVelocityShearer unitVelocity, bool state, bool forcedRemove = false)
     {
+        if (forcedRemove)
+        {
+            _forcedRemovedUnits.Add(unitPosition);
+            return;
+        }
+        
         _positionsToChangeStateWhenDirectionNone.Add(unitPosition);
         _velocitiesToChangeStateWhenDirectionNone.Add(unitVelocity);
         _unitsStateWhenDirectionNone.Add(state);
@@ -37,7 +43,7 @@ public class DirectionInfo
 
         for (int i = 0; i < positions.Count; i++)
         {
-            if (_unitsPositionToAddBeforeDirectionChange.Contains(positions[i]) && distances[i] <= minDistanceToKeep)
+            if (_unitsPositionToAddBeforeDirectionChange.Contains(positions[i]) && distances[i] <= minDistanceToKeep && !_forcedRemovedUnits.Contains(positions[i]))
             {
                 toRemove.Remove(positions[i]);
             }
@@ -49,6 +55,8 @@ public class DirectionInfo
 
         for (int i = 0; i < _unitsStateWhenDirectionNone.Count; i++)
         {
+            if (_forcedRemovedUnits.Contains(_positionsToChangeStateWhenDirectionNone[i])) continue;
+
             if (_unitsStateWhenDirectionNone[i])
             {
                 toAddPositions.Add(_positionsToChangeStateWhenDirectionNone[i]);

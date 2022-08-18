@@ -9,7 +9,9 @@ public class VMoverState : IHoldMoverComponent
     [SerializeField] private bool _inTurn = false;
     [SerializeField] private bool _isCrossroadsLimitOn = false;
     [SerializeField] private bool _isInCrash = false;
+    [SerializeField] private bool _isOnRoad = false;
     public bool IsInCrash { get => _isInCrash; }
+    public bool IsOnRoad { get => _isOnRoad; }
 
     MoverComponent _moverComponent;
 
@@ -60,6 +62,11 @@ public class VMoverState : IHoldMoverComponent
     public void ChangeIsInCrash(bool isInCrash)
     {
         _isInCrash = isInCrash;
+    }
+
+    public void ChangeIsOnRoad(bool isOnRoad)
+    {
+        _isOnRoad = isOnRoad;
     }
 }
 

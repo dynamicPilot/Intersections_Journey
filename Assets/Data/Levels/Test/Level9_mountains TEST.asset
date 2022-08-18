@@ -65,6 +65,81 @@ MonoBehaviour:
   startPointPacksCorrections: []
   activeRoadPacks: 
   timeIntervalsByRoads:
+  - roadStartPointNumber: 11
+    timeIntervals:
+    - startHour: 0
+      endHour: 2
+      vehicleNumbersList:
+      - type: 0
+        _type: 0
+        number: 1
+        needSpecialEndPoint: 1
+        endPointNumber: 7
+      - type: 1
+        _type: 0
+        number: 1
+        needSpecialEndPoint: 1
+        endPointNumber: 7
+      - type: 2
+        _type: 0
+        number: 1
+        needSpecialEndPoint: 1
+        endPointNumber: 7
+      - type: 3
+        _type: 0
+        number: 1
+        needSpecialEndPoint: 1
+        endPointNumber: 7
+    - startHour: 2
+      endHour: 4
+      vehicleNumbersList:
+      - type: 0
+        _type: 0
+        number: 2
+        needSpecialEndPoint: 1
+        endPointNumber: 7
+    - startHour: 4
+      endHour: 6
+      vehicleNumbersList:
+      - type: 2
+        _type: 0
+        number: 1
+        needSpecialEndPoint: 1
+        endPointNumber: 7
+      - type: 4
+        _type: 0
+        number: 1
+        needSpecialEndPoint: 1
+        endPointNumber: 7
+    - startHour: 6
+      endHour: 8
+      vehicleNumbersList:
+      - type: 3
+        _type: 0
+        number: 1
+        needSpecialEndPoint: 1
+        endPointNumber: 7
+    - startHour: 8
+      endHour: 10
+      vehicleNumbersList:
+      - type: 0
+        _type: 0
+        number: 1
+        needSpecialEndPoint: 1
+        endPointNumber: 7
+      - type: 6
+        _type: 0
+        number: 1
+        needSpecialEndPoint: 1
+        endPointNumber: 7
+    - startHour: 10
+      endHour: 12
+      vehicleNumbersList:
+      - type: 0
+        _type: 0
+        number: 1
+        needSpecialEndPoint: 1
+        endPointNumber: 7
   - roadStartPointNumber: 21
     timeIntervals:
     - startHour: 0
@@ -79,38 +154,38 @@ MonoBehaviour:
         _type: 0
         number: 1
         needSpecialEndPoint: 1
-        endPointNumber: 10
+        endPointNumber: 7
       - type: 2
         _type: 0
         number: 1
         needSpecialEndPoint: 1
-        endPointNumber: 18
+        endPointNumber: 7
       - type: 3
         _type: 0
         number: 1
         needSpecialEndPoint: 1
-        endPointNumber: 18
+        endPointNumber: 7
     - startHour: 2
       endHour: 4
       vehicleNumbersList:
       - type: 0
         _type: 0
         number: 2
-        needSpecialEndPoint: 0
-        endPointNumber: 0
+        needSpecialEndPoint: 1
+        endPointNumber: 7
     - startHour: 4
       endHour: 6
       vehicleNumbersList:
       - type: 2
         _type: 0
         number: 1
-        needSpecialEndPoint: 0
-        endPointNumber: 0
+        needSpecialEndPoint: 1
+        endPointNumber: 7
       - type: 4
         _type: 0
         number: 1
         needSpecialEndPoint: 1
-        endPointNumber: 18
+        endPointNumber: 7
     - startHour: 6
       endHour: 8
       vehicleNumbersList:
@@ -118,26 +193,26 @@ MonoBehaviour:
         _type: 0
         number: 1
         needSpecialEndPoint: 1
-        endPointNumber: 10
+        endPointNumber: 7
     - startHour: 8
       endHour: 10
       vehicleNumbersList:
       - type: 0
         _type: 0
         number: 1
-        needSpecialEndPoint: 0
-        endPointNumber: 10
+        needSpecialEndPoint: 1
+        endPointNumber: 7
       - type: 6
         _type: 0
         number: 1
-        needSpecialEndPoint: 0
-        endPointNumber: 10
+        needSpecialEndPoint: 1
+        endPointNumber: 7
     - startHour: 10
       endHour: 12
       vehicleNumbersList:
       - type: 0
         _type: 0
         number: 1
-        needSpecialEndPoint: 0
-        endPointNumber: 10
+        needSpecialEndPoint: 1
+        endPointNumber: 7
   repairSiteTimePoints: []

@@ -87,6 +87,8 @@ public class VScanner : MonoBehaviour, ICrossBorder, IDirectionShearer
         _isIntoCrossroads = false;
         _needUpdateTotalTime = false;
         _direction = DIRECTION.none;
+
+        _unitsInfo.ClearInfo();
     }
 
 

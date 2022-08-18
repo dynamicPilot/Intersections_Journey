@@ -16,10 +16,10 @@ MonoBehaviour:
   locationIndex: 2
   levels:
   - {fileID: 11400000, guid: 1a700ad921075e14b8befca2552e7d0c, type: 2}
-  - {fileID: 11400000, guid: 0b44d28cbc70dfc4a84cb8b630cb902b, type: 2}
+  - {fileID: 11400000, guid: 0bfed232ca7b4604783ba80576b02451, type: 2}
   - {fileID: 11400000, guid: ae8053e054cd899468da1701fbb80d75, type: 2}
   - {fileID: 11400000, guid: c85743465569fa7439c0e42f5083b77f, type: 2}
-  pointsToMakeAvailable: 0
+  pointsToMakeAvailable: 11
   maxPoints: 12
   locationsToMakeAvailable:
   - {fileID: 11400000, guid: 326fb69ab71ae1f48bdae272dada5dbc, type: 2}
