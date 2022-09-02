@@ -6,6 +6,8 @@ public interface IIsEndPointParking
 {
     public bool IsEndPointParking(int endPointNumber);
 }
+
+[RequireComponent(typeof (VEndMover))]
 public class VehicleManager : MonoBehaviour, IIsEndPointParking
 {
     [Header("Scripts")]
@@ -23,6 +25,7 @@ public class VehicleManager : MonoBehaviour, IIsEndPointParking
 
     private VStorage storage;
     private VCrashes crashes;
+    private VEndMover _endMover;
 
     private int crashCounter = 0;
 
@@ -30,6 +33,7 @@ public class VehicleManager : MonoBehaviour, IIsEndPointParking
     {
         storage = new VStorage();
         crashes = new VCrashes();
+        _endMover = GetComponent<VEndMover>();
     }
 
     public VStorage GetStorage()
@@ -65,11 +69,13 @@ public class VehicleManager : MonoBehaviour, IIsEndPointParking
 
     void FreeUnit(int unitIndex, int endPointNumber, VInfo info)
     {
-        KeyValuePair<TYPE, IDirectionShearer> unitRoadInfo = storage.FreeUnit(unitIndex);
+        KeyValuePair<TYPE, IDirectionShearer> unitRoadInfo = storage.GetUnitTypeAndDirection(unitIndex);
         crashes.RemoveCrashByVehicleIndex(unitIndex);
         UnsubscribeUnitInfo(info);
         RemoveFromRoad(unitRoadInfo.Value, unitRoadInfo.Key);
         roadsManager.FreeParking(endPointNumber);
+
+        _endMover.AddUnitToMove(unitIndex, info);
     }
 
     void UnitInCrash(int selfIndex, int otherIndex, Vector3 contactPoint)
@@ -84,11 +90,15 @@ public class VehicleManager : MonoBehaviour, IIsEndPointParking
         crashEffects.StartCrashEffect(contactPoint);        
     }
 
+    public void SetUnitAsFree(int unitIndex)
+    {
+        storage.FreeUnit(unitIndex);        
+    }
+
     void RemoveFromRoad(IDirectionShearer unitDirection, TYPE type)
     {
         if (unitDirection == null)
         {
-            Logging.Log("No direction");
             return;
         }
 

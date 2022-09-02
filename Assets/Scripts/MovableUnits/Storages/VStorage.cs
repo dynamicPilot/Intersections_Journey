@@ -60,6 +60,17 @@ public class VStorage: IGetUnitsOnRoad
         else return null;
     }
 
+    public KeyValuePair<TYPE, IDirectionShearer> GetUnitTypeAndDirection(int unitIndex)
+    {
+        if (!activeUnits.ContainsKey(unitIndex))
+        {
+            return new KeyValuePair<TYPE, IDirectionShearer>();
+        }
+
+        TYPE type = (TYPE)activeUnits[unitIndex][0];
+        return new KeyValuePair<TYPE, IDirectionShearer>(type, allUnitsDirection[unitIndex]);
+    }
+
     public KeyValuePair<TYPE, IDirectionShearer> FreeUnit(int unitIndex)
     {
         if (!activeUnits.ContainsKey(unitIndex))
