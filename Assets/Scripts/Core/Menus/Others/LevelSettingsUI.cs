@@ -14,6 +14,7 @@ namespace IJ.Core.Menus.Others
 
         public bool NeedSaveSattings()
         {
+            Logging.Log("Check for save settings");
             return _totalVolumeButton.IsStateChange();
         }
     }
